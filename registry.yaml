@@ -559,6 +559,7 @@ examples:
       - sequential-thinking MCP
       - web search (NHTSA databases, parts sourcing)
     status: generated
+    generated_at: 2026-03-30
     test_status: passed
     notes: "Pipeline #211 from source material. Automotive is completely unrepresented. Recalls are high-stakes, multi-stakeholder processes."
 
@@ -598,7 +599,8 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
       - web search (drug safety databases, literature monitoring)
-    status: queued
+    status: generated
+    test_status: passed
     notes: "Pipeline #284 from source material. Pharma is completely unrepresented. Pharmacovigilance is high-stakes, heavily regulated, multi-stakeholder."
 
   # --- Sports Analytics (new — conductor sweep 5, 2026-03-30) ---

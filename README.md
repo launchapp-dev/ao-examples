@@ -63,7 +63,7 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [ad-campaign](examples/ad-campaign/) | Advertising | Audience research → creative brief → copy → A/B test → launch | generated | [repo](https://github.com/launchapp-dev/ao-example-ad-campaign) |
 | [crop-monitor](examples/crop-monitor/) | Agriculture | Field data → disease detection → treatment → dispatch | generated | [repo](https://github.com/launchapp-dev/ao-example-crop-monitor) |
 | [foia-processor](examples/foia-processor/) | Government | Records request → search → redact → legal review → release | generated | |
-| vehicle-recall | Automotive | Defect pattern → VIN scope → notification → repair tracking | queued | |
+| [vehicle-recall](examples/vehicle-recall/) | Automotive | Defect pattern → VIN scope → notification → repair tracking | generated | |
 | [network-fault-manager](examples/network-fault-manager/) | Telecom | Alarm correlation → diagnosis → dispatch → RCA report | generated | [repo](https://github.com/launchapp-dev/ao-example-network-fault-manager) |
 | pharmacovigilance | Pharma | Adverse event monitoring → causality → signal detection → regulatory | queued | |
 | athlete-tracker | Sports | Biometrics → workload trends → injury risk → load management | queued | |
@@ -74,7 +74,7 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | recipe-developer | Food | Nutritional targets → recipe generation → cost analysis → publish | queued | |
 | construction-tracker | Construction | Schedule tracking → delay detection → resource reallocation | queued | |
 
-*37 examples across 33 verticals — 28 generated, 9 queued. More added autonomously by the conductor every 30 minutes.*
+*37 examples across 33 verticals — 29 generated, 8 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 
