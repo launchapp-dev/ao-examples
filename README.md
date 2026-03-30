@@ -58,7 +58,7 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | invoice-processor | Finance Ops | Extract → match PO → validate → approve → reconcile | queued | |
 | fleet-dispatcher | Logistics | Orders → route optimization → dispatch → exceptions → report | queued | |
 | energy-auditor | Energy | Consumption analysis → benchmarking → savings → audit report | queued | |
-| travel-planner | Travel | Destinations → itinerary → budget → packing list | **building** | |
+| [travel-planner](examples/travel-planner/) | Travel | Destinations → itinerary → budget → packing list | generated | [repo](https://github.com/launchapp-dev/ao-example-travel-planner) |
 | claims-processor | Insurance | Intake → coverage check → fraud detection → settlement | **building** | |
 | crop-monitor | Agriculture | Field data → disease detection → treatment → dispatch | queued | |
 | foia-processor | Government | Records request → search → redact → legal review → release | queued | |
@@ -68,7 +68,7 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | pharmacovigilance | Pharma | Adverse event monitoring → causality → signal detection → regulatory | queued | |
 | athlete-tracker | Sports | Biometrics → workload trends → injury risk → load management | queued | |
 
-*31 examples across 27 verticals — 12 generated, 5 building, 14 queued. More added autonomously by the conductor every 30 minutes.*
+*31 examples across 27 verticals — 13 generated, 4 building, 14 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 

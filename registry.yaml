@@ -292,10 +292,12 @@ examples:
       - scheduled workflows (daily resume screening)
     tools_needed:
       - filesystem MCP
-      - web search (job market research)
-    status: in-progress
+      - sequential-thinking MCP
+    status: generated
     started_at: 2026-03-30
-    notes: "Pipeline #96 from source material. Building now."
+    generated_at: 2026-03-30
+    github_repo: launchapp-dev/ao-example-hiring-pipeline
+    notes: "Complete — 6 agents (Haiku/Sonnet/Opus), 3 decision contracts, 2 manual gates, rework loops, 3 workflows (full-hiring/daily-screening/interview-cycle), daily schedule. 5 sample resumes included."
 
   # --- Manufacturing / Supply Chain (new — conductor ideation 2026-03-30) ---
   - id: supply-chain-monitor
@@ -422,9 +424,12 @@ examples:
       - web search
       - filesystem MCP
       - sequential-thinking MCP
-    status: in-progress
+    status: generated
     started_at: 2026-03-30
-    notes: "Pipelines #251-260 from source material. Building now."
+    generated_at: 2026-03-30
+    test_status: passed
+    github_repo: launchapp-dev/ao-example-travel-planner
+    notes: "Complete — multi-agent travel planning pipeline with web search, sequential-thinking, budget routing. GitHub repo created and public."
 
   # --- Insurance (new — conductor ideation 2026-03-30 sweep 3) ---
   - id: claims-processor
