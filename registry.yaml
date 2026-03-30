@@ -895,9 +895,66 @@ examples:
     status: queued
     notes: "Pipeline #135 from source material. Tax preparation is universally relatable and shows AO handling complex rule-based logic with human approval gates."
 
+  # --- Customs & Trade (new — conductor sweep 10, 2026-03-30) ---
+  - id: compliance-auditor
+    name: "Customs & Trade Compliance Pipeline"
+    vertical: customs-trade
+    description: "Cross-border trade compliance pipeline — classify goods by HS code, determine duty rates and trade agreement eligibility, screen restricted parties, prepare customs declarations, validate commercial invoices, manage broker review, file electronically, track clearance, maintain audit trail"
+    features_demonstrated:
+      - command phases (HS code lookup scripts, duty rate calculations)
+      - decision contracts (classification confidence: confirmed/review-needed/blocked)
+      - multi-agent pipeline (classifier, compliance officer, document preparer, broker reviewer, filer)
+      - manual approval gates (licensed customs broker sign-off)
+      - output contracts (structured customs declarations, audit trail records)
+      - scheduled workflows (daily shipment processing)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - web search (tariff databases, restricted party lists)
+    status: queued
+    notes: "Pipeline #160 from source material. Customs/trade compliance is completely unrepresented. Rule-heavy, multi-stakeholder process with regulatory filing."
+
+  # --- Nonprofit / Fundraising (new — conductor sweep 10, 2026-03-30) ---
+  - id: donor-prospector
+    name: "Donor Prospecting & Stewardship Pipeline"
+    vertical: nonprofit-fundraising
+    description: "Donor management pipeline — identify high-value prospects from wealth indicators, research giving history and affinity, score likelihood and capacity, generate personalized outreach sequences, track cultivation touchpoints, prepare solicitation strategy, manage stewardship post-gift, produce fundraising analytics reports"
+    features_demonstrated:
+      - web search MCP (wealth screening, philanthropic databases)
+      - multi-agent pipeline (prospect researcher, scoring analyst, outreach writer, stewardship coordinator, reporter)
+      - decision contracts (prospect readiness: ready-to-ask/needs-cultivation/disqualified)
+      - output contracts (structured prospect profiles, outreach sequences)
+      - scheduled workflows (weekly prospect pipeline review)
+      - phase routing (rework outreach on low engagement)
+    tools_needed:
+      - web search
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #191 from source material. Distinct from grant-writer — this is donor relationship management, not proposal writing. Shows AO managing long-term relationship pipelines."
+
+  # --- Government / Permits (new — conductor sweep 10, 2026-03-30) ---
+  - id: permit-tracker
+    name: "Building Permit Application Pipeline"
+    vertical: government-permits
+    description: "Building permit pipeline — gather jurisdiction requirements, compile architectural drawings and specifications, assemble application package, submit to planning department, track reviewer comments, respond to corrections, manage interdepartmental approvals (fire, zoning, structural), secure final permit, schedule inspections"
+    features_demonstrated:
+      - multi-agent pipeline (requirements researcher, document compiler, applicant coordinator, reviewer liaison, inspector scheduler)
+      - decision contracts (application status: approved/corrections-needed/denied)
+      - manual approval gates (architect sign-off, owner approval before submission)
+      - scheduled workflows (daily status tracking, deadline monitoring)
+      - command phases (document assembly scripts, status polling)
+      - output contracts (structured application packages, correction responses)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - web search (jurisdiction requirements, code lookups)
+    status: queued
+    notes: "Pipeline #143 from source material. Distinct from foia-processor and construction-tracker. Permit applications are a universal pain point with complex multi-department routing."
+
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
 #
-# Verticals to explore next: media production (video/music), customs/trade compliance,
-# donor management, home renovation, college applications, fraud detection
+# Verticals to explore next: media production (video/music), college applications,
+# fraud detection, home renovation, music production, warehouse management
