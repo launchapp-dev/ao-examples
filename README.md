@@ -42,9 +42,9 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | story-writer | Creative | World-building → characters → plot → chapters → review | **building** | |
 | podcast-producer | Media | Research → script → show notes → social posts | **building** | |
 | supply-chain-monitor | Manufacturing | Supplier monitoring → disruption detection → response | **building** | |
-| threat-intel | Cybersecurity | IOC collection → enrichment → correlation → analyst briefs | **building** | |
-| data-pipeline | Data | Source discovery → schema → transforms → validation | **building** | |
-| grant-writer | Nonprofit | Opportunity scan → proposal draft → budget → review | **building** | |
+| threat-intel | Cybersecurity | IOC collection → enrichment → correlation → analyst briefs | queued | |
+| data-pipeline | Data | Source discovery → schema → transforms → validation | queued | |
+| grant-writer | Nonprofit | Opportunity scan → proposal draft → budget → review | queued | |
 | researcher | Research | Question → sources → analysis → synthesis → report | queued | |
 | research-analyst | Business | Market research → competitive analysis → trend reports | queued | |
 | biology-lab | Science | Literature → hypothesis → experiment design → paper | queued | |
