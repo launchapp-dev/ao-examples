@@ -49,7 +49,7 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [product-catalog](examples/product-catalog/) | E-Commerce | Product data → SEO descriptions → translation → QA | generated | [repo](https://github.com/launchapp-dev/ao-example-product-catalog) |
 | [curriculum-builder](examples/curriculum-builder/) | Education | Learning objectives → modules → content → quizzes → review | generated | [repo](https://github.com/launchapp-dev/ao-example-curriculum-builder) |
 | [research-analyst](examples/research-analyst/) | Business | Market research → competitive analysis → trend reports | generated | [repo](https://github.com/launchapp-dev/ao-example-research-analyst) |
-| biology-lab | Science | Literature → hypothesis → experiment design → paper | queued | |
+| [biology-lab](examples/biology-lab/) | Science | Literature → hypothesis → experiment design → paper | generated | [repo](https://github.com/launchapp-dev/ao-example-biology-lab) |
 | [devops-automator](examples/devops-automator/) | Infrastructure | Audit → IaC generation → security review → apply | generated | [repo](https://github.com/launchapp-dev/ao-example-devops-automator) |
 | [property-analyzer](examples/property-analyzer/) | Real Estate | Listing analysis → market comps → investment reports | generated | [repo](https://github.com/launchapp-dev/ao-example-property-analyzer) |
 | [patient-intake](examples/patient-intake/) | Healthcare | Form processing → triage → provider matching → scheduling | generated | [repo](https://github.com/launchapp-dev/ao-example-patient-intake) |
@@ -72,12 +72,12 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [game-narrative](examples/game-narrative/) | Gaming | World-building → dialogue trees → branching logic → continuity | generated | [repo](https://github.com/launchapp-dev/ao-example-game-narrative) |
 | support-triage | Customer Ops | Ticket classification → routing → response drafts → analytics | queued | |
 | [recipe-developer](examples/recipe-developer/) | Food | Nutritional targets → recipe generation → cost analysis → publish | generated | [repo](https://github.com/launchapp-dev/ao-example-recipe-developer) |
-| construction-tracker | Construction | Schedule tracking → delay detection → resource reallocation | queued | |
+| [construction-tracker](examples/construction-tracker/) | Construction | Schedule tracking → delay detection → resource reallocation | generated | [repo](https://github.com/launchapp-dev/ao-example-construction-tracker) |
 | immigration-tracker | Immigration | Eligibility → documents → filing → status tracking → RFEs | queued | |
 | content-moderator | Trust & Safety | AI classification → human review → appeals → analytics | queued | |
 | clinical-trial | Biotech | Protocol design → recruitment → monitoring → analysis → submission | queued | |
 
-*40 examples across 36 verticals — 34 generated, 6 queued. More added autonomously by the conductor every 30 minutes.*
+*40 examples across 36 verticals — 35 generated, 5 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 
