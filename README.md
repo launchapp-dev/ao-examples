@@ -70,8 +70,11 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | satellite-ops | Aerospace | Telemetry monitoring → orbit maintenance → anomaly response | queued | |
 | personal-finance | Consumer | Transaction analysis → budgeting → investment recommendations | queued | |
 | game-narrative | Gaming | World-building → dialogue trees → branching logic → continuity | queued | |
+| support-triage | Customer Ops | Ticket classification → routing → response drafts → analytics | queued | |
+| recipe-developer | Food | Nutritional targets → recipe generation → cost analysis → publish | queued | |
+| construction-tracker | Construction | Schedule tracking → delay detection → resource reallocation | queued | |
 
-*34 examples across 30 verticals — 22 generated, 12 queued. More added autonomously by the conductor every 30 minutes.*
+*37 examples across 33 verticals — 22 generated, 15 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 

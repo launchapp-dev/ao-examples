@@ -659,9 +659,63 @@ examples:
     status: queued
     notes: "Pipeline #24 from source material. Gaming is completely unrepresented. Narrative design is deeply creative yet requires rigorous logical consistency — perfect AO showcase."
 
+  # --- Customer Operations (new — conductor sweep 7, 2026-03-30) ---
+  - id: support-triage
+    name: "Support Ticket Triage & Resolution Pipeline"
+    vertical: customer-ops
+    description: "Customer support pipeline — classify incoming tickets, prioritize by urgency/impact, route to appropriate team, suggest response drafts, escalate stale tickets, generate support analytics dashboards, identify knowledge base gaps"
+    features_demonstrated:
+      - scheduled workflows (continuous ticket monitoring)
+      - decision contracts (priority: critical/high/medium/low, route: engineering/billing/product/general)
+      - multi-agent pipeline (classifier, responder, escalation manager, analyst)
+      - command phases (ticket ingestion and metrics scripts)
+      - output contracts (structured ticket assessments, analytics reports)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - web search (knowledge base lookup)
+    status: queued
+    notes: "Pipeline #81 from source material. Customer ops is completely unrepresented. Support triage is universally relevant and showcases complex routing decisions."
+
+  # --- Food & Restaurant (new — conductor sweep 7, 2026-03-30) ---
+  - id: recipe-developer
+    name: "Recipe Development & Nutrition Pipeline"
+    vertical: food
+    description: "Recipe development pipeline — define nutritional targets, source seasonal ingredients, generate recipe variations, calculate macros and cost per serving, allergen checking, kitchen testing protocol, food photography prompts, publish to recipe database"
+    features_demonstrated:
+      - multi-agent pipeline (nutritionist, chef, food scientist, photographer, publisher)
+      - phase routing (rework if nutrition targets not met)
+      - output contracts (structured recipe JSON with nutrition data)
+      - command phases (nutrition calculation scripts)
+      - web search MCP (ingredient sourcing, seasonal availability)
+    tools_needed:
+      - filesystem MCP
+      - web search
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #204 from source material. Food/restaurant is completely unrepresented. Recipe development combines creative and analytical workflows."
+
+  # --- Construction (new — conductor sweep 7, 2026-03-30) ---
+  - id: construction-tracker
+    name: "Construction Project Tracking Pipeline"
+    vertical: construction
+    description: "Construction project tracking — schedule task dependencies, track daily progress reports, flag schedule delays, manage resource reallocation, generate stakeholder reports, weather delay impact assessment, subcontractor coordination, punch list management"
+    features_demonstrated:
+      - scheduled workflows (daily progress monitoring)
+      - decision contracts (delay severity: on-track/minor-delay/major-delay/critical)
+      - multi-agent pipeline (project manager, scheduler, resource planner, reporter)
+      - command phases (schedule calculation, critical path analysis scripts)
+      - output contracts (structured progress reports, delay analyses)
+      - manual approval gates (change order approvals)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #142 from source material. Construction is completely unrepresented. Project tracking shows AO managing physical-world timelines with complex dependencies."
+
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
 #
-# Verticals to explore next: immigration/legal-personal, food/restaurant,
-# media production (video/music), customer ops, devops deep-dives
+# Verticals to explore next: immigration/legal-personal, media production (video/music),
+# ESG/sustainability reporting, customs/trade compliance, donor management
