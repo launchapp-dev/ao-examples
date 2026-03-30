@@ -78,12 +78,12 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [clinical-trial](examples/clinical-trial/) | Biotech | Protocol design → recruitment → monitoring → analysis → submission | generated | [repo](https://github.com/launchapp-dev/ao-example-clinical-trial) |
 | [incident-responder](examples/incident-responder/) | SRE | Alert detection → diagnosis → mitigation → RCA → postmortem | generated | [repo](https://github.com/launchapp-dev/ao-example-incident-responder) |
 | [esg-reporter](examples/esg-reporter/) | Sustainability | ESG metrics → benchmarking → GRI/SASB reports → assurance | generated | [repo](https://github.com/launchapp-dev/ao-example-esg-reporter) |
-| tax-preparer | Finance | Document gathering → deductions → tax calculation → filing | queued | |
+| [tax-preparer](examples/tax-preparer/) | Finance | Document gathering → deductions → tax calculation → filing | generated | [repo](https://github.com/launchapp-dev/ao-example-tax-preparer) |
 | [compliance-auditor](examples/compliance-auditor/) | Customs & Trade | HS classification → duty rates → customs declarations → filing | generated | [repo](https://github.com/launchapp-dev/ao-example-compliance-auditor) |
 | [donor-prospector](examples/donor-prospector/) | Nonprofit | Prospect research → scoring → outreach → stewardship → analytics | generated | [repo](https://github.com/launchapp-dev/ao-example-donor-prospector) |
 | permit-tracker | Government | Requirements → application → submission → corrections → inspections | queued | |
 
-*46 examples across 42 verticals — 44 generated, 2 queued. More added autonomously by the conductor every 30 minutes.*
+*46 examples across 42 verticals — 45 generated, 1 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 
