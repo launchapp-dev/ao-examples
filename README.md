@@ -52,7 +52,7 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | biology-lab | Science | Literature → hypothesis → experiment design → paper | queued | |
 | devops-automator | Infrastructure | Audit → IaC generation → security review → apply | queued | |
 | [property-analyzer](examples/property-analyzer/) | Real Estate | Listing analysis → market comps → investment reports | generated | [repo](https://github.com/launchapp-dev/ao-example-property-analyzer) |
-| patient-intake | Healthcare | Form processing → triage → provider matching → scheduling | **building** | |
+| [patient-intake](examples/patient-intake/) | Healthcare | Form processing → triage → provider matching → scheduling | generated | |
 | [hiring-pipeline](examples/hiring-pipeline/) | Business Ops | Job desc → screen → interview → feedback → offer | generated | [repo](https://github.com/launchapp-dev/ao-example-hiring-pipeline) |
 | event-producer | Entertainment | Concept → venue → talent → marketing → runsheet | queued | |
 | invoice-processor | Finance Ops | Extract → match PO → validate → approve → reconcile | queued | |
@@ -68,7 +68,7 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | pharmacovigilance | Pharma | Adverse event monitoring → causality → signal detection → regulatory | queued | |
 | athlete-tracker | Sports | Biometrics → workload trends → injury risk → load management | queued | |
 
-*31 examples across 27 verticals — 16 generated, 1 building, 14 queued. More added autonomously by the conductor every 30 minutes.*
+*31 examples across 27 verticals — 17 generated, 14 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 
