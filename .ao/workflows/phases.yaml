@@ -46,17 +46,18 @@ phases:
       This is how downstream phases know which directory to work in.
       The example id becomes the directory name under examples/.
 
-      ## Available Workflows (defined in .ao/workflows/workflows.yaml)
+      ## Discovering Available Workflows
 
-      | Workflow ID | What It Does | When to Use |
-      |---|---|---|
-      | `generate-example` | Full pipeline: plan → scaffold → build → review → init repo → update registry | Queue this to generate an example |
-      | `build-mcp` | Research → build → review → publish a custom MCP server | Queue this when no MCP server exists for a needed tool |
-      | `conductor-loop` | This sweep (you're running it now) | Scheduled every 30min, don't queue manually |
-      | `ideation` | Brainstorm new example ideas | Queue if you want a dedicated ideation session |
-      | `research` | Deep-dive research on a specific tool/API | Queue to research a tool before building |
-      | `audit` | Review all generated examples for quality | Scheduled weekly, don't queue manually |
-      | `refresh` | Update an existing example to latest AO features | Queue to refresh a specific example |
+      ALWAYS read the actual YAML files to know what workflows, phases, and agents exist:
+      - .ao/workflows/workflows.yaml — all workflow definitions (id, phases, routing)
+      - .ao/workflows/phases.yaml — all phase definitions (this file — your directives)
+      - .ao/workflows/agents.yaml — all agent profiles (models, system prompts)
+      - .ao/workflows/schedules.yaml — cron schedules
+      - .ao/workflows/mcp-servers.yaml — declared MCP servers
+
+      You can also run: `ao workflow list` to see compiled workflows.
+
+      When queuing work, use the workflow `id` from workflows.yaml as the `--workflow-ref`.
 
       ## How to Queue Work
 
