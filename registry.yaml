@@ -827,9 +827,65 @@ examples:
     status: queued
     notes: "Pipeline #282 from source material. Biotech/clinical is unrepresented despite pharma being covered. Clinical trials are the most complex regulated pipeline — perfect stress test for AO."
 
+  # --- SRE / DevOps (new — conductor sweep 9, 2026-03-30) ---
+  - id: incident-responder
+    name: "Incident Response Pipeline"
+    vertical: sre
+    description: "SRE incident response pipeline — detect alert from monitoring, diagnose root cause, apply mitigation, validate recovery, generate root cause analysis, write postmortem, create prevention tasks, update runbooks"
+    features_demonstrated:
+      - scheduled workflows (continuous alert monitoring)
+      - decision contracts (severity: SEV1/SEV2/SEV3/SEV4, status: mitigated/escalating/resolved)
+      - multi-agent pipeline (detector, diagnostician, mitigator, postmortem writer, prevention planner)
+      - command phases (health check scripts, metric queries, rollback commands)
+      - output contracts (structured RCA reports, postmortem documents)
+      - phase routing (escalate on SEV1, auto-resolve on SEV4)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - web search (status pages, documentation lookup)
+    status: queued
+    notes: "Pipeline #62 from source material. SRE/incident response is a killer DevOps use case — real-time operations with complex decision routing and escalation."
+
+  # --- Sustainability / ESG (new — conductor sweep 9, 2026-03-30) ---
+  - id: esg-reporter
+    name: "ESG Compliance Reporting Pipeline"
+    vertical: sustainability
+    description: "ESG reporting pipeline — collect environmental/social/governance metrics across departments, validate data quality, benchmark against industry standards, calculate carbon footprint, generate GRI/SASB-aligned reports, assurance review, publish to stakeholders"
+    features_demonstrated:
+      - scheduled workflows (quarterly data collection cycles)
+      - multi-agent pipeline (data collector, validator, analyst, benchmarker, report writer, reviewer)
+      - command phases (metric calculation scripts, benchmarking tools)
+      - output contracts (structured ESG metrics JSON, GRI-aligned reports)
+      - decision contracts (data quality: complete/incomplete/anomalous)
+      - manual approval gates (CFO sign-off on published reports)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - web search (industry benchmarks, regulatory frameworks)
+    status: queued
+    notes: "Pipeline #174 from source material. ESG/sustainability is trending and increasingly mandatory. Reporting frameworks (GRI, SASB, TCFD) are complex — perfect for multi-agent orchestration."
+
+  # --- Finance / Tax (new — conductor sweep 9, 2026-03-30) ---
+  - id: tax-preparer
+    name: "Tax Preparation Pipeline"
+    vertical: finance-personal
+    description: "Tax preparation pipeline — gather income documents (W-2, 1099, K-1), categorize deductions, apply tax rules, calculate federal/state liability, optimize for deductions and credits, generate filing-ready forms, review for accuracy, e-file preparation"
+    features_demonstrated:
+      - command phases (tax calculation scripts, form generation)
+      - multi-agent pipeline (document gatherer, categorizer, tax strategist, calculator, reviewer, filer)
+      - decision contracts (filing status optimization: itemize/standard, extension needed: yes/no)
+      - output contracts (structured tax return JSON, filing-ready forms)
+      - manual approval gates (taxpayer review before filing)
+      - sequential-thinking MCP for complex tax optimization
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #135 from source material. Tax preparation is universally relatable and shows AO handling complex rule-based logic with human approval gates."
+
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
 #
-# Verticals to explore next: immigration/legal-personal, media production (video/music),
-# ESG/sustainability reporting, customs/trade compliance, donor management
+# Verticals to explore next: media production (video/music), customs/trade compliance,
+# donor management, home renovation, college applications, fraud detection

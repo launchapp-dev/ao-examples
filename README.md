@@ -73,11 +73,14 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [support-triage](examples/support-triage/) | Customer Ops | Ticket classification → routing → response drafts → analytics | generated | [repo](https://github.com/launchapp-dev/ao-example-support-triage) |
 | [recipe-developer](examples/recipe-developer/) | Food | Nutritional targets → recipe generation → cost analysis → publish | generated | [repo](https://github.com/launchapp-dev/ao-example-recipe-developer) |
 | [construction-tracker](examples/construction-tracker/) | Construction | Schedule tracking → delay detection → resource reallocation | generated | [repo](https://github.com/launchapp-dev/ao-example-construction-tracker) |
-| immigration-tracker | Immigration | Eligibility → documents → filing → status tracking → RFEs | queued | |
 | [content-moderator](examples/content-moderator/) | Trust & Safety | AI classification → human review → appeals → analytics | generated | [repo](https://github.com/launchapp-dev/ao-example-content-moderator) |
+| immigration-tracker | Immigration | Eligibility → documents → filing → status tracking → RFEs | queued | |
 | clinical-trial | Biotech | Protocol design → recruitment → monitoring → analysis → submission | queued | |
+| incident-responder | SRE | Alert detection → diagnosis → mitigation → RCA → postmortem | queued | |
+| esg-reporter | Sustainability | ESG metrics → benchmarking → GRI/SASB reports → assurance | queued | |
+| tax-preparer | Finance | Document gathering → deductions → tax calculation → filing | queued | |
 
-*40 examples across 36 verticals — 37 generated, 3 queued. More added autonomously by the conductor every 30 minutes.*
+*43 examples across 39 verticals — 38 generated, 5 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 
