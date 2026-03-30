@@ -640,7 +640,10 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    started_at: 2026-03-30
+    generated_at: 2026-03-30
+    test_status: passed
     notes: "Pipeline #240 from source material. Aerospace is completely unrepresented. Satellite ops demonstrates AO managing mission-critical real-time systems."
 
   # --- Consumer / Personal Finance (new — conductor sweep 6, 2026-03-30) ---

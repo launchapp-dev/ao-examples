@@ -67,14 +67,14 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [network-fault-manager](examples/network-fault-manager/) | Telecom | Alarm correlation → diagnosis → dispatch → RCA report | generated | [repo](https://github.com/launchapp-dev/ao-example-network-fault-manager) |
 | [pharmacovigilance](examples/pharmacovigilance/) | Pharma | Adverse event monitoring → causality → signal detection → regulatory | generated | |
 | [athlete-tracker](examples/athlete-tracker/) | Sports | Biometrics → workload trends → injury risk → load management | generated | |
-| satellite-ops | Aerospace | Telemetry monitoring → orbit maintenance → anomaly response | queued | |
+| [satellite-ops](examples/satellite-ops/) | Aerospace | Telemetry monitoring → orbit maintenance → anomaly response | generated | |
 | [personal-finance](examples/personal-finance/) | Consumer | Transaction analysis → budgeting → investment recommendations | generated | [repo](https://github.com/launchapp-dev/ao-example-personal-finance) |
 | [game-narrative](examples/game-narrative/) | Gaming | World-building → dialogue trees → branching logic → continuity | generated | [repo](https://github.com/launchapp-dev/ao-example-game-narrative) |
 | support-triage | Customer Ops | Ticket classification → routing → response drafts → analytics | queued | |
 | recipe-developer | Food | Nutritional targets → recipe generation → cost analysis → publish | queued | |
 | construction-tracker | Construction | Schedule tracking → delay detection → resource reallocation | queued | |
 
-*37 examples across 33 verticals — 31 generated, 6 queued. More added autonomously by the conductor every 30 minutes.*
+*37 examples across 33 verticals — 32 generated, 5 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 
