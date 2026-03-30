@@ -40,9 +40,11 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: in-progress
+    status: generated
     started_at: 2026-03-30
-    notes: "Enqueued by conductor 2026-03-30."
+    generated_at: 2026-03-30
+    github_repo: launchapp-dev/ao-example-story-writer
+    notes: "Complete — multi-model creative pipeline with manual approval gates. GitHub repo created and public."
 
   # --- Finance ---
   - id: stock-trader
@@ -77,8 +79,9 @@ examples:
       - web search
       - sequential-thinking MCP
       - filesystem MCP
-    status: queued
-    notes: "Previous task cancelled. Re-queued by conductor 2026-03-30."
+    status: in-progress
+    started_at: 2026-03-30
+    notes: "Enqueued by conductor 2026-03-30 sweep."
 
   - id: research-analyst
     name: "Business Research Analyst"
@@ -139,7 +142,11 @@ examples:
       - output contracts (schema definitions)
     tools_needed:
       - filesystem MCP
-    status: queued
+    status: generated
+    started_at: 2026-03-30
+    generated_at: 2026-03-30
+    github_repo: launchapp-dev/ao-example-data-pipeline
+    notes: "Complete — ETL pipeline with command phases, schema inference, validation. GitHub repo created and public."
 
   # --- Media ---
   - id: podcast-producer
@@ -154,9 +161,11 @@ examples:
     tools_needed:
       - web search
       - filesystem MCP
-    status: in-progress
+    status: generated
     started_at: 2026-03-30
-    notes: "Enqueued by conductor 2026-03-30."
+    generated_at: 2026-03-30
+    github_repo: launchapp-dev/ao-example-podcast-producer
+    notes: "Complete — multi-agent podcast production with scheduled cadence. GitHub repo created and public."
 
   # --- Infrastructure ---
   - id: devops-automator
@@ -188,8 +197,11 @@ examples:
       - web search
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
-    notes: "Pipeline #181 from source material. Cybersecurity is high-value vertical with no existing examples."
+    status: generated
+    started_at: 2026-03-30
+    generated_at: 2026-03-30
+    github_repo: launchapp-dev/ao-example-threat-intel
+    notes: "Complete — scheduled OSINT monitoring, multi-agent threat analysis. GitHub repo created and public."
 
   # --- Real Estate (new — conductor ideation 2026-03-30) ---
   - id: property-analyzer
@@ -220,8 +232,9 @@ examples:
     tools_needed:
       - filesystem MCP
       - web search (competitor research)
-    status: queued
-    notes: "Pipeline #104 from source material. E-commerce is high-demand vertical."
+    status: in-progress
+    started_at: 2026-03-30
+    notes: "Enqueued by conductor 2026-03-30 sweep. E-commerce is high-demand vertical."
 
   # --- Healthcare (new — conductor ideation 2026-03-30) ---
   - id: patient-intake
@@ -254,8 +267,9 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
       - web search (reference material)
-    status: queued
-    notes: "Pipeline #121 from source material. Education is universally relatable and unrepresented."
+    status: in-progress
+    started_at: 2026-03-30
+    notes: "Enqueued by conductor 2026-03-30 sweep. Education is universally relatable."
 
   # --- HR / Business Operations (new — conductor ideation 2026-03-30) ---
   - id: hiring-pipeline
@@ -289,9 +303,11 @@ examples:
       - web search
       - filesystem MCP
       - sequential-thinking MCP
-    status: in-progress
+    status: generated
     started_at: 2026-03-30
-    notes: "Pipeline #152. Enqueued by conductor 2026-03-30."
+    generated_at: 2026-03-30
+    github_repo: launchapp-dev/ao-example-supply-chain-monitor
+    notes: "Complete — scheduled supplier monitoring, severity-based routing. GitHub repo created and public."
 
   # --- Sports & Entertainment (new — conductor ideation 2026-03-30) ---
   - id: event-producer
@@ -342,8 +358,11 @@ examples:
       - web search
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
-    notes: "Pipeline #94 from source material. Nonprofit is unrepresented. Grant writing is a universal pain point."
+    status: generated
+    started_at: 2026-03-30
+    generated_at: 2026-03-30
+    github_repo: launchapp-dev/ao-example-grant-writer
+    notes: "Complete — grant proposal pipeline with funder research, budget analysis, peer review. GitHub repo created and public."
 
   # --- Logistics (new — conductor ideation 2026-03-30 sweep 2) ---
   - id: fleet-dispatcher
@@ -379,9 +398,62 @@ examples:
     status: queued
     notes: "Inspired by pipelines #171-180 from source material. Energy/sustainability is unrepresented and timely."
 
+  # --- Travel & Hospitality (new — conductor ideation 2026-03-30 sweep 3) ---
+  - id: travel-planner
+    name: "AI Travel Itinerary Planner"
+    vertical: travel
+    description: "Travel planning pipeline — collect preferences, research destinations, build day-by-day itinerary, book accommodations research, budget estimation, packing list generation, emergency info compilation"
+    features_demonstrated:
+      - web search MCP (flights, hotels, activities, weather)
+      - multi-agent pipeline (researcher, planner, budget analyst, concierge)
+      - output contracts (structured itinerary JSON)
+      - phase routing (rework if budget exceeded)
+      - sequential-thinking MCP for trip optimization
+    tools_needed:
+      - web search
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipelines #251-260 from source material. Travel is universally relatable and completely unrepresented."
+
+  # --- Insurance (new — conductor ideation 2026-03-30 sweep 3) ---
+  - id: claims-processor
+    name: "Insurance Claims Processor"
+    vertical: insurance
+    description: "Insurance claims pipeline — intake claim, extract details from documents, verify policy coverage, assess damage, detect fraud indicators, calculate settlement, route for approval, generate correspondence"
+    features_demonstrated:
+      - decision contracts (approve/deny/investigate verdicts)
+      - multi-agent pipeline (intake agent, adjuster, fraud detector, settler, communicator)
+      - manual approval gates (supervisor review for high-value claims)
+      - command phases (document processing scripts)
+      - output contracts (structured claim assessment JSON)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #80 from source material. Insurance is a high-value vertical with complex decision logic."
+
+  # --- Agriculture (new — conductor ideation 2026-03-30 sweep 3) ---
+  - id: crop-monitor
+    name: "Crop Health Monitoring Pipeline"
+    vertical: agriculture
+    description: "Crop monitoring pipeline — ingest field data, analyze vegetation health indicators, detect disease/pest patterns, generate treatment recommendations, dispatch field operations, track outcomes"
+    features_demonstrated:
+      - scheduled workflows (daily field monitoring)
+      - command phases (data ingestion and analysis scripts)
+      - decision contracts (treatment urgency verdicts)
+      - multi-agent pipeline (data analyst, agronomist, dispatcher, reporter)
+      - output contracts (structured field reports with treatment plans)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - web search (pest databases, weather data)
+    status: queued
+    notes: "Pipeline #201 from source material. Agriculture shows AO managing physical-world production systems."
+
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
 #
-# Verticals to explore next: government, agriculture, automotive,
-# telecom, aerospace, travel, insurance, pharmaceutical, personal/consumer
+# Verticals to explore next: government, automotive, telecom,
+# aerospace, pharmaceutical, personal/consumer, advertising
