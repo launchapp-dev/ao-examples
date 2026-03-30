@@ -218,8 +218,9 @@ examples:
     tools_needed:
       - web search
       - filesystem MCP
-    status: queued
-    notes: "Pipeline #141-150 from source material. Real estate is completely unrepresented."
+    status: in-progress
+    started_at: 2026-03-30
+    notes: "Pipeline #141-150 from source material. Building now."
 
   # --- E-Commerce (new — conductor ideation 2026-03-30) ---
   - id: product-catalog
@@ -254,8 +255,9 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
-    notes: "Pipeline #111 from source material. Healthcare is high-value, completely unrepresented vertical."
+    status: in-progress
+    started_at: 2026-03-30
+    notes: "Pipeline #111 from source material. Building now."
 
   # --- Education (new — conductor ideation 2026-03-30) ---
   - id: curriculum-builder
@@ -291,8 +293,9 @@ examples:
     tools_needed:
       - filesystem MCP
       - web search (job market research)
-    status: queued
-    notes: "Pipeline #96 from source material. Universal business process everyone understands."
+    status: in-progress
+    started_at: 2026-03-30
+    notes: "Pipeline #96 from source material. Building now."
 
   # --- Manufacturing / Supply Chain (new — conductor ideation 2026-03-30) ---
   - id: supply-chain-monitor
@@ -419,8 +422,9 @@ examples:
       - web search
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
-    notes: "Pipelines #251-260 from source material. Travel is universally relatable and completely unrepresented."
+    status: in-progress
+    started_at: 2026-03-30
+    notes: "Pipelines #251-260 from source material. Building now."
 
   # --- Insurance (new — conductor ideation 2026-03-30 sweep 3) ---
   - id: claims-processor
@@ -436,8 +440,9 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
-    notes: "Pipeline #80 from source material. Insurance is a high-value vertical with complex decision logic."
+    status: in-progress
+    started_at: 2026-03-30
+    notes: "Pipeline #80 from source material. Building now."
 
   # --- Agriculture (new — conductor ideation 2026-03-30 sweep 3) ---
   - id: crop-monitor
