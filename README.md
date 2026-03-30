@@ -45,27 +45,30 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [threat-intel](examples/threat-intel/) | Cybersecurity | IOC collection → enrichment → correlation → analyst briefs | generated | [repo](https://github.com/launchapp-dev/ao-example-threat-intel) |
 | [supply-chain-monitor](examples/supply-chain-monitor/) | Manufacturing | Supplier monitoring → disruption detection → response | generated | [repo](https://github.com/launchapp-dev/ao-example-supply-chain-monitor) |
 | [grant-writer](examples/grant-writer/) | Nonprofit | Opportunity scan → proposal draft → budget → review | generated | [repo](https://github.com/launchapp-dev/ao-example-grant-writer) |
-| researcher | Research | Question → sources → analysis → synthesis → report | **building** | |
-| product-catalog | E-Commerce | Product data → SEO descriptions → translation → QA | **building** | |
-| curriculum-builder | Education | Learning objectives → modules → content → quizzes → review | **building** | |
+| [researcher](examples/researcher/) | Research | Question → sources → analysis → synthesis → report | generated | [repo](https://github.com/launchapp-dev/ao-example-researcher) |
+| [product-catalog](examples/product-catalog/) | E-Commerce | Product data → SEO descriptions → translation → QA | generated | [repo](https://github.com/launchapp-dev/ao-example-product-catalog) |
+| [curriculum-builder](examples/curriculum-builder/) | Education | Learning objectives → modules → content → quizzes → review | generated | [repo](https://github.com/launchapp-dev/ao-example-curriculum-builder) |
 | research-analyst | Business | Market research → competitive analysis → trend reports | queued | |
 | biology-lab | Science | Literature → hypothesis → experiment design → paper | queued | |
 | devops-automator | Infrastructure | Audit → IaC generation → security review → apply | queued | |
-| property-analyzer | Real Estate | Listing analysis → market comps → investment reports | queued | |
-| patient-intake | Healthcare | Form processing → triage → provider matching → scheduling | queued | |
-| hiring-pipeline | Business Ops | Job desc → screen → interview → feedback → offer | queued | |
+| property-analyzer | Real Estate | Listing analysis → market comps → investment reports | **building** | |
+| patient-intake | Healthcare | Form processing → triage → provider matching → scheduling | **building** | |
+| hiring-pipeline | Business Ops | Job desc → screen → interview → feedback → offer | **building** | |
 | event-producer | Entertainment | Concept → venue → talent → marketing → runsheet | queued | |
 | invoice-processor | Finance Ops | Extract → match PO → validate → approve → reconcile | queued | |
 | fleet-dispatcher | Logistics | Orders → route optimization → dispatch → exceptions → report | queued | |
 | energy-auditor | Energy | Consumption analysis → benchmarking → savings → audit report | queued | |
-| travel-planner | Travel | Destinations → itinerary → budget → packing list | queued | |
-| claims-processor | Insurance | Intake → coverage check → fraud detection → settlement | queued | |
+| travel-planner | Travel | Destinations → itinerary → budget → packing list | **building** | |
+| claims-processor | Insurance | Intake → coverage check → fraud detection → settlement | **building** | |
 | crop-monitor | Agriculture | Field data → disease detection → treatment → dispatch | queued | |
 | foia-processor | Government | Records request → search → redact → legal review → release | queued | |
 | ad-campaign | Advertising | Audience research → creative brief → copy → A/B test → launch | queued | |
 | vehicle-recall | Automotive | Defect pattern → VIN scope → notification → repair tracking | queued | |
+| network-fault-manager | Telecom | Alarm correlation → diagnosis → dispatch → RCA report | queued | |
+| pharmacovigilance | Pharma | Adverse event monitoring → causality → signal detection → regulatory | queued | |
+| athlete-tracker | Sports | Biometrics → workload trends → injury risk → load management | queued | |
 
-*28 examples across 25 verticals — 9 generated, 3 building, 16 queued. More added autonomously by the conductor every 30 minutes.*
+*31 examples across 27 verticals — 12 generated, 5 building, 14 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 
