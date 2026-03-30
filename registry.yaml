@@ -23,9 +23,8 @@ examples:
       - filesystem MCP
       - web search
     status: in-progress
-    task_id: TASK-001
-    workflow_id: d7300fc1-e0fc-4b2d-add5-8e68531e8d99
     started_at: 2026-03-30
+    notes: "Re-queued by conductor 2026-03-30. Enqueued via ao queue."
 
   - id: story-writer
     name: "Story Writer"
@@ -55,9 +54,8 @@ examples:
       - web search (market data)
       - filesystem MCP
     status: in-progress
-    task_id: TASK-003
-    workflow_id: 61bb399a-a54e-4741-a070-f62c12ebaac8
     started_at: 2026-03-30
+    notes: "Re-queued by conductor 2026-03-30. Enqueued via ao queue."
 
   # --- Research ---
   - id: researcher
@@ -73,10 +71,8 @@ examples:
       - web search
       - sequential-thinking MCP
       - filesystem MCP
-    status: in-progress
-    task_id: TASK-002
-    workflow_id: 6bf76ded-6117-49fe-9361-fa9caf7d2212
-    started_at: 2026-03-30
+    status: queued
+    notes: "Previous task cancelled. Re-queued by conductor 2026-03-30."
 
   - id: research-analyst
     name: "Business Research Analyst"
@@ -119,7 +115,9 @@ examples:
       - manual approval gate
     tools_needed:
       - filesystem MCP
-    status: queued
+    status: in-progress
+    started_at: 2026-03-30
+    notes: "Enqueued by conductor 2026-03-30."
 
   # --- Data ---
   - id: data-pipeline
@@ -215,10 +213,61 @@ examples:
     status: queued
     notes: "Pipeline #104 from source material. E-commerce is high-demand vertical."
 
+  # --- Healthcare (new — conductor ideation 2026-03-30) ---
+  - id: patient-intake
+    name: "Patient Intake & Triage Pipeline"
+    vertical: healthcare
+    description: "Patient intake automation — form processing, insurance verification, medical history review, triage severity scoring, provider matching, appointment scheduling"
+    features_demonstrated:
+      - decision contracts (triage severity verdicts)
+      - manual approval gates (provider sign-off)
+      - multi-agent pipeline (intake coordinator, triage nurse, scheduler)
+      - output contracts (structured patient intake JSON)
+      - filesystem MCP for document handling
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #111 from source material. Healthcare is high-value, completely unrepresented vertical."
+
+  # --- Education (new — conductor ideation 2026-03-30) ---
+  - id: curriculum-builder
+    name: "Curriculum & Course Builder"
+    vertical: education
+    description: "Curriculum generation pipeline — define learning objectives, design module structure, create lesson content, generate quizzes and exercises, peer review, publish course package"
+    features_demonstrated:
+      - multi-agent pipeline (instructional designer, content writer, quiz generator, reviewer)
+      - phase routing (rework on review failure)
+      - output contracts (structured curriculum JSON)
+      - sequential-thinking MCP for pedagogical planning
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - web search (reference material)
+    status: queued
+    notes: "Pipeline #121 from source material. Education is universally relatable and unrepresented."
+
+  # --- HR / Business Operations (new — conductor ideation 2026-03-30) ---
+  - id: hiring-pipeline
+    name: "Hiring Pipeline Automation"
+    vertical: business-ops
+    description: "End-to-end hiring pipeline — write job descriptions, screen resumes, generate interview questions, schedule interviews, collect feedback, produce hiring recommendation memos"
+    features_demonstrated:
+      - multi-agent pipeline (recruiter, screener, interviewer, hiring manager)
+      - decision contracts (hire/pass/next-round verdicts)
+      - manual approval gates (human hiring decision)
+      - output contracts (candidate evaluation reports)
+      - scheduled workflows (daily resume screening)
+    tools_needed:
+      - filesystem MCP
+      - web search (job market research)
+    status: queued
+    notes: "Pipeline #96 from source material. Universal business process everyone understands."
+
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
 #
-# Verticals to explore: healthcare, education, e-commerce, real estate,
-# manufacturing, government, energy, cybersecurity, agriculture, automotive,
-# telecom, aerospace, sports, travel, insurance, pharmaceutical, personal/consumer
+# Verticals to explore next: manufacturing, government, energy, agriculture,
+# automotive, telecom, aerospace, sports, travel, insurance, pharmaceutical,
+# nonprofit, logistics, personal/consumer
