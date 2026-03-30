@@ -54,9 +54,9 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [property-analyzer](examples/property-analyzer/) | Real Estate | Listing analysis → market comps → investment reports | generated | [repo](https://github.com/launchapp-dev/ao-example-property-analyzer) |
 | [patient-intake](examples/patient-intake/) | Healthcare | Form processing → triage → provider matching → scheduling | generated | |
 | [hiring-pipeline](examples/hiring-pipeline/) | Business Ops | Job desc → screen → interview → feedback → offer | generated | [repo](https://github.com/launchapp-dev/ao-example-hiring-pipeline) |
-| event-producer | Entertainment | Concept → venue → talent → marketing → runsheet | queued | |
+| [event-producer](examples/event-producer/) | Entertainment | Concept → venue → talent → marketing → runsheet | generated | |
 | invoice-processor | Finance Ops | Extract → match PO → validate → approve → reconcile | queued | |
-| fleet-dispatcher | Logistics | Orders → route optimization → dispatch → exceptions → report | queued | |
+| [fleet-dispatcher](examples/fleet-dispatcher/) | Logistics | Orders → route optimization → dispatch → exceptions → report | generated | |
 | [energy-auditor](examples/energy-auditor/) | Energy | Consumption analysis → benchmarking → savings → audit report | generated | |
 | [travel-planner](examples/travel-planner/) | Travel | Destinations → itinerary → budget → packing list | generated | [repo](https://github.com/launchapp-dev/ao-example-travel-planner) |
 | [claims-processor](examples/claims-processor/) | Insurance | Intake → coverage check → fraud detection → settlement | generated | [repo](https://github.com/launchapp-dev/ao-example-claims-processor) |
@@ -68,7 +68,7 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | pharmacovigilance | Pharma | Adverse event monitoring → causality → signal detection → regulatory | queued | |
 | athlete-tracker | Sports | Biometrics → workload trends → injury risk → load management | queued | |
 
-*31 examples across 27 verticals — 18 generated, 13 queued. More added autonomously by the conductor every 30 minutes.*
+*31 examples across 27 verticals — 21 generated, 10 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 

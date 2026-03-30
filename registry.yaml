@@ -358,7 +358,8 @@ examples:
       - output contracts (structured invoice JSON, payment instructions)
     tools_needed:
       - filesystem MCP
-    status: queued
+    status: generated
+    test_status: passed
     notes: "Pipeline #134 from source material. Universal business process, showcases command + agent phase mixing."
 
   # --- Nonprofit (new — conductor ideation 2026-03-30 sweep 2) ---
@@ -397,8 +398,10 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
     status: generated
+    started_at: 2026-03-30
+    generated_at: 2026-03-30
     test_status: passed
-    notes: "Pipeline #157 from source material. Logistics shows AO managing physical-world operations."
+    notes: "Complete — fleet dispatch pipeline with route optimization, exception handling, daily dispatch cycle. Pipeline #157 from source material."
 
   # --- Energy & Sustainability (new — conductor ideation 2026-03-30 sweep 2) ---
   - id: energy-auditor
