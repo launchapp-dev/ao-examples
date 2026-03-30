@@ -784,7 +784,9 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
       - web search (USCIS processing times, policy updates)
-    status: queued
+    status: generated
+    generated_at: 2026-03-30
+    test_status: passed
     notes: "Pipeline #294 from source material. Immigration/legal-personal is unrepresented. Case management with regulatory deadlines and document assembly is a perfect AO showcase."
 
   # --- Trust & Safety (new — conductor sweep 8, 2026-03-30) ---
