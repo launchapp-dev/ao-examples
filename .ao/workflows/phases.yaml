@@ -23,16 +23,24 @@ phases:
       3. Run `ao task list` — any tasks running, stuck, or completed?
       4. Handle completed tasks: update registry status to "generated"
       5. Handle stuck/failed tasks: investigate, re-queue if needed
-      6. Count how many tasks are currently queued/in-progress
-      7. If < 3 active tasks AND queued examples exist: enqueue top 1-2 using:
+      6. **VERIFY GITHUB REPOS** — for every example with status "generated":
+         a. Check if the remote repo exists: `gh repo view launchapp-dev/ao-example-<id> 2>&1`
+         b. If it doesn't exist, create it:
+            `cd examples/<id> && gh repo create launchapp-dev/ao-example-<id> --public --description "AO workflow example: <id>" --source=. --push`
+         c. If it exists but local is ahead of remote, push:
+            `cd examples/<id> && git push`
+         d. Verify the repo is public: `gh repo view launchapp-dev/ao-example-<id> --json visibility -q '.visibility'`
+            If private, make it public: `gh repo edit launchapp-dev/ao-example-<id> --visibility public`
+      7. Count how many tasks are currently queued/in-progress
+      8. If < 3 active tasks AND queued examples exist: enqueue top 1-2 using:
            ao queue enqueue --title "<example-id>" --description "<description from registry>" --workflow-ref generate-example
-      8. If all existing examples are generated or in-progress: IDEATE
+      9. If all existing examples are generated or in-progress: IDEATE
          - Come up with 2-3 new example ideas
          - Research what tools/MCP servers they'd need
          - Add them to registry.yaml with status: "queued"
          - Enqueue the highest-priority new idea
-      9. Update README.md examples table if any new examples were completed
-      10. Commit and push changes
+      10. Update README.md examples table if any new examples were completed
+      11. Commit and push changes
 
       IMPORTANT: The task title MUST be the example id (e.g. "blog-generator").
       This is how downstream phases know which directory to work in.
