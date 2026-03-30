@@ -824,7 +824,9 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
       - web search (clinicaltrials.gov, regulatory guidance)
-    status: queued
+    status: generated
+    generated_at: "2026-03-30"
+    test_status: passed
     notes: "Pipeline #282 from source material. Biotech/clinical is unrepresented despite pharma being covered. Clinical trials are the most complex regulated pipeline — perfect stress test for AO."
 
   # --- SRE / DevOps (new — conductor sweep 9, 2026-03-30) ---

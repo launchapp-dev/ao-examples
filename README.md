@@ -75,12 +75,12 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [construction-tracker](examples/construction-tracker/) | Construction | Schedule tracking → delay detection → resource reallocation | generated | [repo](https://github.com/launchapp-dev/ao-example-construction-tracker) |
 | [content-moderator](examples/content-moderator/) | Trust & Safety | AI classification → human review → appeals → analytics | generated | [repo](https://github.com/launchapp-dev/ao-example-content-moderator) |
 | immigration-tracker | Immigration | Eligibility → documents → filing → status tracking → RFEs | queued | |
-| clinical-trial | Biotech | Protocol design → recruitment → monitoring → analysis → submission | queued | |
+| [clinical-trial](examples/clinical-trial/) | Biotech | Protocol design → recruitment → monitoring → analysis → submission | generated | [repo](https://github.com/launchapp-dev/ao-example-clinical-trial) |
 | incident-responder | SRE | Alert detection → diagnosis → mitigation → RCA → postmortem | queued | |
 | esg-reporter | Sustainability | ESG metrics → benchmarking → GRI/SASB reports → assurance | queued | |
 | tax-preparer | Finance | Document gathering → deductions → tax calculation → filing | queued | |
 
-*43 examples across 39 verticals — 38 generated, 5 queued. More added autonomously by the conductor every 30 minutes.*
+*43 examples across 39 verticals — 39 generated, 4 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 
