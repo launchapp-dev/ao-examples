@@ -27,8 +27,15 @@ workflows:
             fail:
               target: plan-example
             advance:
-              target: init-example-repo
+              target: test-example
           max_rework_attempts: 3
+      - test-example:
+          on_verdict:
+            rework:
+              target: build-example
+            fail:
+              target: build-example
+          max_rework_attempts: 2
       - init-example-repo
       - update-registry
     post_success:
@@ -81,6 +88,53 @@ workflows:
         create_pr: true
         auto_merge: true
         cleanup_worktree: true
+
+  # ============================================================
+  # TESTING — validate examples actually work
+  # ============================================================
+  - id: test-example
+    name: "Test Example"
+    description: "Run full test suite on a single example repo"
+    phases:
+      - test-example:
+          on_verdict:
+            fail:
+              target: fix-example
+      - fix-example
+      - test-example:
+          on_verdict:
+            fail:
+              target: ""
+          max_rework_attempts: 2
+
+  - id: test-all
+    name: "Test All Examples"
+    description: "Run full test suite on all generated examples"
+    phases:
+      - test-all-examples
+
+  - id: test-and-fix
+    name: "Test and Fix Example"
+    description: "Test an example, fix if broken, retest"
+    phases:
+      - test-example:
+          on_verdict:
+            rework:
+              target: fix-example
+            fail:
+              target: fix-example
+      - fix-example
+      - test-example:
+          on_verdict:
+            rework:
+              target: fix-example
+          max_rework_attempts: 3
+
+  - id: test-mcp
+    name: "Test MCP Server"
+    description: "Run test suite on a custom MCP server"
+    phases:
+      - test-mcp-server
 
   # ============================================================
   # MAINTENANCE — audit and refresh existing examples

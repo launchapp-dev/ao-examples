@@ -566,6 +566,116 @@ phases:
       timeout_secs: 120
 
   # ============================================================
+  # TEST PHASES
+  # ============================================================
+
+  test-example:
+    mode: agent
+    agent: tester
+    directive: |
+      Test a single generated example repo.
+
+      The task title IS the example id (e.g. "blog-generator").
+      The example is at: examples/{{subject_title}}/
+
+      Run the full test suite:
+      1. File structure test — all required files exist
+      2. YAML syntax test — all YAML is valid
+      3. AO config compilation — `ao workflow config --project-root examples/{{subject_title}}/ 2>&1`
+      4. Cross-reference validation — agents ↔ phases ↔ workflows ↔ mcp-servers
+      5. Workflow list — `ao workflow list --project-root examples/{{subject_title}}/ 2>&1`
+      6. README quality — has quick start, agent list, features
+
+      Write results to: test-results/{{subject_title}}.md
+
+      If any critical test fails (config compilation, cross-refs), provide verdict: fail
+      with exact error messages and what needs fixing.
+      If all pass, verdict: advance.
+
+      Project root: /Users/samishukri/ao-examples
+    decision_contract:
+      required_fields:
+        - verdict
+        - reasoning
+    capabilities:
+      mutates_state: true
+      writes_files: true
+      requires_commit: true
+
+  test-all-examples:
+    mode: agent
+    agent: tester
+    directive: |
+      Test ALL generated example repos.
+
+      1. Read registry.yaml — find all examples with status "generated"
+      2. For each, run the full test suite:
+         - File structure, YAML syntax, AO config compilation, cross-refs, workflow list, README
+         - Run: `ao workflow config --project-root examples/<id>/ 2>&1` for each
+      3. Write individual results to test-results/<id>.md
+      4. Write a summary to test-results/summary.md with pass/fail per example
+      5. Update registry.yaml: add test_status "passed" or "failed" to each tested example
+      6. Commit changes
+
+      Project root: /Users/samishukri/ao-examples
+    capabilities:
+      mutates_state: true
+      writes_files: true
+      requires_commit: true
+
+  test-mcp-server:
+    mode: agent
+    agent: tester
+    directive: |
+      Test a custom MCP server.
+
+      The task title is "mcp-<tool-name>".
+      The MCP server is at: mcp-servers/<tool-name>/
+
+      Run tests:
+      1. package.json exists with @modelcontextprotocol/sdk dependency
+      2. src/index.ts exists and imports Server, StdioServerTransport
+      3. npm install succeeds
+      4. npx tsc --noEmit passes (type-check)
+      5. .env.example exists with required vars
+      6. README documents available tools and setup
+
+      Write results to: test-results/mcp-<tool-name>.md
+
+      Project root: /Users/samishukri/ao-examples
+    decision_contract:
+      required_fields:
+        - verdict
+        - reasoning
+    capabilities:
+      mutates_state: true
+      writes_files: true
+      requires_commit: true
+
+  fix-example:
+    mode: agent
+    agent: master-builder
+    directive: |
+      Fix a failing example based on test results.
+
+      The task title IS the example id.
+      Read the test results at: test-results/{{subject_title}}.md
+      Fix the issues identified by the tester.
+
+      Common fixes:
+      - Missing agent/phase/MCP server references
+      - Invalid model names
+      - Missing mcp-servers.yaml declarations
+      - Invalid on_verdict targets
+      - Missing required files
+
+      Project root: /Users/samishukri/ao-examples
+    capabilities:
+      mutates_state: true
+      writes_files: true
+      requires_commit: true
+
+  # ============================================================
   # MAINTENANCE PHASES
   # ============================================================
 
