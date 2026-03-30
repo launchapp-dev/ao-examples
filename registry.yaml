@@ -787,6 +787,7 @@ examples:
     status: generated
     generated_at: 2026-03-30
     test_status: passed
+    github_repo: launchapp-dev/ao-example-immigration-tracker
     notes: "Pipeline #294 from source material. Immigration/legal-personal is unrepresented. Case management with regulatory deadlines and document assembly is a perfect AO showcase."
 
   # --- Trust & Safety (new — conductor sweep 8, 2026-03-30) ---
@@ -829,6 +830,7 @@ examples:
     status: generated
     generated_at: "2026-03-30"
     test_status: passed
+    github_repo: launchapp-dev/ao-example-clinical-trial
     notes: "Pipeline #282 from source material. Biotech/clinical is unrepresented despite pharma being covered. Clinical trials are the most complex regulated pipeline — perfect stress test for AO."
 
   # --- SRE / DevOps (new — conductor sweep 9, 2026-03-30) ---
@@ -850,6 +852,7 @@ examples:
     status: generated
     generated_at: 2026-03-30
     test_status: passed
+    github_repo: launchapp-dev/ao-example-incident-responder
     notes: "Pipeline #62 from source material. SRE/incident response is a killer DevOps use case — real-time operations with complex decision routing and escalation."
 
   # --- Sustainability / ESG (new — conductor sweep 9, 2026-03-30) ---
@@ -869,7 +872,9 @@ examples:
       - sequential-thinking MCP
       - web search (industry benchmarks, regulatory frameworks)
     status: generated
+    generated_at: 2026-03-30
     test_status: passed
+    github_repo: launchapp-dev/ao-example-esg-reporter
     notes: "Pipeline #174 from source material. ESG/sustainability is trending and increasingly mandatory. Reporting frameworks (GRI, SASB, TCFD) are complex — perfect for multi-agent orchestration."
 
   # --- Finance / Tax (new — conductor sweep 9, 2026-03-30) ---
