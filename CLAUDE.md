@@ -52,8 +52,8 @@ Personal & Consumer.
 |---|---|---|
 | **conductor** | claude-opus-4-6 | Brain — ideates, researches, queues, manages everything |
 | **master-builder** | claude-sonnet-4-6 | Builds complete example repos |
-| **reviewer** | claude-haiku-4-5 | Validates quality before shipping |
-| **researcher** | claude-sonnet-4-6 | Deep-dives into tools, APIs, MCP servers |
+| **reviewer** | claude-sonnet-4-6 | Validates quality before shipping |
+| **researcher** | claude-haiku-4-5 | Deep-dives into tools, APIs, MCP servers |
 
 ## Rules
 

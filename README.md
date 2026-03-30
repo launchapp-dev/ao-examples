@@ -77,8 +77,8 @@ ao daemon start
 |---|---|---|
 | **conductor** | Opus | Brain — runs every 30min. Ideates, researches tools, queues tasks, manages everything |
 | **master-builder** | Sonnet | Builds complete example repos with .ao/ config, README, supporting files |
-| **reviewer** | Haiku | Validates quality — structure, correctness, showcase value |
-| **researcher** | Sonnet | Deep-dives into tools, APIs, MCP servers for new example ideas |
+| **reviewer** | Sonnet | Validates quality — structure, correctness, showcase value |
+| **researcher** | Haiku | Deep-dives into tools, APIs, MCP servers for new example ideas |
 
 ## Source Material
 

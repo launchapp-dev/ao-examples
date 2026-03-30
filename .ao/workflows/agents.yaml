@@ -197,7 +197,7 @@ agents:
       - **advance** — ships as-is, meets all structure/correctness and 4+ quality checks
       - **rework** — fixable issues, specify exactly what needs changing
       - **fail** — fundamentally flawed concept or execution, needs complete redo
-    model: claude-haiku-4-5
+    model: claude-sonnet-4-6
     tool: claude
     mcp_servers:
       - ao
@@ -238,7 +238,7 @@ agents:
       - Example use case for AO
       - Feasibility assessment (can this actually work?)
       - Required API keys or setup
-    model: claude-sonnet-4-6
+    model: claude-haiku-4-5
     tool: claude
     mcp_servers:
       - ao
