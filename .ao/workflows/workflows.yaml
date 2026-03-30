@@ -102,9 +102,6 @@ workflows:
               target: fix-example
       - fix-example
       - test-example:
-          on_verdict:
-            fail:
-              target: ""
           max_rework_attempts: 2
 
   - id: test-all
