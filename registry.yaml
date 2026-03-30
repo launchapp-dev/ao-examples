@@ -102,6 +102,7 @@ examples:
     started_at: 2026-03-30
     generated_at: 2026-03-30
     test_status: passed
+    github_repo: launchapp-dev/ao-example-research-analyst
     notes: "Complete — 6-agent pipeline (Haiku/Sonnet/Opus), 3-verdict quality gate with rework loops (revise→analyze-competitors, insufficient-data→collect-market-data), 3 workflows (weekly-intelligence/competitive-deep-dive/trend-report), weekly+quarterly cron schedules, web-search + sequential-thinking + filesystem MCPs, sample data for B2B SaaS industry."
 
   # --- Science ---
@@ -764,6 +765,7 @@ examples:
     status: generated
     generated_at: "2026-03-30"
     test_status: passed
+    github_repo: launchapp-dev/ao-example-construction-tracker
     notes: "Pipeline #142 from source material. Construction is completely unrepresented. Project tracking shows AO managing physical-world timelines with complex dependencies."
 
   # --- Immigration / Legal-Personal (new — conductor sweep 8, 2026-03-30) ---
@@ -800,7 +802,10 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: 2026-03-30
+    github_repo: launchapp-dev/ao-example-content-moderator
+    test_status: passed
     notes: "Pipeline #275 from source material. Trust & safety is completely unrepresented and highly timely. Content moderation showcases human-in-the-loop escalation patterns."
 
   # --- Biotech / Clinical (new — conductor sweep 8, 2026-03-30) ---
