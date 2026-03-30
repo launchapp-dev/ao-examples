@@ -719,6 +719,7 @@ examples:
       - sequential-thinking MCP
       - web search (knowledge base lookup)
     status: generated
+    test_status: passed
     started_at: 2026-03-30
     generated_at: 2026-03-30
     github_repo: launchapp-dev/ao-example-support-triage
