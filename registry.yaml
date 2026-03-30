@@ -362,6 +362,8 @@ examples:
       - filesystem MCP
     status: generated
     test_status: passed
+    started_at: 2026-03-30
+    generated_at: 2026-03-30
     notes: "Pipeline #134 from source material. Universal business process, showcases command + agent phase mixing."
 
   # --- Nonprofit (new — conductor ideation 2026-03-30 sweep 2) ---
