@@ -342,8 +342,10 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
     status: generated
+    started_at: 2026-03-30
+    generated_at: 2026-03-30
     test_status: passed
-    notes: "Pipeline #241 from source material. Entertainment is high-interest, completely unrepresented."
+    notes: "Complete — end-to-end event production pipeline with concept development, venue research, talent booking, marketing, runsheet. Multi-agent pipeline with manual approval gates, output contracts, phase routing, web search MCP."
 
   # --- Finance / Business Ops (new — conductor ideation 2026-03-30) ---
   - id: invoice-processor
