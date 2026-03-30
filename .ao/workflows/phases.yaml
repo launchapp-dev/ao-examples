@@ -32,7 +32,7 @@ phases:
          d. Verify the repo is public: `gh repo view launchapp-dev/ao-example-<id> --json visibility -q '.visibility'`
             If private, make it public: `gh repo edit launchapp-dev/ao-example-<id> --visibility public`
       7. Count how many tasks are currently queued/in-progress
-      8. If < 3 active tasks AND queued examples exist: enqueue top 1-2 using:
+      8. If < 10 active tasks AND queued examples exist: enqueue the next batch using:
            ao queue enqueue --title "<example-id>" --description "<description from registry>" --workflow-ref generate-example
       9. If all existing examples are generated or in-progress: IDEATE
          - Come up with 2-3 new example ideas

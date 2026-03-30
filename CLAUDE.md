@@ -315,4 +315,4 @@ ao-examples/
 - All MCP server repos are public under launchapp-dev org: mcp-<name>
 - Use `ao queue enqueue` to dispatch work, NOT `ao task create`
 - Task title = example id = directory name (this convention is critical)
-- Don't queue more than 3 tasks at a time
+- Don't queue more than 10 tasks in a single sweep

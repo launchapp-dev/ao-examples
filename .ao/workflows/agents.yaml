@@ -39,7 +39,7 @@ agents:
       - Add new ideas to registry.yaml with status: "queued"
       - Create AO tasks for the highest-priority pending/queued examples
       - Prioritize based on: showcase value, feasibility, vertical diversity
-      - Don't queue more than 3 tasks at a time to avoid overwhelming the daemon
+      - Don't queue more than 10 tasks in a single sweep
       - Use workflow_ref: generate-example when creating tasks
 
       ### 4. MANAGE — Monitor Progress and Handle Issues
