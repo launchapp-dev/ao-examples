@@ -218,9 +218,12 @@ examples:
     tools_needed:
       - web search
       - filesystem MCP
-    status: in-progress
+    status: generated
     started_at: 2026-03-30
-    notes: "Pipeline #141-150 from source material. Building now."
+    generated_at: 2026-03-30
+    test_status: passed
+    github_repo: launchapp-dev/ao-example-property-analyzer
+    notes: "Complete — real estate analysis pipeline with web search, scheduled workflows, multi-model routing, output contracts. GitHub repo created and public."
 
   # --- E-Commerce (new — conductor ideation 2026-03-30) ---
   - id: product-catalog
@@ -445,9 +448,10 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: in-progress
+    status: generated
+    test_status: passed
     started_at: 2026-03-30
-    notes: "Pipeline #80 from source material. Building now."
+    notes: "Pipeline #80 from source material. All tests passed 2026-03-30."
 
   # --- Agriculture (new — conductor ideation 2026-03-30 sweep 3) ---
   - id: crop-monitor
