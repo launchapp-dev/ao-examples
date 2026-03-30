@@ -182,7 +182,11 @@ examples:
     tools_needed:
       - filesystem MCP
       - github MCP
-    status: queued
+    status: generated
+    started_at: 2026-03-30
+    generated_at: 2026-03-30
+    github_repo: launchapp-dev/ao-example-devops-automator
+    notes: "Complete — infrastructure audit and automation pipeline with command phases, security review agent, manual approval gates. GitHub repo created and public."
 
   # --- Cybersecurity (new — conductor ideation 2026-03-30) ---
   - id: threat-intel

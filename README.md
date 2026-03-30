@@ -50,7 +50,7 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [curriculum-builder](examples/curriculum-builder/) | Education | Learning objectives → modules → content → quizzes → review | generated | [repo](https://github.com/launchapp-dev/ao-example-curriculum-builder) |
 | research-analyst | Business | Market research → competitive analysis → trend reports | queued | |
 | biology-lab | Science | Literature → hypothesis → experiment design → paper | queued | |
-| devops-automator | Infrastructure | Audit → IaC generation → security review → apply | queued | |
+| [devops-automator](examples/devops-automator/) | Infrastructure | Audit → IaC generation → security review → apply | generated | [repo](https://github.com/launchapp-dev/ao-example-devops-automator) |
 | [property-analyzer](examples/property-analyzer/) | Real Estate | Listing analysis → market comps → investment reports | generated | [repo](https://github.com/launchapp-dev/ao-example-property-analyzer) |
 | [patient-intake](examples/patient-intake/) | Healthcare | Form processing → triage → provider matching → scheduling | generated | [repo](https://github.com/launchapp-dev/ao-example-patient-intake) |
 | [hiring-pipeline](examples/hiring-pipeline/) | Business Ops | Job desc → screen → interview → feedback → offer | generated | [repo](https://github.com/launchapp-dev/ao-example-hiring-pipeline) |
@@ -74,7 +74,7 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | recipe-developer | Food | Nutritional targets → recipe generation → cost analysis → publish | queued | |
 | construction-tracker | Construction | Schedule tracking → delay detection → resource reallocation | queued | |
 
-*37 examples across 33 verticals — 24 generated, 13 queued. More added autonomously by the conductor every 30 minutes.*
+*37 examples across 33 verticals — 25 generated, 12 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 
