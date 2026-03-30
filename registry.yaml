@@ -911,7 +911,10 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
       - web search (tariff databases, restricted party lists)
-    status: queued
+    status: generated
+    generated_at: "2026-03-30"
+    github_repo: "https://github.com/launchapp-dev/ao-example-compliance-auditor"
+    test_status: passed
     notes: "Pipeline #160 from source material. Customs/trade compliance is completely unrepresented. Rule-heavy, multi-stakeholder process with regulatory filing."
 
   # --- Nonprofit / Fundraising (new — conductor sweep 10, 2026-03-30) ---
