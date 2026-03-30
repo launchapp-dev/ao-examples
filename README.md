@@ -36,16 +36,19 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 
 | Example | Vertical | What It Does | Status |
 |---|---|---|---|
-| [blog-generator](examples/blog-generator/) | Content | SEO research → outline → draft → edit → publish | queued |
+| [blog-generator](examples/blog-generator/) | Content | SEO research → outline → draft → edit → publish | **building** |
 | [story-writer](examples/story-writer/) | Creative | World-building → characters → plot → chapters → review | queued |
-| [stock-trader](examples/stock-trader/) | Finance | Market data → analysis → risk → signals → rebalancing | queued |
-| [researcher](examples/researcher/) | Research | Question → sources → analysis → synthesis → report | queued |
+| [stock-trader](examples/stock-trader/) | Finance | Market data → analysis → risk → signals → rebalancing | **building** |
+| [researcher](examples/researcher/) | Research | Question → sources → analysis → synthesis → report | **building** |
 | [research-analyst](examples/research-analyst/) | Business | Market research → competitive analysis → trend reports | queued |
 | [biology-lab](examples/biology-lab/) | Science | Literature → hypothesis → experiment design → paper | queued |
 | [legal-reviewer](examples/legal-reviewer/) | Legal | Clause extraction → risk flagging → compliance → redlines | queued |
 | [data-pipeline](examples/data-pipeline/) | Data | Source discovery → schema → transforms → validation | queued |
 | [podcast-producer](examples/podcast-producer/) | Media | Research → script → show notes → social posts | queued |
 | [devops-automator](examples/devops-automator/) | Infrastructure | Audit → IaC generation → security review → apply | queued |
+| [threat-intel](examples/threat-intel/) | Cybersecurity | IOC collection → enrichment → correlation → analyst briefs | queued |
+| [property-analyzer](examples/property-analyzer/) | Real Estate | Listing analysis → market comps → valuation → investment reports | queued |
+| [product-catalog](examples/product-catalog/) | E-Commerce | Product data → SEO descriptions → attributes → translation → QA | queued |
 
 *More examples are added autonomously by the conductor. See the full pipeline list: 300 use cases across 30 verticals.*
 

@@ -22,7 +22,10 @@ examples:
     tools_needed:
       - filesystem MCP
       - web search
-    status: queued
+    status: in-progress
+    task_id: TASK-001
+    workflow_id: d7300fc1-e0fc-4b2d-add5-8e68531e8d99
+    started_at: 2026-03-30
 
   - id: story-writer
     name: "Story Writer"
@@ -51,7 +54,10 @@ examples:
     tools_needed:
       - web search (market data)
       - filesystem MCP
-    status: queued
+    status: in-progress
+    task_id: TASK-003
+    workflow_id: 61bb399a-a54e-4741-a070-f62c12ebaac8
+    started_at: 2026-03-30
 
   # --- Research ---
   - id: researcher
@@ -67,7 +73,10 @@ examples:
       - web search
       - sequential-thinking MCP
       - filesystem MCP
-    status: queued
+    status: in-progress
+    task_id: TASK-002
+    workflow_id: 6bf76ded-6117-49fe-9361-fa9caf7d2212
+    started_at: 2026-03-30
 
   - id: research-analyst
     name: "Business Research Analyst"
@@ -155,6 +164,56 @@ examples:
       - filesystem MCP
       - github MCP
     status: queued
+
+  # --- Cybersecurity (new — conductor ideation 2026-03-30) ---
+  - id: threat-intel
+    name: "Threat Intelligence Pipeline"
+    vertical: cybersecurity
+    description: "Automated threat intelligence — collect IOCs from feeds, enrich with context, correlate across sources, prioritize by risk, generate analyst briefs, distribute to security team"
+    features_demonstrated:
+      - scheduled workflows (continuous monitoring)
+      - web search MCP (OSINT feeds)
+      - multi-agent pipeline (collector, enricher, analyst)
+      - output contracts (structured IOC reports)
+      - decision contracts (threat severity verdicts)
+    tools_needed:
+      - web search
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #181 from source material. Cybersecurity is high-value vertical with no existing examples."
+
+  # --- Real Estate (new — conductor ideation 2026-03-30) ---
+  - id: property-analyzer
+    name: "Property Listing Analyzer"
+    vertical: real-estate
+    description: "Real estate analysis pipeline — scrape listings, analyze market comparables, estimate fair value, generate investment reports, flag opportunities, track price changes"
+    features_demonstrated:
+      - web search MCP (listing data, market data)
+      - scheduled workflows (daily market scan)
+      - multi-model routing (fast scan vs deep analysis)
+      - output contracts (investment reports with structured data)
+    tools_needed:
+      - web search
+      - filesystem MCP
+    status: queued
+    notes: "Pipeline #141-150 from source material. Real estate is completely unrepresented."
+
+  # --- E-Commerce (new — conductor ideation 2026-03-30) ---
+  - id: product-catalog
+    name: "Product Catalog Enrichment"
+    vertical: e-commerce
+    description: "E-commerce catalog pipeline — ingest raw product data, generate SEO descriptions, extract attributes, create lifestyle image prompts, translate for markets, quality check"
+    features_demonstrated:
+      - multi-agent pipeline (writer, SEO optimizer, translator, QA reviewer)
+      - phase routing (rework on QA failure)
+      - output contracts (structured product JSON)
+      - batch processing patterns
+    tools_needed:
+      - filesystem MCP
+      - web search (competitor research)
+    status: queued
+    notes: "Pipeline #104 from source material. E-commerce is high-demand vertical."
 
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
