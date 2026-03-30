@@ -600,6 +600,7 @@ examples:
       - sequential-thinking MCP
       - web search (drug safety databases, literature monitoring)
     status: generated
+    generated_at: 2026-03-30
     test_status: passed
     notes: "Pipeline #284 from source material. Pharma is completely unrepresented. Pharmacovigilance is high-stakes, heavily regulated, multi-stakeholder."
 
