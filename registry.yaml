@@ -1,0 +1,113 @@
+# AO Example Registry
+# Each entry defines an example repo to generate and maintain
+
+examples:
+  - id: blog-generator
+    name: "Blog Generator"
+    vertical: content
+    description: "Autonomous blog content pipeline — research, outline, draft, edit, SEO optimize, publish"
+    features_demonstrated:
+      - multi-agent pipeline
+      - phase routing (rework on review failure)
+      - MCP servers (web search, filesystem)
+      - scheduled content generation
+    status: pending
+
+  - id: story-writer
+    name: "Story Writer"
+    vertical: creative
+    description: "Creative fiction pipeline — world-building, character development, plot outline, chapter drafting, continuity review, final edit"
+    features_demonstrated:
+      - agent memory across phases
+      - multi-model routing (creative vs analytical models)
+      - manual approval gates
+      - output contracts
+    status: pending
+
+  - id: researcher
+    name: "Research Agent"
+    vertical: research
+    description: "Deep research pipeline — question decomposition, source gathering, analysis, synthesis, citation, report generation"
+    features_demonstrated:
+      - web search MCP
+      - multi-phase analysis
+      - output contracts with structured JSON
+      - decision contracts (sufficient evidence verdict)
+    status: pending
+
+  - id: stock-trader
+    name: "Stock Analysis & Trading Signals"
+    vertical: finance
+    description: "Market analysis pipeline — data gathering, technical analysis, fundamental analysis, risk assessment, signal generation, portfolio rebalancing recommendations"
+    features_demonstrated:
+      - scheduled workflows (market hours cron)
+      - command phases (data fetching scripts)
+      - decision contracts (buy/hold/sell verdicts)
+      - multi-agent debate (bull vs bear analysts)
+    status: pending
+
+  - id: research-analyst
+    name: "Research Analyst"
+    vertical: business
+    description: "Business intelligence pipeline — market research, competitive analysis, trend identification, report writing, executive summary"
+    features_demonstrated:
+      - web search + sequential thinking MCP
+      - multi-phase pipeline
+      - output contracts (structured reports)
+      - scheduled weekly reports
+    status: pending
+
+  - id: biology-lab
+    name: "Biology Research Assistant"
+    vertical: science
+    description: "Scientific research pipeline — literature review, hypothesis generation, experiment design, data analysis protocol, paper drafting"
+    features_demonstrated:
+      - specialized agent roles (literature reviewer, statistician, writer)
+      - manual gates (human researcher approval)
+      - output contracts (structured experiment designs)
+      - citation management
+    status: pending
+
+  - id: legal-reviewer
+    name: "Legal Document Reviewer"
+    vertical: legal
+    description: "Contract review pipeline — clause extraction, risk flagging, compliance checking, redline suggestions, summary memo"
+    features_demonstrated:
+      - filesystem MCP
+      - decision contracts (risk level verdicts)
+      - multi-agent review (compliance, risk, business terms)
+      - manual approval gate
+    status: pending
+
+  - id: data-pipeline
+    name: "Data Pipeline Orchestrator"
+    vertical: data
+    description: "ETL pipeline — source discovery, schema inference, transformation logic, validation rules, pipeline code generation, test generation"
+    features_demonstrated:
+      - command phases (run scripts, validate output)
+      - agent + command phase mixing
+      - retry policies
+      - output contracts (schema definitions)
+    status: pending
+
+  - id: podcast-producer
+    name: "Podcast Producer"
+    vertical: media
+    description: "Podcast production pipeline — topic research, script writing, show notes, social media posts, SEO metadata"
+    features_demonstrated:
+      - multi-agent pipeline (researcher, writer, social media manager)
+      - workflow composition (sub-workflows)
+      - scheduled production cadence
+      - post-success hooks
+    status: pending
+
+  - id: devops-automator
+    name: "DevOps Automator"
+    vertical: infrastructure
+    description: "Infrastructure pipeline — audit current setup, identify improvements, generate IaC, review security, apply changes"
+    features_demonstrated:
+      - command phases (terraform, docker, kubectl)
+      - security review agent
+      - manual approval gates (before apply)
+      - tools allowlist
+    status: pending

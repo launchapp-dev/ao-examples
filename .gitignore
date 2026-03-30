@@ -1,0 +1,12 @@
+# Nested example repos have their own git history
+examples/*/.git
+
+# OS
+.DS_Store
+
+# Node (if any examples use it)
+node_modules/
+
+# AO runtime
+.ao/runs/
+.ao/cache/

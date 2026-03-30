@@ -1,0 +1,146 @@
+phases:
+  # --- Example Generation Pipeline ---
+
+  plan-example:
+    mode: agent
+    agent: example-architect
+    directive: |
+      Design a complete AO example repo for the given vertical.
+
+      1. Read registry.yaml for the example specification (id, vertical, description, features_demonstrated)
+      2. Plan the agent roles — who does what, which model each uses
+      3. Plan the phase pipeline — what steps the workflow goes through
+      4. Plan the workflow routing — rework loops, decision points, approval gates
+      5. Plan MCP servers and integrations needed
+      6. Plan the README structure
+
+      Output a structured plan document that the builder can follow exactly.
+    capabilities:
+      mutates_state: false
+
+  scaffold-example:
+    mode: command
+    directive: "Create the directory structure for the new example"
+    command:
+      program: bash
+      args:
+        - "-c"
+        - |
+          EXAMPLE_ID="${AO_TASK_TITLE:-unknown}"
+          EXAMPLE_DIR="examples/${EXAMPLE_ID}"
+          mkdir -p "${EXAMPLE_DIR}/.ao/workflows"
+          echo "Scaffolded ${EXAMPLE_DIR}"
+      cwd_mode: project_root
+      timeout_secs: 30
+
+  build-example:
+    mode: agent
+    agent: example-builder
+    directive: |
+      Implement the example repo based on the architect's plan from the previous phase.
+
+      Create all files in the example directory under examples/<example-id>/:
+      - .ao/workflows/agents.yaml
+      - .ao/workflows/phases.yaml
+      - .ao/workflows/workflows.yaml
+      - .ao/workflows/schedules.yaml (if the plan includes scheduled workflows)
+      - README.md
+      - CLAUDE.md
+      - Any supporting files from the plan
+
+      Make it complete and runnable. No placeholders, no TODOs.
+    capabilities:
+      mutates_state: true
+      writes_files: true
+      requires_commit: true
+
+  review-example:
+    mode: agent
+    agent: example-reviewer
+    directive: |
+      Review the generated example repo for completeness, correctness, and quality.
+
+      Check:
+      1. All required files exist in examples/<example-id>/
+      2. YAML is valid — agents referenced in phases exist, phases referenced in workflows exist
+      3. System prompts are real and useful
+      4. README clearly explains the use case and AO features demonstrated
+      5. The example is self-contained and could be cloned independently
+      6. At least one non-trivial AO feature is demonstrated (not just a linear pipeline)
+
+      Provide a verdict: advance (ship it), rework (needs fixes), or fail (redesign needed).
+    decision_contract:
+      required_fields:
+        - verdict
+        - reasoning
+    capabilities:
+      mutates_state: false
+
+  init-example-repo:
+    mode: command
+    directive: "Initialize the example as a standalone git repo"
+    command:
+      program: bash
+      args:
+        - "-c"
+        - |
+          EXAMPLE_ID="${AO_TASK_TITLE:-unknown}"
+          EXAMPLE_DIR="examples/${EXAMPLE_ID}"
+          cd "${EXAMPLE_DIR}"
+          git init
+          git add -A
+          git commit -m "Initial AO example: ${EXAMPLE_ID}"
+          echo "Initialized git repo for ${EXAMPLE_ID}"
+      cwd_mode: project_root
+      timeout_secs: 30
+
+  update-registry:
+    mode: agent
+    agent: registry-updater
+    directive: |
+      Update registry.yaml to mark the current example as "generated".
+      Change the status field from "pending" to "generated" for the example
+      that was just built and reviewed.
+    capabilities:
+      mutates_state: true
+      writes_files: true
+      requires_commit: true
+
+  # --- Batch Generation ---
+
+  pick-next-example:
+    mode: agent
+    agent: registry-updater
+    directive: |
+      Read registry.yaml and find the next example with status: pending.
+      Create an AO task for it with the example id as the task title.
+      If no pending examples remain, report that all examples are generated.
+    capabilities:
+      mutates_state: false
+
+  # --- Refresh Pipeline ---
+
+  audit-example:
+    mode: agent
+    agent: example-reviewer
+    directive: |
+      Audit an existing generated example against the current AO workflow schema.
+      Check if any YAML fields are outdated or if new features should be demonstrated.
+      Provide a verdict: advance (still good) or rework (needs update).
+    decision_contract:
+      required_fields:
+        - verdict
+        - reasoning
+    capabilities:
+      mutates_state: false
+
+  refresh-example:
+    mode: agent
+    agent: example-builder
+    directive: |
+      Update the example repo to use the latest AO workflow schema and features.
+      Only change what needs updating — don't rewrite working files unnecessarily.
+    capabilities:
+      mutates_state: true
+      writes_files: true
+      requires_commit: true
