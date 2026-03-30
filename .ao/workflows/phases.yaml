@@ -46,7 +46,44 @@ phases:
       This is how downstream phases know which directory to work in.
       The example id becomes the directory name under examples/.
 
-      IMPORTANT: Use `ao queue enqueue` to queue work, NOT `ao task create`.
+      ## Available Workflows (defined in .ao/workflows/workflows.yaml)
+
+      | Workflow ID | What It Does | When to Use |
+      |---|---|---|
+      | `generate-example` | Full pipeline: plan → scaffold → build → review → init repo → update registry | Queue this to generate an example |
+      | `build-mcp` | Research → build → review → publish a custom MCP server | Queue this when no MCP server exists for a needed tool |
+      | `conductor-loop` | This sweep (you're running it now) | Scheduled every 30min, don't queue manually |
+      | `ideation` | Brainstorm new example ideas | Queue if you want a dedicated ideation session |
+      | `research` | Deep-dive research on a specific tool/API | Queue to research a tool before building |
+      | `audit` | Review all generated examples for quality | Scheduled weekly, don't queue manually |
+      | `refresh` | Update an existing example to latest AO features | Queue to refresh a specific example |
+
+      ## How to Queue Work
+
+      ALWAYS use `ao queue enqueue`, NEVER use `ao task create`.
+
+      ```bash
+      # Queue an example to be generated
+      ao queue enqueue --title "blog-generator" --description "Generate blog-generator example" --workflow-ref generate-example
+
+      # Queue an MCP server to be built
+      ao queue enqueue --title "mcp-replicate" --description "Build MCP server wrapping Replicate API" --workflow-ref build-mcp
+
+      # Queue a research task
+      ao queue enqueue --title "research-elevenlabs" --description "Research ElevenLabs API for voice synthesis MCP" --workflow-ref research
+      ```
+
+      ## How to Check Status
+
+      ```bash
+      ao queue list          # What's queued
+      ao queue stats         # Queue statistics
+      ao task list           # All tasks and their status
+      ao daemon agents       # Active agents right now
+      ao workflow list       # All available workflows
+      ao errors list         # Any errors
+      ao now                 # Current work inbox
+      ```
 
       Be creative with ideas. Think about:
       - Replicate integration (image gen, video gen, audio)
