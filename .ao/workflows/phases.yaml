@@ -1,22 +1,93 @@
 phases:
-  # --- Example Generation Pipeline ---
+  # ============================================================
+  # CONDUCTOR PHASES — runs every 30 min
+  # ============================================================
+
+  conductor-sweep:
+    mode: agent
+    agent: conductor
+    directive: |
+      Run your 30-minute sweep. This is your main loop.
+
+      1. Read registry.yaml — check current state of all examples
+      2. Read the examples/ directory — what actually exists on disk?
+      3. Check ao task list — any tasks running, stuck, or completed?
+      4. Handle completed tasks: update registry status to "generated"
+      5. Handle stuck/failed tasks: investigate, re-queue if needed
+      6. Count how many tasks are currently queued/in-progress
+      7. If < 3 active tasks AND pending examples exist: create tasks for top 1-2
+      8. If all existing examples are generated or in-progress: IDEATE
+         - Come up with 2-3 new example ideas
+         - Research what tools/MCP servers they'd need
+         - Add them to registry.yaml with status: "queued"
+         - Create a task for the highest-priority new idea
+      9. Update README.md examples table if any new examples were completed
+      10. Commit and push registry.yaml changes
+
+      IMPORTANT: When creating tasks, use:
+        ao task create "<example-id>" --workflow generate-example
+
+      Be creative with ideas. Think about:
+      - Replicate integration (image gen, video gen, audio)
+      - Financial tools (stock APIs, crypto, portfolio management)
+      - Developer tools (GitHub automation, CI/CD, dependency updates)
+      - Content tools (social media, newsletter, SEO)
+      - Science tools (paper search, data analysis, visualization)
+      - Business tools (CRM, invoicing, reporting)
+      - Creative tools (music, art, writing, game design)
+      - Education tools (curriculum, quiz generation, tutoring)
+      - Healthcare (patient notes, drug interactions, scheduling)
+      - Real estate (listing analysis, market reports, property management)
+    capabilities:
+      mutates_state: true
+      writes_files: true
+      requires_commit: true
+
+  # ============================================================
+  # RESEARCH PHASES — conductor delegates research
+  # ============================================================
+
+  research-tools:
+    mode: agent
+    agent: researcher
+    directive: |
+      The conductor has asked you to research tools and integrations for a new example idea.
+
+      Read the task description for what to research. Investigate:
+      1. Does an MCP server exist for this tool? (check npm, GitHub)
+      2. What APIs are available? Are they free/paid?
+      3. What would the AO workflow look like?
+      4. Is this feasible as a standalone example?
+
+      Write your findings to research/<topic>.md so the conductor can review them.
+    capabilities:
+      mutates_state: true
+      writes_files: true
+
+  # ============================================================
+  # EXAMPLE GENERATION PIPELINE
+  # ============================================================
 
   plan-example:
     mode: agent
-    agent: example-architect
+    agent: conductor
     directive: |
-      Design a complete AO example repo for the given vertical.
+      You're planning a specific example. Read registry.yaml for this example's spec.
 
-      1. Read registry.yaml for the example specification (id, vertical, description, features_demonstrated)
-      2. Plan the agent roles — who does what, which model each uses
-      3. Plan the phase pipeline — what steps the workflow goes through
-      4. Plan the workflow routing — rework loops, decision points, approval gates
-      5. Plan MCP servers and integrations needed
-      6. Plan the README structure
+      Design the complete example:
+      1. Agent roles — who does what, which model
+      2. Phase pipeline — what steps, what order
+      3. Workflow routing — rework loops, decision points
+      4. MCP servers needed
+      5. Supporting files needed
+      6. README outline
 
-      Output a structured plan document that the builder can follow exactly.
+      Write the plan to examples/<example-id>/PLAN.md so the builder can follow it.
+      Also create the directory structure: examples/<example-id>/.ao/workflows/
     capabilities:
-      mutates_state: false
+      mutates_state: true
+      writes_files: true
+      requires_commit: true
 
   scaffold-example:
     mode: command
@@ -29,26 +100,30 @@ phases:
           EXAMPLE_ID="${AO_TASK_TITLE:-unknown}"
           EXAMPLE_DIR="examples/${EXAMPLE_ID}"
           mkdir -p "${EXAMPLE_DIR}/.ao/workflows"
+          mkdir -p "${EXAMPLE_DIR}/output"
           echo "Scaffolded ${EXAMPLE_DIR}"
+          ls -la "${EXAMPLE_DIR}"
       cwd_mode: project_root
       timeout_secs: 30
 
   build-example:
     mode: agent
-    agent: example-builder
+    agent: master-builder
     directive: |
-      Implement the example repo based on the architect's plan from the previous phase.
+      Build the complete example repo. Read the plan from examples/<example-id>/PLAN.md
+      (if it exists) or read the registry entry for this example from registry.yaml.
 
-      Create all files in the example directory under examples/<example-id>/:
-      - .ao/workflows/agents.yaml
-      - .ao/workflows/phases.yaml
-      - .ao/workflows/workflows.yaml
-      - .ao/workflows/schedules.yaml (if the plan includes scheduled workflows)
-      - README.md
-      - CLAUDE.md
-      - Any supporting files from the plan
+      Create ALL files under examples/<example-id>/:
+      - .ao/workflows/agents.yaml (detailed agent profiles with real system prompts)
+      - .ao/workflows/phases.yaml (phase definitions with directives)
+      - .ao/workflows/workflows.yaml (workflow pipelines with routing)
+      - .ao/workflows/schedules.yaml (only if this example uses scheduled workflows)
+      - README.md (one-liner, workflow diagram, quick start, features list)
+      - CLAUDE.md (project context for agents)
+      - Any supporting files (config, templates, sample data)
 
-      Make it complete and runnable. No placeholders, no TODOs.
+      The example must be COMPLETE and RUNNABLE. No placeholders. No TODOs.
+      Someone should be able to clone just this directory and run `ao daemon start`.
     capabilities:
       mutates_state: true
       writes_files: true
@@ -56,19 +131,17 @@ phases:
 
   review-example:
     mode: agent
-    agent: example-reviewer
+    agent: reviewer
     directive: |
-      Review the generated example repo for completeness, correctness, and quality.
+      Review the example at examples/<example-id>/.
 
-      Check:
-      1. All required files exist in examples/<example-id>/
-      2. YAML is valid — agents referenced in phases exist, phases referenced in workflows exist
-      3. System prompts are real and useful
-      4. README clearly explains the use case and AO features demonstrated
-      5. The example is self-contained and could be cloned independently
-      6. At least one non-trivial AO feature is demonstrated (not just a linear pipeline)
+      Run through the full review checklist:
+      1. Structure — all required files exist
+      2. Correctness — YAML references resolve, models are valid
+      3. Quality — system prompts are detailed, variety of features
+      4. Showcase value — would this make someone want to try AO?
 
-      Provide a verdict: advance (ship it), rework (needs fixes), or fail (redesign needed).
+      Provide verdict: advance, rework (with specific fixes needed), or fail.
     decision_contract:
       required_fields:
         - verdict
@@ -86,60 +159,123 @@ phases:
         - |
           EXAMPLE_ID="${AO_TASK_TITLE:-unknown}"
           EXAMPLE_DIR="examples/${EXAMPLE_ID}"
-          cd "${EXAMPLE_DIR}"
-          git init
-          git add -A
-          git commit -m "Initial AO example: ${EXAMPLE_ID}"
-          echo "Initialized git repo for ${EXAMPLE_ID}"
+          if [ ! -d "${EXAMPLE_DIR}/.git" ]; then
+            cd "${EXAMPLE_DIR}"
+            git init
+            git add -A
+            git commit -m "Initial AO example: ${EXAMPLE_ID}
+
+          Generated by AO Examples — https://github.com/launchapp-dev/ao-examples
+          This is a standalone AO workflow example. Run with: ao daemon start"
+            echo "Initialized git repo for ${EXAMPLE_ID}"
+          else
+            echo "Git repo already exists for ${EXAMPLE_ID}, updating..."
+            cd "${EXAMPLE_DIR}"
+            git add -A
+            git diff --cached --quiet || git commit -m "Update AO example: ${EXAMPLE_ID}"
+          fi
       cwd_mode: project_root
-      timeout_secs: 30
+      timeout_secs: 60
 
   update-registry:
     mode: agent
-    agent: registry-updater
+    agent: conductor
     directive: |
-      Update registry.yaml to mark the current example as "generated".
-      Change the status field from "pending" to "generated" for the example
-      that was just built and reviewed.
+      The example has been built and reviewed successfully.
+
+      1. Update registry.yaml: change this example's status from "pending"/"queued" to "generated"
+      2. Add generated_at date
+      3. Update README.md: ensure the examples table includes this example with correct info
+      4. Commit changes
     capabilities:
       mutates_state: true
       writes_files: true
       requires_commit: true
 
-  # --- Batch Generation ---
+  # ============================================================
+  # IDEATION PIPELINE — conductor comes up with new ideas
+  # ============================================================
 
-  pick-next-example:
+  ideate:
     mode: agent
-    agent: registry-updater
+    agent: conductor
     directive: |
-      Read registry.yaml and find the next example with status: pending.
-      Create an AO task for it with the example id as the task title.
-      If no pending examples remain, report that all examples are generated.
+      Time to brainstorm new example ideas. This runs when the pipeline needs more work.
+
+      1. Read registry.yaml — what verticals and tools are already covered?
+      2. Identify gaps — what's missing? What would be impressive?
+      3. Research 3-5 new ideas. For each:
+         - What vertical/use case?
+         - What tools/APIs/MCP servers would it use?
+         - What AO features would it demonstrate?
+         - Is it feasible? (real tools, real APIs)
+         - Would it make someone say "I want to try AO"?
+      4. Add the best 2-3 to registry.yaml with status: "queued"
+      5. Commit registry.yaml
+
+      Think creatively. Some directions to explore:
+      - Tool integrations: Replicate, Hugging Face, Pinecone, Weaviate, Supabase
+      - API wrappers: Twitter/X, Reddit, Discord, Telegram bots
+      - File processing: PDF analysis, image manipulation, video editing
+      - Automation: email, calendar, project management, invoicing
+      - Domain-specific: medical records, legal contracts, financial reports
+      - Fun/viral: meme generator, AI art curator, music playlist creator
     capabilities:
-      mutates_state: false
+      mutates_state: true
+      writes_files: true
+      requires_commit: true
 
-  # --- Refresh Pipeline ---
-
-  audit-example:
+  research-integration:
     mode: agent
-    agent: example-reviewer
+    agent: researcher
     directive: |
-      Audit an existing generated example against the current AO workflow schema.
-      Check if any YAML fields are outdated or if new features should be demonstrated.
-      Provide a verdict: advance (still good) or rework (needs update).
-    decision_contract:
-      required_fields:
-        - verdict
-        - reasoning
+      Deep-dive research on a specific tool or integration for a proposed example.
+
+      Read the task description for what to investigate. Produce a research brief:
+      1. Tool overview — what it does, pricing, API availability
+      2. MCP server availability — does one exist? npm package name?
+      3. Integration approach — how would AO use this? (MCP server, command phase, API calls)
+      4. Example workflow sketch — rough phases and agents
+      5. Feasibility verdict — can this work as a standalone AO example?
+      6. Required setup — API keys, accounts, dependencies
+
+      Write findings to research/<tool-name>.md
     capabilities:
-      mutates_state: false
+      mutates_state: true
+      writes_files: true
+      requires_commit: true
+
+  # ============================================================
+  # MAINTENANCE PHASES
+  # ============================================================
+
+  audit-examples:
+    mode: agent
+    agent: reviewer
+    directive: |
+      Audit all generated examples for quality and freshness.
+
+      For each example with status: "generated" in registry.yaml:
+      1. Check if the .ao/ YAML is still valid against current schema
+      2. Check if README is accurate
+      3. Check if better AO features exist now that should be demonstrated
+      4. Flag any that need refreshing
+
+      Update registry.yaml with audit notes for any that need attention.
+    capabilities:
+      mutates_state: true
+      writes_files: true
+      requires_commit: true
 
   refresh-example:
     mode: agent
-    agent: example-builder
+    agent: master-builder
     directive: |
-      Update the example repo to use the latest AO workflow schema and features.
-      Only change what needs updating — don't rewrite working files unnecessarily.
+      Refresh an existing example to use the latest AO features and schema.
+
+      Read the audit notes in registry.yaml for what needs updating.
+      Only change what's necessary — don't rewrite working files.
+      Update the README if features or workflow changed.
     capabilities:
       mutates_state: true
       writes_files: true

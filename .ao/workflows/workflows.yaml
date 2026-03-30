@@ -1,10 +1,21 @@
 default_workflow_ref: generate-example
 
 workflows:
-  # Generate a single example repo from a registry entry
+  # ============================================================
+  # CONDUCTOR LOOP — runs every 30 min, fully autopilot
+  # ============================================================
+  - id: conductor-loop
+    name: "Conductor Loop"
+    description: "Master conductor sweep — ideates, researches, queues, manages the entire factory"
+    phases:
+      - conductor-sweep
+
+  # ============================================================
+  # EXAMPLE GENERATION — queued by conductor
+  # ============================================================
   - id: generate-example
     name: "Generate Example"
-    description: "Creates a complete AO example repo for a given vertical"
+    description: "Full pipeline: plan → scaffold → build → review → init repo → update registry"
     phases:
       - plan-example
       - scaffold-example
@@ -25,36 +36,45 @@ workflows:
         strategy: squash
         target_branch: main
         create_pr: true
-        auto_merge: false
+        auto_merge: true
         cleanup_worktree: true
 
-  # Batch generate all pending examples
-  - id: generate-all
-    name: "Generate All Pending Examples"
-    description: "Picks the next pending example from registry and generates it"
+  # ============================================================
+  # IDEATION — when the pipeline needs more ideas
+  # ============================================================
+  - id: ideation
+    name: "Ideation Pipeline"
+    description: "Brainstorm and research new example ideas, add to registry"
     phases:
-      - pick-next-example
+      - ideate
 
-  # Refresh an existing example to latest AO schema
-  - id: refresh-example
-    name: "Refresh Example"
-    description: "Updates an existing example to use latest AO features and schema"
+  # ============================================================
+  # RESEARCH — deep dive on a specific tool/integration
+  # ============================================================
+  - id: research
+    name: "Research Integration"
+    description: "Deep-dive research on a tool, API, or MCP server for a proposed example"
     phases:
-      - audit-example:
-          on_verdict:
-            advance:
-              target: ""
-            rework:
-              target: refresh-example-phase
-      - refresh-example-phase:
-          id: refresh-example-phase
-          mode: agent
-          agent: example-builder
-          directive: "Update the example based on audit findings"
+      - research-integration
+
+  # ============================================================
+  # MAINTENANCE — audit and refresh existing examples
+  # ============================================================
+  - id: audit
+    name: "Audit Examples"
+    description: "Review all generated examples for quality and freshness"
+    phases:
+      - audit-examples
+
+  - id: refresh
+    name: "Refresh Example"
+    description: "Update an existing example to latest AO features"
+    phases:
+      - refresh-example
       - review-example:
           on_verdict:
             rework:
-              target: refresh-example-phase
+              target: refresh-example
             advance:
               target: ""
           max_rework_attempts: 2

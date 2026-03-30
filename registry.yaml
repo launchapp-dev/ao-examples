@@ -1,17 +1,28 @@
 # AO Example Registry
-# Each entry defines an example repo to generate and maintain
+# Master list of all examples — managed by the conductor agent
+#
+# Statuses: queued → in-progress → generated | failed
+#
+# The conductor ideates new examples, adds them here, and queues tasks.
+# Source material: 300 pipeline use cases in /Users/samishukri/brain/knowledge/yc/100-pipelines.md
+#
+# Initial seed examples below. The conductor will add more autonomously.
 
 examples:
+  # --- Content & Creative ---
   - id: blog-generator
     name: "Blog Generator"
     vertical: content
-    description: "Autonomous blog content pipeline — research, outline, draft, edit, SEO optimize, publish"
+    description: "Autonomous blog content pipeline — SEO research, outline, draft, edit, images, publish, promote"
     features_demonstrated:
       - multi-agent pipeline
       - phase routing (rework on review failure)
       - MCP servers (web search, filesystem)
       - scheduled content generation
-    status: pending
+    tools_needed:
+      - filesystem MCP
+      - web search
+    status: queued
 
   - id: story-writer
     name: "Story Writer"
@@ -22,10 +33,29 @@ examples:
       - multi-model routing (creative vs analytical models)
       - manual approval gates
       - output contracts
-    status: pending
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
 
+  # --- Finance ---
+  - id: stock-trader
+    name: "Stock Analysis & Trading Signals"
+    vertical: finance
+    description: "Market analysis pipeline — data gathering, technical analysis, fundamental analysis, risk assessment, signal generation, portfolio rebalancing"
+    features_demonstrated:
+      - scheduled workflows (market hours cron)
+      - command phases (data fetching scripts)
+      - decision contracts (buy/hold/sell verdicts)
+      - multi-agent debate (bull vs bear analysts)
+    tools_needed:
+      - web search (market data)
+      - filesystem MCP
+    status: queued
+
+  # --- Research ---
   - id: researcher
-    name: "Research Agent"
+    name: "Deep Research Agent"
     vertical: research
     description: "Deep research pipeline — question decomposition, source gathering, analysis, synthesis, citation, report generation"
     features_demonstrated:
@@ -33,21 +63,14 @@ examples:
       - multi-phase analysis
       - output contracts with structured JSON
       - decision contracts (sufficient evidence verdict)
-    status: pending
-
-  - id: stock-trader
-    name: "Stock Analysis & Trading Signals"
-    vertical: finance
-    description: "Market analysis pipeline — data gathering, technical analysis, fundamental analysis, risk assessment, signal generation, portfolio rebalancing recommendations"
-    features_demonstrated:
-      - scheduled workflows (market hours cron)
-      - command phases (data fetching scripts)
-      - decision contracts (buy/hold/sell verdicts)
-      - multi-agent debate (bull vs bear analysts)
-    status: pending
+    tools_needed:
+      - web search
+      - sequential-thinking MCP
+      - filesystem MCP
+    status: queued
 
   - id: research-analyst
-    name: "Research Analyst"
+    name: "Business Research Analyst"
     vertical: business
     description: "Business intelligence pipeline — market research, competitive analysis, trend identification, report writing, executive summary"
     features_demonstrated:
@@ -55,8 +78,12 @@ examples:
       - multi-phase pipeline
       - output contracts (structured reports)
       - scheduled weekly reports
-    status: pending
+    tools_needed:
+      - web search
+      - sequential-thinking MCP
+    status: queued
 
+  # --- Science ---
   - id: biology-lab
     name: "Biology Research Assistant"
     vertical: science
@@ -66,8 +93,12 @@ examples:
       - manual gates (human researcher approval)
       - output contracts (structured experiment designs)
       - citation management
-    status: pending
+    tools_needed:
+      - web search (PubMed, arxiv)
+      - filesystem MCP
+    status: queued
 
+  # --- Legal ---
   - id: legal-reviewer
     name: "Legal Document Reviewer"
     vertical: legal
@@ -77,8 +108,11 @@ examples:
       - decision contracts (risk level verdicts)
       - multi-agent review (compliance, risk, business terms)
       - manual approval gate
-    status: pending
+    tools_needed:
+      - filesystem MCP
+    status: queued
 
+  # --- Data ---
   - id: data-pipeline
     name: "Data Pipeline Orchestrator"
     vertical: data
@@ -88,8 +122,11 @@ examples:
       - agent + command phase mixing
       - retry policies
       - output contracts (schema definitions)
-    status: pending
+    tools_needed:
+      - filesystem MCP
+    status: queued
 
+  # --- Media ---
   - id: podcast-producer
     name: "Podcast Producer"
     vertical: media
@@ -99,8 +136,12 @@ examples:
       - workflow composition (sub-workflows)
       - scheduled production cadence
       - post-success hooks
-    status: pending
+    tools_needed:
+      - web search
+      - filesystem MCP
+    status: queued
 
+  # --- Infrastructure ---
   - id: devops-automator
     name: "DevOps Automator"
     vertical: infrastructure
@@ -110,4 +151,15 @@ examples:
       - security review agent
       - manual approval gates (before apply)
       - tools allowlist
-    status: pending
+    tools_needed:
+      - filesystem MCP
+      - github MCP
+    status: queued
+
+# The conductor will add more examples here autonomously.
+# It should reference the 300 pipelines list for inspiration:
+# /Users/samishukri/brain/knowledge/yc/100-pipelines.md
+#
+# Verticals to explore: healthcare, education, e-commerce, real estate,
+# manufacturing, government, energy, cybersecurity, agriculture, automotive,
+# telecom, aerospace, sports, travel, insurance, pharmaceutical, personal/consumer

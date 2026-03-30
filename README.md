@@ -1,44 +1,94 @@
 # AO Examples
 
-Showcase repository demonstrating AO workflows across 10+ verticals. Each example is a standalone repo you can clone and run with `ao daemon start`.
+Autonomous factory that generates AO workflow examples across 30+ verticals. Runs fully on autopilot — an Opus conductor ideates, researches, builds, and ships example repos every 30 minutes.
+
+## How It Works
+
+```
+┌─────────────────────────────────────────────────────┐
+│                 CONDUCTOR (Opus)                     │
+│              runs every 30 minutes                   │
+│                                                      │
+│  1. Check progress on running tasks                  │
+│  2. Ideate new examples (tools, APIs, verticals)     │
+│  3. Research integrations (MCP servers, APIs)         │
+│  4. Queue new tasks → generate-example workflow       │
+│  5. Update registry + README                         │
+└──────────┬──────────────────────────────┬────────────┘
+           │                              │
+           ▼                              ▼
+┌─────────────────────┐    ┌─────────────────────────┐
+│  generate-example   │    │    research workflow     │
+│                     │    │                          │
+│  plan → scaffold    │    │  deep-dive on tools,     │
+│  → build → review   │    │  APIs, MCP servers       │
+│  → init repo        │    │                          │
+│  → update registry  │    │  writes to research/     │
+│                     │    │                          │
+│  (rework loop if    │    └─────────────────────────┘
+│   review fails)     │
+└─────────────────────┘
+```
 
 ## Examples
 
-| Example | Vertical | What It Does | AO Features |
+> This table is updated automatically by the conductor as examples are generated.
+
+| Example | Vertical | What It Does | Status |
 |---|---|---|---|
-| [blog-generator](examples/blog-generator/) | Content | Research, outline, draft, edit, SEO optimize, publish | Multi-agent pipeline, rework loops, web search MCP, schedules |
-| [story-writer](examples/story-writer/) | Creative | World-building, characters, plot, chapters, continuity review | Agent memory, multi-model routing, manual gates, output contracts |
-| [researcher](examples/researcher/) | Research | Question decomposition, source gathering, analysis, synthesis | Web search MCP, structured output, decision contracts |
-| [stock-trader](examples/stock-trader/) | Finance | Market data, technical analysis, risk assessment, signals | Scheduled workflows, command phases, decision contracts, multi-agent debate |
-| [research-analyst](examples/research-analyst/) | Business | Market research, competitive analysis, trend reports | Web search + sequential thinking MCP, scheduled reports |
-| [biology-lab](examples/biology-lab/) | Science | Literature review, hypothesis, experiment design, paper drafting | Specialized agents, manual gates, citations |
-| [legal-reviewer](examples/legal-reviewer/) | Legal | Clause extraction, risk flagging, compliance, redline suggestions | Filesystem MCP, decision contracts, multi-agent review |
-| [data-pipeline](examples/data-pipeline/) | Data | Source discovery, schema inference, transforms, validation | Command phases, retry policies, output contracts |
-| [podcast-producer](examples/podcast-producer/) | Media | Topic research, script writing, show notes, social posts | Workflow composition, scheduled production, post-success hooks |
-| [devops-automator](examples/devops-automator/) | Infrastructure | Audit, IaC generation, security review, apply | Command phases, manual approval gates, tools allowlist |
+| [blog-generator](examples/blog-generator/) | Content | SEO research → outline → draft → edit → publish | queued |
+| [story-writer](examples/story-writer/) | Creative | World-building → characters → plot → chapters → review | queued |
+| [stock-trader](examples/stock-trader/) | Finance | Market data → analysis → risk → signals → rebalancing | queued |
+| [researcher](examples/researcher/) | Research | Question → sources → analysis → synthesis → report | queued |
+| [research-analyst](examples/research-analyst/) | Business | Market research → competitive analysis → trend reports | queued |
+| [biology-lab](examples/biology-lab/) | Science | Literature → hypothesis → experiment design → paper | queued |
+| [legal-reviewer](examples/legal-reviewer/) | Legal | Clause extraction → risk flagging → compliance → redlines | queued |
+| [data-pipeline](examples/data-pipeline/) | Data | Source discovery → schema → transforms → validation | queued |
+| [podcast-producer](examples/podcast-producer/) | Media | Research → script → show notes → social posts | queued |
+| [devops-automator](examples/devops-automator/) | Infrastructure | Audit → IaC generation → security review → apply | queued |
+
+*More examples are added autonomously by the conductor. See the full pipeline list: 300 use cases across 30 verticals.*
 
 ## Quick Start
 
 ```bash
-# Clone a single example
+# Clone the repo
 git clone https://github.com/launchapp-dev/ao-examples
-cd ao-examples/examples/blog-generator
+cd ao-examples
 
-# Run it
+# Start the autopilot factory
 ao daemon start
+
+# Or generate a specific example manually
+ao task create "blog-generator" --workflow generate-example
 ```
 
-## How This Repo Works
-
-This repo uses AO to generate AO examples (yes, it's recursive). The meta-workflow in `.ao/workflows/` reads from `registry.yaml` and generates complete example repos.
+## Use a Generated Example
 
 ```bash
-# Generate the next pending example
-ao task create "blog-generator" --workflow generate-example
-
-# Generate all pending examples (daemon picks them up)
+# Each example is a standalone AO project
+cd examples/blog-generator
 ao daemon start
 ```
+
+## Agents
+
+| Agent | Model | Role |
+|---|---|---|
+| **conductor** | Opus | Brain — runs every 30min. Ideates, researches tools, queues tasks, manages everything |
+| **master-builder** | Sonnet | Builds complete example repos with .ao/ config, README, supporting files |
+| **reviewer** | Haiku | Validates quality — structure, correctness, showcase value |
+| **researcher** | Sonnet | Deep-dives into tools, APIs, MCP servers for new example ideas |
+
+## Source Material
+
+This factory draws from 300 documented pipeline use cases across 30 verticals:
+- Software Engineering, Media Production, Content & Publishing
+- Data & Analytics, DevOps, Legal, Customer Ops, Research, Science
+- E-Commerce, Healthcare, Education, Finance, Real Estate
+- Manufacturing, Government, Energy, Cybersecurity, Nonprofit
+- Logistics, Agriculture, Automotive, Telecom, Aerospace
+- Sports, Travel, Insurance, Advertising, Pharma, Consumer
 
 ## License
 
