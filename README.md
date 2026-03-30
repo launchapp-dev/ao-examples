@@ -62,19 +62,22 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [claims-processor](examples/claims-processor/) | Insurance | Intake → coverage check → fraud detection → settlement | generated | [repo](https://github.com/launchapp-dev/ao-example-claims-processor) |
 | [ad-campaign](examples/ad-campaign/) | Advertising | Audience research → creative brief → copy → A/B test → launch | generated | [repo](https://github.com/launchapp-dev/ao-example-ad-campaign) |
 | [crop-monitor](examples/crop-monitor/) | Agriculture | Field data → disease detection → treatment → dispatch | generated | [repo](https://github.com/launchapp-dev/ao-example-crop-monitor) |
-| [foia-processor](examples/foia-processor/) | Government | Records request → search → redact → legal review → release | generated | |
-| [vehicle-recall](examples/vehicle-recall/) | Automotive | Defect pattern → VIN scope → notification → repair tracking | generated | |
+| [foia-processor](examples/foia-processor/) | Government | Records request → search → redact → legal review → release | generated | [repo](https://github.com/launchapp-dev/ao-example-foia-processor) |
+| [vehicle-recall](examples/vehicle-recall/) | Automotive | Defect pattern → VIN scope → notification → repair tracking | generated | [repo](https://github.com/launchapp-dev/ao-example-vehicle-recall) |
 | [network-fault-manager](examples/network-fault-manager/) | Telecom | Alarm correlation → diagnosis → dispatch → RCA report | generated | [repo](https://github.com/launchapp-dev/ao-example-network-fault-manager) |
-| [pharmacovigilance](examples/pharmacovigilance/) | Pharma | Adverse event monitoring → causality → signal detection → regulatory | generated | |
-| [athlete-tracker](examples/athlete-tracker/) | Sports | Biometrics → workload trends → injury risk → load management | generated | |
-| [satellite-ops](examples/satellite-ops/) | Aerospace | Telemetry monitoring → orbit maintenance → anomaly response | generated | |
+| [pharmacovigilance](examples/pharmacovigilance/) | Pharma | Adverse event monitoring → causality → signal detection → regulatory | generated | [repo](https://github.com/launchapp-dev/ao-example-pharmacovigilance) |
+| [athlete-tracker](examples/athlete-tracker/) | Sports | Biometrics → workload trends → injury risk → load management | generated | [repo](https://github.com/launchapp-dev/ao-example-athlete-tracker) |
+| [satellite-ops](examples/satellite-ops/) | Aerospace | Telemetry monitoring → orbit maintenance → anomaly response | generated | [repo](https://github.com/launchapp-dev/ao-example-satellite-ops) |
 | [personal-finance](examples/personal-finance/) | Consumer | Transaction analysis → budgeting → investment recommendations | generated | [repo](https://github.com/launchapp-dev/ao-example-personal-finance) |
 | [game-narrative](examples/game-narrative/) | Gaming | World-building → dialogue trees → branching logic → continuity | generated | [repo](https://github.com/launchapp-dev/ao-example-game-narrative) |
 | support-triage | Customer Ops | Ticket classification → routing → response drafts → analytics | queued | |
 | recipe-developer | Food | Nutritional targets → recipe generation → cost analysis → publish | queued | |
 | construction-tracker | Construction | Schedule tracking → delay detection → resource reallocation | queued | |
+| immigration-tracker | Immigration | Eligibility → documents → filing → status tracking → RFEs | queued | |
+| content-moderator | Trust & Safety | AI classification → human review → appeals → analytics | queued | |
+| clinical-trial | Biotech | Protocol design → recruitment → monitoring → analysis → submission | queued | |
 
-*37 examples across 33 verticals — 32 generated, 5 queued. More added autonomously by the conductor every 30 minutes.*
+*40 examples across 36 verticals — 32 generated, 8 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 

@@ -518,6 +518,7 @@ examples:
     status: generated
     generated_at: 2026-03-30
     test_status: passed
+    github_repo: launchapp-dev/ao-example-foia-processor
     notes: "Pipeline #161 from source material. Government is completely unrepresented. FOIA is universally relevant and showcases complex decision routing. 6 agents, 3 workflows, decision contracts, manual approval gate, rework loops, scheduled monitoring."
 
   # --- Advertising / Marketing (new — conductor ideation 2026-03-30 sweep 4) ---
@@ -561,6 +562,7 @@ examples:
     status: generated
     generated_at: 2026-03-30
     test_status: passed
+    github_repo: launchapp-dev/ao-example-vehicle-recall
     notes: "Pipeline #211 from source material. Automotive is completely unrepresented. Recalls are high-stakes, multi-stakeholder processes."
 
   # --- Telecom (new — conductor sweep 5, 2026-03-30) ---
@@ -581,6 +583,7 @@ examples:
     status: generated
     generated_at: 2026-03-30
     test_status: passed
+    github_repo: launchapp-dev/ao-example-network-fault-manager
     notes: "Pipeline #224 from source material. Telecom is completely unrepresented. Network ops is a perfect AO use case — continuous monitoring + complex decision routing."
 
   # --- Pharmaceutical (new — conductor sweep 5, 2026-03-30) ---
@@ -602,6 +605,7 @@ examples:
     status: generated
     generated_at: 2026-03-30
     test_status: passed
+    github_repo: launchapp-dev/ao-example-pharmacovigilance
     notes: "Pipeline #284 from source material. Pharma is completely unrepresented. Pharmacovigilance is high-stakes, heavily regulated, multi-stakeholder."
 
   # --- Sports Analytics (new — conductor sweep 5, 2026-03-30) ---
@@ -623,6 +627,7 @@ examples:
     started_at: 2026-03-30
     generated_at: 2026-03-30
     test_status: passed
+    github_repo: launchapp-dev/ao-example-athlete-tracker
     notes: "Pipeline #242 from source material. Sports is completely unrepresented. Physical performance tracking shows AO beyond digital workflows."
 
   # --- Aerospace (new — conductor sweep 6, 2026-03-30) ---
@@ -644,6 +649,7 @@ examples:
     started_at: 2026-03-30
     generated_at: 2026-03-30
     test_status: passed
+    github_repo: launchapp-dev/ao-example-satellite-ops
     notes: "Pipeline #240 from source material. Aerospace is completely unrepresented. Satellite ops demonstrates AO managing mission-critical real-time systems."
 
   # --- Consumer / Personal Finance (new — conductor sweep 6, 2026-03-30) ---
@@ -742,6 +748,62 @@ examples:
       - sequential-thinking MCP
     status: queued
     notes: "Pipeline #142 from source material. Construction is completely unrepresented. Project tracking shows AO managing physical-world timelines with complex dependencies."
+
+  # --- Immigration / Legal-Personal (new — conductor sweep 8, 2026-03-30) ---
+  - id: immigration-tracker
+    name: "Immigration Case Management Pipeline"
+    vertical: immigration
+    description: "Immigration case management — assess visa eligibility, compile required documents, prepare application forms, legal review, file with USCIS/embassy, track case status, respond to RFEs (Requests for Evidence), deadline monitoring"
+    features_demonstrated:
+      - scheduled workflows (deadline tracking and status polling)
+      - decision contracts (eligibility: eligible/conditionally-eligible/ineligible)
+      - multi-agent pipeline (intake specialist, document compiler, immigration attorney, filer, tracker)
+      - manual approval gates (attorney sign-off before filing)
+      - output contracts (structured case packages, filing checklists)
+      - command phases (deadline calculation, status tracking scripts)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - web search (USCIS processing times, policy updates)
+    status: queued
+    notes: "Pipeline #294 from source material. Immigration/legal-personal is unrepresented. Case management with regulatory deadlines and document assembly is a perfect AO showcase."
+
+  # --- Trust & Safety (new — conductor sweep 8, 2026-03-30) ---
+  - id: content-moderator
+    name: "Content Moderation Pipeline"
+    vertical: trust-safety
+    description: "Content moderation at scale — ingest user-generated content, AI classification (spam/hate/violence/safe), confidence scoring, route low-confidence to human review, action (approve/remove/warn), handle appeals, generate moderation analytics reports"
+    features_demonstrated:
+      - scheduled workflows (continuous content queue monitoring)
+      - decision contracts (moderation verdict: approve/remove/warn/escalate)
+      - multi-agent pipeline (classifier, reviewer, appeals handler, policy analyst, reporter)
+      - command phases (content ingestion, metrics calculation scripts)
+      - output contracts (structured moderation decisions, analytics dashboards)
+      - phase routing (escalate on appeal, rework on policy ambiguity)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #275 from source material. Trust & safety is completely unrepresented and highly timely. Content moderation showcases human-in-the-loop escalation patterns."
+
+  # --- Biotech / Clinical (new — conductor sweep 8, 2026-03-30) ---
+  - id: clinical-trial
+    name: "Clinical Trial Management Pipeline"
+    vertical: biotech
+    description: "Clinical trial management — protocol design, site selection and qualification, patient recruitment screening, data collection and monitoring, adverse event tracking, interim analysis, final report generation, regulatory submission prep"
+    features_demonstrated:
+      - multi-agent pipeline (protocol designer, site manager, recruiter, monitor, statistician, regulatory writer)
+      - decision contracts (enrollment: accept/waitlist/exclude; interim analysis: continue/modify/stop)
+      - manual approval gates (IRB review, medical monitor sign-off, sponsor approval)
+      - scheduled workflows (weekly enrollment monitoring, monthly safety reviews)
+      - output contracts (structured CRFs, safety reports, statistical analysis plans)
+      - phase routing (stop trial on safety signal)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - web search (clinicaltrials.gov, regulatory guidance)
+    status: queued
+    notes: "Pipeline #282 from source material. Biotech/clinical is unrepresented despite pharma being covered. Clinical trials are the most complex regulated pipeline — perfect stress test for AO."
 
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
