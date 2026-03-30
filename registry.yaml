@@ -79,9 +79,11 @@ examples:
       - web search
       - sequential-thinking MCP
       - filesystem MCP
-    status: in-progress
+    status: generated
     started_at: 2026-03-30
-    notes: "Re-enqueued by conductor sweep 4. Previous task was cancelled."
+    generated_at: 2026-03-30
+    github_repo: launchapp-dev/ao-example-researcher
+    notes: "Complete — 6-agent pipeline (Haiku/Sonnet/Opus), 3-verdict sufficiency gate with rework loops, 3 workflows (deep/quick/extend), web-search + sequential-thinking + filesystem MCPs. GitHub repo created and public."
 
   - id: research-analyst
     name: "Business Research Analyst"
@@ -232,9 +234,11 @@ examples:
     tools_needed:
       - filesystem MCP
       - web search (competitor research)
-    status: in-progress
+    status: generated
     started_at: 2026-03-30
-    notes: "Re-enqueued by conductor sweep 4. E-commerce is high-demand vertical."
+    generated_at: 2026-03-30
+    github_repo: launchapp-dev/ao-example-product-catalog
+    notes: "Complete — multi-agent e-commerce catalog pipeline with SEO, translations, QA review. GitHub repo created and public."
 
   # --- Healthcare (new — conductor ideation 2026-03-30) ---
   - id: patient-intake
@@ -267,9 +271,11 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
       - web search (reference material)
-    status: in-progress
+    status: generated
     started_at: 2026-03-30
-    notes: "Re-enqueued by conductor sweep 4. Education is universally relatable."
+    generated_at: 2026-03-30
+    github_repo: launchapp-dev/ao-example-curriculum-builder
+    notes: "Complete — multi-agent curriculum pipeline with instructional design, quiz generation, peer review. GitHub repo created and public."
 
   # --- HR / Business Operations (new — conductor ideation 2026-03-30) ---
   - id: hiring-pipeline
@@ -505,9 +511,64 @@ examples:
     status: queued
     notes: "Pipeline #211 from source material. Automotive is completely unrepresented. Recalls are high-stakes, multi-stakeholder processes."
 
+  # --- Telecom (new — conductor sweep 5, 2026-03-30) ---
+  - id: network-fault-manager
+    name: "Network Fault Management Pipeline"
+    vertical: telecom
+    description: "Network fault management pipeline — detect alarm, correlate events across network elements, diagnose root cause, dispatch repair, verify fix, update ticket, generate root cause analysis report"
+    features_demonstrated:
+      - scheduled workflows (continuous alarm monitoring)
+      - decision contracts (severity: critical/major/minor/warning)
+      - multi-agent pipeline (alarm correlator, diagnostician, dispatcher, reporter)
+      - command phases (alarm ingestion, ticket management scripts)
+      - output contracts (structured RCA reports)
+      - phase routing (escalate on critical severity)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #224 from source material. Telecom is completely unrepresented. Network ops is a perfect AO use case — continuous monitoring + complex decision routing."
+
+  # --- Pharmaceutical (new — conductor sweep 5, 2026-03-30) ---
+  - id: pharmacovigilance
+    name: "Pharmacovigilance Safety Pipeline"
+    vertical: pharmaceutical
+    description: "Drug safety monitoring pipeline — collect adverse event reports, assess causality (WHO-UMC scale), detect safety signals across products, evaluate benefit-risk, update product labeling, generate periodic safety reports for regulatory submission"
+    features_demonstrated:
+      - scheduled workflows (continuous adverse event monitoring)
+      - decision contracts (causality: certain/probable/possible/unlikely/unassessable)
+      - multi-agent pipeline (case processor, signal detector, risk evaluator, regulatory writer)
+      - output contracts (structured ICSR reports, PSUR sections)
+      - manual approval gates (medical officer sign-off)
+      - sequential-thinking MCP for complex causality assessment
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - web search (drug safety databases, literature monitoring)
+    status: queued
+    notes: "Pipeline #284 from source material. Pharma is completely unrepresented. Pharmacovigilance is high-stakes, heavily regulated, multi-stakeholder."
+
+  # --- Sports Analytics (new — conductor sweep 5, 2026-03-30) ---
+  - id: athlete-tracker
+    name: "Athlete Performance Tracker"
+    vertical: sports
+    description: "Athlete performance pipeline — collect biometric and training data, analyze workload trends, score injury risk, generate load management recommendations, track outcomes over time, produce weekly performance reports for coaching staff"
+    features_demonstrated:
+      - scheduled workflows (daily performance monitoring)
+      - command phases (data ingestion scripts, metric calculations)
+      - decision contracts (injury risk: low/moderate/high/critical)
+      - multi-agent pipeline (data analyst, sports scientist, load manager, reporter)
+      - output contracts (structured performance reports, risk assessments)
+      - phase routing (trigger recovery protocol on high risk)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #242 from source material. Sports is completely unrepresented. Physical performance tracking shows AO beyond digital workflows."
+
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
 #
-# Verticals to explore next: telecom, aerospace, pharmaceutical,
-# personal/consumer, sports analytics
+# Verticals to explore next: aerospace, consumer/personal, gaming,
+# media production (video/music), immigration/legal-personal
