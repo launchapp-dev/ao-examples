@@ -37,29 +37,35 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | Example | Vertical | What It Does | Status | Repo |
 |---|---|---|---|---|
 | [blog-generator](examples/blog-generator/) | Content | SEO research → outline → draft → edit → publish | generated | [repo](https://github.com/launchapp-dev/ao-example-blog-generator) |
+| [story-writer](examples/story-writer/) | Creative | World-building → characters → plot → chapters → review | generated | [repo](https://github.com/launchapp-dev/ao-example-story-writer) |
 | [stock-trader](examples/stock-trader/) | Finance | Market data → bull/bear debate → risk → rebalancing | generated | [repo](https://github.com/launchapp-dev/ao-example-stock-trader) |
 | [legal-reviewer](examples/legal-reviewer/) | Legal | Clause extraction → risk flagging → compliance → redlines | generated | [repo](https://github.com/launchapp-dev/ao-example-legal-reviewer) |
-| story-writer | Creative | World-building → characters → plot → chapters → review | **building** | |
-| podcast-producer | Media | Research → script → show notes → social posts | **building** | |
-| supply-chain-monitor | Manufacturing | Supplier monitoring → disruption detection → response | **building** | |
-| threat-intel | Cybersecurity | IOC collection → enrichment → correlation → analyst briefs | queued | |
-| data-pipeline | Data | Source discovery → schema → transforms → validation | queued | |
-| grant-writer | Nonprofit | Opportunity scan → proposal draft → budget → review | queued | |
-| researcher | Research | Question → sources → analysis → synthesis → report | queued | |
+| [data-pipeline](examples/data-pipeline/) | Data | Source discovery → schema → transforms → validation | generated | [repo](https://github.com/launchapp-dev/ao-example-data-pipeline) |
+| [podcast-producer](examples/podcast-producer/) | Media | Research → script → show notes → social posts | generated | [repo](https://github.com/launchapp-dev/ao-example-podcast-producer) |
+| [threat-intel](examples/threat-intel/) | Cybersecurity | IOC collection → enrichment → correlation → analyst briefs | generated | [repo](https://github.com/launchapp-dev/ao-example-threat-intel) |
+| [supply-chain-monitor](examples/supply-chain-monitor/) | Manufacturing | Supplier monitoring → disruption detection → response | generated | [repo](https://github.com/launchapp-dev/ao-example-supply-chain-monitor) |
+| [grant-writer](examples/grant-writer/) | Nonprofit | Opportunity scan → proposal draft → budget → review | generated | [repo](https://github.com/launchapp-dev/ao-example-grant-writer) |
+| researcher | Research | Question → sources → analysis → synthesis → report | **building** | |
+| product-catalog | E-Commerce | Product data → SEO descriptions → translation → QA | **building** | |
+| curriculum-builder | Education | Learning objectives → modules → content → quizzes → review | **building** | |
 | research-analyst | Business | Market research → competitive analysis → trend reports | queued | |
 | biology-lab | Science | Literature → hypothesis → experiment design → paper | queued | |
 | devops-automator | Infrastructure | Audit → IaC generation → security review → apply | queued | |
 | property-analyzer | Real Estate | Listing analysis → market comps → investment reports | queued | |
-| product-catalog | E-Commerce | Product data → SEO descriptions → translation → QA | queued | |
 | patient-intake | Healthcare | Form processing → triage → provider matching → scheduling | queued | |
-| curriculum-builder | Education | Learning objectives → modules → content → quizzes → review | queued | |
 | hiring-pipeline | Business Ops | Job desc → screen → interview → feedback → offer | queued | |
 | event-producer | Entertainment | Concept → venue → talent → marketing → runsheet | queued | |
 | invoice-processor | Finance Ops | Extract → match PO → validate → approve → reconcile | queued | |
 | fleet-dispatcher | Logistics | Orders → route optimization → dispatch → exceptions → report | queued | |
 | energy-auditor | Energy | Consumption analysis → benchmarking → savings → audit report | queued | |
+| travel-planner | Travel | Destinations → itinerary → budget → packing list | queued | |
+| claims-processor | Insurance | Intake → coverage check → fraud detection → settlement | queued | |
+| crop-monitor | Agriculture | Field data → disease detection → treatment → dispatch | queued | |
+| foia-processor | Government | Records request → search → redact → legal review → release | queued | |
+| ad-campaign | Advertising | Audience research → creative brief → copy → A/B test → launch | queued | |
+| vehicle-recall | Automotive | Defect pattern → VIN scope → notification → repair tracking | queued | |
 
-*22 examples across 22 verticals. More added autonomously by the conductor every 30 minutes.*
+*28 examples across 25 verticals — 9 generated, 3 building, 16 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 

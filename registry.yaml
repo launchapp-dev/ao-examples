@@ -81,7 +81,7 @@ examples:
       - filesystem MCP
     status: in-progress
     started_at: 2026-03-30
-    notes: "Enqueued by conductor 2026-03-30 sweep."
+    notes: "Re-enqueued by conductor sweep 4. Previous task was cancelled."
 
   - id: research-analyst
     name: "Business Research Analyst"
@@ -234,7 +234,7 @@ examples:
       - web search (competitor research)
     status: in-progress
     started_at: 2026-03-30
-    notes: "Enqueued by conductor 2026-03-30 sweep. E-commerce is high-demand vertical."
+    notes: "Re-enqueued by conductor sweep 4. E-commerce is high-demand vertical."
 
   # --- Healthcare (new — conductor ideation 2026-03-30) ---
   - id: patient-intake
@@ -269,7 +269,7 @@ examples:
       - web search (reference material)
     status: in-progress
     started_at: 2026-03-30
-    notes: "Enqueued by conductor 2026-03-30 sweep. Education is universally relatable."
+    notes: "Re-enqueued by conductor sweep 4. Education is universally relatable."
 
   # --- HR / Business Operations (new — conductor ideation 2026-03-30) ---
   - id: hiring-pipeline
@@ -451,9 +451,63 @@ examples:
     status: queued
     notes: "Pipeline #201 from source material. Agriculture shows AO managing physical-world production systems."
 
+  # --- Government (new — conductor ideation 2026-03-30 sweep 4) ---
+  - id: foia-processor
+    name: "FOIA Request Processor"
+    vertical: government
+    description: "FOIA request pipeline — receive public records request, scope document search, collect responsive records, redact sensitive information, legal review, compile release package, track compliance deadlines"
+    features_demonstrated:
+      - multi-agent pipeline (intake clerk, searcher, redactor, legal reviewer, release coordinator)
+      - decision contracts (release/withhold/partial-release verdicts per document)
+      - manual approval gates (legal counsel sign-off)
+      - scheduled workflows (deadline tracking and escalation)
+      - command phases (document search and indexing scripts)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #161 from source material. Government is completely unrepresented. FOIA is universally relevant and showcases complex decision routing."
+
+  # --- Advertising / Marketing (new — conductor ideation 2026-03-30 sweep 4) ---
+  - id: ad-campaign
+    name: "Ad Campaign Pipeline"
+    vertical: advertising
+    description: "Ad campaign pipeline — audience research, creative brief, copy variants, image prompt generation, A/B test design, performance forecasting, budget allocation, launch checklist, post-campaign analytics report"
+    features_demonstrated:
+      - web search MCP (audience research, competitor ads)
+      - multi-agent pipeline (strategist, copywriter, creative director, analyst)
+      - phase routing (rework on brief rejection)
+      - output contracts (structured campaign plan JSON, creative assets)
+      - multi-model routing (fast copy gen vs deep strategy analysis)
+    tools_needed:
+      - web search
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #45 / advertising vertical from source material. High-interest vertical, completely unrepresented."
+
+  # --- Automotive (new — conductor ideation 2026-03-30 sweep 4) ---
+  - id: vehicle-recall
+    name: "Vehicle Recall Management Pipeline"
+    vertical: automotive
+    description: "Vehicle recall pipeline — identify defect pattern from warranty claims, scope affected VINs, draft NHTSA notification, generate owner correspondence, coordinate dealer parts procurement, schedule repairs, track completion rates, close out recall"
+    features_demonstrated:
+      - scheduled workflows (daily warranty claim monitoring)
+      - command phases (VIN database queries, completion tracking scripts)
+      - decision contracts (recall severity: safety-critical/non-critical/advisory)
+      - multi-agent pipeline (quality engineer, compliance officer, logistics coordinator, communicator)
+      - manual approval gates (VP sign-off on recall initiation)
+      - output contracts (structured recall package, NHTSA filing)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - web search (NHTSA databases, parts sourcing)
+    status: queued
+    notes: "Pipeline #211 from source material. Automotive is completely unrepresented. Recalls are high-stakes, multi-stakeholder processes."
+
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
 #
-# Verticals to explore next: government, automotive, telecom,
-# aerospace, pharmaceutical, personal/consumer, advertising
+# Verticals to explore next: telecom, aerospace, pharmaceutical,
+# personal/consumer, sports analytics
