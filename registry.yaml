@@ -22,9 +22,11 @@ examples:
     tools_needed:
       - filesystem MCP
       - web search
-    status: in-progress
+    status: generated
     started_at: 2026-03-30
-    notes: "Re-queued by conductor 2026-03-30. Enqueued via ao queue."
+    generated_at: 2026-03-30
+    github_repo: launchapp-dev/ao-example-blog-generator
+    notes: "Complete — 5 agents, rework loops, multi-model routing, scheduled workflows. GitHub repo created and public."
 
   - id: story-writer
     name: "Story Writer"
@@ -38,7 +40,9 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: in-progress
+    started_at: 2026-03-30
+    notes: "Enqueued by conductor 2026-03-30."
 
   # --- Finance ---
   - id: stock-trader
@@ -53,9 +57,11 @@ examples:
     tools_needed:
       - web search (market data)
       - filesystem MCP
-    status: in-progress
+    status: generated
     started_at: 2026-03-30
-    notes: "Re-queued by conductor 2026-03-30. Enqueued via ao queue."
+    generated_at: 2026-03-30
+    github_repo: launchapp-dev/ao-example-stock-trader
+    notes: "Complete — bull/bear debate, command phases, scheduled market hours, decision contracts. GitHub repo created and public."
 
   # --- Research ---
   - id: researcher
@@ -115,9 +121,11 @@ examples:
       - manual approval gate
     tools_needed:
       - filesystem MCP
-    status: in-progress
+    status: generated
     started_at: 2026-03-30
-    notes: "Enqueued by conductor 2026-03-30."
+    generated_at: 2026-03-30
+    github_repo: launchapp-dev/ao-example-legal-reviewer
+    notes: "Complete — 6 agents, risk-based routing, manual gates, 10-phase contract review. GitHub repo created and public."
 
   # --- Data ---
   - id: data-pipeline
@@ -146,7 +154,9 @@ examples:
     tools_needed:
       - web search
       - filesystem MCP
-    status: queued
+    status: in-progress
+    started_at: 2026-03-30
+    notes: "Enqueued by conductor 2026-03-30."
 
   # --- Infrastructure ---
   - id: devops-automator
@@ -264,10 +274,114 @@ examples:
     status: queued
     notes: "Pipeline #96 from source material. Universal business process everyone understands."
 
+  # --- Manufacturing / Supply Chain (new — conductor ideation 2026-03-30) ---
+  - id: supply-chain-monitor
+    name: "Supply Chain Risk Monitor"
+    vertical: manufacturing
+    description: "Supply chain risk pipeline — monitor suppliers for disruptions, assess impact on production, score severity, activate backup suppliers, generate stakeholder alerts, track resolution"
+    features_demonstrated:
+      - scheduled workflows (continuous supplier monitoring)
+      - web search MCP (news feeds, supplier health)
+      - decision contracts (severity verdicts: low/medium/high/critical)
+      - multi-agent pipeline (monitor, analyst, responder, communicator)
+      - command phases (data collection scripts)
+    tools_needed:
+      - web search
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: in-progress
+    started_at: 2026-03-30
+    notes: "Pipeline #152. Enqueued by conductor 2026-03-30."
+
+  # --- Sports & Entertainment (new — conductor ideation 2026-03-30) ---
+  - id: event-producer
+    name: "Event Production Pipeline"
+    vertical: entertainment
+    description: "End-to-end event production — concept development, venue research, talent booking, ticket strategy, marketing plan, day-of runsheet, post-event report and analytics"
+    features_demonstrated:
+      - multi-agent pipeline (creative director, logistics coordinator, marketing strategist, reporter)
+      - manual approval gates (budget sign-off, venue confirmation)
+      - output contracts (structured event plan JSON, runsheet, marketing brief)
+      - phase routing (rework on budget overrun)
+      - web search MCP (venue/talent research)
+    tools_needed:
+      - web search
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #241 from source material. Entertainment is high-interest, completely unrepresented."
+
+  # --- Finance / Business Ops (new — conductor ideation 2026-03-30) ---
+  - id: invoice-processor
+    name: "Invoice Processing Automation"
+    vertical: finance-ops
+    description: "Invoice processing pipeline — receive invoice document, extract structured data, match to purchase orders, validate amounts, route for approval, generate payment instruction, reconcile"
+    features_demonstrated:
+      - command phases (data extraction scripts)
+      - decision contracts (approve/reject/escalate verdicts)
+      - manual approval gates (manager sign-off for high-value invoices)
+      - multi-agent pipeline (extractor, matcher, validator, approver, reconciler)
+      - output contracts (structured invoice JSON, payment instructions)
+    tools_needed:
+      - filesystem MCP
+    status: queued
+    notes: "Pipeline #134 from source material. Universal business process, showcases command + agent phase mixing."
+
+  # --- Nonprofit (new — conductor ideation 2026-03-30 sweep 2) ---
+  - id: grant-writer
+    name: "Grant Proposal Pipeline"
+    vertical: nonprofit
+    description: "Grant writing pipeline — scan funding opportunities, check eligibility, research funder priorities, draft proposal narrative, build budget, peer review, compile submission package"
+    features_demonstrated:
+      - web search MCP (funding databases, funder research)
+      - multi-agent pipeline (opportunity scanner, writer, budget analyst, reviewer)
+      - phase routing (rework on review failure)
+      - output contracts (structured grant application)
+      - manual approval gates (executive sign-off)
+    tools_needed:
+      - web search
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #94 from source material. Nonprofit is unrepresented. Grant writing is a universal pain point."
+
+  # --- Logistics (new — conductor ideation 2026-03-30 sweep 2) ---
+  - id: fleet-dispatcher
+    name: "Fleet Dispatch Optimizer"
+    vertical: logistics
+    description: "Fleet dispatch pipeline — ingest delivery orders, optimize routes, assign vehicles, generate driver manifests, track exceptions (delays, breakdowns), generate end-of-day reports"
+    features_demonstrated:
+      - scheduled workflows (daily dispatch cycle)
+      - command phases (route optimization scripts)
+      - decision contracts (exception severity verdicts)
+      - multi-agent pipeline (planner, dispatcher, exception handler, reporter)
+      - output contracts (structured manifests and route plans)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #157 from source material. Logistics shows AO managing physical-world operations."
+
+  # --- Energy & Sustainability (new — conductor ideation 2026-03-30 sweep 2) ---
+  - id: energy-auditor
+    name: "Building Energy Audit Pipeline"
+    vertical: energy
+    description: "Energy audit pipeline — collect utility data, analyze consumption patterns, benchmark against standards, identify efficiency opportunities, estimate savings, generate audit report with prioritized recommendations"
+    features_demonstrated:
+      - command phases (data ingestion and analysis scripts)
+      - multi-agent pipeline (data collector, analyst, estimator, report writer)
+      - output contracts (structured audit report with ROI calculations)
+      - sequential-thinking MCP for complex cost-benefit analysis
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - web search (benchmarking data, incentive programs)
+    status: queued
+    notes: "Inspired by pipelines #171-180 from source material. Energy/sustainability is unrepresented and timely."
+
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
 #
-# Verticals to explore next: manufacturing, government, energy, agriculture,
-# automotive, telecom, aerospace, sports, travel, insurance, pharmaceutical,
-# nonprofit, logistics, personal/consumer
+# Verticals to explore next: government, agriculture, automotive,
+# telecom, aerospace, travel, insurance, pharmaceutical, personal/consumer
