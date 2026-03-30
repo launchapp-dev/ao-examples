@@ -930,7 +930,10 @@ examples:
       - web search
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: "2026-03-30"
+    github_repo: "https://github.com/launchapp-dev/ao-example-donor-prospector"
+    test_status: passed
     notes: "Pipeline #191 from source material. Distinct from grant-writer — this is donor relationship management, not proposal writing. Shows AO managing long-term relationship pipelines."
 
   # --- Government / Permits (new — conductor sweep 10, 2026-03-30) ---

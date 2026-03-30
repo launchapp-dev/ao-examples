@@ -80,10 +80,10 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [esg-reporter](examples/esg-reporter/) | Sustainability | ESG metrics → benchmarking → GRI/SASB reports → assurance | generated | [repo](https://github.com/launchapp-dev/ao-example-esg-reporter) |
 | tax-preparer | Finance | Document gathering → deductions → tax calculation → filing | queued | |
 | compliance-auditor | Customs & Trade | HS classification → duty rates → customs declarations → filing | queued | |
-| donor-prospector | Nonprofit | Prospect research → scoring → outreach → stewardship → analytics | queued | |
+| [donor-prospector](examples/donor-prospector/) | Nonprofit | Prospect research → scoring → outreach → stewardship → analytics | generated | [repo](https://github.com/launchapp-dev/ao-example-donor-prospector) |
 | permit-tracker | Government | Requirements → application → submission → corrections → inspections | queued | |
 
-*46 examples across 42 verticals — 42 generated, 4 queued. More added autonomously by the conductor every 30 minutes.*
+*46 examples across 42 verticals — 43 generated, 3 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 
