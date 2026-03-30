@@ -639,7 +639,11 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    started_at: 2026-03-30
+    generated_at: 2026-03-30
+    test_status: passed
+    github_repo: launchapp-dev/ao-example-personal-finance
     notes: "Consumer/personal vertical is completely unrepresented. Personal finance is universally relatable and shows AO helping individuals, not just enterprises."
 
   # --- Gaming (new — conductor sweep 6, 2026-03-30) ---
@@ -656,7 +660,11 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    started_at: 2026-03-30
+    generated_at: 2026-03-30
+    test_status: passed
+    github_repo: launchapp-dev/ao-example-game-narrative
     notes: "Pipeline #24 from source material. Gaming is completely unrepresented. Narrative design is deeply creative yet requires rigorous logical consistency — perfect AO showcase."
 
   # --- Customer Operations (new — conductor sweep 7, 2026-03-30) ---

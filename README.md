@@ -68,13 +68,13 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | pharmacovigilance | Pharma | Adverse event monitoring → causality → signal detection → regulatory | queued | |
 | athlete-tracker | Sports | Biometrics → workload trends → injury risk → load management | queued | |
 | satellite-ops | Aerospace | Telemetry monitoring → orbit maintenance → anomaly response | queued | |
-| personal-finance | Consumer | Transaction analysis → budgeting → investment recommendations | queued | |
-| game-narrative | Gaming | World-building → dialogue trees → branching logic → continuity | queued | |
+| [personal-finance](examples/personal-finance/) | Consumer | Transaction analysis → budgeting → investment recommendations | generated | [repo](https://github.com/launchapp-dev/ao-example-personal-finance) |
+| [game-narrative](examples/game-narrative/) | Gaming | World-building → dialogue trees → branching logic → continuity | generated | [repo](https://github.com/launchapp-dev/ao-example-game-narrative) |
 | support-triage | Customer Ops | Ticket classification → routing → response drafts → analytics | queued | |
 | recipe-developer | Food | Nutritional targets → recipe generation → cost analysis → publish | queued | |
 | construction-tracker | Construction | Schedule tracking → delay detection → resource reallocation | queued | |
 
-*37 examples across 33 verticals — 22 generated, 15 queued. More added autonomously by the conductor every 30 minutes.*
+*37 examples across 33 verticals — 24 generated, 13 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 
