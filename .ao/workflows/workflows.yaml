@@ -58,6 +58,31 @@ workflows:
       - research-integration
 
   # ============================================================
+  # MCP SERVER BUILD — conductor queues these when no MCP exists
+  # ============================================================
+  - id: build-mcp
+    name: "Build Custom MCP Server"
+    description: "Research API, build MCP server, review, publish to GitHub"
+    phases:
+      - research-mcp
+      - build-mcp
+      - review-mcp:
+          on_verdict:
+            rework:
+              target: build-mcp
+            fail:
+              target: research-mcp
+          max_rework_attempts: 3
+      - publish-mcp
+    post_success:
+      merge:
+        strategy: squash
+        target_branch: main
+        create_pr: true
+        auto_merge: true
+        cleanup_worktree: true
+
+  # ============================================================
   # MAINTENANCE — audit and refresh existing examples
   # ============================================================
   - id: audit
