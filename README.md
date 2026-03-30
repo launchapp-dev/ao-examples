@@ -65,8 +65,8 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [foia-processor](examples/foia-processor/) | Government | Records request → search → redact → legal review → release | generated | |
 | [vehicle-recall](examples/vehicle-recall/) | Automotive | Defect pattern → VIN scope → notification → repair tracking | generated | |
 | [network-fault-manager](examples/network-fault-manager/) | Telecom | Alarm correlation → diagnosis → dispatch → RCA report | generated | [repo](https://github.com/launchapp-dev/ao-example-network-fault-manager) |
-| pharmacovigilance | Pharma | Adverse event monitoring → causality → signal detection → regulatory | queued | |
-| athlete-tracker | Sports | Biometrics → workload trends → injury risk → load management | queued | |
+| [pharmacovigilance](examples/pharmacovigilance/) | Pharma | Adverse event monitoring → causality → signal detection → regulatory | generated | |
+| [athlete-tracker](examples/athlete-tracker/) | Sports | Biometrics → workload trends → injury risk → load management | generated | |
 | satellite-ops | Aerospace | Telemetry monitoring → orbit maintenance → anomaly response | queued | |
 | [personal-finance](examples/personal-finance/) | Consumer | Transaction analysis → budgeting → investment recommendations | generated | [repo](https://github.com/launchapp-dev/ao-example-personal-finance) |
 | [game-narrative](examples/game-narrative/) | Gaming | World-building → dialogue trees → branching logic → continuity | generated | [repo](https://github.com/launchapp-dev/ao-example-game-narrative) |
@@ -74,7 +74,7 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | recipe-developer | Food | Nutritional targets → recipe generation → cost analysis → publish | queued | |
 | construction-tracker | Construction | Schedule tracking → delay detection → resource reallocation | queued | |
 
-*37 examples across 33 verticals — 29 generated, 8 queued. More added autonomously by the conductor every 30 minutes.*
+*37 examples across 33 verticals — 31 generated, 6 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 

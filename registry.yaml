@@ -619,6 +619,8 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
     status: generated
+    started_at: 2026-03-30
+    generated_at: 2026-03-30
     test_status: passed
     notes: "Pipeline #242 from source material. Sports is completely unrepresented. Physical performance tracking shows AO beyond digital workflows."
 
