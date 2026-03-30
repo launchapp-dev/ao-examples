@@ -57,18 +57,18 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | event-producer | Entertainment | Concept → venue → talent → marketing → runsheet | queued | |
 | invoice-processor | Finance Ops | Extract → match PO → validate → approve → reconcile | queued | |
 | fleet-dispatcher | Logistics | Orders → route optimization → dispatch → exceptions → report | queued | |
-| energy-auditor | Energy | Consumption analysis → benchmarking → savings → audit report | queued | |
+| [energy-auditor](examples/energy-auditor/) | Energy | Consumption analysis → benchmarking → savings → audit report | generated | |
 | [travel-planner](examples/travel-planner/) | Travel | Destinations → itinerary → budget → packing list | generated | [repo](https://github.com/launchapp-dev/ao-example-travel-planner) |
 | [claims-processor](examples/claims-processor/) | Insurance | Intake → coverage check → fraud detection → settlement | generated | [repo](https://github.com/launchapp-dev/ao-example-claims-processor) |
 | crop-monitor | Agriculture | Field data → disease detection → treatment → dispatch | queued | |
 | foia-processor | Government | Records request → search → redact → legal review → release | queued | |
-| ad-campaign | Advertising | Audience research → creative brief → copy → A/B test → launch | queued | |
+| [ad-campaign](examples/ad-campaign/) | Advertising | Audience research → creative brief → copy → A/B test → launch | generated | |
 | vehicle-recall | Automotive | Defect pattern → VIN scope → notification → repair tracking | queued | |
 | network-fault-manager | Telecom | Alarm correlation → diagnosis → dispatch → RCA report | queued | |
 | pharmacovigilance | Pharma | Adverse event monitoring → causality → signal detection → regulatory | queued | |
 | athlete-tracker | Sports | Biometrics → workload trends → injury risk → load management | queued | |
 
-*31 examples across 27 verticals — 17 generated, 14 queued. More added autonomously by the conductor every 30 minutes.*
+*31 examples across 27 verticals — 18 generated, 13 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 

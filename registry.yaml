@@ -341,7 +341,8 @@ examples:
       - web search
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    test_status: passed
     notes: "Pipeline #241 from source material. Entertainment is high-interest, completely unrepresented."
 
   # --- Finance / Business Ops (new — conductor ideation 2026-03-30) ---
@@ -395,7 +396,8 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    test_status: passed
     notes: "Pipeline #157 from source material. Logistics shows AO managing physical-world operations."
 
   # --- Energy & Sustainability (new — conductor ideation 2026-03-30 sweep 2) ---
@@ -412,7 +414,10 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
       - web search (benchmarking data, incentive programs)
-    status: queued
+    status: generated
+    started_at: 2026-03-30
+    generated_at: 2026-03-30
+    test_status: passed
     notes: "Inspired by pipelines #171-180 from source material. Energy/sustainability is unrepresented and timely."
 
   # --- Travel & Hospitality (new — conductor ideation 2026-03-30 sweep 3) ---
@@ -508,7 +513,10 @@ examples:
       - web search
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    started_at: 2026-03-30
+    generated_at: 2026-03-30
+    test_status: passed
     notes: "Pipeline #45 / advertising vertical from source material. High-interest vertical, completely unrepresented."
 
   # --- Automotive (new — conductor ideation 2026-03-30 sweep 4) ---
