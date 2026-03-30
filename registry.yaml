@@ -117,7 +117,10 @@ examples:
     tools_needed:
       - web search (PubMed, arxiv)
       - filesystem MCP
-    status: queued
+    status: generated
+    started_at: 2026-03-30
+    generated_at: 2026-03-30
+    github_repo: launchapp-dev/ao-example-biology-lab
 
   # --- Legal ---
   - id: legal-reviewer

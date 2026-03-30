@@ -71,13 +71,13 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [personal-finance](examples/personal-finance/) | Consumer | Transaction analysis → budgeting → investment recommendations | generated | [repo](https://github.com/launchapp-dev/ao-example-personal-finance) |
 | [game-narrative](examples/game-narrative/) | Gaming | World-building → dialogue trees → branching logic → continuity | generated | [repo](https://github.com/launchapp-dev/ao-example-game-narrative) |
 | support-triage | Customer Ops | Ticket classification → routing → response drafts → analytics | queued | |
-| recipe-developer | Food | Nutritional targets → recipe generation → cost analysis → publish | queued | |
+| [recipe-developer](examples/recipe-developer/) | Food | Nutritional targets → recipe generation → cost analysis → publish | generated | [repo](https://github.com/launchapp-dev/ao-example-recipe-developer) |
 | construction-tracker | Construction | Schedule tracking → delay detection → resource reallocation | queued | |
 | immigration-tracker | Immigration | Eligibility → documents → filing → status tracking → RFEs | queued | |
 | content-moderator | Trust & Safety | AI classification → human review → appeals → analytics | queued | |
 | clinical-trial | Biotech | Protocol design → recruitment → monitoring → analysis → submission | queued | |
 
-*40 examples across 36 verticals — 33 generated, 7 queued. More added autonomously by the conductor every 30 minutes.*
+*40 examples across 36 verticals — 34 generated, 6 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 
