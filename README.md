@@ -52,23 +52,26 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | biology-lab | Science | Literature → hypothesis → experiment design → paper | queued | |
 | devops-automator | Infrastructure | Audit → IaC generation → security review → apply | queued | |
 | [property-analyzer](examples/property-analyzer/) | Real Estate | Listing analysis → market comps → investment reports | generated | [repo](https://github.com/launchapp-dev/ao-example-property-analyzer) |
-| [patient-intake](examples/patient-intake/) | Healthcare | Form processing → triage → provider matching → scheduling | generated | |
+| [patient-intake](examples/patient-intake/) | Healthcare | Form processing → triage → provider matching → scheduling | generated | [repo](https://github.com/launchapp-dev/ao-example-patient-intake) |
 | [hiring-pipeline](examples/hiring-pipeline/) | Business Ops | Job desc → screen → interview → feedback → offer | generated | [repo](https://github.com/launchapp-dev/ao-example-hiring-pipeline) |
-| [event-producer](examples/event-producer/) | Entertainment | Concept → venue → talent → marketing → runsheet | generated | |
-| [invoice-processor](examples/invoice-processor/) | Finance Ops | Extract → match PO → validate → approve → reconcile | generated | |
-| [fleet-dispatcher](examples/fleet-dispatcher/) | Logistics | Orders → route optimization → dispatch → exceptions → report | generated | |
-| [energy-auditor](examples/energy-auditor/) | Energy | Consumption analysis → benchmarking → savings → audit report | generated | |
+| [event-producer](examples/event-producer/) | Entertainment | Concept → venue → talent → marketing → runsheet | generated | [repo](https://github.com/launchapp-dev/ao-example-event-producer) |
+| [invoice-processor](examples/invoice-processor/) | Finance Ops | Extract → match PO → validate → approve → reconcile | generated | [repo](https://github.com/launchapp-dev/ao-example-invoice-processor) |
+| [fleet-dispatcher](examples/fleet-dispatcher/) | Logistics | Orders → route optimization → dispatch → exceptions → report | generated | [repo](https://github.com/launchapp-dev/ao-example-fleet-dispatcher) |
+| [energy-auditor](examples/energy-auditor/) | Energy | Consumption analysis → benchmarking → savings → audit report | generated | [repo](https://github.com/launchapp-dev/ao-example-energy-auditor) |
 | [travel-planner](examples/travel-planner/) | Travel | Destinations → itinerary → budget → packing list | generated | [repo](https://github.com/launchapp-dev/ao-example-travel-planner) |
 | [claims-processor](examples/claims-processor/) | Insurance | Intake → coverage check → fraud detection → settlement | generated | [repo](https://github.com/launchapp-dev/ao-example-claims-processor) |
+| [ad-campaign](examples/ad-campaign/) | Advertising | Audience research → creative brief → copy → A/B test → launch | generated | [repo](https://github.com/launchapp-dev/ao-example-ad-campaign) |
 | crop-monitor | Agriculture | Field data → disease detection → treatment → dispatch | queued | |
 | foia-processor | Government | Records request → search → redact → legal review → release | queued | |
-| [ad-campaign](examples/ad-campaign/) | Advertising | Audience research → creative brief → copy → A/B test → launch | generated | |
 | vehicle-recall | Automotive | Defect pattern → VIN scope → notification → repair tracking | queued | |
 | network-fault-manager | Telecom | Alarm correlation → diagnosis → dispatch → RCA report | queued | |
 | pharmacovigilance | Pharma | Adverse event monitoring → causality → signal detection → regulatory | queued | |
 | athlete-tracker | Sports | Biometrics → workload trends → injury risk → load management | queued | |
+| satellite-ops | Aerospace | Telemetry monitoring → orbit maintenance → anomaly response | queued | |
+| personal-finance | Consumer | Transaction analysis → budgeting → investment recommendations | queued | |
+| game-narrative | Gaming | World-building → dialogue trees → branching logic → continuity | queued | |
 
-*31 examples across 27 verticals — 22 generated, 9 queued. More added autonomously by the conductor every 30 minutes.*
+*34 examples across 30 verticals — 22 generated, 12 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 

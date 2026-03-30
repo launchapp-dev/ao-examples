@@ -262,6 +262,7 @@ examples:
     started_at: 2026-03-30
     generated_at: 2026-03-30
     test_status: passed
+    github_repo: launchapp-dev/ao-example-patient-intake
     notes: "Pipeline #111 from source material. 6 agents (Haiku/Sonnet/Opus), 5-verdict ESI triage decision contract, manual provider sign-off gate, 2 workflows (full + quick-triage). All tests passed 2026-03-30."
 
   # --- Education (new — conductor ideation 2026-03-30) ---
@@ -345,6 +346,7 @@ examples:
     started_at: 2026-03-30
     generated_at: 2026-03-30
     test_status: passed
+    github_repo: launchapp-dev/ao-example-event-producer
     notes: "Complete — end-to-end event production pipeline with concept development, venue research, talent booking, marketing, runsheet. Multi-agent pipeline with manual approval gates, output contracts, phase routing, web search MCP."
 
   # --- Finance / Business Ops (new — conductor ideation 2026-03-30) ---
@@ -364,6 +366,7 @@ examples:
     test_status: passed
     started_at: 2026-03-30
     generated_at: 2026-03-30
+    github_repo: launchapp-dev/ao-example-invoice-processor
     notes: "Pipeline #134 from source material. Universal business process, showcases command + agent phase mixing."
 
   # --- Nonprofit (new — conductor ideation 2026-03-30 sweep 2) ---
@@ -405,6 +408,7 @@ examples:
     started_at: 2026-03-30
     generated_at: 2026-03-30
     test_status: passed
+    github_repo: launchapp-dev/ao-example-fleet-dispatcher
     notes: "Complete — fleet dispatch pipeline with route optimization, exception handling, daily dispatch cycle. Pipeline #157 from source material."
 
   # --- Energy & Sustainability (new — conductor ideation 2026-03-30 sweep 2) ---
@@ -425,6 +429,7 @@ examples:
     started_at: 2026-03-30
     generated_at: 2026-03-30
     test_status: passed
+    github_repo: launchapp-dev/ao-example-energy-auditor
     notes: "Inspired by pipelines #171-180 from source material. Energy/sustainability is unrepresented and timely."
 
   # --- Travel & Hospitality (new — conductor ideation 2026-03-30 sweep 3) ---
@@ -524,6 +529,7 @@ examples:
     started_at: 2026-03-30
     generated_at: 2026-03-30
     test_status: passed
+    github_repo: launchapp-dev/ao-example-ad-campaign
     notes: "Pipeline #45 / advertising vertical from source material. High-interest vertical, completely unrepresented."
 
   # --- Automotive (new — conductor ideation 2026-03-30 sweep 4) ---
@@ -600,9 +606,62 @@ examples:
     status: queued
     notes: "Pipeline #242 from source material. Sports is completely unrepresented. Physical performance tracking shows AO beyond digital workflows."
 
+  # --- Aerospace (new — conductor sweep 6, 2026-03-30) ---
+  - id: satellite-ops
+    name: "Satellite Operations Pipeline"
+    vertical: aerospace
+    description: "Satellite operations pipeline — command scheduling, telemetry monitoring, orbit maintenance maneuver planning, anomaly detection and response, link budget analysis, generate operational reports for ground control"
+    features_demonstrated:
+      - scheduled workflows (continuous telemetry monitoring)
+      - command phases (telemetry ingestion, orbit calculation scripts)
+      - decision contracts (anomaly severity: nominal/caution/warning/critical)
+      - multi-agent pipeline (flight controller, orbit analyst, anomaly responder, reporter)
+      - output contracts (structured pass plans, maneuver sequences, health reports)
+      - phase routing (escalate on critical anomaly)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #240 from source material. Aerospace is completely unrepresented. Satellite ops demonstrates AO managing mission-critical real-time systems."
+
+  # --- Consumer / Personal Finance (new — conductor sweep 6, 2026-03-30) ---
+  - id: personal-finance
+    name: "Personal Finance Advisor Pipeline"
+    vertical: consumer
+    description: "Personal finance pipeline — collect income/expense data, categorize transactions, detect spending anomalies, analyze saving potential, generate monthly budget, create investment allocation recommendations, produce financial health report"
+    features_demonstrated:
+      - command phases (transaction import and categorization scripts)
+      - multi-agent pipeline (accountant, budget analyst, investment advisor, reporter)
+      - decision contracts (financial health: excellent/good/fair/poor/critical)
+      - output contracts (structured budget plans, investment recommendations)
+      - scheduled workflows (monthly financial review)
+      - sequential-thinking MCP for complex financial planning
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Consumer/personal vertical is completely unrepresented. Personal finance is universally relatable and shows AO helping individuals, not just enterprises."
+
+  # --- Gaming (new — conductor sweep 6, 2026-03-30) ---
+  - id: game-narrative
+    name: "Game Narrative Design Pipeline"
+    vertical: gaming
+    description: "Game narrative pipeline — world-building bible, character arc design, dialogue tree generation, branching plot logic, continuity checking across paths, lore consistency validation, quest dependency mapping, localization prep"
+    features_demonstrated:
+      - multi-agent pipeline (world builder, character designer, dialogue writer, continuity checker, lore keeper)
+      - phase routing (rework on continuity failure)
+      - output contracts (structured dialogue trees, quest dependency graphs)
+      - sequential-thinking MCP for branching logic design
+      - multi-model routing (creative ideation vs analytical consistency checking)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #24 from source material. Gaming is completely unrepresented. Narrative design is deeply creative yet requires rigorous logical consistency — perfect AO showcase."
+
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
 #
-# Verticals to explore next: aerospace, consumer/personal, gaming,
-# media production (video/music), immigration/legal-personal
+# Verticals to explore next: immigration/legal-personal, food/restaurant,
+# media production (video/music), customer ops, devops deep-dives
