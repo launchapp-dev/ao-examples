@@ -494,7 +494,11 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
       - web search (pest databases, weather data)
-    status: queued
+    status: generated
+    started_at: 2026-03-30
+    generated_at: 2026-03-30
+    test_status: passed
+    github_repo: launchapp-dev/ao-example-crop-monitor
     notes: "Pipeline #201 from source material. Agriculture shows AO managing physical-world production systems."
 
   # --- Government (new — conductor ideation 2026-03-30 sweep 4) ---
@@ -511,8 +515,10 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
-    notes: "Pipeline #161 from source material. Government is completely unrepresented. FOIA is universally relevant and showcases complex decision routing."
+    status: generated
+    generated_at: 2026-03-30
+    test_status: passed
+    notes: "Pipeline #161 from source material. Government is completely unrepresented. FOIA is universally relevant and showcases complex decision routing. 6 agents, 3 workflows, decision contracts, manual approval gate, rework loops, scheduled monitoring."
 
   # --- Advertising / Marketing (new — conductor ideation 2026-03-30 sweep 4) ---
   - id: ad-campaign
@@ -552,7 +558,8 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
       - web search (NHTSA databases, parts sourcing)
-    status: queued
+    status: generated
+    test_status: passed
     notes: "Pipeline #211 from source material. Automotive is completely unrepresented. Recalls are high-stakes, multi-stakeholder processes."
 
   # --- Telecom (new — conductor sweep 5, 2026-03-30) ---
@@ -570,7 +577,9 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: 2026-03-30
+    test_status: passed
     notes: "Pipeline #224 from source material. Telecom is completely unrepresented. Network ops is a perfect AO use case — continuous monitoring + complex decision routing."
 
   # --- Pharmaceutical (new — conductor sweep 5, 2026-03-30) ---
@@ -607,7 +616,8 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    test_status: passed
     notes: "Pipeline #242 from source material. Sports is completely unrepresented. Physical performance tracking shows AO beyond digital workflows."
 
   # --- Aerospace (new — conductor sweep 6, 2026-03-30) ---
