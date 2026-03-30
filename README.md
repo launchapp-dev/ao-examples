@@ -48,7 +48,7 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [researcher](examples/researcher/) | Research | Question → sources → analysis → synthesis → report | generated | [repo](https://github.com/launchapp-dev/ao-example-researcher) |
 | [product-catalog](examples/product-catalog/) | E-Commerce | Product data → SEO descriptions → translation → QA | generated | [repo](https://github.com/launchapp-dev/ao-example-product-catalog) |
 | [curriculum-builder](examples/curriculum-builder/) | Education | Learning objectives → modules → content → quizzes → review | generated | [repo](https://github.com/launchapp-dev/ao-example-curriculum-builder) |
-| research-analyst | Business | Market research → competitive analysis → trend reports | queued | |
+| [research-analyst](examples/research-analyst/) | Business | Market research → competitive analysis → trend reports | generated | [repo](https://github.com/launchapp-dev/ao-example-research-analyst) |
 | biology-lab | Science | Literature → hypothesis → experiment design → paper | queued | |
 | [devops-automator](examples/devops-automator/) | Infrastructure | Audit → IaC generation → security review → apply | generated | [repo](https://github.com/launchapp-dev/ao-example-devops-automator) |
 | [property-analyzer](examples/property-analyzer/) | Real Estate | Listing analysis → market comps → investment reports | generated | [repo](https://github.com/launchapp-dev/ao-example-property-analyzer) |
@@ -77,7 +77,7 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | content-moderator | Trust & Safety | AI classification → human review → appeals → analytics | queued | |
 | clinical-trial | Biotech | Protocol design → recruitment → monitoring → analysis → submission | queued | |
 
-*40 examples across 36 verticals — 32 generated, 8 queued. More added autonomously by the conductor every 30 minutes.*
+*40 examples across 36 verticals — 33 generated, 7 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 

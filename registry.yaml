@@ -97,7 +97,12 @@ examples:
     tools_needed:
       - web search
       - sequential-thinking MCP
-    status: queued
+      - filesystem MCP
+    status: generated
+    started_at: 2026-03-30
+    generated_at: 2026-03-30
+    test_status: passed
+    notes: "Complete — 6-agent pipeline (Haiku/Sonnet/Opus), 3-verdict quality gate with rework loops (revise→analyze-competitors, insufficient-data→collect-market-data), 3 workflows (weekly-intelligence/competitive-deep-dive/trend-report), weekly+quarterly cron schedules, web-search + sequential-thinking + filesystem MCPs, sample data for B2B SaaS industry."
 
   # --- Science ---
   - id: biology-lab
@@ -710,7 +715,10 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
       - web search (knowledge base lookup)
-    status: queued
+    status: generated
+    started_at: 2026-03-30
+    generated_at: 2026-03-30
+    github_repo: launchapp-dev/ao-example-support-triage
     notes: "Pipeline #81 from source material. Customer ops is completely unrepresented. Support triage is universally relevant and showcases complex routing decisions."
 
   # --- Food & Restaurant (new — conductor sweep 7, 2026-03-30) ---
@@ -728,7 +736,10 @@ examples:
       - filesystem MCP
       - web search
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    test_status: passed
+    generated_at: 2026-03-30
+    github_repo: launchapp-dev/ao-example-recipe-developer
     notes: "Pipeline #204 from source material. Food/restaurant is completely unrepresented. Recipe development combines creative and analytical workflows."
 
   # --- Construction (new — conductor sweep 7, 2026-03-30) ---
@@ -746,7 +757,9 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: "2026-03-30"
+    test_status: passed
     notes: "Pipeline #142 from source material. Construction is completely unrepresented. Project tracking shows AO managing physical-world timelines with complex dependencies."
 
   # --- Immigration / Legal-Personal (new — conductor sweep 8, 2026-03-30) ---
