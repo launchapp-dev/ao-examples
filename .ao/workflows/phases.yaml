@@ -134,7 +134,7 @@ phases:
       args:
         - "-c"
         - |
-          EXAMPLE_ID="${AO_TASK_TITLE:-unknown}"
+          EXAMPLE_ID="{{subject_title}}"
           EXAMPLE_DIR="examples/${EXAMPLE_ID}"
           mkdir -p "${EXAMPLE_DIR}/.ao/workflows"
           mkdir -p "${EXAMPLE_DIR}/output"
@@ -261,7 +261,7 @@ phases:
         - "-c"
         - |
           set -e
-          EXAMPLE_ID="${AO_TASK_TITLE:-unknown}"
+          EXAMPLE_ID="{{subject_title}}"
           EXAMPLE_DIR="examples/${EXAMPLE_ID}"
           REPO_NAME="ao-example-${EXAMPLE_ID}"
           ORG="launchapp-dev"
@@ -480,7 +480,7 @@ phases:
         - "-c"
         - |
           set -e
-          TASK_TITLE="${AO_TASK_TITLE:-unknown}"
+          TASK_TITLE="{{subject_title}}"
           TOOL_NAME="${TASK_TITLE#mcp-}"
           MCP_DIR="mcp-servers/${TOOL_NAME}"
           REPO_NAME="mcp-${TOOL_NAME}"

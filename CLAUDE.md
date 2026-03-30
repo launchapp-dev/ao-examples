@@ -78,7 +78,7 @@ phases:
     # For command phases:
     command:
       program: bash
-      args: ["-c", "echo hello"]
+      args: ["-c", "echo hello {{subject_title}}"]
       cwd_mode: project_root          # project_root | task_root
       timeout_secs: 300
 ```
@@ -130,6 +130,26 @@ mcp_servers:
     env:
       API_KEY: "${API_KEY}"            # Environment variable interpolation
 ```
+
+### Template Variables in Command Phases
+
+Command phase `args` and `env` values support `{{variable}}` expansion:
+
+| Variable | Value |
+|---|---|
+| `{{subject_title}}` | Task title (e.g. "blog-generator") |
+| `{{subject_id}}` | Task ID (e.g. "TASK-001") |
+| `{{subject_description}}` | Task description |
+| `{{project_root}}` | Project root path |
+| `{{execution_cwd}}` | Current working directory for this execution |
+| `{{workflow_id}}` | Workflow instance ID |
+| `{{workflow_ref}}` | Workflow definition ID |
+| `{{phase_id}}` | Current phase ID |
+| `{{dispatch_input}}` | Input JSON from queue enqueue |
+| `{{schedule_input}}` | Input from schedule trigger |
+
+**Important:** Do NOT use `${AO_TASK_TITLE}` — these are not environment variables.
+Use `{{subject_title}}` in command args instead.
 
 ### Rules
 - Every agent referenced in phases must exist in agents.yaml
