@@ -75,6 +75,4 @@ workflows:
           on_verdict:
             rework:
               target: refresh-example
-            advance:
-              target: ""
           max_rework_attempts: 2
