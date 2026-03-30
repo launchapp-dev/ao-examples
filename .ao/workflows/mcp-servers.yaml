@@ -1,7 +1,7 @@
 mcp_servers:
   filesystem:
     command: npx
-    args: ["-y", "@modelcontextprotocol/server-filesystem", "/Users/samishukri/ao-examples"]
+    args: ["-y", "@modelcontextprotocol/server-filesystem", "/Users/samishukri/ao-examples", "/Users/samishukri/brain"]
 
   github:
     command: npx
