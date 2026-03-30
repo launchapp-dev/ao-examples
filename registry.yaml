@@ -258,9 +258,11 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: in-progress
+    status: generated
     started_at: 2026-03-30
-    notes: "Pipeline #111 from source material. Building now."
+    generated_at: 2026-03-30
+    test_status: passed
+    notes: "Pipeline #111 from source material. 6 agents (Haiku/Sonnet/Opus), 5-verdict ESI triage decision contract, manual provider sign-off gate, 2 workflows (full + quick-triage). All tests passed 2026-03-30."
 
   # --- Education (new — conductor ideation 2026-03-30) ---
   - id: curriculum-builder
@@ -451,7 +453,9 @@ examples:
     status: generated
     test_status: passed
     started_at: 2026-03-30
-    notes: "Pipeline #80 from source material. All tests passed 2026-03-30."
+    generated_at: 2026-03-30
+    github_repo: launchapp-dev/ao-example-claims-processor
+    notes: "Complete — insurance claims pipeline with decision contracts, fraud detection, manual approval gates. GitHub repo created and public."
 
   # --- Agriculture (new — conductor ideation 2026-03-30 sweep 3) ---
   - id: crop-monitor
