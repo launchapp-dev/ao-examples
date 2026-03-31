@@ -1086,7 +1086,9 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
       - web search
-    status: queued
+    status: generated
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-example-ma-due-diligence
     notes: "Pipeline #100 from source material. Corporate M&A is a massive vertical. Due diligence is inherently multi-stakeholder with complex document analysis and decision gates."
 
   # --- Pharma R&D (new — conductor sweep 12, 2026-03-31) ---
@@ -1105,7 +1107,9 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
       - web search (PubMed, patent databases, compound databases)
-    status: queued
+    status: generated
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-example-drug-discovery
     notes: "Pipeline #281 from source material. Distinct from pharmacovigilance (post-market). Drug discovery is the ultimate multi-phase, high-stakes pipeline with complex decision trees."
 
   # --- Hospitality (new — conductor sweep 12, 2026-03-31) ---
@@ -1124,7 +1128,9 @@ examples:
       - web search
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-example-hotel-revenue
     notes: "Pipeline #251 from source material. Hospitality is completely unrepresented. Revenue management is a daily operational pipeline with real financial impact."
 
   # --- Consumer / Life Events (new — conductor sweep 12, 2026-03-31) ---
@@ -1143,7 +1149,9 @@ examples:
       - web search
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-example-wedding-planner
     notes: "Pipeline #293 from source material. Universally relatable consumer event. Shows AO managing a complex personal project with many vendors and hard deadlines."
 
   # --- Media Production (new — conductor sweep 12, 2026-03-31) ---
@@ -1162,12 +1170,70 @@ examples:
       - web search
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-example-video-factory
     notes: "Pipeline #19 from source material. Media production is only covered by podcast-producer. Video/YouTube is the highest-volume content medium and shows AO managing a content factory."
+
+  # --- Consumer / Home (new — conductor sweep 13, 2026-03-31) ---
+  - id: home-renovation
+    name: "Home Renovation Pipeline"
+    vertical: consumer-home
+    description: "Home renovation pipeline — scope project and set budget, generate design concepts, select and vet contractors, prepare permit applications, construction schedule management, progress tracking with photo documentation, inspection coordination, punch list management, final walkthrough"
+    features_demonstrated:
+      - multi-agent pipeline (designer, contractor evaluator, project manager, inspector, closer)
+      - decision contracts (contractor selection: hire/negotiate/reject, inspection: pass/fix/fail)
+      - manual approval gates (homeowner approval at design, contractor selection, budget checkpoints)
+      - phase routing (rework on inspection failure, rework on budget overrun)
+      - output contracts (structured project plans, contractor comparison matrices, punch lists)
+      - scheduled workflows (weekly progress tracking, milestone reminders)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - web search (contractor reviews, material pricing, permit requirements)
+    status: queued
+    notes: "Pipeline #292 from source material. Home renovation is universally relatable and shows AO managing a complex physical-world project with multiple contractors and regulatory gates."
+
+  # --- Personal Legal / Finance (new — conductor sweep 13, 2026-03-31) ---
+  - id: estate-planner
+    name: "Estate Planning Pipeline"
+    vertical: personal-legal
+    description: "Estate planning pipeline — inventory all assets and liabilities, define beneficiaries and guardians, draft will/trust documents, coordinate beneficiary designations on financial accounts, healthcare directive and power of attorney, tax optimization strategies, legal review, document execution and storage, periodic review scheduling"
+    features_demonstrated:
+      - multi-agent pipeline (estate attorney, financial planner, tax strategist, document drafter, reviewer)
+      - decision contracts (trust type selection: revocable/irrevocable/special-needs, tax strategy: basic/advanced/complex)
+      - manual approval gates (attorney review, client approval before execution)
+      - output contracts (structured asset inventory, document checklists, beneficiary matrices)
+      - scheduled workflows (annual review reminders, life event triggers)
+      - sequential-thinking MCP for complex tax and trust structure analysis
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #295 from source material. Estate planning is a deeply personal, high-stakes process. Shows AO handling sensitive life documents with multiple legal review gates."
+
+  # --- Food & Hospitality (new — conductor sweep 13, 2026-03-31) ---
+  - id: restaurant-ops
+    name: "Restaurant Operations Pipeline"
+    vertical: food-hospitality
+    description: "Restaurant operations pipeline — seasonal menu planning with food cost targets, ingredient sourcing and vendor management, prep scheduling and station assignments, service execution monitoring, waste tracking and cost analysis, daily P&L reporting, inventory management, health inspection readiness"
+    features_demonstrated:
+      - scheduled workflows (daily prep schedule, weekly menu review, monthly P&L)
+      - command phases (food cost calculation scripts, inventory reconciliation)
+      - multi-agent pipeline (executive chef, sous chef, purchasing manager, floor manager, cost controller)
+      - decision contracts (menu item viability: keep/modify/remove, vendor selection: approve/negotiate/reject)
+      - output contracts (structured menu cost sheets, prep lists, P&L reports)
+      - phase routing (rework menu item if food cost exceeds target)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - web search (seasonal ingredient pricing, food trends)
+    status: queued
+    notes: "Pipeline #253 from source material. Restaurant ops is distinct from recipe-developer — this is the full daily operational cycle. Shows AO managing a high-velocity business with tight margins."
 
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
 #
-# Verticals to explore next: home renovation, music production, estate planning,
-# fitness coaching, restaurant operations, insurance underwriting, vendor evaluation
+# Verticals to explore next: music production, fitness coaching, insurance underwriting,
+# vendor evaluation, connected car, esports tournament, influencer campaign, programmatic ads

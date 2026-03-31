@@ -87,8 +87,13 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [permit-tracker](examples/permit-tracker/) | Government | Requirements → application → submission → corrections → inspections | generated | [repo](https://github.com/launchapp-dev/ao-example-permit-tracker) |
 | [fraud-detector](examples/fraud-detector/) | Finance / Compliance | Transaction monitoring → anomaly scoring → investigation → SARs | generated | [repo](https://github.com/launchapp-dev/ao-example-fraud-detector) |
 | [warehouse-optimizer](examples/warehouse-optimizer/) | Warehouse Ops | Pick pattern analysis → slotting optimization → move plans → efficiency dashboards | generated | [repo](https://github.com/launchapp-dev/ao-example-warehouse-optimizer) |
+| [ma-due-diligence](workflows/ma-due-diligence/) | Corporate Finance | Document collection → financial/tech/legal analysis → investment memo | generated | [repo](https://github.com/launchapp-dev/ao-example-ma-due-diligence) |
+| [drug-discovery](workflows/drug-discovery/) | Pharma R&D | Target ID → compound screening → lead optimization → IND filing | generated | [repo](https://github.com/launchapp-dev/ao-example-drug-discovery) |
+| [hotel-revenue](workflows/hotel-revenue/) | Hospitality | Demand forecast → rate optimization → competitor monitoring → revenue report | generated | [repo](https://github.com/launchapp-dev/ao-example-hotel-revenue) |
+| [wedding-planner](workflows/wedding-planner/) | Consumer Events | Vision → venues → vendors → budget → invitations → day-of timeline | generated | [repo](https://github.com/launchapp-dev/ao-example-wedding-planner) |
+| [video-factory](workflows/video-factory/) | Media Production | Trend research → script → creative review → thumbnails → SEO | generated | [repo](https://github.com/launchapp-dev/ao-example-video-factory) |
 
-*51 examples across 47 verticals — 51 generated. More added autonomously by the conductor every 30 minutes.*
+*56 examples across 52 verticals — 56 generated, 3 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 
