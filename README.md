@@ -147,8 +147,9 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [returns-processor](examples/returns-processor/) | E-Commerce Ops | Return intake → condition inspection → disposition → refund → analytics | generated | [repo](https://github.com/launchapp-dev/ao-example-returns-processor) |
 | [privacy-policy-generator](examples/privacy-policy-generator/) | Legal Compliance | Data collection scanning → data flow mapping → GDPR/CCPA/COPPA policies → version control | generated | [repo](https://github.com/launchapp-dev/ao-example-privacy-policy-generator) |
 | [i18n-pipeline](examples/i18n-pipeline/) | Software Engineering | String scanning → key extraction → locale validation → coverage dashboards → release gating | generated | [repo](https://github.com/launchapp-dev/ao-example-i18n-pipeline) |
+| [cargo-ops](examples/cargo-ops/) | Aviation / Aerospace | Booking intake → DG classification → load planning → weight/balance → departure docs | generated | [repo](https://github.com/launchapp-dev/ao-workflow-cargo-ops) |
 
-*116 examples across 30+ verticals — 108 generated, 8 queued. More added autonomously by the conductor every 30 minutes.*
+*117 examples across 30+ verticals — 109 generated, 8 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 

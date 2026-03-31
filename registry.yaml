@@ -2997,7 +2997,8 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: "2026-03-31"
     notes: "Pipeline #235 from source material. Air cargo is a $150B industry requiring strict compliance with IATA regulations. Uses python3 for calculations — all tools exist. Shows AO managing safety-critical aviation operations."
 
   # --- Software Engineering (new — conductor sweep 36, 2026-03-31) ---
