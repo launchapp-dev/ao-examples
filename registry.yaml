@@ -1793,6 +1793,66 @@ examples:
     status: queued
     notes: "Universal business need — every team has meetings. Uses Linear MCP for real task tracking. Shows AO as a business productivity tool, not just dev tooling."
 
+  # --- Legal / Developer Tools (new — conductor sweep 21, 2026-03-31) ---
+  - id: license-compliance
+    name: "License Compliance Scanner"
+    vertical: legal-devtools
+    description: "License compliance pipeline — scan project dependencies with npx license-checker, identify copyleft/proprietary/unknown licenses, cross-reference with company-approved license whitelist, flag policy violations, generate compliance matrix, create GitHub issues for violations requiring remediation, produce audit-ready report with dependency tree visualization"
+    features_demonstrated:
+      - command phases (npx license-checker --json, npm ls --all, gh issue create)
+      - multi-agent pipeline (dependency scanner, license classifier, policy checker, report generator, issue creator)
+      - decision contracts (compliance: compliant/warning/violation/unknown, action: approve/replace/request-exception/block-release)
+      - output contracts (structured compliance matrices, violation reports, audit packages)
+      - scheduled workflows (weekly compliance scan, pre-release gate)
+      - phase routing (block release on copyleft violation, request exception on unknown)
+      - github MCP for issue creation and PR blocking
+    tools_needed:
+      - github MCP (gh-cli-mcp)
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #77 from source material. Every company shipping software needs license compliance. Uses real npm tools (license-checker, npm ls) and gh CLI — all existing today."
+
+  # --- Business Operations (new — conductor sweep 21, 2026-03-31) ---
+  - id: board-deck-generator
+    name: "Board Deck Preparation Pipeline"
+    vertical: business-executive
+    description: "Board meeting preparation pipeline — collect KPI metrics from markdown/CSV data sources, generate narrative summaries per department, create executive summary with key highlights and risks, format as structured markdown slides, produce appendix with detailed data tables, generate talking points and Q&A prep for presenters, version and archive deck history"
+    features_demonstrated:
+      - multi-agent pipeline (data collector, narrative writer, executive summarizer, slide formatter, Q&A preparer)
+      - scheduled workflows (monthly board prep cycle, quarterly deep-dive)
+      - output contracts (structured slide decks, talking points, Q&A guides, appendix tables)
+      - decision contracts (deck-quality: ready/needs-data/needs-revision, narrative-tone: appropriate/too-optimistic/too-pessimistic)
+      - phase routing (rework narrative on tone misalignment, collect more data on gaps)
+      - sequential-thinking MCP for strategic narrative development
+      - memory MCP for tracking historical metrics and prior deck themes
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - memory MCP
+    status: queued
+    notes: "Pipeline #98 from source material. Every company with a board does this monthly/quarterly. Shows AO as an executive operations tool with strategic reasoning."
+
+  # --- Real Estate (new — conductor sweep 21, 2026-03-31) ---
+  - id: tenant-screening
+    name: "Tenant Screening Pipeline"
+    vertical: real-estate-property
+    description: "Tenant screening pipeline — receive rental application, verify employment and income documentation, check rental history references, assess credit worthiness from provided reports, evaluate application against property-specific criteria (income ratio, pet policy, lease terms), generate risk score with reasoning, produce landlord-ready decision report, draft lease agreement from approved template, manage waitlist for competitive properties"
+    features_demonstrated:
+      - multi-agent pipeline (application intake, employment verifier, reference checker, risk scorer, report generator, lease drafter)
+      - decision contracts (application-status: approved/conditionally-approved/denied/waitlisted, risk-level: low/moderate/high/disqualifying)
+      - output contracts (structured screening reports, risk assessments, draft leases, denial notices with fair-housing compliance)
+      - phase routing (conditional approval triggers additional documentation request, denial triggers fair-housing compliant notice)
+      - sequential-thinking MCP for holistic applicant evaluation
+      - manual approval gates (landlord final decision on conditional approvals)
+      - memory MCP for tracking application pipeline and waitlist state
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - memory MCP
+    status: queued
+    notes: "Pipeline #149 from source material. Every landlord/property manager screens tenants. Shows AO handling sensitive personal data workflows with compliance requirements."
+
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
@@ -1800,4 +1860,4 @@ examples:
 # Verticals to explore next: documentary research, children's book,
 # connected car, programmatic ads, medical coding, loyalty program,
 # cargo operations, broadcast production, vendor evaluation,
-# access review, license compliance, tenant screening
+# access review, volunteer coordinator, number porting
