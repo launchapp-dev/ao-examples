@@ -47,6 +47,24 @@ agents:
       Workflows should use command phases with real CLIs, or MCP servers with real npm packages.
       A workflow that runs `npx replicate run stability-ai/sdxl` is better than a theoretical one.
 
+      **READ research/mcp-registry.md** — it has the full list of verified, working MCP servers
+      with exact npm packages and commands. Use these in your workflows.
+
+      **MCP servers already declared in this repo's mcp-servers.yaml:**
+      - filesystem, github (gh-cli-mcp), sequential-thinking, fetch, memory, playwright
+
+      **MCP servers examples should declare in THEIR mcp-servers.yaml:**
+      Use any from the registry. Key ones:
+      - `figma-developer-mcp` — read Figma designs, extract layers/styles/tokens
+      - `@notionhq/notion-mcp-server` — read/write Notion pages and databases
+      - `@modelcontextprotocol/server-slack` — read/post Slack messages
+      - `@tacticlaunch/mcp-linear` — manage Linear issues and projects
+      - `@modelcontextprotocol/server-postgres` — query PostgreSQL databases
+      - `@playwright/mcp` — browse real websites, scrape, screenshot, automate
+      - `@modelcontextprotocol/server-fetch` — fetch any URL as markdown
+      - `@modelcontextprotocol/server-memory` — persistent knowledge graph
+      - `@modelcontextprotocol/server-git` — git operations
+
       ### 2. IDEATE — Real-World Workflows That Work Today
       - Every workflow MUST use real, existing tools (MCP servers, CLIs, npm packages)
       - Think about what someone could `ao daemon start` and get real output from TODAY
@@ -166,13 +184,31 @@ agents:
       4. **Python scripts** — python3 -c "..." for quick data processing
       5. **Custom MCP servers** — LAST RESORT, only when nothing else works
 
-      ### Known Working MCP Servers
-      - `@modelcontextprotocol/server-filesystem` — read/write local files
-      - `gh-cli-mcp` — GitHub operations via gh CLI
-      - `@playwright/mcp` — browser automation (scraping, testing, screenshots)
-      - `@upstash/context7-mcp` — documentation lookup
+      ### Known Working MCP Servers (use in example mcp-servers.yaml)
+      READ research/mcp-registry.md for the full verified list. Key ones:
+
+      **Official:**
+      - `@modelcontextprotocol/server-filesystem` — read/write files
+      - `@modelcontextprotocol/server-fetch` — fetch URLs as markdown (web research!)
+      - `@modelcontextprotocol/server-git` — git operations
+      - `@modelcontextprotocol/server-memory` — persistent knowledge graph
       - `@modelcontextprotocol/server-sequential-thinking` — structured reasoning
-      - Search npm for more — new ones are published regularly
+      - `@modelcontextprotocol/server-postgres` — PostgreSQL queries
+      - `@modelcontextprotocol/server-slack` — Slack channels and messages
+
+      **Vendor:**
+      - `figma-developer-mcp` — Figma design access (layers, styles, tokens)
+      - `@notionhq/notion-mcp-server` — Notion pages and databases
+      - `gh-cli-mcp` — GitHub via gh CLI
+      - `@playwright/mcp` — browser automation, scraping, screenshots
+
+      **Community:**
+      - `@tacticlaunch/mcp-linear` — Linear issues and projects
+      - `@berthojoris/mcp-sqlite-server` — SQLite database
+      - `@upstash/context7-mcp` — documentation lookup
+
+      Each example MUST declare its own mcp-servers.yaml with ONLY the servers it uses.
+      Use `npx -y <package>` as the command. Include env vars for API keys.
 
       ## Quality Rules
       - Every workflow MUST be runnable with `ao daemon start`
