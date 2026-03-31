@@ -2809,7 +2809,7 @@ examples:
     status: generated
     started_at: 2026-03-31
     generated_at: 2026-03-31
-    github_repo: launchapp-dev/ao-workflow-soc2-evidence
+    github_repo: launchapp-dev/ao-example-soc2-evidence
     notes: "Pipeline #78 from source material. SOC 2 compliance is mandatory for SaaS companies selling to enterprises. Uses git and filesystem — all tools exist. Shows AO automating a painful, audit-heavy compliance process."
 
   # --- Privacy / Legal (new — conductor sweep 34, 2026-03-31) ---
@@ -2832,7 +2832,7 @@ examples:
     status: generated
     started_at: 2026-03-31
     generated_at: 2026-03-31
-    github_repo: launchapp-dev/ao-workflow-gdpr-request-handler
+    github_repo: launchapp-dev/ao-example-gdpr-request-handler
     notes: "Pipeline #73 from source material. GDPR compliance is legally required for any company with EU users, with fines up to 4% of revenue. Uses filesystem, memory, and CLI tools — all exist. Shows AO managing time-sensitive legal compliance workflows."
 
   # --- Data Analytics (new — conductor sweep 34, 2026-03-31) ---
@@ -2852,7 +2852,7 @@ examples:
       - sequential-thinking MCP
     status: generated
     test_status: passed
-    github_repo: launchapp-dev/ao-workflow-churn-predictor
+    github_repo: launchapp-dev/ao-example-churn-predictor
     notes: "Pipeline #51 from source material. Churn prediction directly impacts revenue — 5% improvement in retention can increase profits 25-95%. Uses python3 and jq for scoring — tools exist. Shows AO running a data analytics pipeline with real business impact."
 
   # --- Developer Tools (new — conductor sweep 34, 2026-03-31) ---
@@ -2874,7 +2874,7 @@ examples:
       - sequential-thinking MCP
     status: generated
     test_status: passed
-    github_repo: launchapp-dev/ao-workflow-a11y-auditor
+    github_repo: launchapp-dev/ao-example-a11y-auditor
     notes: "Pipeline #13 from source material. Accessibility compliance is legally required (ADA, EAA) and affects 15% of the population. Uses Playwright MCP and axe-core CLI — both exist on npm. Shows AO using browser automation for real-world auditing."
 
   # --- Customer Ops (new — conductor sweep 34, 2026-03-31) ---
@@ -2895,6 +2895,7 @@ examples:
     status: generated
     started_at: 2026-03-31
     generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-example-kb-article-generator
     notes: "Pipeline #86 from source material. Knowledge base deflection reduces support costs 20-40%. Uses python3 for clustering and filesystem for storage — all tools exist. Shows AO automating a high-value customer ops workflow."
 
   # --- Energy / Sustainability (new — conductor sweep 35, 2026-03-31) ---
@@ -2912,7 +2913,8 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    test_status: passed
     notes: "Pipeline #171 from source material. Carbon tracking is increasingly mandatory (SEC climate disclosure, EU CSRD). Uses python3 for calculations and filesystem — all tools exist. Shows AO automating environmental compliance."
 
   # --- Content / Publishing (new — conductor sweep 35, 2026-03-31) ---
@@ -2932,7 +2934,10 @@ examples:
       - filesystem MCP
       - fetch MCP (@modelcontextprotocol/server-fetch)
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    started_at: 2026-03-31
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-example-whitepaper-producer
     notes: "Pipeline #38 from source material. Whitepapers are the #1 B2B content format for lead generation. Uses pandoc for formatting, fetch for research — all tools exist. Shows AO running a sophisticated content production pipeline."
 
   # --- Healthcare (new — conductor sweep 35, 2026-03-31) ---
@@ -2950,7 +2955,10 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    started_at: 2026-03-31
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-example-medical-coding
     notes: "Pipeline #112 from source material. Medical coding is a $16B industry with chronic staffing shortages. Uses python3 for pattern matching and filesystem — all tools exist. Shows AO automating a specialized healthcare workflow."
 
   # --- Marketing (new — conductor sweep 35, 2026-03-31) ---
@@ -2968,7 +2976,8 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    test_status: passed
     notes: "Pipeline #45 from source material. Email marketing has 36:1 ROI — highest of any channel. Uses python3 for scoring, node for templating — all tools exist. Shows AO automating a revenue-driving marketing workflow."
 
   # --- Aviation / Aerospace (new — conductor sweep 35, 2026-03-31) ---
@@ -2989,13 +2998,105 @@ examples:
     status: queued
     notes: "Pipeline #235 from source material. Air cargo is a $150B industry requiring strict compliance with IATA regulations. Uses python3 for calculations — all tools exist. Shows AO managing safety-critical aviation operations."
 
+  # --- Software Engineering (new — conductor sweep 36, 2026-03-31) ---
+  - id: i18n-pipeline
+    name: "Internationalization Pipeline"
+    vertical: software-engineering
+    description: "Software internationalization pipeline — scan source code for hardcoded strings using grep/ast patterns, extract translatable content into structured key files, generate translation keys with context descriptions, validate locale files for completeness and missing keys, detect pluralization and interpolation patterns, produce translation status dashboards per locale, flag untranslated strings blocking release, schedule weekly completeness audits and daily new-string detection"
+    features_demonstrated:
+      - scheduled workflows (daily new-string detection, weekly completeness audits, release readiness checks)
+      - multi-agent pipeline (scanner, extractor, key-generator, validator, reporter, release-gater)
+      - command phases (grep for string extraction, python3 for key generation and locale comparison, jq for JSON locale file processing, wc for coverage metrics)
+      - decision contracts (locale-status: complete/partial/blocking, release-readiness: go/no-go/conditional)
+      - output contracts (locale coverage reports, missing key lists, translation dashboards, release readiness assessments)
+      - phase routing (block release on critical missing translations, re-scan on code changes detected)
+    tools_needed:
+      - filesystem MCP
+      - git MCP (@modelcontextprotocol/server-git)
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #14/#40 from source material. i18n is required for any product serving international markets. Uses grep, python3, jq, and git — all tools exist. Shows AO automating a tedious but critical developer workflow."
+
+  # --- Finance (new — conductor sweep 36, 2026-03-31) ---
+  - id: portfolio-rebalancer
+    name: "Portfolio Rebalancing Engine"
+    vertical: finance
+    description: "Portfolio rebalancing pipeline — ingest current portfolio positions from CSV/JSON, fetch target allocation models, calculate drift from target weights per asset class, apply rebalancing rules (threshold-based, calendar-based, or hybrid), generate trade orders with tax-lot optimization (minimize short-term gains), validate trades against compliance constraints (concentration limits, restricted securities), produce execution-ready trade blotters, track rebalancing effectiveness, generate quarterly performance attribution reports, schedule daily drift monitoring and monthly rebalancing runs"
+    features_demonstrated:
+      - scheduled workflows (daily drift monitoring, monthly rebalancing, quarterly attribution reports)
+      - multi-agent pipeline (position ingester, drift calculator, trade generator, compliance checker, executor, reporter)
+      - command phases (python3 for portfolio math and optimization, jq for position data extraction, sort for trade prioritization)
+      - decision contracts (drift-status: within-band/approaching-threshold/rebalance-required, compliance: approved/restricted/blocked)
+      - output contracts (trade blotters, drift reports, performance attribution, compliance certificates)
+      - phase routing (immediate rebalance on threshold breach, compliance review loop on restricted trades)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #137 from source material. Portfolio rebalancing is a $30T+ AUM activity. Uses python3 for optimization and filesystem — all tools exist. Shows AO managing a high-stakes financial workflow with compliance gates."
+
+  # --- Legal (new — conductor sweep 36, 2026-03-31) ---
+  - id: privacy-policy-generator
+    name: "Privacy Policy Generator"
+    vertical: legal-compliance
+    description: "Privacy policy generation pipeline — scan product configuration and feature manifests to identify data collection points, map data flows through the system (collection, processing, storage, sharing, deletion), classify data by sensitivity level (PII, financial, health, biometric), generate privacy policy sections per regulatory framework (GDPR, CCPA, COPPA), produce data processing records (Article 30 GDPR), create cookie consent configurations, version-control policy documents with change tracking, alert on product changes that require policy updates, schedule quarterly policy reviews and annual comprehensive audits"
+    features_demonstrated:
+      - scheduled workflows (quarterly policy reviews, annual audits, continuous product change monitoring)
+      - multi-agent pipeline (product scanner, data flow mapper, classifier, policy drafter, legal reviewer, versioner)
+      - command phases (grep/find for codebase scanning, python3 for data flow analysis, diff for version comparison, jq for configuration parsing)
+      - decision contracts (policy-status: current/needs-update/non-compliant, data-sensitivity: low/medium/high/critical)
+      - output contracts (privacy policies per jurisdiction, data processing records, cookie consent configs, change impact assessments)
+      - phase routing (immediate update on critical data flow changes, legal review loop on policy drafts)
+    tools_needed:
+      - filesystem MCP
+      - git MCP (@modelcontextprotocol/server-git)
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #72 from source material. Privacy policies are legally required globally, and product changes often outpace policy updates. Uses grep, python3, git — all tools exist. Shows AO automating a critical legal compliance workflow."
+
+  # --- Pharma Manufacturing (new — conductor sweep 36, 2026-03-31) ---
+  - id: batch-record
+    name: "Manufacturing Batch Record"
+    vertical: pharmaceutical-manufacturing
+    description: "Pharmaceutical manufacturing batch record pipeline — initiate batch record from production order, generate step-by-step manufacturing instructions from master batch record templates, capture in-process quality checks at critical control points, manage deviation workflows when results fall outside specifications, calculate yield and reconciliation at each stage, perform release testing checklists, route batch for QP (Qualified Person) release decision, generate certificates of analysis, track batch genealogy (raw materials to finished product), produce batch summary reports, schedule shift-based batch monitoring and weekly quality review"
+    features_demonstrated:
+      - scheduled workflows (shift-based batch monitoring, daily production summaries, weekly quality reviews)
+      - multi-agent pipeline (batch initiator, instruction generator, quality checker, deviation handler, yield calculator, QP reviewer, reporter)
+      - command phases (python3 for yield calculations and specification checking, jq for batch data extraction, date for timestamp management)
+      - decision contracts (batch-status: in-spec/minor-deviation/major-deviation/reject, release-decision: approved/conditional/hold/reject)
+      - output contracts (batch records, certificates of analysis, deviation reports, yield reconciliation, quality dashboards)
+      - phase routing (immediate hold on major deviation, re-test on conditional release, investigation loop on reject)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #285 from source material. GMP batch records are legally required for pharmaceutical manufacturing with FDA/EMA oversight. Uses python3 for calculations and filesystem — all tools exist. Shows AO managing a safety-critical manufacturing workflow with strict quality gates."
+
+  # --- Customer Ops (new — conductor sweep 36, 2026-03-31) ---
+  - id: nps-followup
+    name: "NPS Follow-up Pipeline"
+    vertical: customer-ops
+    description: "Net Promoter Score follow-up pipeline — ingest NPS survey responses from CSV/JSON, segment respondents into promoters (9-10), passives (7-8), and detractors (0-6), extract themes and pain points from verbatim comments using text analysis, generate personalized follow-up actions per segment (thank promoters, engage passives, rescue detractors), create escalation workflows for critical detractor feedback, track follow-up completion rates, measure rescue effectiveness (detractor-to-promoter conversion), produce weekly NPS trend dashboards and monthly executive summaries, schedule daily response ingestion and weekly follow-up audits"
+    features_demonstrated:
+      - scheduled workflows (daily response ingestion, weekly follow-up audits, monthly executive reports)
+      - multi-agent pipeline (ingester, segmenter, theme analyzer, action generator, tracker, reporter)
+      - command phases (python3 for NPS calculation and trend analysis, jq for response data extraction, sort/awk for segmentation)
+      - decision contracts (response-action: thank/engage/rescue/escalate, rescue-status: responding/improving/churning)
+      - output contracts (segment reports, follow-up action lists, trend dashboards, executive summaries, rescue effectiveness reports)
+      - phase routing (immediate escalation on critical detractor, rescue sequence on low scores, thank-and-refer on promoters)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #87 from source material. NPS is the standard customer loyalty metric — closing the loop on feedback drives 2x higher retention. Uses python3 and jq — all tools exist. Shows AO automating the critical 'close the loop' customer ops workflow."
+
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
 #
-# Verticals to explore next: children's book, connected car, medical coding,
-# cargo operations, broadcast production, number porting,
-# load testing, multi-region deployment, portfolio-rebalancer, nps-followup,
-# pest-management, livestock-health, public-records-manager, venue-maintenance,
-# construction-cost-estimator, housekeeping-optimizer, email-campaign,
-# carbon-tracker, policy-impact-analyzer, whitepaper-producer, privacy-policy-generator
+# Verticals to explore next: children's book, connected car,
+# broadcast production, number porting, load testing,
+# multi-region deployment, pest-management, livestock-health,
+# public-records-manager, venue-maintenance, construction-cost-estimator,
+# housekeeping-optimizer, policy-impact-analyzer, tour-package,
+# competitive-intel, insurance-underwriting, facility-maintenance
