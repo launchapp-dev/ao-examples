@@ -1861,6 +1861,7 @@ examples:
       - memory MCP
     status: generated
     test_status: passed
+    github_repo: launchapp-dev/ao-workflow-board-deck-generator
     notes: "Pipeline #98 from source material. Every company with a board does this monthly/quarterly. Shows AO as an executive operations tool with strategic reasoning."
 
   # --- Real Estate (new — conductor sweep 21, 2026-03-31) ---
@@ -2026,7 +2027,9 @@ examples:
       - github MCP (gh-cli-mcp)
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-runbook-generator
     notes: "Pipeline #69 from source material. Every SRE team needs runbooks. Uses gh CLI for real incident data — all tools exist today. Shows AO for operational reliability."
 
   # --- Education (new — conductor sweep 24, 2026-03-31) ---
@@ -2045,7 +2048,9 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
       - git MCP (for submission tracking)
-    status: queued
+    status: generated
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-assignment-grader
     notes: "Pipeline #122 from source material. Every instructor grades assignments. Uses filesystem and sequential-thinking — extremely feasible. Shows AO for education automation."
 
   # --- Data / Analytics (new — conductor sweep 24, 2026-03-31) ---
@@ -2064,7 +2069,9 @@ examples:
       - filesystem MCP
       - memory MCP (@modelcontextprotocol/server-memory)
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    test_status: passed
+    github_repo: launchapp-dev/ao-workflow-data-quality-monitor
     notes: "Pipeline #47 from source material. Every data team needs quality monitoring. Uses filesystem + command phases with python3/jq — all tools exist today. Shows AO for data operations."
 
   # --- E-Commerce / Consumer (new — conductor sweep 25, 2026-03-31) ---
@@ -2084,7 +2091,9 @@ examples:
       - playwright MCP (@playwright/mcp)
       - memory MCP (@modelcontextprotocol/server-memory)
       - filesystem MCP
-    status: queued
+    status: generated
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-price-tracker
     notes: "Pipeline #56 variant from source material. Price tracking is a universal consumer need. Uses Playwright MCP for real scraping — immediately practical. Shows AO for consumer-facing automation."
 
   - id: api-health-monitor
@@ -2126,6 +2135,66 @@ examples:
     status: queued
     notes: "Pipeline #26 variant from source material. Content repurposing is the #1 content marketing workflow. Uses fetch MCP for real URL ingestion — every content team needs this. Shows AO for marketing operations."
 
+  # --- Business Operations (new — conductor sweep 26, 2026-03-31) ---
+  - id: rfp-responder
+    name: "RFP Response Automation"
+    vertical: business-operations
+    description: "RFP response automation pipeline — parse incoming RFP requirements document, match company capabilities against each requirement, draft section-by-section responses drawing from a knowledge base of past proposals, review for completeness and compliance, assemble final response document with executive summary, appendices, and pricing framework, track response submission deadlines"
+    features_demonstrated:
+      - multi-agent pipeline (parser, capability matcher, draft writer, compliance reviewer, assembler)
+      - decision contracts (coverage-verdict: fully-covered/partial-gaps/cannot-respond, compliance-check: compliant/needs-revision/non-compliant)
+      - output contracts (structured response documents, gap analysis, compliance checklists)
+      - phase routing (rework on compliance failure, skip sections with no matching capability)
+      - sequential-thinking MCP for requirement-to-capability matching
+      - filesystem MCP for reading RFPs and writing responses
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - memory MCP (@modelcontextprotocol/server-memory)
+    status: queued
+    notes: "Pipeline #42 from source material. Every services company responds to RFPs. Clean parse-match-draft-review structure maps perfectly to AO phases. All tools exist on npm."
+
+  # --- Government / Public Sector (new — conductor sweep 26, 2026-03-31) ---
+  - id: legislative-tracker
+    name: "Legislative Bill Tracker"
+    vertical: government-public-sector
+    description: "Legislative tracking pipeline — monitor bills and regulatory proposals via web scraping of congress.gov and state legislature sites, analyze potential impact on specified industries or organizations, generate stakeholder briefings with plain-language summaries, recommend positions (support/oppose/monitor/amend), track committee votes and floor progress, produce weekly legislative digest with priority rankings"
+    features_demonstrated:
+      - scheduled workflows (daily bill monitoring, weekly digest generation)
+      - multi-agent pipeline (web scraper, impact analyst, briefing writer, position recommender, digest compiler)
+      - decision contracts (impact-severity: high/medium/low/none, position: support/oppose/monitor/amend)
+      - output contracts (structured briefings, impact assessments, weekly digests, position papers)
+      - playwright MCP for real web scraping of legislative sites
+      - phase routing (escalate on high-impact bills, skip on irrelevant)
+      - memory MCP for tracking bill history and prior positions
+    tools_needed:
+      - playwright MCP (@playwright/mcp)
+      - memory MCP (@modelcontextprotocol/server-memory)
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #169 from source material. Government vertical is underrepresented (only foia-processor, permit-tracker). Uses Playwright for real legislative site scraping — all tools exist today."
+
+  # --- DevOps / SRE (new — conductor sweep 26, 2026-03-31) ---
+  - id: log-analyzer
+    name: "Log Analysis & Alerting Pipeline"
+    vertical: devops-sre
+    description: "Log analysis and alerting pipeline — aggregate log files from configured directories, parse structured and unstructured log formats, detect patterns and anomalies (error spikes, latency outliers, unusual access patterns), correlate events across services, create GitHub issues for confirmed incidents, generate daily log health summaries with trending patterns, maintain baseline metrics for comparison"
+    features_demonstrated:
+      - command phases (grep/awk for log parsing, jq for structured log analysis, wc for metrics)
+      - scheduled workflows (hourly log analysis, daily summaries, weekly trend reports)
+      - multi-agent pipeline (log aggregator, pattern detector, anomaly analyzer, incident creator, summary writer)
+      - decision contracts (severity: critical/warning/info, action: create-incident/monitor/ignore)
+      - output contracts (structured incident reports, daily summaries, trend analysis)
+      - github MCP for automatic incident issue creation
+      - filesystem MCP for log file access
+    tools_needed:
+      - filesystem MCP
+      - github MCP (gh-cli-mcp)
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #54 from source material. Complements runbook-generator and incident-responder for full SRE coverage. Uses command phases with real CLI tools (grep, awk, jq) — extremely feasible."
+
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
@@ -2134,4 +2203,4 @@ examples:
 # connected car, programmatic ads, medical coding, loyalty program,
 # cargo operations, broadcast production, access review,
 # volunteer coordinator, number porting, customer churn prediction,
-# log analysis, load testing, multi-region deployment
+# load testing, multi-region deployment, portfolio-rebalancer, nps-followup
