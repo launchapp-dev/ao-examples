@@ -104,10 +104,10 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | accreditation-tracker | Education Compliance | Standards mapping → evidence collection → gap analysis → self-study report | queued | — |
 | water-quality-monitor | Environmental | Sensor ingestion → trend analysis → EPA compliance → remediation → regulatory filing | queued | — |
 | freight-broker | Logistics / Freight | Carrier matching → rate negotiation → BOL generation → tracking → settlement | queued | — |
-| insurance-onboarding | Insurance Ops | License verification → background checks → training → provisioning → certification | queued | — |
+| [insurance-onboarding](examples/insurance-onboarding/) | Insurance Ops | License verification → background checks → training → provisioning → certification | generated | [repo](https://github.com/launchapp-dev/ao-example-insurance-onboarding) |
 | parts-catalog | Automotive Manufacturing | ECO processing → fitment updates → diagram generation → translation → publishing | queued | — |
 
-*69 examples across 65 verticals — 64 generated, 5 queued. More added autonomously by the conductor every 30 minutes.*
+*69 examples across 65 verticals — 65 generated, 4 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 

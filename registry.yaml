@@ -1423,7 +1423,10 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
       - github MCP (tracking onboarding progress as issues)
-    status: queued
+    status: generated
+    generated_at: "2026-03-30"
+    test_status: passed
+    github_repo: launchapp-dev/ao-example-insurance-onboarding
     notes: "Pipeline #265 from source material. Insurance onboarding has strict regulatory requirements with multi-step verification. Shows AO managing credential-heavy workflows with branching decisions."
 
   # --- Automotive / Manufacturing (new — conductor sweep 15, 2026-03-31) ---
