@@ -3373,13 +3373,105 @@ examples:
     status: queued
     notes: "Pipeline #101 from source material. Product listing quality directly drives conversion rates — top listings convert 3-5x vs poor ones. Uses python3 for scoring and jq for data — all tools exist. Shows AO automating marketplace listing operations at scale."
 
+  # --- DevOps (new — conductor sweep 40, 2026-03-31) ---
+  - id: backup-verification
+    name: "Backup Verification Pipeline"
+    vertical: devops-reliability
+    description: "Automated backup verification pipeline — schedule backup snapshots of databases, filesystems, and object stores, execute restore-to-test-environment procedures, run data integrity validation comparing checksums and row counts between source and restored data, verify application connectivity against restored databases, measure restore time (RTO) against SLA targets, flag backups that fail integrity checks or exceed RTO thresholds, generate compliance evidence for SOC2/ISO audit requirements, produce daily backup health reports, weekly RTO trend analysis, and monthly compliance attestation packages"
+    features_demonstrated:
+      - scheduled workflows (daily backup verification, weekly RTO analysis, monthly compliance reports, quarterly disaster recovery drills)
+      - multi-agent pipeline (scheduler, backup executor, restore operator, integrity validator, RTO measurer, compliance packager, alerter, reporter)
+      - command phases (python3 for checksum comparison and RTO calculations, jq for backup metadata extraction, sha256sum for file integrity, diff for data comparison, date for SLA deadline tracking)
+      - decision contracts (backup-health: verified/degraded/failed, rto-status: within-sla/approaching-limit/exceeds-sla)
+      - output contracts (backup verification reports, integrity check results, RTO measurements, compliance evidence packages, trend dashboards, alert notifications)
+      - phase routing (immediate re-backup on failed integrity, escalation on exceeds-sla RTO, additional validation on degraded status, compliance flag on missing evidence)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #66 from source material. Data loss from unverified backups costs enterprises $1.7T/year. Uses sha256sum, python3, diff — all tools exist. Shows AO automating critical disaster recovery validation."
+
+  # --- Agriculture (new — conductor sweep 40, 2026-03-31) ---
+  - id: pest-management
+    name: "Pest Management Pipeline"
+    vertical: agriculture-crop-protection
+    description: "Integrated pest management pipeline — ingest field scouting reports with pest identification data (species, life stage, population counts, affected area), cross-reference pest populations against economic injury thresholds from agricultural extension databases, analyze weather forecasts for conditions favoring pest outbreaks (temperature, humidity, wind patterns), evaluate treatment options considering IPM hierarchy (cultural controls, biological controls, targeted pesticides), calculate application rates and timing windows based on pest life cycles and weather, generate spray prescriptions with buffer zone calculations for waterways and sensitive areas, track treatment effectiveness through follow-up scouting, produce daily scout briefings, weekly pest pressure maps, and seasonal management summaries"
+    features_demonstrated:
+      - scheduled workflows (daily scouting ingestion, weekly pest pressure analysis, bi-weekly treatment effectiveness reviews, seasonal summary reports)
+      - multi-agent pipeline (scout data ingester, pest identifier, threshold evaluator, weather analyzer, treatment selector, prescription generator, effectiveness tracker, reporter)
+      - command phases (python3 for threshold calculations and application rate math, jq for scouting data extraction, curl for weather API, awk for prescription formatting, bc for buffer zone geometry)
+      - decision contracts (pest-action: monitor/cultural-control/biological-control/chemical-treatment/emergency-spray, outbreak-risk: low/moderate/high/critical)
+      - output contracts (scouting summaries, pest pressure maps, treatment prescriptions, application logs, effectiveness reports, seasonal management summaries)
+      - phase routing (emergency spray authorization on critical outbreak, expanded monitoring on moderate risk, biological control deployment on appropriate pest-stage match, re-scout on unclear identification)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - fetch MCP (weather data)
+    status: queued
+    notes: "Pipeline #209 from source material. IPM reduces pesticide use 30-50% while maintaining yields. Uses python3 for calculations and fetch for weather — all tools exist. Shows AO orchestrating precision agriculture decision-making."
+
+  # --- Aviation (new — conductor sweep 40, 2026-03-31) ---
+  - id: passenger-rebooking
+    name: "Passenger Rebooking Pipeline"
+    vertical: aviation-ops
+    description: "Airline passenger rebooking pipeline — detect flight disruptions (cancellations, delays, diversions) from operations feed, identify all affected passengers with their itineraries, loyalty status, and connection windows, calculate rebooking priority scores based on loyalty tier, fare class, connection urgency, and regulatory compensation eligibility, search available inventory across own airline and interline partners, generate optimal rebooking options ranked by passenger preference (earliest arrival, direct flight, same cabin), auto-rebook passengers with clear best options, queue complex cases (groups, unaccompanied minors, medical needs) for agent review, calculate EU261/DOT compensation eligibility, generate passenger notification messages via email/SMS, produce disruption dashboards with rebooking completion rates and customer impact metrics"
+    features_demonstrated:
+      - scheduled workflows (continuous disruption monitoring, hourly rebooking progress updates, daily disruption summary, weekly operational reliability reports)
+      - multi-agent pipeline (disruption detector, passenger identifier, priority scorer, inventory searcher, option ranker, auto-rebooker, complex case handler, compensation calculator, notifier, reporter)
+      - command phases (python3 for priority scoring and compensation calculations, jq for passenger manifest extraction, sort for rebooking priority ordering, date for connection time calculations, wc for affected passenger counting)
+      - decision contracts (rebooking-action: auto-rebook/agent-review/voluntary-rebook/refund-eligible, compensation-status: eu261-eligible/dot-eligible/goodwill/none)
+      - output contracts (rebooking confirmations, passenger notifications, compensation offers, agent review queues, disruption dashboards, reliability reports)
+      - phase routing (immediate auto-rebook on clear best option, agent escalation on complex cases, voluntary rebook offer on oversold alternatives, refund processing on no suitable options)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #233 from source material. Flight disruptions affect 150M+ passengers/year — fast rebooking is the #1 driver of customer satisfaction during IRROPS. Uses python3 for scoring and filesystem — all tools exist. Shows AO handling real-time operations crisis management."
+
+  # --- Government (new — conductor sweep 40, 2026-03-31) ---
+  - id: policy-impact-analyzer
+    name: "Policy Impact Analyzer"
+    vertical: government-policy
+    description: "Government policy impact analysis pipeline — ingest draft policy documents (legislation, regulations, executive orders), extract affected populations and sectors, model economic impacts using input-output analysis and cost-benefit frameworks, estimate fiscal impacts on government budgets (revenue changes, implementation costs, savings), analyze equity impacts across demographic groups, identify implementation requirements and timeline dependencies, generate stakeholder impact summaries for public comment periods, cross-reference with existing regulations for conflicts and redundancies, produce policy briefs with executive summaries, detailed analysis chapters, implementation roadmaps, and public-facing FAQ documents"
+    features_demonstrated:
+      - scheduled workflows (per-policy analysis runs, weekly regulatory calendar scans, monthly legislative tracking, quarterly impact review updates)
+      - multi-agent pipeline (policy parser, population modeler, economic analyst, fiscal estimator, equity assessor, implementation planner, conflict checker, brief writer, FAQ generator, reporter)
+      - command phases (python3 for economic modeling and fiscal calculations, jq for policy data extraction, wc for document metrics, diff for policy version comparison, pandoc for report formatting)
+      - decision contracts (impact-magnitude: minimal/moderate/significant/transformative, implementation-feasibility: straightforward/complex/requires-legislation/infeasible)
+      - output contracts (impact assessments, fiscal notes, equity analyses, stakeholder summaries, implementation roadmaps, policy briefs, FAQ documents)
+      - phase routing (expanded analysis on significant impact, legal review on requires-legislation, stakeholder consultation loop on equity concerns, implementation pilot recommendation on complex feasibility)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #164 from source material. Evidence-based policymaking reduces unintended consequences — CBO-style analysis saves billions in avoided bad policy. Uses python3 for modeling and pandoc for reports — all tools exist. Shows AO supporting democratic governance processes."
+
+  # --- Travel (new — conductor sweep 40, 2026-03-31) ---
+  - id: tour-package
+    name: "Tour Package Builder"
+    vertical: travel-tourism
+    description: "Automated tour package creation pipeline — ingest destination data including attractions, hotels, restaurants, and transport options from structured databases, analyze seasonal pricing and availability patterns, generate multi-day itineraries optimized for logistics (minimize transit time, maximize activity density), calculate package pricing with markup tiers for budget/standard/premium segments, write compelling marketing descriptions for each tour variant, generate day-by-day activity schedules with timing and logistics, validate logistical feasibility (operating hours, travel distances, booking capacity), create comparison tables across package tiers, produce seasonal tour catalogs, individual package PDFs, and booking-ready data feeds for OTA integration"
+    features_demonstrated:
+      - scheduled workflows (seasonal catalog generation, weekly pricing updates, daily availability checks, monthly performance reviews)
+      - multi-agent pipeline (destination researcher, itinerary designer, pricing calculator, copywriter, logistics validator, comparison builder, catalog producer, OTA formatter, reporter)
+      - command phases (python3 for pricing calculations and distance optimization, jq for destination data extraction, pandoc for PDF generation, awk for data feed formatting, sort for attraction ranking)
+      - decision contracts (itinerary-feasibility: feasible/tight-timing/infeasible, pricing-competitiveness: underpriced/competitive/premium/overpriced)
+      - output contracts (tour itineraries, pricing sheets, marketing descriptions, day-by-day schedules, comparison tables, seasonal catalogs, OTA data feeds)
+      - phase routing (itinerary redesign on infeasible logistics, pricing adjustment on overpriced assessment, attraction substitution on availability conflicts, premium upsell creation on high-demand periods)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - fetch MCP (destination data and pricing)
+    status: queued
+    notes: "Tour packaging is a $300B+ market where manual itinerary creation limits catalog size. Uses python3 for optimization and pandoc for PDF catalogs — all tools exist. Shows AO automating creative travel product development."
+
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
 #
 # Verticals to explore next: children's book, number porting,
-# load testing, multi-region deployment, pest-management,
-# public-records-manager, venue-maintenance, policy-impact-analyzer,
-# tour-package, competitive-intel, facility-maintenance,
+# load testing, multi-region deployment, public-records-manager,
+# venue-maintenance, competitive-intel, facility-maintenance,
 # spectrum-manager, agricultural-lending, product-spec-writer,
-# backup-verification, demand-forecaster, passenger-rebooking
+# demand-forecaster, merchandise-pipeline, fan-engagement,
+# size-fit-recommendation, visual-search-indexer
