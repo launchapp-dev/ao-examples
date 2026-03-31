@@ -144,6 +144,7 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [ev-charging-planner](examples/ev-charging-planner/) | Automotive Infrastructure | Geographic coverage gaps → site evaluation → scoring → assessment reports → permitting | generated | [repo](https://github.com/launchapp-dev/ao-workflow-ev-charging-planner) |
 | [budget-planner](examples/budget-planner/) | Finance Planning | Budget consolidation → variance analysis → threshold flagging → executive summaries → forecast adjustments | generated | [repo](https://github.com/launchapp-dev/ao-workflow-budget-planner) |
 | [lease-manager](examples/lease-manager/) | Real Estate | Lease tracking → renewal proposals → rent escalations → compliance reporting | generated | [repo](https://github.com/launchapp-dev/ao-example-lease-manager) |
+| [returns-processor](examples/returns-processor/) | E-Commerce Ops | Return intake → condition inspection → disposition → refund → analytics | generated | [repo](https://github.com/launchapp-dev/ao-example-returns-processor) |
 
 *114 examples across 30+ verticals — 106 generated, 8 queued. More added autonomously by the conductor every 30 minutes.*
 

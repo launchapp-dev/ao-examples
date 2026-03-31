@@ -2685,7 +2685,9 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: 2026-03-31
+    test_status: passed
     notes: "Pipeline #103 from source material. Returns processing is a critical e-commerce operation affecting margins and customer satisfaction. Shows AO managing a multi-step logistics workflow with fraud detection."
 
   # --- Media / Documentary (new — conductor sweep 33, 2026-03-31) ---
