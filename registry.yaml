@@ -1061,7 +1061,9 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: 2026-03-30
+    test_status: passed
     notes: "Pipeline #199 from source material. Warehouse ops is distinct from fleet-dispatcher. Physical space optimization with measurable efficiency gains."
 
 # The conductor will add more examples here autonomously.
