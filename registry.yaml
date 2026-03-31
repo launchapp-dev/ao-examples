@@ -2113,8 +2113,10 @@ examples:
       - memory MCP (@modelcontextprotocol/server-memory)
       - filesystem MCP
       - github MCP (gh-cli-mcp for incident issue creation)
-    status: queued
-    notes: "Pipeline #54 variant from source material. Every team with APIs needs monitoring. Uses fetch MCP and command phases — all real tools. Shows AO for infrastructure observability."
+    status: generated
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-api-health-monitor
+    notes: "Complete — API health monitoring with fetch MCP, command phases for probing, incident creation. GitHub repo created and public."
 
   - id: content-repurposer
     name: "Content Repurposing Pipeline"
@@ -2132,8 +2134,10 @@ examples:
       - fetch MCP (@modelcontextprotocol/server-fetch)
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
-    notes: "Pipeline #26 variant from source material. Content repurposing is the #1 content marketing workflow. Uses fetch MCP for real URL ingestion — every content team needs this. Shows AO for marketing operations."
+    status: generated
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-content-repurposer
+    notes: "Complete — content repurposing pipeline with fetch MCP for URL ingestion, multi-platform output. GitHub repo created and public."
 
   # --- Business Operations (new — conductor sweep 26, 2026-03-31) ---
   - id: rfp-responder
@@ -2151,8 +2155,10 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
       - memory MCP (@modelcontextprotocol/server-memory)
-    status: queued
-    notes: "Pipeline #42 from source material. Every services company responds to RFPs. Clean parse-match-draft-review structure maps perfectly to AO phases. All tools exist on npm."
+    status: generated
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-rfp-responder
+    notes: "Complete — RFP response automation with knowledge base matching, compliance review. GitHub repo created and public."
 
   # --- Government / Public Sector (new — conductor sweep 26, 2026-03-31) ---
   - id: legislative-tracker
@@ -2172,8 +2178,11 @@ examples:
       - memory MCP (@modelcontextprotocol/server-memory)
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
-    notes: "Pipeline #169 from source material. Government vertical is underrepresented (only foia-processor, permit-tracker). Uses Playwright for real legislative site scraping — all tools exist today."
+    status: generated
+    generated_at: 2026-03-31
+    test_status: passed
+    github_repo: launchapp-dev/ao-workflow-legislative-tracker
+    notes: "Complete — legislative bill tracking with Playwright scraping, impact analysis, position recommendations. GitHub repo created and public."
 
   # --- DevOps / SRE (new — conductor sweep 26, 2026-03-31) ---
   - id: log-analyzer
@@ -2192,8 +2201,10 @@ examples:
       - filesystem MCP
       - github MCP (gh-cli-mcp)
       - sequential-thinking MCP
-    status: queued
-    notes: "Pipeline #54 from source material. Complements runbook-generator and incident-responder for full SRE coverage. Uses command phases with real CLI tools (grep, awk, jq) — extremely feasible."
+    status: generated
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-log-analyzer
+    notes: "Complete — log analysis with command phases (grep, awk, jq), anomaly detection, incident creation. GitHub repo created and public."
 
   # --- DevOps / SRE (new — conductor sweep 27, 2026-03-31) ---
   - id: incident-postmortem
@@ -2213,8 +2224,10 @@ examples:
       - git MCP (@modelcontextprotocol/server-git)
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
-    notes: "Pipeline #62 from source material. Every engineering team needs postmortems. Uses gh-cli-mcp + git MCP — all real tools. Complements incident-responder and runbook-generator for complete incident lifecycle."
+    status: generated
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-incident-postmortem
+    notes: "Complete — incident postmortem generator with git/GitHub timeline extraction, root cause analysis. GitHub repo created and public."
 
   # --- Customer Operations (new — conductor sweep 27, 2026-03-31) ---
   - id: customer-feedback-analyzer
@@ -2235,8 +2248,10 @@ examples:
       - memory MCP (@modelcontextprotocol/server-memory)
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
-    notes: "Pipeline #83 from source material. Customer ops vertical has only support-triage. Feedback analysis is universal — every product team needs it. Uses Playwright MCP for real scraping."
+    status: generated
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-customer-feedback-analyzer
+    notes: "Complete — customer feedback analysis with Playwright scraping, sentiment analysis, theme extraction. GitHub repo created and public."
 
   # --- E-Commerce / Retention (new — conductor sweep 27, 2026-03-31) ---
   - id: loyalty-program-manager
@@ -2255,8 +2270,10 @@ examples:
       - memory MCP (@modelcontextprotocol/server-memory)
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
-    notes: "Pipeline #110 from source material. E-commerce retention is huge and underrepresented. Uses memory MCP for persistent customer profiles — all tools exist. Shows AO for marketing/retention operations."
+    status: generated
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-loyalty-program-manager
+    notes: "Complete — loyalty program management with memory MCP for customer profiles, points/tier calculation. GitHub repo created and public."
 
   # --- DevOps / Infrastructure (new — conductor sweep 28, 2026-03-31) ---
   - id: dns-cert-manager
@@ -2275,8 +2292,10 @@ examples:
       - filesystem MCP
       - github MCP (gh-cli-mcp)
       - sequential-thinking MCP
-    status: queued
-    notes: "Pipeline #65 from source material. Certificate expiry outages are embarrassingly common. Uses real CLI tools (openssl, dig, curl) — maximally feasible. Shows AO for infrastructure lifecycle management."
+    status: generated
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-dns-cert-manager
+    notes: "Complete — DNS/TLS certificate lifecycle with openssl/dig/curl command phases, renewal management. GitHub repo created and public."
 
   # --- Data & Analytics (new — conductor sweep 28, 2026-03-31) ---
   - id: customer-segmentation
@@ -2383,6 +2402,70 @@ examples:
       - sequential-thinking MCP
     status: queued
     notes: "Pipeline #202 from source material. Food safety audits are legally required and operationally critical. Uses memory MCP for persistent audit history — all tools exist. Shows AO for regulatory compliance in food industry."
+
+  # --- Telecom (new — conductor sweep 30, 2026-03-31) ---
+  - id: telecom-billing-resolver
+    name: "Telecom Billing Dispute Resolution"
+    vertical: telecom
+    description: "Billing dispute resolution pipeline — ingest dispute tickets from CSV/JSON files, parse call detail records (CDRs) to validate claimed usage, cross-reference rate plans and contract terms, determine adjustment eligibility based on configurable rules, calculate credit amounts, generate resolution letters with itemized findings, track dispute outcomes for pattern detection, produce monthly dispute analytics reports with root cause breakdowns"
+    features_demonstrated:
+      - scheduled workflows (daily dispute intake, weekly pattern analysis, monthly reporting)
+      - multi-agent pipeline (ticket parser, CDR analyst, eligibility determiner, resolution writer, analytics reporter)
+      - command phases (jq for CDR parsing, csvtool for rate plan lookups, date calculations for billing periods)
+      - decision contracts (eligibility: full-credit/partial-credit/no-credit/escalate, dispute-pattern: billing-error/usage-dispute/rate-mismatch/fraud)
+      - output contracts (resolution letters, credit memos, analytics dashboards, pattern reports)
+      - memory MCP for tracking dispute patterns and repeat offenders
+      - filesystem MCP for CDR files and resolution documents
+      - phase routing (auto-credit for clear billing errors, manual escalation for ambiguous cases)
+    tools_needed:
+      - memory MCP (@modelcontextprotocol/server-memory)
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Telecom vertical only has network-fault-manager. Billing disputes are high-volume, rule-based — perfect for AO automation. Uses command phases with jq for CDR analysis. Shows AO for telecom operations."
+
+  # --- Automotive (new — conductor sweep 30, 2026-03-31) ---
+  - id: ev-charging-planner
+    name: "EV Charging Site Planner"
+    vertical: automotive-infrastructure
+    description: "EV charging station site planning pipeline — analyze geographic coverage gaps using existing station data scraped via Playwright, evaluate candidate sites against criteria (population density, traffic patterns, grid capacity, zoning), score and rank locations, generate site assessment reports with maps and cost estimates, track permitting status for approved sites, produce quarterly network expansion reports with coverage analytics"
+    features_demonstrated:
+      - scheduled workflows (weekly gap analysis refresh, monthly site scoring, quarterly expansion report)
+      - multi-agent pipeline (data scraper, gap analyzer, site evaluator, report writer, permit tracker)
+      - decision contracts (site-verdict: approve/conditional/reject/defer, priority: immediate/next-quarter/backlog)
+      - output contracts (site assessments, coverage gap reports, cost estimates, expansion roadmaps)
+      - playwright MCP for scraping public EV charging station data (AFDC, PlugShare)
+      - memory MCP for persistent site evaluation history and coverage baselines
+      - command phases (jq for data processing, python3 for distance calculations)
+      - phase routing (fast-track high-demand areas, defer low-priority sites)
+    tools_needed:
+      - playwright MCP (@playwright/mcp)
+      - memory MCP (@modelcontextprotocol/server-memory)
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Automotive has vehicle-recall only. EV infrastructure is a massive growth area. Uses Playwright to scrape real charging station data — immediately practical. Shows AO for infrastructure planning."
+
+  # --- Advertising (new — conductor sweep 30, 2026-03-31) ---
+  - id: campaign-bid-optimizer
+    name: "Ad Campaign Bid Optimizer"
+    vertical: advertising-programmatic
+    description: "Programmatic ad campaign bid optimization pipeline — ingest campaign performance data from CSV exports (impressions, clicks, conversions, spend by segment), calculate key metrics (CTR, CPA, ROAS) per audience segment and placement, identify underperforming and overperforming segments, generate bid adjustment recommendations using configurable optimization rules, simulate budget reallocation scenarios, produce daily performance dashboards and weekly optimization reports with before/after projections"
+    features_demonstrated:
+      - scheduled workflows (hourly metric refresh, daily bid recommendations, weekly optimization reports)
+      - multi-agent pipeline (data processor, metric calculator, segment analyst, bid optimizer, report generator)
+      - command phases (jq for performance data aggregation, python3 for statistical calculations, csvtool for data processing)
+      - decision contracts (segment-action: increase-bid/decrease-bid/pause/maintain, budget-action: reallocate/maintain/expand/contract)
+      - output contracts (bid adjustment sheets, segment scorecards, optimization reports, budget allocation plans)
+      - memory MCP for tracking historical performance and optimization effectiveness
+      - filesystem MCP for campaign data files and reports
+      - phase routing (auto-pause on high-CPA segments, boost on high-ROAS segments)
+    tools_needed:
+      - memory MCP (@modelcontextprotocol/server-memory)
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Advertising has only ad-campaign and influencer-campaign. Programmatic bidding is the core of digital advertising. Uses command phases with real math (python3, jq). Shows AO for data-driven ad optimization."
 
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
