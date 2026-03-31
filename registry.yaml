@@ -1411,7 +1411,10 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: 2026-03-30
+    test_status: passed
+    github_repo: launchapp-dev/ao-example-freight-broker
     notes: "Pipeline #198 from source material. Freight brokerage is a multi-party negotiation workflow with real-time tracking and exception handling. Shows AO managing complex logistics with carrier matching and settlement."
 
   # --- Insurance / Operations (new — conductor sweep 15, 2026-03-31) ---
