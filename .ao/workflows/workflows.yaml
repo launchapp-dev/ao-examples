@@ -1,4 +1,4 @@
-default_workflow_ref: generate-example
+default_workflow_ref: generate-workflow
 
 workflows:
   # ============================================================
@@ -11,32 +11,32 @@ workflows:
       - conductor-sweep
 
   # ============================================================
-  # EXAMPLE GENERATION — queued by conductor
+  # WORKFLOW GENERATION — queued by conductor
   # ============================================================
-  - id: generate-example
-    name: "Generate Example"
-    description: "Full pipeline: plan → scaffold → build → review → init repo → update registry"
+  - id: generate-workflow
+    name: "Generate Workflow"
+    description: "Full pipeline: plan → scaffold → build → review → QA → init repo → update registry"
     phases:
-      - plan-example
-      - scaffold-example
-      - build-example
-      - review-example:
+      - plan-workflow
+      - scaffold-workflow
+      - build-workflow
+      - review-workflow:
           on_verdict:
             rework:
-              target: build-example
+              target: build-workflow
             fail:
-              target: plan-example
+              target: plan-workflow
             advance:
-              target: test-example
+              target: qa-workflow
           max_rework_attempts: 3
-      - qa-example:
+      - qa-workflow:
           on_verdict:
             rework:
-              target: build-example
+              target: build-workflow
             fail:
-              target: build-example
+              target: build-workflow
           max_rework_attempts: 3
-      - init-example-repo
+      - init-workflow-repo
       - update-registry
     post_success:
       merge:
@@ -51,7 +51,7 @@ workflows:
   # ============================================================
   - id: ideation
     name: "Ideation Pipeline"
-    description: "Brainstorm and research new example ideas, add to registry"
+    description: "Brainstorm and research new workflow ideas, add to registry"
     phases:
       - ideate
 
@@ -60,7 +60,7 @@ workflows:
   # ============================================================
   - id: research
     name: "Research Integration"
-    description: "Deep-dive research on a tool, API, or MCP server for a proposed example"
+    description: "Deep-dive research on a tool, API, or MCP server for a proposed workflow"
     phases:
       - research-integration
 
@@ -90,65 +90,67 @@ workflows:
         cleanup_worktree: true
 
   # ============================================================
-  # TESTING — validate examples actually work
+  # QA — validate workflows actually work
   # ============================================================
-  - id: test-example
-    name: "Test Example"
-    description: "Run full test suite on a single example repo"
+  - id: qa-single
+    name: "QA Single Workflow"
+    description: "Run full QA on a single workflow, fix if broken"
     phases:
-      - test-example:
+      - qa-workflow:
           on_verdict:
+            rework:
+              target: fix-workflow
             fail:
-              target: fix-example
-      - fix-example
-      - test-example:
+              target: fix-workflow
+      - fix-workflow
+      - qa-workflow:
           max_rework_attempts: 2
 
-  - id: test-all
-    name: "Test All Examples"
-    description: "Run full test suite on all generated examples"
+  - id: qa-all
+    name: "QA All Workflows"
+    description: "Run full QA suite on all generated workflows"
     phases:
-      - test-all-examples
+      - qa-all-workflows
 
-  - id: test-and-fix
-    name: "Test and Fix Example"
-    description: "Test an example, fix if broken, retest"
+  - id: qa-and-fix
+    name: "QA and Fix Workflow"
+    description: "QA a workflow, fix if broken, retest"
     phases:
-      - test-example:
+      - qa-workflow:
           on_verdict:
             rework:
-              target: fix-example
+              target: fix-workflow
             fail:
-              target: fix-example
-      - fix-example
-      - test-example:
+              target: fix-workflow
+      - fix-workflow
+      - qa-workflow:
           on_verdict:
             rework:
-              target: fix-example
+              target: fix-workflow
           max_rework_attempts: 3
 
-  - id: test-mcp
-    name: "Test MCP Server"
+  - id: qa-mcp
+    name: "QA MCP Server"
     description: "Run test suite on a custom MCP server"
     phases:
-      - test-mcp-server
+      - qa-mcp-server
 
   # ============================================================
-  # MAINTENANCE — audit and refresh existing examples
+  # MAINTENANCE — audit and refresh existing workflows
   # ============================================================
   - id: audit
-    name: "Audit Examples"
-    description: "Review all generated examples for quality and freshness"
+    name: "Audit Workflows"
+    description: "Review all generated workflows for quality and freshness"
     phases:
-      - audit-examples
+      - audit-workflows
 
   - id: refresh
-    name: "Refresh Example"
-    description: "Update an existing example to latest AO features"
+    name: "Refresh Workflow"
+    description: "Update an existing workflow to latest AO features"
     phases:
-      - refresh-example
-      - review-example:
+      - refresh-workflow
+      - review-workflow:
           on_verdict:
             rework:
-              target: refresh-example
+              target: refresh-workflow
           max_rework_attempts: 2

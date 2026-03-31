@@ -11,10 +11,10 @@ phases:
 
       ## Project Layout
       You are in /Users/samishukri/ao-examples (the project root).
-      - registry.yaml        — master list of all examples and their status
-      - examples/             — each subdirectory is a standalone AO example repo
-      - examples/<id>/        — one example (e.g. examples/blog-generator/)
-      - examples/<id>/.ao/workflows/ — the AO config for that example
+      - registry.yaml        — master list of all workflows and their status
+      - workflows/            — each subdirectory is a standalone AO workflow repo
+      - workflows/<id>/       — one workflow (e.g. workflows/blog-generator/)
+      - workflows/<id>/.ao/workflows/ — the AO config for that workflow
       - research/             — research briefs written by the researcher agent
 
       ## Your Loop
@@ -24,27 +24,27 @@ phases:
       4. Handle completed tasks: update registry status to "generated"
       5. Handle stuck/failed tasks: investigate, re-queue if needed
       6. **VERIFY GITHUB REPOS** — for every example with status "generated":
-         a. Check if the remote repo exists: `gh repo view launchapp-dev/ao-example-<id> 2>&1`
+         a. Check if the remote repo exists: `gh repo view launchapp-dev/ao-workflow-<id> 2>&1`
          b. If it doesn't exist, create it:
-            `cd examples/<id> && gh repo create launchapp-dev/ao-example-<id> --public --description "AO workflow example: <id>" --source=. --push`
+            `cd workflows/<id> && gh repo create launchapp-dev/ao-workflow-<id> --public --description "AO workflow: <id>" --source=. --push`
          c. If it exists but local is ahead of remote, push:
-            `cd examples/<id> && git push`
-         d. Verify the repo is public: `gh repo view launchapp-dev/ao-example-<id> --json visibility -q '.visibility'`
-            If private, make it public: `gh repo edit launchapp-dev/ao-example-<id> --visibility public`
+            `cd workflows/<id> && git push`
+         d. Verify the repo is public: `gh repo view launchapp-dev/ao-workflow-<id> --json visibility -q '.visibility'`
+            If private, make it public: `gh repo edit launchapp-dev/ao-workflow-<id> --visibility public`
       7. Count how many tasks are currently queued/in-progress
       8. If < 10 active tasks AND queued examples exist: enqueue the next batch using:
            ao queue enqueue --title "<example-id>" --description "<description from registry>" --workflow-ref generate-example
       9. If all existing examples are generated or in-progress: IDEATE
-         - Come up with 2-3 new example ideas
+         - Come up with 2-3 new workflow ideas
          - Research what tools/MCP servers they'd need
          - Add them to registry.yaml with status: "queued"
          - Enqueue the highest-priority new idea
       10. Update README.md examples table if any new examples were completed
       11. Commit and push changes
 
-      IMPORTANT: The task title MUST be the example id (e.g. "blog-generator").
+      IMPORTANT: The task title MUST be the workflow id (e.g. "blog-generator").
       This is how downstream phases know which directory to work in.
-      The example id becomes the directory name under examples/.
+      The workflow id becomes the directory name under examples/.
 
       ## Discovering Available Workflows
 
@@ -65,7 +65,7 @@ phases:
 
       ```bash
       # Queue an example to be generated
-      ao queue enqueue --title "blog-generator" --description "Generate blog-generator example" --workflow-ref generate-example
+      ao queue enqueue --title "blog-generator" --description "Generate blog-generator workflow" --workflow-ref generate-workflow
 
       # Queue an MCP server to be built
       ao queue enqueue --title "mcp-replicate" --description "Build MCP server wrapping Replicate API" --workflow-ref build-mcp
@@ -110,7 +110,7 @@ phases:
     mode: agent
     agent: researcher
     directive: |
-      The conductor has asked you to research tools and integrations for a new example idea.
+      The conductor has asked you to research tools and integrations for a new workflow idea.
 
       Read the task title and description for what to research. Investigate:
       1. Does an MCP server exist for this tool? (check npm, GitHub)
@@ -127,20 +127,20 @@ phases:
   # ============================================================
   # EXAMPLE GENERATION PIPELINE
   #
-  # Convention: the TASK TITLE is the example id (e.g. "blog-generator").
-  # This maps directly to the directory: examples/<task-title>/
+  # Convention: the TASK TITLE is the workflow id (e.g. "blog-generator").
+  # This maps directly to the directory: workflows/<task-title>/
   # All phases in this pipeline use this convention.
   # ============================================================
 
-  plan-example:
+  plan-workflow:
     mode: agent
     agent: conductor
     directive: |
-      You're planning a specific example repo.
+      You're planning a specific workflow repo.
 
-      ## How to find the example id
-      The task title IS the example id. Look at the current task's title.
-      This maps to the directory: examples/<task-title>/
+      ## How to find the workflow id
+      The task title IS the workflow id. Look at the current task's title.
+      This maps to the directory: workflows/<task-title>/
 
       ## What to do
       1. Read registry.yaml — find the entry matching the task title for this example's spec
@@ -151,8 +151,8 @@ phases:
          - MCP servers needed (only use ones declared: filesystem, github, sequential-thinking)
          - Supporting files needed (config, templates, sample data)
          - README outline
-      3. Create the directory: examples/<task-title>/.ao/workflows/
-      4. Write the plan to: examples/<task-title>/PLAN.md
+      3. Create the directory: workflows/<task-title>/.ao/workflows/
+      4. Write the plan to: workflows/<task-title>/PLAN.md
 
       ## File paths (example for task title "blog-generator")
       - examples/blog-generator/PLAN.md
@@ -164,72 +164,72 @@ phases:
       writes_files: true
       requires_commit: true
 
-  scaffold-example:
+  scaffold-workflow:
     mode: command
-    directive: "Create the directory structure for the new example repo"
+    directive: "Create the directory structure for the new workflow repo"
     command:
       program: bash
       args:
         - "-c"
         - |
-          EXAMPLE_ID="{{subject_title}}"
-          EXAMPLE_DIR="examples/${EXAMPLE_ID}"
-          mkdir -p "${EXAMPLE_DIR}/.ao/workflows"
-          mkdir -p "${EXAMPLE_DIR}/output"
-          echo "Scaffolded ${EXAMPLE_DIR}"
-          ls -la "${EXAMPLE_DIR}"
+          WORKFLOW_ID="{{subject_title}}"
+          WORKFLOW_DIR="workflows/${WORKFLOW_ID}"
+          mkdir -p "${WORKFLOW_DIR}/.ao/workflows"
+          mkdir -p "${WORKFLOW_DIR}/output"
+          echo "Scaffolded ${WORKFLOW_DIR}"
+          ls -la "${WORKFLOW_DIR}"
       cwd_mode: project_root
       timeout_secs: 30
 
-  build-example:
+  build-workflow:
     mode: agent
     agent: master-builder
     directive: |
-      Build a complete, runnable AO example repo.
+      Build a complete, runnable AO workflow repo.
 
-      ## How to find the example id and directory
-      The task title IS the example id (e.g. "blog-generator").
-      All files go under: examples/<task-title>/
+      ## How to find the workflow id and directory
+      The task title IS the workflow id (e.g. "blog-generator").
+      All files go under: workflows/<task-title>/
       Example: if task title is "blog-generator", write files to examples/blog-generator/
 
       ## What to read first
-      1. Check if examples/<task-title>/PLAN.md exists — if so, follow the plan
+      1. Check if workflows/<task-title>/PLAN.md exists — if so, follow the plan
       2. If no plan, read registry.yaml and find the entry matching the task title
       3. Use the description and features_demonstrated fields to guide your build
 
       ## Files to create (ALL required)
 
-      examples/<task-title>/.ao/workflows/agents.yaml
+      workflows/<task-title>/.ao/workflows/agents.yaml
         - Define all agent profiles with detailed system prompts (5+ lines each)
         - Use real model names: claude-sonnet-4-6, claude-haiku-4-5, claude-opus-4-6, kimi-code/kimi-for-coding, minimax/MiniMax-M2.7
         - Use at least 2 different models
         - Only reference MCP servers that are declared in the mcp-servers.yaml you create
 
-      examples/<task-title>/.ao/workflows/phases.yaml
+      workflows/<task-title>/.ao/workflows/phases.yaml
         - Define all phases referenced by workflows
         - Mix agent phases, command phases, and manual gates where appropriate
         - Include real, detailed directives
 
-      examples/<task-title>/.ao/workflows/workflows.yaml
+      workflows/<task-title>/.ao/workflows/workflows.yaml
         - Define at least one workflow pipeline
         - Include at least one non-linear feature (rework loop, decision routing, manual gate)
         - Set default_workflow_ref
 
-      examples/<task-title>/.ao/workflows/mcp-servers.yaml
+      workflows/<task-title>/.ao/workflows/mcp-servers.yaml
         - Declare ALL MCP servers referenced by agents
         - Use real npm packages (e.g. @modelcontextprotocol/server-filesystem)
 
-      examples/<task-title>/.ao/workflows/schedules.yaml (ONLY if this example uses cron)
+      workflows/<task-title>/.ao/workflows/schedules.yaml (ONLY if this example uses cron)
 
-      examples/<task-title>/README.md
+      workflows/<task-title>/README.md
         - One-line description
         - Workflow diagram (ASCII)
-        - Quick start: cd examples/<task-title> && ao daemon start
+        - Quick start: cd workflows/<task-title> && ao daemon start
         - List of agents and their roles
         - AO features demonstrated
         - Requirements (API keys, tools needed)
 
-      examples/<task-title>/CLAUDE.md
+      workflows/<task-title>/CLAUDE.md
         - Project context for agents working in this repo
 
       ## Quality bar
@@ -245,25 +245,25 @@ phases:
       writes_files: true
       requires_commit: true
 
-  review-example:
+  review-workflow:
     mode: agent
     agent: reviewer
     directive: |
-      Review the generated AO example repo.
+      Review the generated AO workflow repo.
 
       ## How to find the example
-      The task title IS the example id (e.g. "blog-generator").
-      The example is at: examples/<task-title>/
+      The task title IS the workflow id (e.g. "blog-generator").
+      The example is at: workflows/<task-title>/
 
       ## Review checklist
 
       ### Structure (read these files)
-      - examples/<task-title>/.ao/workflows/agents.yaml — must exist, define agents
-      - examples/<task-title>/.ao/workflows/phases.yaml — must exist, define phases
-      - examples/<task-title>/.ao/workflows/workflows.yaml — must exist, define workflows
-      - examples/<task-title>/.ao/workflows/mcp-servers.yaml — must exist if agents reference MCP servers
-      - examples/<task-title>/README.md — must exist with quick start
-      - examples/<task-title>/CLAUDE.md — must exist
+      - workflows/<task-title>/.ao/workflows/agents.yaml — must exist, define agents
+      - workflows/<task-title>/.ao/workflows/phases.yaml — must exist, define phases
+      - workflows/<task-title>/.ao/workflows/workflows.yaml — must exist, define workflows
+      - workflows/<task-title>/.ao/workflows/mcp-servers.yaml — must exist if agents reference MCP servers
+      - workflows/<task-title>/README.md — must exist with quick start
+      - workflows/<task-title>/CLAUDE.md — must exist
 
       ### Correctness
       - Every agent referenced in phases.yaml exists in agents.yaml
@@ -290,7 +290,7 @@ phases:
     capabilities:
       mutates_state: false
 
-  init-example-repo:
+  init-workflow-repo:
     mode: command
     directive: "Initialize the example as a standalone git repo, create remote on GitHub, and push"
     command:
@@ -299,30 +299,30 @@ phases:
         - "-c"
         - |
           set -e
-          EXAMPLE_ID="{{subject_title}}"
-          EXAMPLE_DIR="examples/${EXAMPLE_ID}"
-          REPO_NAME="ao-example-${EXAMPLE_ID}"
+          WORKFLOW_ID="{{subject_title}}"
+          WORKFLOW_DIR="workflows/${WORKFLOW_ID}"
+          REPO_NAME="ao-workflow-${WORKFLOW_ID}"
           ORG="launchapp-dev"
 
-          if [ ! -d "${EXAMPLE_DIR}" ]; then
-            echo "ERROR: ${EXAMPLE_DIR} does not exist!"
+          if [ ! -d "${WORKFLOW_DIR}" ]; then
+            echo "ERROR: ${WORKFLOW_DIR} does not exist!"
             exit 1
           fi
 
-          cd "${EXAMPLE_DIR}"
+          cd "${WORKFLOW_DIR}"
 
           # Init local git repo if needed
           if [ ! -d ".git" ]; then
             git init
             git add -A
-            git commit -m "Initial AO example: ${EXAMPLE_ID}
+            git commit -m "Initial AO example: ${WORKFLOW_ID}
 
           Generated by AO Examples — https://github.com/launchapp-dev/ao-examples
-          This is a standalone AO workflow example. Run with: ao daemon start"
-            echo "Initialized local git repo for ${EXAMPLE_ID}"
+          This is a standalone AO workflow. Run with: ao daemon start"
+            echo "Initialized local git repo for ${WORKFLOW_ID}"
           else
             git add -A
-            git diff --cached --quiet || git commit -m "Update AO example: ${EXAMPLE_ID}"
+            git diff --cached --quiet || git commit -m "Update AO example: ${WORKFLOW_ID}"
           fi
 
           # Create remote repo on GitHub if it doesn't exist
@@ -330,7 +330,7 @@ phases:
             echo "Creating public repo: ${ORG}/${REPO_NAME}"
             gh repo create "${ORG}/${REPO_NAME}" \
               --public \
-              --description "AO workflow example: ${EXAMPLE_ID} — generated by ao-examples" \
+              --description "AO workflow: ${WORKFLOW_ID} — generated by ao-examples" \
               --source=. \
               --push
           else
@@ -350,7 +350,7 @@ phases:
       The example has been built, reviewed, and initialized as a git repo.
 
       ## How to find the example
-      The task title IS the example id.
+      The task title IS the workflow id.
 
       ## What to do
       1. Update registry.yaml: change this example's status to "generated"
@@ -372,7 +372,7 @@ phases:
     mode: agent
     agent: conductor
     directive: |
-      Time to brainstorm new example ideas. This runs when the pipeline needs more work.
+      Time to brainstorm new workflow ideas. This runs when the pipeline needs more work.
 
       ## Project context
       Project root: /Users/samishukri/ao-examples
@@ -569,13 +569,13 @@ phases:
   # TEST PHASES
   # ============================================================
 
-  test-example:
+  test-workflow:
     mode: agent
     agent: tester
     directive: |
-      Test a single generated example repo.
+      Test a single generated workflow repo.
 
-      The task title IS the example id (e.g. "blog-generator").
+      The task title IS the workflow id (e.g. "blog-generator").
       The example is at: examples/{{subject_title}}/
 
       Run the full test suite:
@@ -602,16 +602,16 @@ phases:
       writes_files: true
       requires_commit: true
 
-  test-all-examples:
+  qa-all-workflows:
     mode: agent
     agent: tester
     directive: |
-      Test ALL generated example repos.
+      Test ALL generated workflow repos.
 
       1. Read registry.yaml — find all examples with status "generated"
       2. For each, run the full test suite:
          - File structure, YAML syntax, AO config compilation, cross-refs, workflow list, README
-         - Run: `ao workflow config --project-root examples/<id>/ 2>&1` for each
+         - Run: `ao workflow config --project-root workflows/<id>/ 2>&1` for each
       3. Write individual results to test-results/<id>.md
       4. Write a summary to test-results/summary.md with pass/fail per example
       5. Update registry.yaml: add test_status "passed" or "failed" to each tested example
@@ -623,7 +623,7 @@ phases:
       writes_files: true
       requires_commit: true
 
-  test-mcp-server:
+  qa-mcp-server:
     mode: agent
     agent: tester
     directive: |
@@ -652,13 +652,13 @@ phases:
       writes_files: true
       requires_commit: true
 
-  qa-example:
+  qa-workflow:
     mode: agent
     agent: tester
     directive: |
       MANDATORY QA — this example cannot ship without passing.
 
-      The task title IS the example id.
+      The task title IS the workflow id.
       The example is at: examples/{{subject_title}}/
 
       ## QA Checklist (ALL must pass)
@@ -709,13 +709,13 @@ phases:
       writes_files: true
       requires_commit: true
 
-  fix-example:
+  fix-workflow:
     mode: agent
     agent: master-builder
     directive: |
       Fix a failing example based on test results.
 
-      The task title IS the example id.
+      The task title IS the workflow id.
       Read the test results at: test-results/{{subject_title}}.md
       Fix the issues identified by the tester.
 
@@ -736,7 +736,7 @@ phases:
   # MAINTENANCE PHASES
   # ============================================================
 
-  audit-examples:
+  audit-workflows:
     mode: agent
     agent: reviewer
     directive: |
@@ -745,7 +745,7 @@ phases:
       Project root: /Users/samishukri/ao-examples
 
       For each example with status: "generated" in registry.yaml:
-      1. Read examples/<id>/.ao/workflows/ — is the YAML still valid?
+      1. Read workflows/<id>/.ao/workflows/ — is the YAML still valid?
       2. Check if README is accurate
       3. Check if better AO features exist now that should be demonstrated
       4. Flag any that need refreshing
@@ -756,13 +756,13 @@ phases:
       writes_files: true
       requires_commit: true
 
-  refresh-example:
+  refresh-workflow:
     mode: agent
     agent: master-builder
     directive: |
       Refresh an existing example to use the latest AO features and schema.
 
-      The task title IS the example id. Files are at: examples/<task-title>/
+      The task title IS the workflow id. Files are at: workflows/<task-title>/
 
       Read the audit notes in registry.yaml for what needs updating.
       Only change what's necessary — don't rewrite working files.
