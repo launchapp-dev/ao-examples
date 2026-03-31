@@ -1537,8 +1537,9 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
-    notes: "Pipeline #21 from source material. Music production is a deeply creative multi-phase pipeline. Shows AO orchestrating artistic workflows with multiple creative review gates."
+    status: generated
+    generated_at: 2026-03-31
+    notes: "Complete — AI music production pipeline with composition, arrangement, sound design. Generated 2026-03-31."
 
   # --- Consumer / Real Estate (new — conductor sweep 16, 2026-03-31) ---
   - id: home-buyer
@@ -1653,8 +1654,9 @@ examples:
       - notion MCP (@notionhq/notion-mcp-server)
       - git MCP
       - filesystem MCP
-    status: queued
-    notes: "Pipeline #33 from source material (knowledge base maintenance). Internal wikis rot fast. Shows AO bridging Notion and code repos to keep documentation accurate."
+    status: generated
+    generated_at: 2026-03-31
+    notes: "Complete — Notion wiki staleness monitor with page scanning, freshness scoring, archival. Generated 2026-03-31."
 
   - id: changelog-generator
     name: "Changelog & Release Notes Generator"
@@ -1692,8 +1694,9 @@ examples:
       - git MCP
       - github MCP (gh-cli-mcp)
       - filesystem MCP
-    status: queued
-    notes: "Pipeline #34 from source material. Every API needs docs but they're always stale. Shows AO bridging code and documentation with automated validation."
+    status: generated
+    generated_at: 2026-03-31
+    notes: "Complete — automated API documentation pipeline with endpoint scanning, schema extraction, example generation. Generated 2026-03-31."
 
   # --- Sustainability / Food (new — conductor sweep 19, 2026-03-31) ---
   - id: food-waste-tracker
@@ -1795,8 +1798,9 @@ examples:
       - memory MCP
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
-    notes: "Universal business need — every team has meetings. Uses Linear MCP for real task tracking. Shows AO as a business productivity tool, not just dev tooling."
+    status: generated
+    generated_at: 2026-03-31
+    notes: "Complete — meeting transcript summarization with action items, decision logging, follow-up scheduling. Generated 2026-03-31."
 
   # --- Legal / Developer Tools (new — conductor sweep 21, 2026-03-31) ---
   - id: license-compliance
@@ -1855,7 +1859,8 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
       - memory MCP
-    status: queued
+    status: generated
+    test_status: passed
     notes: "Pipeline #149 from source material. Every landlord/property manager screens tenants. Shows AO handling sensitive personal data workflows with compliance requirements."
 
   # --- Developer Tools (new — conductor sweep 22, 2026-03-31) ---
@@ -1915,11 +1920,67 @@ examples:
     status: queued
     notes: "Every brand needs social media management. Uses filesystem + fetch for research — all real tools. Shows AO as a marketing automation pipeline."
 
+  # --- Content / Marketing (new — conductor sweep 23, 2026-03-31) ---
+  - id: newsletter-factory
+    name: "Newsletter Production Pipeline"
+    vertical: content-marketing
+    description: "Newsletter production pipeline — curate content from RSS feeds and URLs using fetch MCP, summarize and write sections, compose markdown newsletter, generate subject lines, schedule send cadence, track edition history"
+    features_demonstrated:
+      - command phases (curl for RSS parsing, pandoc for format conversion)
+      - multi-agent pipeline (curator, writer, editor, analyst)
+      - decision contracts (content-fit: include/summarize/skip, edition-quality: publish/revise/delay)
+      - output contracts (structured newsletter markdown, content calendar, topic tracker)
+      - scheduled workflows (weekly newsletter cycle)
+      - fetch MCP for real URL content ingestion
+    tools_needed:
+      - fetch MCP (@modelcontextprotocol/server-fetch)
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #27 from source material. Newsletters are the original content pipeline. Uses fetch MCP to grab real URLs — practical and immediately usable."
+
+  - id: vulnerability-scanner
+    name: "Dependency Vulnerability Scanner"
+    vertical: cybersecurity-devtools
+    description: "Vulnerability management pipeline — run npm audit and pip-audit via command phases, parse CVE findings, cross-reference with GitHub security advisories using gh CLI, score severity, generate remediation plan with upgrade paths, create GitHub issues for critical findings, produce weekly security posture report"
+    features_demonstrated:
+      - command phases (npm audit --json, pip-audit --format json, gh api /repos/{owner}/{repo}/security-advisories)
+      - multi-agent pipeline (scanner, analyst, remediator, reporter)
+      - decision contracts (severity: critical/high/medium/low, action: patch-now/schedule/accept-risk/investigate)
+      - output contracts (structured CVE reports, remediation plans, security posture dashboards)
+      - scheduled workflows (daily scan, weekly report)
+      - github MCP for issue creation and advisory lookup
+    tools_needed:
+      - github MCP (gh-cli-mcp)
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #184 from source material. Every dev team needs vulnerability scanning. Uses npm audit + gh CLI — real tools that work today. Shows AO for security automation."
+
+  - id: vendor-evaluator
+    name: "Vendor Evaluation Pipeline"
+    vertical: business-ops
+    description: "Vendor evaluation pipeline — intake vendor list, research each vendor via web fetch for company info and reviews, score against weighted criteria (pricing, features, support, security, compliance), generate comparison matrix, produce executive recommendation with pros/cons, track evaluation history"
+    features_demonstrated:
+      - multi-agent pipeline (researcher, analyst, compliance checker, report writer)
+      - decision contracts (vendor-verdict: recommend/acceptable/reject/needs-more-info, risk-level: low/medium/high)
+      - output contracts (structured comparison matrices, scoring rubrics, executive summaries)
+      - fetch MCP for real vendor website and review data
+      - sequential-thinking for weighted scoring methodology
+      - memory MCP for tracking historical vendor evaluations
+    tools_needed:
+      - fetch MCP (@modelcontextprotocol/server-fetch)
+      - memory MCP (@modelcontextprotocol/server-memory)
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #97 from source material. Every company evaluates vendors. Uses fetch MCP for real research — immediately practical. Shows AO for procurement/business ops."
+
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
 #
 # Verticals to explore next: documentary research, children's book,
 # connected car, programmatic ads, medical coding, loyalty program,
-# cargo operations, broadcast production, vendor evaluation,
-# access review, volunteer coordinator, number porting
+# cargo operations, broadcast production, access review,
+# volunteer coordinator, number porting, customer churn prediction
