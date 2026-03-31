@@ -2806,7 +2806,10 @@ examples:
       - filesystem MCP
       - git MCP (@modelcontextprotocol/server-git)
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    started_at: 2026-03-31
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-soc2-evidence
     notes: "Pipeline #78 from source material. SOC 2 compliance is mandatory for SaaS companies selling to enterprises. Uses git and filesystem — all tools exist. Shows AO automating a painful, audit-heavy compliance process."
 
   # --- Privacy / Legal (new — conductor sweep 34, 2026-03-31) ---
@@ -2826,7 +2829,10 @@ examples:
       - filesystem MCP
       - memory MCP (@modelcontextprotocol/server-memory)
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    started_at: 2026-03-31
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-gdpr-request-handler
     notes: "Pipeline #73 from source material. GDPR compliance is legally required for any company with EU users, with fines up to 4% of revenue. Uses filesystem, memory, and CLI tools — all exist. Shows AO managing time-sensitive legal compliance workflows."
 
   # --- Data Analytics (new — conductor sweep 34, 2026-03-31) ---
@@ -2844,7 +2850,9 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    test_status: passed
+    github_repo: launchapp-dev/ao-workflow-churn-predictor
     notes: "Pipeline #51 from source material. Churn prediction directly impacts revenue — 5% improvement in retention can increase profits 25-95%. Uses python3 and jq for scoring — tools exist. Shows AO running a data analytics pipeline with real business impact."
 
   # --- Developer Tools (new — conductor sweep 34, 2026-03-31) ---
@@ -2864,7 +2872,9 @@ examples:
       - playwright MCP (@playwright/mcp)
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    test_status: passed
+    github_repo: launchapp-dev/ao-workflow-a11y-auditor
     notes: "Pipeline #13 from source material. Accessibility compliance is legally required (ADA, EAA) and affects 15% of the population. Uses Playwright MCP and axe-core CLI — both exist on npm. Shows AO using browser automation for real-world auditing."
 
   # --- Customer Ops (new — conductor sweep 34, 2026-03-31) ---
@@ -2882,8 +2892,102 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    started_at: 2026-03-31
+    generated_at: 2026-03-31
     notes: "Pipeline #86 from source material. Knowledge base deflection reduces support costs 20-40%. Uses python3 for clustering and filesystem for storage — all tools exist. Shows AO automating a high-value customer ops workflow."
+
+  # --- Energy / Sustainability (new — conductor sweep 35, 2026-03-31) ---
+  - id: carbon-tracker
+    name: "Carbon Footprint Tracker"
+    vertical: energy-sustainability
+    description: "Carbon emissions tracking and reduction pipeline — ingest emissions data from CSV/JSON (energy usage, travel, procurement, waste), calculate scope 1/2/3 carbon footprints using standard emission factors, benchmark against industry averages and regulatory targets, identify top reduction opportunities ranked by cost-effectiveness, generate reduction action plans with projected savings, track progress against reduction commitments, produce quarterly sustainability reports and annual disclosures, schedule monthly data collection and weekly anomaly detection"
+    features_demonstrated:
+      - scheduled workflows (monthly data collection, weekly anomaly detection, quarterly reporting)
+      - multi-agent pipeline (data collector, calculator, benchmarker, opportunity finder, planner, reporter)
+      - command phases (python3 for emissions calculations and trend analysis, jq for data aggregation, awk for CSV processing)
+      - decision contracts (emissions-status: on-track/behind-target/critical-overshoot, reduction-priority: quick-win/medium-effort/strategic-investment)
+      - output contracts (emissions inventories, reduction plans, quarterly reports, annual disclosures)
+      - phase routing (immediate alert on critical overshoot, re-collection on data quality issues)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #171 from source material. Carbon tracking is increasingly mandatory (SEC climate disclosure, EU CSRD). Uses python3 for calculations and filesystem — all tools exist. Shows AO automating environmental compliance."
+
+  # --- Content / Publishing (new — conductor sweep 35, 2026-03-31) ---
+  - id: whitepaper-producer
+    name: "Whitepaper Production Pipeline"
+    vertical: content-publishing
+    description: "End-to-end whitepaper production pipeline — intake topic brief and target audience, research existing literature and data using web search, generate detailed outline with thesis and supporting arguments, draft sections with citations and data visualizations, peer review each section for accuracy and clarity, revise based on feedback, compile into formatted document with executive summary, table of contents, and bibliography, generate promotional materials (social posts, email copy, landing page draft), schedule recurring production for quarterly thought leadership"
+    features_demonstrated:
+      - scheduled workflows (quarterly production cycle, weekly progress checks)
+      - multi-agent pipeline (researcher, outliner, writer, reviewer, compiler, promoter)
+      - command phases (pandoc for document formatting, python3 for citation management, wc for length validation)
+      - decision contracts (section-quality: approved/needs-revision/rewrite, research-sufficiency: adequate/needs-more-sources/insufficient)
+      - output contracts (structured whitepapers in markdown, promotional packages, production reports)
+      - phase routing (revision loop on quality review failure, additional research on insufficient sources)
+      - fetch MCP for web research
+    tools_needed:
+      - filesystem MCP
+      - fetch MCP (@modelcontextprotocol/server-fetch)
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #38 from source material. Whitepapers are the #1 B2B content format for lead generation. Uses pandoc for formatting, fetch for research — all tools exist. Shows AO running a sophisticated content production pipeline."
+
+  # --- Healthcare (new — conductor sweep 35, 2026-03-31) ---
+  - id: medical-coding
+    name: "Medical Coding Assistant"
+    vertical: healthcare
+    description: "Medical coding pipeline — ingest clinical encounter notes from text/JSON files, extract diagnoses, procedures, and symptoms using NLP patterns, map extracted terms to ICD-10-CM and CPT code candidates, validate code combinations for clinical consistency and payer rules, flag high-risk codes requiring additional documentation, generate coding worksheets with suggested codes and confidence levels, route uncertain cases for human review, track coding accuracy metrics, produce daily productivity reports and monthly accuracy audits, maintain a code lookup reference from public ICD-10 data"
+    features_demonstrated:
+      - scheduled workflows (daily batch coding, weekly accuracy audits, monthly reports)
+      - multi-agent pipeline (note parser, code mapper, validator, reviewer, reporter, auditor)
+      - command phases (python3 for text pattern matching and code lookup, jq for JSON clinical data extraction, grep for ICD code matching)
+      - decision contracts (code-confidence: high/medium/low/manual-review, documentation-status: sufficient/needs-addendum/query-provider)
+      - output contracts (coding worksheets, audit reports, accuracy dashboards, documentation queries)
+      - phase routing (immediate escalation on low-confidence codes, re-parse on extraction failures)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #112 from source material. Medical coding is a $16B industry with chronic staffing shortages. Uses python3 for pattern matching and filesystem — all tools exist. Shows AO automating a specialized healthcare workflow."
+
+  # --- Marketing (new — conductor sweep 35, 2026-03-31) ---
+  - id: email-campaign
+    name: "Email Campaign Pipeline"
+    vertical: marketing
+    description: "Email campaign production and optimization pipeline — intake campaign brief with goals and target segments, research audience behavior from engagement data (CSV/JSON), segment recipients by engagement tier and preferences, generate email copy variants (subject lines, body, CTAs) tailored per segment, create A/B test configurations with variant allocation, validate content for spam triggers and compliance (CAN-SPAM, GDPR), generate HTML email templates from markdown, produce send schedule optimized by timezone and historical open patterns, track campaign metrics post-send, generate performance reports with next-campaign recommendations"
+    features_demonstrated:
+      - scheduled workflows (campaign cadence scheduling, daily metric collection, weekly performance reviews)
+      - multi-agent pipeline (strategist, segmenter, copywriter, compliance checker, template builder, analyst)
+      - command phases (python3 for engagement scoring and timezone optimization, jq for metrics aggregation, node for HTML template generation)
+      - decision contracts (content-quality: send-ready/needs-revision/restart, compliance-status: compliant/fix-required/blocked)
+      - output contracts (email copy variants, HTML templates, send schedules, A/B test configs, performance reports)
+      - phase routing (revision loop on compliance failures, restart on poor A/B test results)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #45 from source material. Email marketing has 36:1 ROI — highest of any channel. Uses python3 for scoring, node for templating — all tools exist. Shows AO automating a revenue-driving marketing workflow."
+
+  # --- Aviation / Aerospace (new — conductor sweep 35, 2026-03-31) ---
+  - id: cargo-ops
+    name: "Air Cargo Operations Manager"
+    vertical: aviation-aerospace
+    description: "Air cargo operations pipeline — intake shipment bookings from JSON manifests, perform dangerous goods classification against IATA DGR categories, calculate load plans with weight and balance constraints, generate cargo manifests with piece counts and dimensions, validate against aircraft payload and volume limits, flag overweight or hazardous cargo for special handling, produce departure-ready documentation packages (manifest, DG declaration, NOTOC), track shipment status through transit points, generate operations dashboards with utilization metrics, schedule daily load planning and weekly capacity analysis"
+    features_demonstrated:
+      - scheduled workflows (daily load planning, shift-based manifest generation, weekly capacity analysis)
+      - multi-agent pipeline (booking processor, DG classifier, load planner, manifest generator, compliance checker, tracker)
+      - command phases (python3 for weight/balance calculations and capacity optimization, jq for booking data extraction, awk for manifest formatting)
+      - decision contracts (cargo-status: cleared/hold-for-review/rejected, load-balance: within-limits/marginal/exceeds-limits)
+      - output contracts (load plans, cargo manifests, DG declarations, operations dashboards, capacity reports)
+      - phase routing (immediate rejection on exceeds-limits, manual review on marginal loads, DG re-classification on missing data)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #235 from source material. Air cargo is a $150B industry requiring strict compliance with IATA regulations. Uses python3 for calculations — all tools exist. Shows AO managing safety-critical aviation operations."
 
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
