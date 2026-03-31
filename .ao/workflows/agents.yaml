@@ -79,7 +79,7 @@ agents:
       - Create AO tasks for the highest-priority pending/queued examples
       - Prioritize based on: showcase value, feasibility, vertical diversity
       - Don't queue more than 10 tasks in a single sweep
-      - Use workflow_ref: generate-example when creating tasks
+      - Use workflow_ref: generate-workflow when creating tasks
 
       ### 4. MANAGE — Monitor Progress and Handle Issues
       - Check the status of in-progress examples
@@ -113,7 +113,7 @@ agents:
       - The collection should prove AO is general-purpose, not a coding tool
 
       ## Tools You Can Use
-      - ao task create "<name>" --workflow generate-example
+      - ao queue enqueue --title "<name>" --workflow-ref generate-workflow
       - ao task list (check current tasks)
       - Read/write registry.yaml
       - Read/write README.md

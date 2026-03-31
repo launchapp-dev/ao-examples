@@ -33,7 +33,7 @@ phases:
             If private, make it public: `gh repo edit launchapp-dev/ao-workflow-<id> --visibility public`
       7. Count how many tasks are currently queued/in-progress
       8. If < 10 active tasks AND queued examples exist: enqueue the next batch using:
-           ao queue enqueue --title "<example-id>" --description "<description from registry>" --workflow-ref generate-example
+           ao queue enqueue --title "<example-id>" --description "<description from registry>" --workflow-ref generate-workflow
       9. If all existing examples are generated or in-progress: IDEATE
          - Come up with 2-3 new workflow ideas
          - Research what tools/MCP servers they'd need
