@@ -2470,7 +2470,9 @@ examples:
       - memory MCP (@modelcontextprotocol/server-memory)
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: 2026-03-31
+    test_status: passed
     notes: "Advertising has only ad-campaign and influencer-campaign. Programmatic bidding is the core of digital advertising. Uses command phases with real math (python3, jq). Shows AO for data-driven ad optimization."
 
   # --- Automotive / Manufacturing (new — conductor sweep 31, 2026-03-31) ---
