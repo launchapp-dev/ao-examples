@@ -3140,6 +3140,8 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
     status: generated
+    generated_at: "2026-03-31"
+    test_status: passed
     notes: "Pipeline #260 from source material. Housekeeping is 50% of hotel labor cost — optimization directly impacts profitability. Uses python3 for routing and filesystem — all tools exist. Shows AO optimizing physical operations scheduling."
 
   # --- Insurance (new — conductor sweep 37, 2026-03-31) ---
