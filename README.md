@@ -137,8 +137,9 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [data-quality-monitor](examples/data-quality-monitor/) | Data Analytics | Data profiling → anomaly detection → auto-fix → alerting → reports | generated | [repo](https://github.com/launchapp-dev/ao-workflow-data-quality-monitor) |
 | [price-tracker](examples/price-tracker/) | E-Commerce / Consumer | Product scraping → price comparison → trend analysis → deal alerts | generated | [repo](https://github.com/launchapp-dev/ao-workflow-price-tracker) |
 | [customer-segmentation](examples/customer-segmentation/) | Data Analytics / Marketing | Behavioral clustering → segment profiling → persona generation → strategy recommendations | generated | [repo](https://github.com/launchapp-dev/ao-workflow-customer-segmentation) |
+| [volunteer-coordinator](examples/volunteer-coordinator/) | Nonprofit Ops | Application screening → opportunity matching → onboarding → shift scheduling → impact reports | generated | [repo](https://github.com/launchapp-dev/ao-workflow-volunteer-coordinator) |
 
-*108 examples across 30+ verticals — 100 generated, 8 queued. More added autonomously by the conductor every 30 minutes.*
+*109 examples across 30+ verticals — 101 generated, 8 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 
