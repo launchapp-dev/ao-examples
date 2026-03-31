@@ -2998,6 +2998,7 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
     status: generated
+    github_repo: launchapp-dev/ao-workflow-cargo-ops
     generated_at: "2026-03-31"
     notes: "Pipeline #235 from source material. Air cargo is a $150B industry requiring strict compliance with IATA regulations. Uses python3 for calculations — all tools exist. Shows AO managing safety-critical aviation operations."
 
@@ -3081,6 +3082,7 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
     status: generated
+    github_repo: launchapp-dev/ao-workflow-batch-record
     generated_at: 2026-03-31
     test_status: passed
     notes: "Pipeline #285 from source material. GMP batch records are legally required for pharmaceutical manufacturing with FDA/EMA oversight. Uses python3 for calculations and filesystem — all tools exist. Shows AO managing a safety-critical manufacturing workflow with strict quality gates."
@@ -3101,6 +3103,7 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
     status: generated
+    github_repo: launchapp-dev/ao-workflow-nps-followup
     generated_at: 2026-03-31
     notes: "Pipeline #87 from source material. NPS is the standard customer loyalty metric — closing the loop on feedback drives 2x higher retention. Uses python3 and jq — all tools exist. Shows AO automating the critical 'close the loop' customer ops workflow."
 
@@ -3121,6 +3124,7 @@ examples:
       - sequential-thinking MCP
       - playwright MCP (competitor price scraping)
     status: generated
+    github_repo: launchapp-dev/ao-workflow-ticket-pricing
     test_status: passed
     notes: "Pipeline #244 from source material. Dynamic pricing drives 15-30% revenue uplift for live events. Uses Playwright MCP for real competitor scraping, python3 for optimization — all tools exist. Shows AO managing real-time revenue optimization."
 
@@ -3140,6 +3144,7 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
     status: generated
+    github_repo: launchapp-dev/ao-workflow-housekeeping-optimizer
     generated_at: "2026-03-31"
     test_status: passed
     notes: "Pipeline #260 from source material. Housekeeping is 50% of hotel labor cost — optimization directly impacts profitability. Uses python3 for routing and filesystem — all tools exist. Shows AO optimizing physical operations scheduling."
@@ -3160,6 +3165,7 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
     status: generated
+    github_repo: launchapp-dev/ao-workflow-actuarial-modeler
     generated_at: 2026-03-31
     notes: "Pipeline #264 from source material. Actuarial modeling drives $6T+ in global insurance pricing. Uses python3 for statistical methods and filesystem — all tools exist. Shows AO automating complex quantitative workflows with regulatory compliance."
 
@@ -3179,6 +3185,7 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
     status: generated
+    github_repo: launchapp-dev/ao-workflow-capacity-planner
     generated_at: 2026-03-31
     notes: "Pipeline #221 from source material. Capacity planning prevents outages that cost $5,600/minute average. Uses python3 for forecasting and filesystem — all tools exist. Shows AO managing proactive infrastructure planning."
 
@@ -3199,6 +3206,7 @@ examples:
       - sequential-thinking MCP
       - fetch MCP (PubMed API access)
     status: generated
+    github_repo: launchapp-dev/ao-workflow-medical-affairs
     generated_at: 2026-03-31
     notes: "Pipeline #287 from source material. Medical affairs is a $20B+ function across pharma — literature monitoring is legally required for pharmacovigilance compliance. Uses fetch MCP for PubMed, python3 for analysis — all tools exist. Shows AO automating scientific literature intelligence."
 
@@ -3218,6 +3226,7 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
     status: generated
+    github_repo: launchapp-dev/ao-workflow-construction-cost-estimator
     generated_at: 2026-03-31
     notes: "Pipeline #150 from source material. Construction estimating is a $1.4T US industry — accurate bids win contracts. Uses python3 for math, jq for data, awk for formatting — all tools exist. Shows AO automating complex multi-trade cost estimation."
 
@@ -3309,7 +3318,9 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    github_repo: launchapp-dev/ao-workflow-cloud-cost-optimizer
+    test_status: passed
     notes: "Pipeline #63 from source material. Cloud waste averages 32% of total spend — optimization directly impacts bottom line. Uses python3 for analysis and jq for data extraction — all tools exist. Shows AO managing FinOps workflows with quantified savings tracking."
 
   # --- Automotive / IoT (new — conductor sweep 39, 2026-03-31) ---
@@ -3363,7 +3374,9 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    github_repo: launchapp-dev/ao-workflow-production-scheduler
+    test_status: passed
     notes: "Pipeline #153 from source material. Production scheduling drives $2T+ in global manufacturing output. Uses python3 for optimization and filesystem — all tools exist. Shows AO orchestrating complex manufacturing operations with constraint satisfaction."
 
   # --- E-Commerce (new — conductor sweep 39, 2026-03-31) ---
@@ -3471,7 +3484,9 @@ examples:
       - filesystem MCP
       - git MCP
       - fetch MCP (API specs)
-    status: queued
+    status: generated
+    github_repo: launchapp-dev/ao-workflow-load-test-runner
+    test_status: passed
     notes: "Load testing is critical DevOps infrastructure. Uses k6 CLI (npm: k6) or artillery (npm: artillery) for real load gen, jq for result parsing, git for tracking baselines. All tools exist as CLIs."
 
   - id: children-book-maker
@@ -3487,7 +3502,8 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
       - fetch MCP (Replicate API for image gen)
-    status: queued
+    status: generated
+    github_repo: launchapp-dev/ao-workflow-children-book-maker
     notes: "Children's book production showcases creative + safety review pipelines. Uses pandoc CLI for PDF, imagemagick for image processing, Replicate API via fetch for illustrations. Demonstrates AO handling content safety gates."
 
   - id: competitive-intel
@@ -3504,8 +3520,10 @@ examples:
       - filesystem MCP
       - memory MCP (track changes over time)
       - fetch MCP
-    status: queued
-    notes: "Competitive intel is a $30B+ market. Uses Playwright MCP for real website scraping, memory MCP for tracking changes over time, filesystem for reports. All MCP servers exist and are verified."
+    status: generated
+    github_repo: launchapp-dev/ao-workflow-competitive-intel
+    test_status: passed
+    notes: "Competitive intel is a $30B+ market. Uses Playwright MCP for real website scraping, memory MCP for tracking changes over time, filesystem for reports. Fixed: replaced nonexistent @modelcontextprotocol/server-fetch with mcp-fetch."
 
   - id: irrigation-optimizer
     name: "Irrigation Optimizer"
