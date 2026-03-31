@@ -1254,7 +1254,9 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    test_status: passed
+    github_repo: launchapp-dev/ao-example-fitness-coach
     notes: "Pipeline #296 from source material. Fitness coaching is universally relatable and shows AO managing physical performance with adaptive programming."
 
   # --- Banking / Compliance (new — conductor sweep 14, 2026-03-31) ---
@@ -1333,8 +1335,11 @@ examples:
       - web search
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
-    notes: "Pipeline #274 from source material. Influencer marketing is a distinct workflow from ad-campaign and brand-monitor. Shows AO managing human talent relationships with content approval gates."
+    status: generated
+    generated_at: 2026-03-30
+    github_repo: launchapp-dev/ao-example-influencer-campaign
+    test_status: passed
+    notes: "Pipeline #274 from source material. Influencer marketing is a distinct workflow from ad-campaign and brand-monitor. Shows AO managing human talent relationships with content approval gates. Uses only filesystem + sequential-thinking MCPs — no API keys required."
 
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:

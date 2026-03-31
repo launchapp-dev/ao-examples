@@ -100,9 +100,9 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | aml-monitor | Banking Compliance | Transaction screening → pattern detection → SAR filing → case management | queued | — |
 | dynamic-pricer | E-Commerce Analytics | Competitor monitoring → demand elasticity → A/B testing → price optimization | queued | — |
 | emergency-manager | Government / Crisis | Disaster detection → alerts → resource mobilization → situation reports → recovery | queued | — |
-| influencer-campaign | Marketing / Social | Talent discovery → vetting → creative briefs → content review → ROI analysis | queued | — |
+| [influencer-campaign](examples/influencer-campaign/) | Marketing / Social | Talent discovery → vetting → creative briefs → content review → ROI analysis | generated | [repo](https://github.com/launchapp-dev/ao-example-influencer-campaign) |
 
-*64 examples across 60 verticals — 59 generated, 5 queued. More added autonomously by the conductor every 30 minutes.*
+*64 examples across 60 verticals — 60 generated, 4 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 
