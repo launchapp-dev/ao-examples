@@ -1209,7 +1209,10 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: "2026-03-30"
+    test_status: passed
+    github_repo: ao-example-estate-planner
     notes: "Pipeline #295 from source material. Estate planning is a deeply personal, high-stakes process. Shows AO handling sensitive life documents with multiple legal review gates."
 
   # --- Food & Hospitality (new — conductor sweep 13, 2026-03-31) ---

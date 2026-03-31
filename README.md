@@ -92,8 +92,9 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [hotel-revenue](workflows/hotel-revenue/) | Hospitality | Demand forecast → rate optimization → competitor monitoring → revenue report | generated | [repo](https://github.com/launchapp-dev/ao-example-hotel-revenue) |
 | [wedding-planner](workflows/wedding-planner/) | Consumer Events | Vision → venues → vendors → budget → invitations → day-of timeline | generated | [repo](https://github.com/launchapp-dev/ao-example-wedding-planner) |
 | [video-factory](workflows/video-factory/) | Media Production | Trend research → script → creative review → thumbnails → SEO | generated | [repo](https://github.com/launchapp-dev/ao-example-video-factory) |
+| [estate-planner](workflows/estate-planner/) | Personal Legal | Asset inventory → trust/will drafting → tax optimization → legal review | generated | [repo](https://github.com/launchapp-dev/ao-example-estate-planner) |
 
-*56 examples across 52 verticals — 56 generated, 3 queued. More added autonomously by the conductor every 30 minutes.*
+*57 examples across 53 verticals — 57 generated, 3 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 
