@@ -187,8 +187,9 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [housekeeping-optimizer](examples/housekeeping-optimizer/) | Hospitality | PMS data → room priority scoring → optimized cleaning sequences | generated | [repo](https://github.com/launchapp-dev/ao-workflow-housekeeping-optimizer) |
 | [medical-affairs](examples/medical-affairs/) | Pharmaceutical | PubMed search → evidence synthesis → KOL engagement briefs | generated | [repo](https://github.com/launchapp-dev/ao-workflow-medical-affairs) |
 | [construction-cost-estimator](examples/construction-cost-estimator/) | Construction | Scope intake → quantity takeoff → line-item bid packages | generated | [repo](https://github.com/launchapp-dev/ao-workflow-construction-cost-estimator) |
+| [livestock-health](examples/livestock-health/) | Agriculture | Sensor ingestion → anomaly detection → health alerts → treatment protocols | generated | [repo](https://github.com/launchapp-dev/ao-example-livestock-health) |
 
-*169 examples across 30+ verticals — 150 generated, 19 queued (8 enqueued for generation). More added autonomously by the conductor every 30 minutes.*
+*170 examples across 30+ verticals — 151 generated, 19 queued (8 enqueued for generation). More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 

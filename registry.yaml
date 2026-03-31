@@ -3245,7 +3245,10 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    test_status: passed
+    github_repo: launchapp-dev/ao-example-livestock-health
+    generated_at: 2026-03-31
     notes: "Pipeline #206 from source material. Livestock health monitoring prevents $8B+ annual US losses from animal disease. Uses python3 for statistical analysis and filesystem — all tools exist. Shows AO managing agricultural operations with real-time anomaly detection."
 
   # --- Aviation (new — conductor sweep 38, 2026-03-31) ---
@@ -3282,7 +3285,7 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
     notes: "Pipeline #245 from source material. Broadcast production scheduling is the backbone of live TV and streaming operations. Uses python3 for calculations and filesystem — all tools exist. Shows AO managing real-time media production logistics."
 
   # --- Insurance (new — conductor sweep 38, 2026-03-31) ---
