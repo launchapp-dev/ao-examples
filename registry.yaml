@@ -1558,7 +1558,8 @@ examples:
       - web search
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: 2026-03-31
     notes: "Pipeline #297 from source material. Home buying is the largest financial transaction most consumers make. Shows AO managing a high-stakes personal journey with multiple professional stakeholders."
 
   # --- Media / Localization (new — conductor sweep 17, 2026-03-31) ---
@@ -1819,7 +1820,8 @@ examples:
       - github MCP (gh-cli-mcp)
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    test_status: passed
     notes: "Pipeline #77 from source material. Every company shipping software needs license compliance. Uses real npm tools (license-checker, npm ls) and gh CLI — all existing today."
 
   # --- Business Operations (new — conductor sweep 21, 2026-03-31) ---
@@ -1880,7 +1882,8 @@ examples:
       - git MCP
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: 2026-03-31
     notes: "Every engineering team wants automated code review. Uses gh CLI for real PR operations — all tools exist today. Shows AO as a developer productivity bot."
 
   # --- Retail / Supply Chain (new — conductor sweep 22, 2026-03-31) ---
@@ -1898,7 +1901,8 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: 2026-03-31
     notes: "Pipeline #130 from source material. Every retailer needs demand forecasting. Uses only filesystem and sequential-thinking — extremely feasible. Shows AO handling data analysis workflows."
 
   # --- Marketing / Social (new — conductor sweep 22, 2026-03-31) ---
@@ -1917,7 +1921,8 @@ examples:
       - filesystem MCP
       - fetch MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    test_status: passed
     notes: "Every brand needs social media management. Uses filesystem + fetch for research — all real tools. Shows AO as a marketing automation pipeline."
 
   # --- Content / Marketing (new — conductor sweep 23, 2026-03-31) ---
@@ -1976,6 +1981,63 @@ examples:
     status: queued
     notes: "Pipeline #97 from source material. Every company evaluates vendors. Uses fetch MCP for real research — immediately practical. Shows AO for procurement/business ops."
 
+  # --- DevOps / SRE (new — conductor sweep 24, 2026-03-31) ---
+  - id: runbook-generator
+    name: "Runbook Generator"
+    vertical: devops-sre
+    description: "Operational runbook pipeline — pull incident history from GitHub issues via gh CLI, analyze common failure patterns, generate step-by-step runbooks with diagnostic commands and remediation procedures, review for completeness and accuracy, publish to repository wiki, track runbook coverage across services"
+    features_demonstrated:
+      - command phases (gh issue list, gh api for incident data, git operations)
+      - multi-agent pipeline (incident analyst, procedure writer, reviewer, publisher)
+      - decision contracts (coverage-verdict: complete/gaps-identified/needs-rewrite, severity-mapping: P1/P2/P3/P4)
+      - output contracts (structured runbook markdown, coverage reports, gap analysis)
+      - scheduled workflows (weekly runbook refresh from new incidents)
+      - github MCP for issue and wiki operations
+    tools_needed:
+      - github MCP (gh-cli-mcp)
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #69 from source material. Every SRE team needs runbooks. Uses gh CLI for real incident data — all tools exist today. Shows AO for operational reliability."
+
+  # --- Education (new — conductor sweep 24, 2026-03-31) ---
+  - id: assignment-grader
+    name: "Assignment Grading Pipeline"
+    vertical: education
+    description: "Automated grading pipeline — ingest student submissions from a directory, analyze code or written work against rubric criteria, check for plagiarism via similarity analysis, generate detailed feedback with specific improvement suggestions, compute scores, produce grade reports with class-wide analytics and common mistake patterns"
+    features_demonstrated:
+      - command phases (file listing, diff analysis, similarity scoring)
+      - multi-agent pipeline (submission processor, grader, plagiarism checker, feedback writer, analytics compiler)
+      - decision contracts (grade-verdict: pass/needs-revision/fail, plagiarism-flag: clear/suspicious/confirmed)
+      - output contracts (structured grade reports, individual feedback, class analytics)
+      - phase routing (rework on ambiguous plagiarism results)
+      - filesystem MCP for reading submissions and writing reports
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - git MCP (for submission tracking)
+    status: queued
+    notes: "Pipeline #122 from source material. Every instructor grades assignments. Uses filesystem and sequential-thinking — extremely feasible. Shows AO for education automation."
+
+  # --- Data / Analytics (new — conductor sweep 24, 2026-03-31) ---
+  - id: data-quality-monitor
+    name: "Data Quality Monitor"
+    vertical: data-analytics
+    description: "Data quality monitoring pipeline — profile CSV/JSON data files for schema consistency, detect anomalies (null spikes, value distribution shifts, format violations), validate against expected ranges and business rules, auto-fix safe issues (trimming, type coercion), generate data quality scorecards, alert on critical degradation, track quality trends over time"
+    features_demonstrated:
+      - command phases (python3 -c for data profiling, jq for JSON validation)
+      - multi-agent pipeline (profiler, anomaly detector, validator, fixer, reporter)
+      - decision contracts (quality-verdict: healthy/degraded/critical, fix-action: auto-fix/manual-review/escalate)
+      - output contracts (structured quality scorecards, anomaly reports, trend dashboards)
+      - scheduled workflows (hourly data quality checks)
+      - memory MCP for tracking quality baselines and historical trends
+    tools_needed:
+      - filesystem MCP
+      - memory MCP (@modelcontextprotocol/server-memory)
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #47 from source material. Every data team needs quality monitoring. Uses filesystem + command phases with python3/jq — all tools exist today. Shows AO for data operations."
+
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
@@ -1983,4 +2045,5 @@ examples:
 # Verticals to explore next: documentary research, children's book,
 # connected car, programmatic ads, medical coding, loyalty program,
 # cargo operations, broadcast production, access review,
-# volunteer coordinator, number porting, customer churn prediction
+# volunteer coordinator, number porting, customer churn prediction,
+# log analysis, load testing, multi-region deployment
