@@ -961,6 +961,7 @@ examples:
     status: generated
     generated_at: "2026-03-30"
     test_status: passed
+    github_repo: launchapp-dev/ao-example-permit-tracker
     notes: "Pipeline #143 from source material. Distinct from foia-processor and construction-tracker. Permit applications are a universal pain point with complex multi-department routing."
 
   # --- Finance / Compliance (new — conductor sweep 11, 2026-03-30) ---
@@ -981,6 +982,7 @@ examples:
     status: generated
     generated_at: 2026-03-30
     test_status: passed
+    github_repo: launchapp-dev/ao-example-fraud-detector
     notes: "Pipeline #136 from source material. Fraud detection is high-stakes, real-time, and shows AO handling complex investigation workflows with regulatory reporting."
 
   # --- Banking (new — conductor sweep 11, 2026-03-30) ---
@@ -1021,6 +1023,7 @@ examples:
       - web search (school data, admission statistics, scholarship databases)
     status: generated
     generated_at: 2026-03-30
+    github_repo: launchapp-dev/ao-example-college-advisor
     notes: "Pipeline #298 from source material. Universally relatable consumer use case. Shows AO managing a complex personal project with hard deadlines."
 
   # --- Marketing Intelligence (new — conductor sweep 11, 2026-03-30) ---
@@ -1064,11 +1067,107 @@ examples:
     status: generated
     generated_at: 2026-03-30
     test_status: passed
+    github_repo: launchapp-dev/ao-example-warehouse-optimizer
     notes: "Pipeline #199 from source material. Warehouse ops is distinct from fleet-dispatcher. Physical space optimization with measurable efficiency gains."
+
+  # --- Corporate Finance (new — conductor sweep 12, 2026-03-31) ---
+  - id: ma-due-diligence
+    name: "M&A Due Diligence Pipeline"
+    vertical: corporate-finance
+    description: "M&A due diligence pipeline — collect target company documents, financial statement analysis, technology audit, IP review, regulatory risk assessment, customer concentration analysis, integration planning, generate investment memo with go/no-go recommendation"
+    features_demonstrated:
+      - multi-agent pipeline (financial analyst, tech auditor, legal reviewer, integration planner, investment committee writer)
+      - decision contracts (verdict: proceed/conditional-proceed/walk-away)
+      - manual approval gates (deal team sign-off, board approval)
+      - output contracts (structured due diligence report, investment memo)
+      - sequential-thinking MCP for complex valuation analysis
+      - web search MCP (public filings, market data, news)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - web search
+    status: queued
+    notes: "Pipeline #100 from source material. Corporate M&A is a massive vertical. Due diligence is inherently multi-stakeholder with complex document analysis and decision gates."
+
+  # --- Pharma R&D (new — conductor sweep 12, 2026-03-31) ---
+  - id: drug-discovery
+    name: "Drug Discovery Pipeline"
+    vertical: pharma-rd
+    description: "Drug discovery pipeline — target identification from disease biology, compound library screening, hit-to-lead optimization, ADMET property prediction, preclinical study design, IND-enabling study planning, regulatory strategy, generate IND filing package"
+    features_demonstrated:
+      - multi-agent pipeline (biologist, medicinal chemist, DMPK scientist, toxicologist, regulatory strategist)
+      - decision contracts (compound progression: advance/optimize/terminate)
+      - phase routing (rework on failed ADMET properties, terminate on safety signal)
+      - output contracts (structured compound profiles, study protocols, IND sections)
+      - sequential-thinking MCP for SAR analysis
+      - command phases (property prediction scripts, literature search)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - web search (PubMed, patent databases, compound databases)
+    status: queued
+    notes: "Pipeline #281 from source material. Distinct from pharmacovigilance (post-market). Drug discovery is the ultimate multi-phase, high-stakes pipeline with complex decision trees."
+
+  # --- Hospitality (new — conductor sweep 12, 2026-03-31) ---
+  - id: hotel-revenue
+    name: "Hotel Revenue Management Pipeline"
+    vertical: hospitality
+    description: "Hotel revenue management pipeline — forecast demand by room type, monitor competitor pricing, calculate optimal rates, manage rate fences, oversell/overbooking strategy, channel distribution, generate daily rate recommendations, weekly revenue performance report"
+    features_demonstrated:
+      - scheduled workflows (daily rate optimization, weekly performance review)
+      - command phases (demand forecasting scripts, competitive rate scraping)
+      - multi-agent pipeline (demand forecaster, rate strategist, channel manager, revenue analyst, reporter)
+      - decision contracts (rate action: increase/hold/decrease, overbooking level: conservative/moderate/aggressive)
+      - output contracts (structured rate grids, performance dashboards)
+      - web search MCP (competitor rates, event calendars, market data)
+    tools_needed:
+      - web search
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #251 from source material. Hospitality is completely unrepresented. Revenue management is a daily operational pipeline with real financial impact."
+
+  # --- Consumer / Life Events (new — conductor sweep 12, 2026-03-31) ---
+  - id: wedding-planner
+    name: "Wedding Planning Pipeline"
+    vertical: consumer-events
+    description: "Wedding planning pipeline — set budget and style, venue research and comparison, vendor booking (catering, photography, flowers, music), guest list management, invitation design, timeline creation, day-of coordination runsheet, thank-you tracking, post-wedding album compilation"
+    features_demonstrated:
+      - multi-agent pipeline (planner, venue researcher, vendor coordinator, designer, timeline manager)
+      - phase routing (rework if over budget)
+      - output contracts (structured vendor comparison matrices, day-of timeline, budget tracker)
+      - web search MCP (venue research, vendor pricing, inspiration)
+      - manual approval gates (couple approval at key milestones)
+      - scheduled workflows (weekly planning check-ins, deadline reminders)
+    tools_needed:
+      - web search
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #293 from source material. Universally relatable consumer event. Shows AO managing a complex personal project with many vendors and hard deadlines."
+
+  # --- Media Production (new — conductor sweep 12, 2026-03-31) ---
+  - id: video-factory
+    name: "YouTube Content Factory Pipeline"
+    vertical: media-production
+    description: "Video content production pipeline — trend analysis and topic selection, script writing, thumbnail concept generation, voiceover script optimization, B-roll shot list, SEO metadata (title, description, tags), content calendar scheduling, post-publish analytics review, audience retention analysis"
+    features_demonstrated:
+      - scheduled workflows (weekly content calendar, daily analytics review)
+      - web search MCP (trend research, competitor analysis, keyword research)
+      - multi-agent pipeline (trend analyst, scriptwriter, creative director, SEO specialist, analytics reviewer)
+      - phase routing (rework script on creative review failure)
+      - output contracts (structured content briefs, SEO metadata packages)
+      - multi-model routing (fast trend scanning vs deep script writing)
+    tools_needed:
+      - web search
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #19 from source material. Media production is only covered by podcast-producer. Video/YouTube is the highest-volume content medium and shows AO managing a content factory."
 
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
 #
-# Verticals to explore next: media production (video/music), home renovation,
-# music production, drug discovery, M&A due diligence, hotel revenue management
+# Verticals to explore next: home renovation, music production, estate planning,
+# fitness coaching, restaurant operations, insurance underwriting, vendor evaluation
