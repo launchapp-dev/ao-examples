@@ -2336,7 +2336,8 @@ examples:
       - memory MCP (@modelcontextprotocol/server-memory)
       - filesystem MCP
       - github MCP (gh-cli-mcp)
-    status: queued
+    status: generated
+    test_status: passed
     notes: "Pipeline #193 from source material. Every nonprofit struggles with volunteer management. Uses memory MCP for persistent profiles — all tools exist. Shows AO for nonprofit operations management."
 
   # --- Business Operations (new — conductor sweep 29, 2026-03-31) ---
@@ -2402,7 +2403,8 @@ examples:
       - filesystem MCP
       - github MCP (gh-cli-mcp)
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: "2026-03-31"
     notes: "Pipeline #202 from source material. Food safety audits are legally required and operationally critical. Uses memory MCP for persistent audit history — all tools exist. Shows AO for regulatory compliance in food industry."
 
   # --- Telecom (new — conductor sweep 30, 2026-03-31) ---
@@ -2423,7 +2425,8 @@ examples:
       - memory MCP (@modelcontextprotocol/server-memory)
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    test_status: passed
     notes: "Telecom vertical only has network-fault-manager. Billing disputes are high-volume, rule-based — perfect for AO automation. Uses command phases with jq for CDR analysis. Shows AO for telecom operations."
 
   # --- Automotive (new — conductor sweep 30, 2026-03-31) ---
