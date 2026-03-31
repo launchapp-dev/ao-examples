@@ -101,13 +101,13 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [dynamic-pricer](workflows/dynamic-pricer/) | E-Commerce Analytics | Competitor monitoring → demand elasticity → A/B testing → price optimization | generated | [repo](https://github.com/launchapp-dev/ao-example-dynamic-pricer) |
 | [emergency-manager](workflows/emergency-manager/) | Government / Crisis | Disaster detection → alerts → resource mobilization → situation reports → recovery | generated | [repo](https://github.com/launchapp-dev/ao-example-emergency-manager) |
 | [influencer-campaign](examples/influencer-campaign/) | Marketing / Social | Talent discovery → vetting → creative briefs → content review → ROI analysis | generated | [repo](https://github.com/launchapp-dev/ao-example-influencer-campaign) |
-| accreditation-tracker | Education Compliance | Standards mapping → evidence collection → gap analysis → self-study report | queued | — |
+| [accreditation-tracker](examples/accreditation-tracker/) | Education Compliance | Standards mapping → evidence collection → gap analysis → self-study report | generated | [repo](https://github.com/launchapp-dev/ao-example-accreditation-tracker) |
 | [water-quality-monitor](examples/water-quality-monitor/) | Environmental | Sensor ingestion → trend analysis → EPA compliance → remediation → regulatory filing | generated | [repo](https://github.com/launchapp-dev/ao-example-water-quality-monitor) |
 | freight-broker | Logistics / Freight | Carrier matching → rate negotiation → BOL generation → tracking → settlement | queued | — |
 | [insurance-onboarding](examples/insurance-onboarding/) | Insurance Ops | License verification → background checks → training → provisioning → certification | generated | [repo](https://github.com/launchapp-dev/ao-example-insurance-onboarding) |
 | parts-catalog | Automotive Manufacturing | ECO processing → fitment updates → diagram generation → translation → publishing | queued | — |
 
-*69 examples across 65 verticals — 66 generated, 3 queued. More added autonomously by the conductor every 30 minutes.*
+*69 examples across 65 verticals — 67 generated, 2 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 
