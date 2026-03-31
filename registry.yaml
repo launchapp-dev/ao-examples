@@ -1454,8 +1454,10 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
-    notes: "Pipeline #220 from source material. Parts catalog management demonstrates multi-model routing (cost-optimize by using Haiku for extraction, Sonnet for generation). Shows AO managing engineering change workflows in manufacturing."
+    status: generated
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-parts-catalog
+    notes: "Complete — multi-model routing pipeline with ECO processing, fitment validation, multilingual content. Built via generate-workflow (escalated during review but content complete)."
 
   # --- Consumer / Food (new — conductor sweep 16, 2026-03-31) ---
   - id: meal-planner
@@ -1473,8 +1475,10 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
       - web search (recipe databases, grocery pricing)
-    status: queued
-    notes: "Pipeline #299 from source material. Meal planning is universally relatable and shows AO managing everyday consumer workflows with optimization and scheduling."
+    status: generated
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-meal-planner
+    notes: "Complete — multi-agent meal planning with nutrition optimization, grocery consolidation, and batch cooking. Built via generate-workflow (escalated during review but content complete)."
 
   # --- Aviation (new — conductor sweep 16, 2026-03-31) ---
   - id: aircraft-maintenance
@@ -1492,8 +1496,10 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
-    notes: "Pipeline #232 from source material. Aviation maintenance is safety-critical with strict regulatory intervals. Shows AO managing life-safety workflows with certification gates."
+    status: generated
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-aircraft-maintenance
+    notes: "Complete — safety-critical aviation pipeline with regulatory inspection intervals, airworthiness certification, and fleet health reporting. Built via generate-workflow (escalated during review but content complete)."
 
   # --- Gaming / Esports (new — conductor sweep 16, 2026-03-31) ---
   - id: esports-tournament
@@ -1511,8 +1517,10 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
-    notes: "Pipeline #246 from source material. Esports is a rapidly growing vertical. Tournament ops shows AO managing real-time competitive events with bracket logic and dispute resolution."
+    status: generated
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-esports-tournament
+    notes: "Complete — tournament operations with bracket generation, match scheduling, dispute resolution, and prize distribution. Built via generate-workflow (escalated during review but content complete)."
 
   # --- Media / Music (new — conductor sweep 16, 2026-03-31) ---
   - id: music-producer
@@ -1551,6 +1559,64 @@ examples:
       - sequential-thinking MCP
     status: queued
     notes: "Pipeline #297 from source material. Home buying is the largest financial transaction most consumers make. Shows AO managing a high-stakes personal journey with multiple professional stakeholders."
+
+  # --- Media / Localization (new — conductor sweep 17, 2026-03-31) ---
+  - id: subtitle-pipeline
+    name: "Subtitle & Dubbing Pipeline"
+    vertical: media-localization
+    description: "Subtitle and dubbing pipeline — transcribe source audio, translate to target languages, synchronize timing with speech segments, generate dubbed voiceover via synthesis, quality-check lip sync and cultural localization, produce final subtitle files (SRT/VTT) and dubbed audio tracks, package for distribution platforms"
+    features_demonstrated:
+      - multi-agent pipeline (transcriber, translator, timing specialist, QA reviewer, packager)
+      - multi-model routing (Haiku for transcription parsing, Sonnet for translation, Opus for cultural review)
+      - decision contracts (quality: approve/retranslate/escalate, cultural-fit: localized/needs-adaptation/reject)
+      - output contracts (structured SRT/VTT files, timing manifests, QA reports)
+      - phase routing (rework on cultural misfit, retranslate on quality failure)
+      - command phases (subtitle timing scripts, format conversion)
+      - scheduled workflows (batch processing new episodes)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - fetch MCP (source media metadata)
+    status: queued
+    notes: "Pipeline #30 from source material. Subtitle/dubbing is critical for global media distribution. Shows AO managing multilingual content pipelines with timing precision and cultural sensitivity."
+
+  # --- Consumer / Pet Care (new — conductor sweep 17, 2026-03-31) ---
+  - id: pet-care
+    name: "Pet Health & Veterinary Pipeline"
+    vertical: consumer-petcare
+    description: "Pet health management pipeline — track vaccination schedules and due dates, monitor weight and vital trends, manage medication reminders, coordinate vet appointment scheduling, generate health reports per pet, flag abnormal trends for early intervention, manage multi-pet household records, produce annual wellness summaries"
+    features_demonstrated:
+      - scheduled workflows (daily medication reminders, weekly weight check prompts, annual vaccination alerts)
+      - multi-agent pipeline (health tracker, medication manager, appointment coordinator, trend analyzer, reporter)
+      - decision contracts (health-status: healthy/monitor/urgent-vet-visit, vaccination: current/due-soon/overdue)
+      - output contracts (structured health records, medication schedules, wellness reports)
+      - phase routing (escalate to urgent on abnormal vitals, remind on upcoming vaccinations)
+      - command phases (weight trend calculation, medication interaction checks)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - memory MCP (pet health history)
+    status: queued
+    notes: "Pet care is a massive consumer vertical (~$150B market). Shows AO managing health-tracking workflows for non-human subjects with scheduling and trend analysis."
+
+  # --- Developer Tools (new — conductor sweep 17, 2026-03-31) ---
+  - id: changelog-generator
+    name: "Changelog & Release Notes Generator"
+    vertical: developer-tools
+    description: "Changelog generation pipeline — scan git history since last release, categorize commits by type (feat/fix/refactor/docs), extract breaking changes, group by component or package, write human-readable release notes with migration guides, generate CHANGELOG.md entries, draft GitHub release, notify stakeholders"
+    features_demonstrated:
+      - command phases (git log parsing, commit categorization scripts, version bump calculation)
+      - multi-agent pipeline (commit analyzer, changelog writer, migration guide author, release drafter)
+      - decision contracts (release-type: major/minor/patch, breaking-change: yes/no/unclear)
+      - output contracts (structured changelogs, release notes, migration guides)
+      - phase routing (rework changelog on reviewer rejection, escalate on unclear breaking changes)
+      - git MCP for repository operations
+    tools_needed:
+      - git MCP
+      - filesystem MCP
+      - github MCP (gh-cli-mcp)
+    status: queued
+    notes: "Pipeline #35 from source material. Every dev team needs changelogs but hates writing them. Shows AO using git MCP and GitHub CLI for developer tooling workflows."
 
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:

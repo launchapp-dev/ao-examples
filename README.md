@@ -105,9 +105,17 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [water-quality-monitor](examples/water-quality-monitor/) | Environmental | Sensor ingestion → trend analysis → EPA compliance → remediation → regulatory filing | generated | [repo](https://github.com/launchapp-dev/ao-example-water-quality-monitor) |
 | [freight-broker](examples/freight-broker/) | Logistics / Freight | Carrier matching → rate negotiation → BOL generation → tracking → settlement | generated | [repo](https://github.com/launchapp-dev/ao-example-freight-broker) |
 | [insurance-onboarding](examples/insurance-onboarding/) | Insurance Ops | License verification → background checks → training → provisioning → certification | generated | [repo](https://github.com/launchapp-dev/ao-example-insurance-onboarding) |
-| parts-catalog | Automotive Manufacturing | ECO processing → fitment updates → diagram generation → translation → publishing | queued | — |
+| [parts-catalog](examples/parts-catalog/) | Automotive Manufacturing | ECO processing → fitment updates → diagram generation → translation → publishing | generated | [repo](https://github.com/launchapp-dev/ao-workflow-parts-catalog) |
+| [meal-planner](examples/meal-planner/) | Consumer Food | Dietary preferences → recipe matching → grocery lists → batch cooking → cost tracking | generated | [repo](https://github.com/launchapp-dev/ao-workflow-meal-planner) |
+| [aircraft-maintenance](examples/aircraft-maintenance/) | Aviation | Flight hour tracking → inspection scheduling → work orders → airworthiness certification | generated | [repo](https://github.com/launchapp-dev/ao-workflow-aircraft-maintenance) |
+| [esports-tournament](examples/esports-tournament/) | Esports | Registration → bracket seeding → match scheduling → disputes → prize distribution | generated | [repo](https://github.com/launchapp-dev/ao-workflow-esports-tournament) |
+| music-producer | Media / Music | Album concept → lyrics → composition → mastering → artwork → distribution | queued | — |
+| home-buyer | Consumer Real Estate | Financial readiness → mortgage → house hunting → offers → closing | queued | — |
+| subtitle-pipeline | Media / Localization | Transcription → translation → timing sync → dubbed voiceover → SRT/VTT | queued | — |
+| pet-care | Consumer Pet Care | Vaccination tracking → weight monitoring → medication → vet appointments → wellness | queued | — |
+| changelog-generator | Developer Tools | Git history → commit categorization → release notes → migration guides → GitHub release | queued | — |
 
-*69 examples across 65 verticals — 68 generated, 1 queued. More added autonomously by the conductor every 30 minutes.*
+*77 examples across 70+ verticals — 72 generated, 5 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 
