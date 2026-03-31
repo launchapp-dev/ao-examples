@@ -2318,12 +2318,78 @@ examples:
     status: queued
     notes: "Pipeline #193 from source material. Every nonprofit struggles with volunteer management. Uses memory MCP for persistent profiles — all tools exist. Shows AO for nonprofit operations management."
 
+  # --- Business Operations (new — conductor sweep 29, 2026-03-31) ---
+  - id: okr-tracker
+    name: "OKR Tracking & Reporting Pipeline"
+    vertical: business-planning
+    description: "OKR tracking and reporting pipeline — define company and team objectives with measurable key results, track progress against targets via periodic check-ins, calculate confidence scores and completion percentages, generate weekly progress digests for team leads, produce quarterly review reports with trend analysis and retrospective insights, create GitHub issues for at-risk objectives, maintain historical OKR data for cross-quarter comparison"
+    features_demonstrated:
+      - scheduled workflows (weekly progress digest, monthly confidence update, quarterly review)
+      - multi-agent pipeline (objective definer, progress tracker, confidence scorer, digest writer, quarterly reviewer)
+      - command phases (jq for structured OKR data processing, date calculations for deadline tracking)
+      - decision contracts (confidence-level: on-track/at-risk/off-track/achieved, quarter-verdict: exceeded/met/partially-met/missed)
+      - output contracts (weekly digests, confidence dashboards, quarterly review documents, retrospective reports)
+      - memory MCP for persistent OKR history and cross-quarter tracking
+      - github MCP for creating issues on at-risk objectives
+      - phase routing (escalation on off-track objectives, celebration on exceeded targets)
+    tools_needed:
+      - memory MCP (@modelcontextprotocol/server-memory)
+      - filesystem MCP
+      - github MCP (gh-cli-mcp)
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #99 from source material. Every company tracks OKRs. Uses memory MCP for persistent tracking across quarters — all tools exist. Shows AO for strategic planning and organizational alignment."
+
+  # --- Cybersecurity / Compliance (new — conductor sweep 29, 2026-03-31) ---
+  - id: access-reviewer
+    name: "Access Review & Compliance Pipeline"
+    vertical: cybersecurity-compliance
+    description: "Identity access review pipeline — extract current permissions from GitHub org teams and repository access, compare against documented access policy (who should have access to what), flag violations (over-privileged users, stale access, orphaned accounts), generate remediation tickets as GitHub issues, produce compliance audit trail documents, maintain access baseline snapshots for drift detection, scheduled weekly reviews with monthly compliance reports"
+    features_demonstrated:
+      - scheduled workflows (weekly access scan, monthly compliance report, quarterly full audit)
+      - command phases (gh api for extracting org members/teams/repo permissions, jq for policy comparison)
+      - multi-agent pipeline (permission extractor, policy comparator, violation flagger, remediation writer, compliance reporter)
+      - decision contracts (access-status: compliant/violation/needs-review, severity: critical/high/medium/low)
+      - output contracts (violation reports, remediation issues, compliance audit trails, access baseline snapshots)
+      - github MCP for permission extraction and issue creation
+      - memory MCP for access baselines and historical comparison
+      - phase routing (immediate escalation on critical violations, batch processing for low severity)
+    tools_needed:
+      - github MCP (gh-cli-mcp)
+      - memory MCP (@modelcontextprotocol/server-memory)
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #185 from source material. Access reviews are mandatory for SOC 2/ISO 27001. Uses gh API commands for real permission extraction — maximally feasible. Shows AO for security compliance automation."
+
+  # --- Agriculture / Food Safety (new — conductor sweep 29, 2026-03-31) ---
+  - id: food-safety-auditor
+    name: "Food Safety Audit Pipeline"
+    vertical: food-safety
+    description: "Food safety audit and compliance pipeline — define audit checklists based on HACCP/FDA standards, schedule facility inspections with configurable frequency, execute checklist items with pass/fail/observation ratings, document findings with evidence notes and severity classifications, generate corrective action plans for non-conformances, track remediation progress to closure, produce audit summary reports with trend analysis across facilities, maintain audit history for regulatory inspections and certifications"
+    features_demonstrated:
+      - scheduled workflows (daily temperature log review, weekly facility audits, monthly compliance summary)
+      - multi-agent pipeline (checklist generator, audit executor, finding documenter, corrective action writer, compliance reporter)
+      - decision contracts (finding-severity: critical/major/minor/observation, audit-result: pass/conditional-pass/fail)
+      - output contracts (audit checklists, finding reports, corrective action plans, compliance certificates, trend dashboards)
+      - memory MCP for audit history and facility baseline tracking
+      - github MCP for tracking corrective action items as issues
+      - command phases (date calculations for audit scheduling, jq for structured audit data)
+      - phase routing (immediate shutdown recommendation on critical food safety violations, routine follow-up for minor observations)
+    tools_needed:
+      - memory MCP (@modelcontextprotocol/server-memory)
+      - filesystem MCP
+      - github MCP (gh-cli-mcp)
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #202 from source material. Food safety audits are legally required and operationally critical. Uses memory MCP for persistent audit history — all tools exist. Shows AO for regulatory compliance in food industry."
+
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
 #
 # Verticals to explore next: documentary research, children's book,
 # connected car, programmatic ads, medical coding, cargo operations,
-# broadcast production, access review, number porting, customer churn prediction,
+# broadcast production, number porting, customer churn prediction,
 # load testing, multi-region deployment, portfolio-rebalancer, nps-followup,
-# alumni engagement, food safety audit, warranty analytics
+# alumni engagement, warranty analytics, budget-planner, site-reliability-dashboard
