@@ -3447,6 +3447,86 @@ examples:
     notes: "Pipeline #164 from source material. Evidence-based policymaking reduces unintended consequences — CBO-style analysis saves billions in avoided bad policy. Uses python3 for modeling and pandoc for reports — all tools exist. Shows AO supporting democratic governance processes."
 
   # --- Travel (new — conductor sweep 40, 2026-03-31) ---
+  - id: load-test-runner
+    name: "Load Test Runner"
+    vertical: devops-performance
+    description: "Automated load testing pipeline — generate test scenarios from API specs, execute k6/artillery runs, analyze latency/throughput results, produce regression reports, alert on degradations"
+    features_demonstrated:
+      - command phases (k6/artillery CLI execution)
+      - decision contracts (perf-status: pass/regression/critical-degradation, action: ship/investigate/block-deploy)
+      - scheduled workflows (nightly perf runs)
+      - multi-phase pipeline with rework loops
+    tools_needed:
+      - filesystem MCP
+      - git MCP
+      - fetch MCP (API specs)
+    status: queued
+    notes: "Load testing is critical DevOps infrastructure. Uses k6 CLI (npm: k6) or artillery (npm: artillery) for real load gen, jq for result parsing, git for tracking baselines. All tools exist as CLIs."
+
+  - id: children-book-maker
+    name: "Children's Book Maker"
+    vertical: creative-publishing
+    description: "Children's book production pipeline — age-appropriate story writing, illustration direction, image generation via Replicate, page layout, reading level verification, PDF assembly"
+    features_demonstrated:
+      - multi-model routing (creative Opus for story, Sonnet for layout, Haiku for reading level check)
+      - decision contracts (content-safety: approved/needs-revision/rejected, reading-level: on-target/too-simple/too-complex)
+      - command phases (pandoc for PDF assembly, imagemagick for image processing)
+      - rework loops on content review
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - fetch MCP (Replicate API for image gen)
+    status: queued
+    notes: "Children's book production showcases creative + safety review pipelines. Uses pandoc CLI for PDF, imagemagick for image processing, Replicate API via fetch for illustrations. Demonstrates AO handling content safety gates."
+
+  - id: competitive-intel
+    name: "Competitive Intelligence Monitor"
+    vertical: business-strategy
+    description: "Competitive intelligence pipeline — monitor competitor websites, track product changes, analyze pricing shifts, detect new features, generate executive briefings"
+    features_demonstrated:
+      - scheduled workflows (daily competitor monitoring)
+      - playwright MCP (real website scraping)
+      - decision contracts (alert-priority: critical/notable/routine, market-impact: high/medium/low)
+      - multi-agent pipeline (scraper, analyst, writer)
+    tools_needed:
+      - playwright MCP
+      - filesystem MCP
+      - memory MCP (track changes over time)
+      - fetch MCP
+    status: queued
+    notes: "Competitive intel is a $30B+ market. Uses Playwright MCP for real website scraping, memory MCP for tracking changes over time, filesystem for reports. All MCP servers exist and are verified."
+
+  - id: irrigation-optimizer
+    name: "Irrigation Optimizer"
+    vertical: agriculture-precision
+    description: "Precision irrigation pipeline — ingest soil moisture and weather forecast data, calculate crop water needs, generate irrigation schedules, monitor consumption, produce water usage reports"
+    features_demonstrated:
+      - scheduled workflows (daily weather-based scheduling)
+      - command phases (python3 for calculations, curl for weather API)
+      - decision contracts (irrigation-action: irrigate/defer/reduce, water-status: optimal/stressed/waterlogged)
+      - fetch MCP (weather API data)
+    tools_needed:
+      - filesystem MCP
+      - fetch MCP (weather API, soil sensor data)
+    status: queued
+    notes: "Precision agriculture is a $12B+ market. Uses fetch MCP for Open-Meteo weather API (free, no key needed), python3 for evapotranspiration calculations, filesystem for schedules. Demonstrates AO in IoT/agriculture."
+
+  - id: venue-maintenance
+    name: "Venue Maintenance Manager"
+    vertical: facilities-management
+    description: "Venue/facility maintenance pipeline — inspection scheduling, work order generation, priority triage, contractor dispatch, compliance documentation, preventive maintenance calendar"
+    features_demonstrated:
+      - scheduled workflows (weekly inspection cycles)
+      - decision contracts (urgency: emergency/high/routine/deferrable, compliance-status: compliant/due-soon/overdue/violation)
+      - multi-agent pipeline (inspector, dispatcher, compliance-officer)
+      - filesystem reports and audit trails
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - git MCP (audit trail)
+    status: queued
+    notes: "Facility management is a $1.5T global market. Uses filesystem for work orders and compliance docs, git for audit trail, sequential-thinking for priority triage. Demonstrates AO in physical operations management."
+
   - id: tour-package
     name: "Tour Package Builder"
     vertical: travel-tourism
@@ -3469,9 +3549,9 @@ examples:
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
 #
-# Verticals to explore next: children's book, number porting,
-# load testing, multi-region deployment, public-records-manager,
-# venue-maintenance, competitive-intel, facility-maintenance,
-# spectrum-manager, agricultural-lending, product-spec-writer,
-# demand-forecaster, merchandise-pipeline, fan-engagement,
-# size-fit-recommendation, visual-search-indexer
+# Verticals to explore next: number porting, multi-region deployment,
+# public-records-manager, spectrum-manager, agricultural-lending,
+# product-spec-writer, demand-forecaster, merchandise-pipeline,
+# fan-engagement, size-fit-recommendation, visual-search-indexer,
+# dealer-inventory-optimizer, emissions-compliance, pilot-training,
+# vendor-onboarding, campus-safety-monitor, fundraising-campaign
