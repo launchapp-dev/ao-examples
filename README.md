@@ -83,9 +83,10 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [donor-prospector](examples/donor-prospector/) | Nonprofit | Prospect research → scoring → outreach → stewardship → analytics | generated | [repo](https://github.com/launchapp-dev/ao-example-donor-prospector) |
 | [brand-monitor](examples/brand-monitor/) | Marketing Intelligence | Social monitoring → sentiment analysis → crisis detection → response drafts → brand health reports | generated | [repo](https://github.com/launchapp-dev/ao-example-brand-monitor) |
 | [loan-originator](examples/loan-originator/) | Banking | Application → credit check → underwriting → approval → closing docs | generated | [repo](https://github.com/launchapp-dev/ao-example-loan-originator) |
+| [college-advisor](examples/college-advisor/) | Education | School research → essay writing → deadline tracking → financial aid → offers | generated | [repo](https://github.com/launchapp-dev/ao-example-college-advisor) |
 | permit-tracker | Government | Requirements → application → submission → corrections → inspections | queued | |
 
-*48 examples across 44 verticals — 47 generated, 1 queued. More added autonomously by the conductor every 30 minutes.*
+*49 examples across 45 verticals — 48 generated, 1 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 

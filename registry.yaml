@@ -958,7 +958,8 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
       - web search (jurisdiction requirements, code lookups)
-    status: queued
+    status: generated
+    test_status: passed
     notes: "Pipeline #143 from source material. Distinct from foia-processor and construction-tracker. Permit applications are a universal pain point with complex multi-department routing."
 
   # --- Finance / Compliance (new — conductor sweep 11, 2026-03-30) ---
@@ -977,6 +978,7 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
     status: generated
+    generated_at: 2026-03-30
     test_status: passed
     notes: "Pipeline #136 from source material. Fraud detection is high-stakes, real-time, and shows AO handling complex investigation workflows with regulatory reporting."
 
@@ -1016,7 +1018,8 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
       - web search (school data, admission statistics, scholarship databases)
-    status: queued
+    status: generated
+    generated_at: 2026-03-30
     notes: "Pipeline #298 from source material. Universally relatable consumer use case. Shows AO managing a complex personal project with hard deadlines."
 
   # --- Marketing Intelligence (new — conductor sweep 11, 2026-03-30) ---
