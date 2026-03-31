@@ -2315,6 +2315,7 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
     status: generated
+    github_repo: launchapp-dev/ao-example-customer-segmentation
     generated_at: 2026-03-31
     test_status: passed
     notes: "Pipeline #60 from source material. Customer segmentation is foundational to all marketing. Uses command phases with real tools (jq, python3) — highly feasible. Shows AO for data-driven marketing intelligence."
@@ -2337,6 +2338,7 @@ examples:
       - filesystem MCP
       - github MCP (gh-cli-mcp)
     status: generated
+    github_repo: launchapp-dev/ao-example-volunteer-coordinator
     test_status: passed
     notes: "Pipeline #193 from source material. Every nonprofit struggles with volunteer management. Uses memory MCP for persistent profiles — all tools exist. Shows AO for nonprofit operations management."
 
@@ -2409,6 +2411,7 @@ examples:
       - github MCP (gh-cli-mcp)
       - sequential-thinking MCP
     status: generated
+    github_repo: launchapp-dev/ao-example-food-safety-auditor
     generated_at: "2026-03-31"
     notes: "Pipeline #202 from source material. Food safety audits are legally required and operationally critical. Uses memory MCP for persistent audit history — all tools exist. Shows AO for regulatory compliance in food industry."
 
@@ -2431,6 +2434,7 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
     status: generated
+    github_repo: launchapp-dev/ao-example-telecom-billing-resolver
     generated_at: 2026-03-31
     test_status: passed
     notes: "Telecom vertical only has network-fault-manager. Billing disputes are high-volume, rule-based — perfect for AO automation. Uses command phases with jq for CDR analysis. Shows AO for telecom operations."
@@ -2455,6 +2459,7 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
     status: generated
+    github_repo: launchapp-dev/ao-example-ev-charging-planner
     generated_at: 2026-03-31
     test_status: passed
     notes: "Automotive has vehicle-recall only. EV infrastructure is a massive growth area. Uses Playwright to scrape real charging station data — immediately practical. Shows AO for infrastructure planning."
@@ -2478,6 +2483,7 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
     status: generated
+    github_repo: launchapp-dev/ao-example-campaign-bid-optimizer
     generated_at: 2026-03-31
     test_status: passed
     notes: "Advertising has only ad-campaign and influencer-campaign. Programmatic bidding is the core of digital advertising. Uses command phases with real math (python3, jq). Shows AO for data-driven ad optimization."
@@ -2501,6 +2507,7 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
     status: generated
+    github_repo: launchapp-dev/ao-example-warranty-analytics
     generated_at: 2026-03-31
     test_status: passed
     notes: "Pipeline #215 from source material. Warranty analytics is critical for automotive cost management and safety. Uses command phases with python3 for real statistical analysis — highly feasible. Shows AO for manufacturing quality intelligence."
@@ -2515,6 +2522,7 @@ examples:
       - multi-agent pipeline (request validator, consolidator, variance analyst, executive writer, forecast adjuster)
       - command phases (python3 for financial calculations and variance analysis, jq for budget data consolidation, csvtool for account mapping)
       - decision contracts (variance-status: within-budget/over-threshold/needs-justification/rejected, forecast-action: maintain/revise-up/revise-down/defer)
+    github_repo: launchapp-dev/ao-example-budget-planner
       - output contracts (consolidated budgets, variance reports, executive summaries, forecast adjustments, multi-year trend analyses)
       - memory MCP for multi-year budget history and cost center baselines
       - filesystem MCP for budget templates, data files, and reports
@@ -2540,6 +2548,7 @@ examples:
       - multi-agent pipeline (data ingester, segmentation engine, engagement scorer, donor identifier, outreach writer, report generator)
       - command phases (python3 for engagement scoring algorithms, jq for alumni data processing, csvtool for export handling)
       - decision contracts (donor-potential: major-gift/mid-level/annual-fund/steward-only, engagement-status: highly-engaged/active/lapsed/lost)
+    github_repo: launchapp-dev/ao-example-alumni-engagement
       - output contracts (segment profiles, outreach templates, event invitation lists, engagement dashboards, donor prospect lists)
       - memory MCP for persistent alumni profiles and engagement history
       - filesystem MCP for data files, templates, and reports
@@ -2574,6 +2583,7 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
     status: generated
+    github_repo: launchapp-dev/ao-example-survey-analyzer
     test_status: passed
     notes: "Pipeline #53 from source material. Every company runs surveys. Uses python3 for real statistical analysis (confidence intervals, NPS scoring) — maximally feasible. Shows AO for research and insights."
 
@@ -2587,6 +2597,7 @@ examples:
       - multi-agent pipeline (secret auditor, rotation planner, credential rotator, health verifier, compliance reporter)
       - command phases (gh secret set for GitHub secrets, jq for secret inventory management, openssl for certificate operations)
       - decision contracts (rotation-urgency: immediate/scheduled/deferred/exempt, health-status: verified/degraded/failed/rollback)
+    github_repo: launchapp-dev/ao-example-secret-rotation
       - output contracts (rotation audit logs, expiry forecasts, compliance reports, secret inventory snapshots)
       - github MCP for scanning repos and managing GitHub secrets
       - memory MCP for secret inventory and rotation history
@@ -2622,6 +2633,7 @@ examples:
       - github MCP (gh-cli-mcp)
       - sequential-thinking MCP
     status: generated
+    github_repo: launchapp-dev/ao-example-customer-health-scorer
     notes: "Pipeline #88 from source material. Customer health scoring is the foundation of customer success. Uses python3 for real weighted scoring — all tools exist. Shows AO for SaaS retention and growth."
 
   # --- Real Estate (new — conductor sweep 32, 2026-03-31) ---
@@ -2645,6 +2657,7 @@ examples:
       - github MCP (gh-cli-mcp)
       - sequential-thinking MCP
     status: generated
+    github_repo: launchapp-dev/ao-example-lease-manager
     generated_at: 2026-03-31
     test_status: passed
     notes: "Pipeline #145 from source material. Commercial lease management involves complex date tracking and financial calculations. Uses python3 for real NPV and escalation math — all tools exist. Shows AO for commercial real estate operations."
@@ -2659,6 +2672,7 @@ examples:
       - multi-agent pipeline (batch ingester, chain validator, anomaly detector, certificate generator, compliance reporter)
       - command phases (jq for batch record parsing and chain validation, python3 for anomaly detection algorithms, shasum for document integrity verification)
       - decision contracts (chain-status: complete/gap-detected/anomaly-flagged/recall-triggered, compliance-status: compliant/documentation-gap/violation/exempt)
+    github_repo: launchapp-dev/ao-example-provenance-tracker
       - output contracts (provenance certificates, chain-of-custody logs, anomaly alerts, compliance reports, recall-readiness assessments)
       - memory MCP for persistent batch genealogy and supply chain node registry
       - filesystem MCP for batch data files, certificates, and reports
@@ -2667,7 +2681,9 @@ examples:
       - memory MCP (@modelcontextprotocol/server-memory)
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: 2026-03-31
+    test_status: passed
     notes: "Pipeline #203 from source material. Supply chain traceability is mandatory under FSMA 204 (effective 2026). Uses jq for chain validation and python3 for anomaly detection — all tools exist. Shows AO for food/product safety compliance."
 
   # --- E-Commerce / Returns (new — conductor sweep 33, 2026-03-31) ---
@@ -2686,6 +2702,7 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
     status: generated
+    github_repo: launchapp-dev/ao-example-returns-processor
     generated_at: 2026-03-31
     test_status: passed
     notes: "Pipeline #103 from source material. Returns processing is a critical e-commerce operation affecting margins and customer satisfaction. Shows AO managing a multi-step logistics workflow with fraud detection."
@@ -2699,14 +2716,16 @@ examples:
       - multi-agent pipeline (topic researcher, source gatherer, fact-checker, narrative architect, scriptwriter)
       - multi-model routing (Haiku for web scraping, Sonnet for fact-checking, Opus for narrative structure)
       - decision contracts (fact-status: verified/unverified/disputed, narrative-quality: compelling/needs-work/restructure)
+    github_repo: launchapp-dev/ao-example-documentary-researcher
       - phase routing (rework on disputed facts, restructure on weak narrative)
       - output contracts (structured source database, fact-check reports, research package)
       - web search and fetch MCP for source gathering
     tools_needed:
-      - fetch MCP (@modelcontextprotocol/server-fetch)
+      - fetch MCP (mcp-fetch-server)
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    test_status: passed
     notes: "Pipeline #25 from source material. Documentary research requires rigorous fact-checking and narrative construction. Shows AO managing research-intensive creative workflows."
 
   # --- Logistics / Last-Mile (new — conductor sweep 33, 2026-03-31) ---
@@ -2724,7 +2743,10 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    github_repo: launchapp-dev/ao-example-last-mile-optimizer
+    generated_at: 2026-03-31
+    test_status: passed
     notes: "Pipeline #197 from source material. Last-mile delivery is the most expensive part of the logistics chain. Shows AO managing real-time operational optimization with geographic clustering."
 
   # --- HR / Training (new — conductor sweep 33, 2026-03-31) ---
@@ -2736,13 +2758,15 @@ examples:
       - scheduled workflows (daily completion checks, weekly reminder escalation, monthly compliance reports)
       - multi-agent pipeline (assignment manager, progress tracker, reminder scheduler, certifier, auditor, reporter)
       - decision contracts (compliance-status: compliant/at-risk/non-compliant, escalation: remind/manager-notify/block-access)
+    github_repo: launchapp-dev/ao-example-training-compliance
       - output contracts (structured compliance dashboards, audit trails, regulatory reports)
       - command phases (completion percentage calculations, deadline tracking scripts)
       - phase routing (escalate on overdue, certify on completion)
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    test_status: passed
     notes: "Pipeline #130 from source material. Training compliance is mandatory across regulated industries (healthcare, finance, manufacturing). Shows AO managing ongoing compliance tracking with automated escalation."
 
   # --- Entertainment / Rights (new — conductor sweep 33, 2026-03-31) ---
@@ -2754,22 +2778,120 @@ examples:
       - multi-agent pipeline (usage tracker, royalty calculator, statement generator, payment processor, auditor, reconciler)
       - scheduled workflows (monthly royalty calculation, quarterly audit, annual reconciliation)
       - decision contracts (payment-status: approved/disputed/hold, audit-finding: clean/discrepancy/escalate)
+    github_repo: launchapp-dev/ao-example-rights-royalties
       - output contracts (structured royalty statements, audit reports, reconciliation summaries)
       - command phases (royalty calculation scripts, usage aggregation, payment processing)
       - phase routing (hold payment on dispute, escalate on audit discrepancy)
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
     notes: "Pipeline #280 from source material. Rights and royalties management is complex and error-prone in media/publishing. Shows AO managing financial calculations with audit trails and dispute handling."
+
+  # --- Compliance / Security (new — conductor sweep 34, 2026-03-31) ---
+  - id: soc2-evidence
+    name: "SOC 2 Evidence Collector"
+    vertical: compliance-security
+    description: "SOC 2 Type II evidence collection pipeline — map trust service criteria to controls, automatically collect evidence from git logs, access reviews, CI/CD configs, and infrastructure configs, detect gaps between required and collected evidence, generate remediation tasks for missing controls, compile evidence packages organized by criteria, produce auditor-ready reports with control narratives and evidence links, schedule quarterly evidence refreshes to maintain continuous compliance"
+    features_demonstrated:
+      - scheduled workflows (quarterly evidence collection, monthly gap analysis, weekly control monitoring)
+      - multi-agent pipeline (criteria mapper, evidence collector, gap analyzer, remediation planner, report compiler)
+      - command phases (git log parsing for change management evidence, file permission audits, config scanning with jq)
+      - decision contracts (control-status: effective/deficiency/material-weakness, evidence-status: sufficient/gap/stale)
+      - output contracts (evidence packages, gap analysis reports, auditor summaries, remediation task lists)
+      - phase routing (immediate alert on material weakness, remediation loop on deficiency)
+      - git MCP for change management evidence
+      - filesystem MCP for evidence collection and report generation
+    tools_needed:
+      - filesystem MCP
+      - git MCP (@modelcontextprotocol/server-git)
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #78 from source material. SOC 2 compliance is mandatory for SaaS companies selling to enterprises. Uses git and filesystem — all tools exist. Shows AO automating a painful, audit-heavy compliance process."
+
+  # --- Privacy / Legal (new — conductor sweep 34, 2026-03-31) ---
+  - id: gdpr-request-handler
+    name: "GDPR Data Subject Request Handler"
+    vertical: privacy-legal
+    description: "GDPR/CCPA data subject request pipeline — receive and categorize requests (access/erasure/portability/rectification), locate data across structured files and databases, compile data inventory for the subject, generate erasure execution plans with dependency ordering, produce data portability exports in machine-readable format, track request status against regulatory deadlines (30-day GDPR, 45-day CCPA), generate compliance audit trails, escalate requests approaching deadline, produce monthly DSR analytics reports"
+    features_demonstrated:
+      - scheduled workflows (daily deadline monitoring, weekly status reports, monthly analytics)
+      - multi-agent pipeline (intake classifier, data locator, compiler, erasure planner, compliance tracker, reporter)
+      - command phases (jq for data extraction, find for file system data location, shasum for data integrity verification)
+      - decision contracts (request-type: access/erasure/portability/rectification, compliance-status: on-track/at-risk/overdue/completed)
+      - output contracts (data inventories, erasure plans, portability exports, audit trails, analytics dashboards)
+      - phase routing (escalate on approaching deadline, re-search on incomplete data location)
+      - memory MCP for persistent request tracking and data location registry
+    tools_needed:
+      - filesystem MCP
+      - memory MCP (@modelcontextprotocol/server-memory)
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #73 from source material. GDPR compliance is legally required for any company with EU users, with fines up to 4% of revenue. Uses filesystem, memory, and CLI tools — all exist. Shows AO managing time-sensitive legal compliance workflows."
+
+  # --- Data Analytics (new — conductor sweep 34, 2026-03-31) ---
+  - id: churn-predictor
+    name: "Customer Churn Predictor"
+    vertical: data-analytics
+    description: "Customer churn prediction pipeline — ingest behavioral data from CSV/JSON exports (login frequency, feature usage, support tickets, billing events), compute engagement scores using weighted activity metrics, extract churn risk features (declining usage trends, support escalations, payment failures), classify customers into risk tiers (healthy/monitor/at-risk/churning), generate personalized intervention recommendations per risk tier, trigger automated outreach templates for at-risk customers, track intervention effectiveness, produce weekly churn risk dashboards and monthly retention reports"
+    features_demonstrated:
+      - scheduled workflows (daily risk scoring, weekly dashboard, monthly retention analysis)
+      - multi-agent pipeline (data ingester, feature extractor, risk scorer, intervention planner, tracker, reporter)
+      - command phases (python3 for statistical scoring and trend analysis, jq for data aggregation, sort/awk for ranking)
+      - decision contracts (risk-tier: healthy/monitor/at-risk/churning, intervention: no-action/nurture-email/csm-outreach/executive-escalation)
+      - output contracts (risk scorecards, intervention plans, churn dashboards, retention reports)
+      - phase routing (immediate CSM alert on churning, nurture sequence on at-risk)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #51 from source material. Churn prediction directly impacts revenue — 5% improvement in retention can increase profits 25-95%. Uses python3 and jq for scoring — tools exist. Shows AO running a data analytics pipeline with real business impact."
+
+  # --- Developer Tools (new — conductor sweep 34, 2026-03-31) ---
+  - id: a11y-auditor
+    name: "Accessibility Compliance Auditor"
+    vertical: developer-tools
+    description: "WCAG accessibility compliance pipeline — crawl target website pages using Playwright, run accessibility audits against WCAG 2.1 AA criteria, categorize violations by severity and impact (critical/serious/moderate/minor), generate remediation code suggestions with before/after examples, produce per-page audit reports with screenshots of violations, create prioritized remediation backlog, track compliance progress across audit cycles, generate executive compliance dashboards, schedule recurring audits for continuous monitoring"
+    features_demonstrated:
+      - scheduled workflows (weekly audits, daily monitoring of critical pages, monthly trend reports)
+      - multi-agent pipeline (crawler, auditor, categorizer, remediator, reporter, tracker)
+      - command phases (npx @axe-core/cli for WCAG testing, node for result processing)
+      - decision contracts (compliance-status: compliant/minor-issues/major-violations/critical-failures, page-status: pass/conditional-pass/fail)
+      - output contracts (audit reports with screenshots, remediation guides, compliance dashboards, trend analyses)
+      - phase routing (immediate alert on critical failures, remediation loop on major violations)
+      - Playwright MCP for browser-based page crawling and screenshots
+    tools_needed:
+      - playwright MCP (@playwright/mcp)
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #13 from source material. Accessibility compliance is legally required (ADA, EAA) and affects 15% of the population. Uses Playwright MCP and axe-core CLI — both exist on npm. Shows AO using browser automation for real-world auditing."
+
+  # --- Customer Ops (new — conductor sweep 34, 2026-03-31) ---
+  - id: kb-article-generator
+    name: "Knowledge Base Article Generator"
+    vertical: customer-ops
+    description: "Knowledge base article generation from support tickets — aggregate resolved support tickets from JSON exports, cluster tickets by topic using text similarity, identify topics with high ticket volume but no existing KB article, draft comprehensive KB articles with step-by-step solutions, include common variations and edge cases from ticket history, generate FAQ sections from recurring questions, cross-link related articles, review articles for accuracy and completeness, publish to knowledge base directory, track article effectiveness by monitoring ticket deflection, update stale articles when new ticket patterns emerge"
+    features_demonstrated:
+      - scheduled workflows (weekly topic clustering, daily stale article detection, monthly effectiveness analysis)
+      - multi-agent pipeline (ticket aggregator, topic clusterer, gap analyzer, article drafter, reviewer, publisher, effectiveness tracker)
+      - command phases (python3 for text clustering and similarity scoring, jq for ticket data extraction, wc for article metrics)
+      - decision contracts (article-quality: publish/revise/reject, staleness: current/needs-update/obsolete)
+      - output contracts (structured KB articles in markdown, topic cluster reports, gap analysis, effectiveness dashboards)
+      - phase routing (revise loop on quality review failure, immediate publish on critical gap detection)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #86 from source material. Knowledge base deflection reduces support costs 20-40%. Uses python3 for clustering and filesystem for storage — all tools exist. Shows AO automating a high-value customer ops workflow."
 
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
 #
 # Verticals to explore next: children's book, connected car, medical coding,
-# cargo operations, broadcast production, number porting, customer churn prediction,
+# cargo operations, broadcast production, number porting,
 # load testing, multi-region deployment, portfolio-rebalancer, nps-followup,
 # pest-management, livestock-health, public-records-manager, venue-maintenance,
 # construction-cost-estimator, housekeeping-optimizer, email-campaign,
-# carbon-tracker, policy-impact-analyzer, whitepaper-producer
+# carbon-tracker, policy-impact-analyzer, whitepaper-producer, privacy-policy-generator
