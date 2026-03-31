@@ -2452,7 +2452,9 @@ examples:
       - memory MCP (@modelcontextprotocol/server-memory)
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: 2026-03-31
+    test_status: passed
     notes: "Automotive has vehicle-recall only. EV infrastructure is a massive growth area. Uses Playwright to scrape real charging station data — immediately practical. Shows AO for infrastructure planning."
 
   # --- Advertising (new — conductor sweep 30, 2026-03-31) ---
