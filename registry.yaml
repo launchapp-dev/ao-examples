@@ -916,7 +916,7 @@ examples:
       - web search (tariff databases, restricted party lists)
     status: generated
     generated_at: "2026-03-30"
-    github_repo: "https://github.com/launchapp-dev/ao-example-compliance-auditor"
+    github_repo: launchapp-dev/ao-example-compliance-auditor
     test_status: passed
     notes: "Pipeline #160 from source material. Customs/trade compliance is completely unrepresented. Rule-heavy, multi-stakeholder process with regulatory filing."
 
@@ -938,7 +938,7 @@ examples:
       - sequential-thinking MCP
     status: generated
     generated_at: "2026-03-30"
-    github_repo: "https://github.com/launchapp-dev/ao-example-donor-prospector"
+    github_repo: launchapp-dev/ao-example-donor-prospector
     test_status: passed
     notes: "Pipeline #191 from source material. Distinct from grant-writer — this is donor relationship management, not proposal writing. Shows AO managing long-term relationship pipelines."
 
@@ -1046,7 +1046,7 @@ examples:
     status: generated
     generated_at: "2026-03-30"
     test_status: passed
-    github_repo: "https://github.com/launchapp-dev/ao-example-brand-monitor"
+    github_repo: launchapp-dev/ao-example-brand-monitor
     notes: "Pipeline #273 from source material. Marketing intelligence is distinct from ad-campaign. Real-time monitoring + crisis detection is a compelling AO pattern."
 
   # --- Logistics / Warehouse (new — conductor sweep 11, 2026-03-30) ---
@@ -1194,6 +1194,7 @@ examples:
     status: generated
     test_status: passed
     generated_at: 2026-03-30
+    github_repo: launchapp-dev/ao-workflow-home-renovation
     notes: "Pipeline #292 from source material. Home renovation is universally relatable and shows AO managing a complex physical-world project with multiple contractors and regulatory gates."
 
   # --- Personal Legal / Finance (new — conductor sweep 13, 2026-03-31) ---
@@ -1214,7 +1215,7 @@ examples:
     status: generated
     generated_at: "2026-03-30"
     test_status: passed
-    github_repo: ao-example-estate-planner
+    github_repo: launchapp-dev/ao-workflow-estate-planner
     notes: "Pipeline #295 from source material. Estate planning is a deeply personal, high-stakes process. Shows AO handling sensitive life documents with multiple legal review gates."
 
   # --- Food & Hospitality (new — conductor sweep 13, 2026-03-31) ---
@@ -1235,12 +1236,110 @@ examples:
     status: generated
     generated_at: 2026-03-30
     test_status: passed
-    github_repo: ao-example-restaurant-ops
+    github_repo: launchapp-dev/ao-workflow-restaurant-ops
     notes: "Pipeline #253 from source material. Restaurant ops is distinct from recipe-developer — this is the full daily operational cycle. Shows AO managing a high-velocity business with tight margins."
+
+  # --- Consumer / Health (new — conductor sweep 14, 2026-03-31) ---
+  - id: fitness-coach
+    name: "Fitness Program Pipeline"
+    vertical: consumer-health
+    description: "Fitness coaching pipeline — assess baseline fitness and goals, design periodized training program, generate daily workouts, track progress metrics, adjust intensity based on recovery signals, monthly body composition review, program progression, generate weekly performance reports for athlete"
+    features_demonstrated:
+      - scheduled workflows (daily workout generation, weekly progress review, monthly program adjustment)
+      - command phases (metric calculation scripts, periodization logic)
+      - multi-agent pipeline (assessment specialist, program designer, exercise selector, recovery analyst, reporter)
+      - decision contracts (progression: advance/maintain/deload, recovery status: fresh/fatigued/overtrained)
+      - output contracts (structured workout plans, progress reports, body composition tracking)
+      - phase routing (trigger deload week on overtrained status)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #296 from source material. Fitness coaching is universally relatable and shows AO managing physical performance with adaptive programming."
+
+  # --- Banking / Compliance (new — conductor sweep 14, 2026-03-31) ---
+  - id: aml-monitor
+    name: "Anti-Money Laundering Pipeline"
+    vertical: banking-compliance
+    description: "AML monitoring pipeline — continuous transaction screening, pattern detection (structuring, layering, integration), customer due diligence enhancement, suspicious activity investigation, evidence compilation, SAR filing preparation, regulatory submission, case management and resolution tracking"
+    features_demonstrated:
+      - scheduled workflows (continuous transaction monitoring, periodic customer reviews)
+      - decision contracts (risk level: low/medium/high/critical, filing decision: file-SAR/escalate/close)
+      - multi-agent pipeline (transaction screener, pattern analyst, investigator, compliance officer, filing specialist)
+      - command phases (transaction scoring scripts, threshold monitoring)
+      - output contracts (structured investigation reports, SAR filings, audit trails)
+      - phase routing (escalate on critical risk, auto-close low-risk with documentation)
+      - manual approval gates (BSA officer sign-off on SAR filings)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #132 from source material. AML is distinct from fraud-detector — focuses on regulatory compliance patterns (structuring, layering) not individual transaction fraud. High-stakes regulatory domain."
+
+  # --- E-Commerce / Analytics (new — conductor sweep 14, 2026-03-31) ---
+  - id: dynamic-pricer
+    name: "Dynamic Pricing Engine Pipeline"
+    vertical: ecommerce-analytics
+    description: "Dynamic pricing pipeline — monitor competitor prices via web scraping, analyze demand elasticity, calculate optimal price points, generate A/B test configurations, deploy price changes, measure revenue impact, automated rollback on negative signals, generate pricing analytics reports"
+    features_demonstrated:
+      - scheduled workflows (hourly competitor monitoring, daily price optimization, weekly revenue review)
+      - web search MCP (competitor price scraping, market data)
+      - command phases (elasticity calculation scripts, revenue impact analysis)
+      - multi-agent pipeline (market researcher, pricing strategist, test designer, revenue analyst, reporter)
+      - decision contracts (price action: increase/decrease/hold, test result: deploy-winner/extend-test/rollback)
+      - output contracts (structured pricing matrices, A/B test results, revenue dashboards)
+      - phase routing (rollback on negative revenue signal)
+    tools_needed:
+      - web search
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #102 from source material. Dynamic pricing is a real-time optimization problem with direct revenue impact. Shows AO managing automated A/B testing and rollback."
+
+  # --- Government / Crisis (new — conductor sweep 14, 2026-03-31) ---
+  - id: emergency-manager
+    name: "Emergency Management Pipeline"
+    vertical: government-crisis
+    description: "Emergency management pipeline — detect disaster event from monitoring feeds, classify severity and type, issue public alerts, mobilize resources (personnel, equipment, shelters), generate situation reports, coordinate multi-agency response, track resource deployment, manage recovery planning, produce after-action review"
+    features_demonstrated:
+      - scheduled workflows (continuous hazard monitoring, periodic situation reports)
+      - decision contracts (severity: watch/warning/emergency/catastrophe, phase: preparedness/response/recovery/mitigation)
+      - multi-agent pipeline (hazard monitor, alert coordinator, resource mobilizer, situation reporter, recovery planner)
+      - command phases (weather data ingestion, resource tracking scripts, GIS analysis)
+      - output contracts (structured situation reports, resource deployment plans, after-action reviews)
+      - phase routing (escalate on catastrophe, transition to recovery phase)
+      - manual approval gates (emergency director authorization for resource mobilization)
+    tools_needed:
+      - web search (weather data, news feeds, hazard monitoring)
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #165 from source material. Emergency management is life-safety critical and shows AO coordinating multi-agency response with real-time situational awareness."
+
+  # --- Marketing / Social (new — conductor sweep 14, 2026-03-31) ---
+  - id: influencer-campaign
+    name: "Influencer Campaign Management Pipeline"
+    vertical: marketing-social
+    description: "Influencer campaign pipeline — identify relevant influencers by niche/audience fit, vet for brand safety (content history, engagement authenticity), negotiate terms and deliverables, create creative briefs, review submitted content before publish, track post performance, measure ROI across influencers, generate campaign wrap report"
+    features_demonstrated:
+      - web search MCP (influencer discovery, audience analysis, content vetting)
+      - multi-agent pipeline (talent scout, vetting analyst, negotiator, creative director, performance analyst, reporter)
+      - decision contracts (influencer fit: approve/negotiate/reject, content review: approve/revise/reject)
+      - output contracts (structured influencer profiles, campaign briefs, ROI reports)
+      - manual approval gates (brand manager content approval before publish)
+      - phase routing (rework content on revision request)
+      - scheduled workflows (daily performance tracking, weekly campaign optimization)
+    tools_needed:
+      - web search
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #274 from source material. Influencer marketing is a distinct workflow from ad-campaign and brand-monitor. Shows AO managing human talent relationships with content approval gates."
 
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
 #
-# Verticals to explore next: music production, fitness coaching, insurance underwriting,
-# vendor evaluation, connected car, esports tournament, influencer campaign, programmatic ads
+# Verticals to explore next: music production, insurance underwriting,
+# vendor evaluation, connected car, esports tournament, programmatic ads,
+# medical coding, meal planning, pet care

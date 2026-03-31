@@ -96,7 +96,13 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [home-renovation](workflows/home-renovation/) | Consumer / Home | Contractor vetting → permit tracking → construction management → inspections | generated | [repo](https://github.com/launchapp-dev/ao-example-home-renovation) |
 | [restaurant-ops](workflows/restaurant-ops/) | Food & Hospitality | Menu planning → food costing → prep scheduling → waste tracking → daily P&L | generated | [repo](https://github.com/launchapp-dev/ao-example-restaurant-ops) |
 
-*59 examples across 55 verticals — 59 generated, 1 queued. More added autonomously by the conductor every 30 minutes.*
+| fitness-coach | Consumer Health | Baseline assessment → periodized programming → daily workouts → progress tracking | queued | — |
+| aml-monitor | Banking Compliance | Transaction screening → pattern detection → SAR filing → case management | queued | — |
+| dynamic-pricer | E-Commerce Analytics | Competitor monitoring → demand elasticity → A/B testing → price optimization | queued | — |
+| emergency-manager | Government / Crisis | Disaster detection → alerts → resource mobilization → situation reports → recovery | queued | — |
+| influencer-campaign | Marketing / Social | Talent discovery → vetting → creative briefs → content review → ROI analysis | queued | — |
+
+*64 examples across 60 verticals — 59 generated, 5 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 
