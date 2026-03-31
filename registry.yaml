@@ -3080,7 +3080,8 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    test_status: passed
     notes: "Pipeline #285 from source material. GMP batch records are legally required for pharmaceutical manufacturing with FDA/EMA oversight. Uses python3 for calculations and filesystem — all tools exist. Shows AO managing a safety-critical manufacturing workflow with strict quality gates."
 
   # --- Customer Ops (new — conductor sweep 36, 2026-03-31) ---
@@ -3098,7 +3099,8 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: 2026-03-31
     notes: "Pipeline #87 from source material. NPS is the standard customer loyalty metric — closing the loop on feedback drives 2x higher retention. Uses python3 and jq — all tools exist. Shows AO automating the critical 'close the loop' customer ops workflow."
 
   # --- Sports & Entertainment (new — conductor sweep 37, 2026-03-31) ---
