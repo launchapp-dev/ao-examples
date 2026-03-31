@@ -2360,7 +2360,7 @@ examples:
       - github MCP (gh-cli-mcp)
       - sequential-thinking MCP
     status: queued
-    notes: "Pipeline #99 from source material. Every company tracks OKRs. Uses memory MCP for persistent tracking across quarters — all tools exist. Shows AO for strategic planning and organizational alignment."
+    notes: "Pipeline #99 from source material. Every company tracks OKRs. Uses memory MCP for persistent tracking across quarters — all tools exist. Shows AO for strategic planning and organizational alignment. Previous build incomplete — only scaffolded PLAN.md, needs full rebuild."
 
   # --- Cybersecurity / Compliance (new — conductor sweep 29, 2026-03-31) ---
   - id: access-reviewer
@@ -2381,8 +2381,11 @@ examples:
       - memory MCP (@modelcontextprotocol/server-memory)
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
-    notes: "Pipeline #185 from source material. Access reviews are mandatory for SOC 2/ISO 27001. Uses gh API commands for real permission extraction — maximally feasible. Shows AO for security compliance automation."
+    status: generated
+    started_at: 2026-03-31
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-access-reviewer
+    notes: "Pipeline #185 from source material. Access reviews are mandatory for SOC 2/ISO 27001. Uses gh API commands for real permission extraction — maximally feasible. Shows AO for security compliance automation. GitHub repo created and public."
 
   # --- Agriculture / Food Safety (new — conductor sweep 29, 2026-03-31) ---
   - id: food-safety-auditor
@@ -2542,6 +2545,117 @@ examples:
     status: queued
     notes: "Pipeline #129 from source material. Alumni engagement is the lifeblood of university advancement offices. Uses python3 for real scoring algorithms — all tools exist. Shows AO for education advancement and fundraising."
 
+  # --- Data & Analytics (new — conductor sweep 32, 2026-03-31) ---
+  - id: survey-analyzer
+    name: "Survey Analysis Pipeline"
+    vertical: data-analytics-research
+    description: "Survey analysis pipeline — ingest survey responses from CSV/JSON exports, clean and validate response data, perform sentiment analysis on open-ended answers, extract recurring themes using keyword clustering, calculate NPS/CSAT/CES scores with statistical confidence intervals, segment respondents by demographics and behavior, generate executive summary reports with key findings and actionable recommendations, produce trend comparisons against prior survey waves, maintain historical survey data for longitudinal analysis"
+    features_demonstrated:
+      - scheduled workflows (daily response ingestion, weekly interim reports, end-of-survey full analysis)
+      - multi-agent pipeline (data cleaner, sentiment analyzer, theme extractor, statistician, report writer)
+      - command phases (python3 for statistical analysis and NPS calculations, jq for response data processing, csvtool for export handling)
+      - decision contracts (survey-health: sufficient-responses/low-response-rate/needs-extension, finding-significance: statistically-significant/trending/inconclusive)
+      - output contracts (executive summaries, theme reports, segment breakdowns, trend comparisons, raw data appendices)
+      - memory MCP for historical survey baselines and wave-over-wave tracking
+      - filesystem MCP for response data files and reports
+      - phase routing (flag low response rates for survey extension, fast-track high-priority findings)
+    tools_needed:
+      - memory MCP (@modelcontextprotocol/server-memory)
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #53 from source material. Every company runs surveys. Uses python3 for real statistical analysis (confidence intervals, NPS scoring) — maximally feasible. Shows AO for research and insights."
+
+  # --- DevOps / Security (new — conductor sweep 32, 2026-03-31) ---
+  - id: secret-rotation
+    name: "Secret Rotation Pipeline"
+    vertical: devops-security
+    description: "Secret rotation pipeline — audit all secrets and API keys across repositories using git-secrets and trufflehog patterns, track expiration dates and rotation schedules, generate new credentials via provider CLIs where possible, update service configurations with rotated secrets, verify services remain healthy after rotation, revoke old credentials after successful verification, produce audit trail of all rotations with compliance evidence, send alerts for secrets approaching expiration, maintain a secret inventory with ownership and rotation policy metadata"
+    features_demonstrated:
+      - scheduled workflows (daily expiry check, weekly rotation batch, monthly compliance audit)
+      - multi-agent pipeline (secret auditor, rotation planner, credential rotator, health verifier, compliance reporter)
+      - command phases (gh secret set for GitHub secrets, jq for secret inventory management, openssl for certificate operations)
+      - decision contracts (rotation-urgency: immediate/scheduled/deferred/exempt, health-status: verified/degraded/failed/rollback)
+      - output contracts (rotation audit logs, expiry forecasts, compliance reports, secret inventory snapshots)
+      - github MCP for scanning repos and managing GitHub secrets
+      - memory MCP for secret inventory and rotation history
+      - filesystem MCP for configuration templates and audit reports
+      - phase routing (immediate rotation on compromised secrets, batch processing for routine rotations)
+    tools_needed:
+      - github MCP (gh-cli-mcp)
+      - memory MCP (@modelcontextprotocol/server-memory)
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #68 from source material. Secret rotation is a top-priority security practice — mandatory for SOC 2. Uses gh secret set and openssl as real CLI tools. Shows AO for DevSecOps automation."
+
+  # --- Customer Ops (new — conductor sweep 32, 2026-03-31) ---
+  - id: customer-health-scorer
+    name: "Customer Health Scoring Pipeline"
+    vertical: customer-success
+    description: "Customer health scoring pipeline — aggregate customer signals from multiple sources (usage logs, support tickets, billing data, NPS scores) stored as CSV/JSON files, compute weighted health scores using configurable signal weights, classify accounts into health tiers (healthy/attention/at-risk/critical), detect score trend changes and inflection points, generate CSM action playbooks for at-risk accounts, create weekly health digest reports for customer success leadership, produce churn risk forecasts based on historical patterns, maintain persistent health score history for trend analysis and model calibration"
+    features_demonstrated:
+      - scheduled workflows (daily score refresh, weekly health digest, monthly churn forecast)
+      - multi-agent pipeline (signal aggregator, health scorer, trend detector, playbook generator, report writer)
+      - command phases (python3 for weighted scoring algorithms and trend analysis, jq for signal data aggregation)
+      - decision contracts (health-tier: healthy/attention/at-risk/critical, intervention: proactive-outreach/escalate-to-manager/executive-sponsor/churn-prevention)
+      - output contracts (account health cards, CSM playbooks, weekly digests, churn risk forecasts, trend dashboards)
+      - memory MCP for persistent health score history and intervention effectiveness tracking
+      - filesystem MCP for signal data files and reports
+      - github MCP for creating intervention tasks as issues
+      - phase routing (immediate escalation for critical accounts, batch processing for healthy accounts)
+    tools_needed:
+      - memory MCP (@modelcontextprotocol/server-memory)
+      - filesystem MCP
+      - github MCP (gh-cli-mcp)
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #88 from source material. Customer health scoring is the foundation of customer success. Uses python3 for real weighted scoring — all tools exist. Shows AO for SaaS retention and growth."
+
+  # --- Real Estate (new — conductor sweep 32, 2026-03-31) ---
+  - id: lease-manager
+    name: "Lease Management Pipeline"
+    vertical: real-estate-commercial
+    description: "Commercial lease management pipeline — ingest lease agreements from structured data files (CSV/JSON with key terms, dates, rent amounts), track lease expirations and renewal windows with configurable lead times, calculate rent escalations based on CPI adjustments and contractual formulas, flag upcoming critical dates (options, renewals, terminations, rent reviews), generate renewal negotiation briefs with market comparables, produce monthly rent roll reports with variance analysis, track tenant improvement allowances and amortization schedules, create GitHub issues for upcoming lease actions, maintain complete lease portfolio history for portfolio analytics"
+    features_demonstrated:
+      - scheduled workflows (daily critical date check, monthly rent roll, quarterly portfolio review)
+      - multi-agent pipeline (lease parser, date tracker, escalation calculator, negotiation briefer, portfolio reporter)
+      - command phases (python3 for rent escalation calculations and NPV analysis, jq for lease data aggregation, date for deadline calculations)
+      - decision contracts (lease-action: renew/renegotiate/terminate/holdover, urgency: immediate/30-day/60-day/90-day)
+      - output contracts (critical date alerts, rent rolls, renewal briefs, portfolio summaries, amortization schedules)
+      - memory MCP for lease portfolio history and market comparable baselines
+      - filesystem MCP for lease data files and reports
+      - github MCP for creating lease action items as issues
+      - phase routing (immediate alert on missed deadlines, batch processing for routine renewals)
+    tools_needed:
+      - memory MCP (@modelcontextprotocol/server-memory)
+      - filesystem MCP
+      - github MCP (gh-cli-mcp)
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #145 from source material. Commercial lease management involves complex date tracking and financial calculations. Uses python3 for real NPV and escalation math — all tools exist. Shows AO for commercial real estate operations."
+
+  # --- Supply Chain (new — conductor sweep 32, 2026-03-31) ---
+  - id: provenance-tracker
+    name: "Supply Chain Provenance Tracker"
+    vertical: supply-chain-traceability
+    description: "Supply chain provenance and traceability pipeline — ingest batch records from each supply chain node (farm/factory, processor, distributor, retailer) as structured data files, validate chain-of-custody completeness at each handoff, detect gaps or anomalies in the provenance chain (missing timestamps, temperature excursions, unauthorized handlers), generate provenance certificates with full chain-of-custody documentation, create consumer-facing traceability summaries, track recall-readiness by mapping which batches went where, produce compliance reports for food safety (FSMA 204) and product safety regulations, maintain persistent batch genealogy for rapid recall response"
+    features_demonstrated:
+      - scheduled workflows (hourly batch ingestion, daily chain validation, weekly compliance reports)
+      - multi-agent pipeline (batch ingester, chain validator, anomaly detector, certificate generator, compliance reporter)
+      - command phases (jq for batch record parsing and chain validation, python3 for anomaly detection algorithms, shasum for document integrity verification)
+      - decision contracts (chain-status: complete/gap-detected/anomaly-flagged/recall-triggered, compliance-status: compliant/documentation-gap/violation/exempt)
+      - output contracts (provenance certificates, chain-of-custody logs, anomaly alerts, compliance reports, recall-readiness assessments)
+      - memory MCP for persistent batch genealogy and supply chain node registry
+      - filesystem MCP for batch data files, certificates, and reports
+      - phase routing (immediate escalation on recall triggers, batch processing for routine validation)
+    tools_needed:
+      - memory MCP (@modelcontextprotocol/server-memory)
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #203 from source material. Supply chain traceability is mandatory under FSMA 204 (effective 2026). Uses jq for chain validation and python3 for anomaly detection — all tools exist. Shows AO for food/product safety compliance."
+
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
@@ -2550,4 +2664,5 @@ examples:
 # connected car, medical coding, cargo operations, broadcast production,
 # number porting, customer churn prediction, load testing, multi-region deployment,
 # portfolio-rebalancer, nps-followup, site-reliability-dashboard, pest-management,
-# livestock-health, public-records-manager, venue-maintenance
+# livestock-health, public-records-manager, venue-maintenance, rights-royalties,
+# construction-cost-estimator, last-mile-delivery, housekeeping-optimizer
