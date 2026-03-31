@@ -1615,7 +1615,8 @@ examples:
       - github MCP (gh-cli-mcp)
       - git MCP
       - filesystem MCP
-    status: queued
+    status: generated
+    generated_at: 2026-03-31
     notes: "Pipeline #11 from source material (code quality remediation). Every engineering org needs visibility into repo hygiene across their fleet. Shows AO as an org-wide DevOps audit tool using gh CLI and git MCP."
 
   - id: slack-digest
@@ -1633,7 +1634,8 @@ examples:
       - slack MCP (@modelcontextprotocol/server-slack)
       - sequential-thinking MCP
       - filesystem MCP
-    status: queued
+    status: generated
+    generated_at: 2026-03-31
     notes: "Pipeline #90 from source material (voice of customer/team communication). Every team drowns in Slack. Shows AO as a daily information distiller using the official Slack MCP server."
 
   - id: notion-wiki-sync
@@ -1669,7 +1671,8 @@ examples:
       - git MCP
       - filesystem MCP
       - github MCP (gh-cli-mcp)
-    status: queued
+    status: generated
+    generated_at: 2026-03-31
     notes: "Pipeline #35 from source material. Every dev team needs changelogs but hates writing them. Shows AO using git MCP and GitHub CLI for developer tooling workflows."
 
   # --- Developer Tools (new — conductor sweep 19, 2026-03-31) ---
@@ -1748,7 +1751,8 @@ examples:
       - github MCP (gh-cli-mcp)
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: 2026-03-31
     notes: "Every dev team deals with dependency rot. Uses gh CLI and npm/yarn commands — all real tools. Shows AO managing a real developer workflow end-to-end."
 
   # --- Marketing / SEO (new — conductor sweep 20, 2026-03-31) ---
@@ -1769,7 +1773,8 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
       - fetch MCP
-    status: queued
+    status: generated
+    test_status: passed
     notes: "SEO auditing is a perfect Playwright MCP showcase — real web crawling with actionable output. Every website owner needs this."
 
   # --- Business / Meetings (new — conductor sweep 20, 2026-03-31) ---
@@ -1852,6 +1857,63 @@ examples:
       - memory MCP
     status: queued
     notes: "Pipeline #149 from source material. Every landlord/property manager screens tenants. Shows AO handling sensitive personal data workflows with compliance requirements."
+
+  # --- Developer Tools (new — conductor sweep 22, 2026-03-31) ---
+  - id: code-review-bot
+    name: "Automated Code Review Bot"
+    vertical: developer-tools
+    description: "PR review automation pipeline — watch for new PRs in a GitHub org, fetch diff and changed files, analyze code quality (complexity, naming, patterns), check for security issues (hardcoded secrets, SQL injection, XSS), verify test coverage expectations, post structured review comments with severity levels, approve/request-changes verdict, track review metrics over time"
+    features_demonstrated:
+      - scheduled workflows (poll for new PRs every 15 minutes)
+      - command phases (gh pr list, gh pr diff, gh pr review)
+      - multi-agent pipeline (diff analyzer, security scanner, style checker, review composer)
+      - decision contracts (review-verdict: approve/request-changes/comment-only, severity: critical/warning/info)
+      - output contracts (structured review comments, metrics dashboard)
+      - github MCP for PR operations
+    tools_needed:
+      - github MCP (gh-cli-mcp)
+      - git MCP
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Every engineering team wants automated code review. Uses gh CLI for real PR operations — all tools exist today. Shows AO as a developer productivity bot."
+
+  # --- Retail / Supply Chain (new — conductor sweep 22, 2026-03-31) ---
+  - id: inventory-forecaster
+    name: "Inventory Demand Forecaster"
+    vertical: retail
+    description: "Demand forecasting pipeline — ingest historical sales data from CSV/JSON files, analyze seasonal patterns and trends, correlate with external signals (holidays, weather, events), generate demand forecasts per SKU, calculate reorder points and safety stock levels, produce purchase order recommendations, generate visual forecast reports in markdown with data tables"
+    features_demonstrated:
+      - command phases (data parsing scripts, statistical calculations)
+      - multi-agent pipeline (data ingester, trend analyzer, forecaster, report generator)
+      - decision contracts (reorder-urgency: immediate/scheduled/monitor, confidence: high/medium/low)
+      - output contracts (structured forecasts, purchase order recommendations, markdown reports)
+      - scheduled workflows (weekly forecast refresh)
+      - sequential-thinking for trend analysis
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #130 from source material. Every retailer needs demand forecasting. Uses only filesystem and sequential-thinking — extremely feasible. Shows AO handling data analysis workflows."
+
+  # --- Marketing / Social (new — conductor sweep 22, 2026-03-31) ---
+  - id: social-media-scheduler
+    name: "Social Media Content Scheduler"
+    vertical: marketing
+    description: "Content calendar automation pipeline — generate weekly content calendar based on brand voice and topics, draft posts optimized for each platform (Twitter/LinkedIn/Instagram), create image prompts for visual content, schedule posts with optimal timing analysis, track engagement metrics from previous posts, adjust strategy based on performance, produce weekly analytics reports"
+    features_demonstrated:
+      - scheduled workflows (daily content generation, weekly analytics)
+      - multi-agent pipeline (strategist, copywriter, visual director, scheduler, analyst)
+      - decision contracts (post-quality: publish/revise/kill, platform-fit: optimized/needs-adjustment/skip)
+      - output contracts (structured content calendar, platform-specific posts, analytics reports)
+      - phase routing (rework posts that fail brand voice check)
+      - multi-model routing (creative drafting vs analytical review)
+    tools_needed:
+      - filesystem MCP
+      - fetch MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Every brand needs social media management. Uses filesystem + fetch for research — all real tools. Shows AO as a marketing automation pipeline."
 
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
