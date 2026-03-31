@@ -2258,12 +2258,72 @@ examples:
     status: queued
     notes: "Pipeline #110 from source material. E-commerce retention is huge and underrepresented. Uses memory MCP for persistent customer profiles — all tools exist. Shows AO for marketing/retention operations."
 
+  # --- DevOps / Infrastructure (new — conductor sweep 28, 2026-03-31) ---
+  - id: dns-cert-manager
+    name: "DNS & Certificate Manager"
+    vertical: devops-infrastructure
+    description: "DNS and TLS certificate lifecycle management pipeline — audit all domains and certificates for approaching expiry dates using openssl and dig CLI tools, generate renewal requests via ACME protocol, validate DNS propagation, deploy updated certificates, verify TLS handshake after deployment, generate weekly certificate health dashboards, alert on certificates expiring within 30/14/7 days, maintain certificate inventory with issuance history"
+    features_demonstrated:
+      - scheduled workflows (daily expiry check, weekly health dashboard, monthly full audit)
+      - command phases (openssl s_client for cert inspection, dig for DNS validation, curl for endpoint verification)
+      - multi-agent pipeline (cert auditor, renewal manager, deployment verifier, dashboard generator)
+      - decision contracts (cert-status: valid/expiring-soon/expired/revoked, renewal-action: auto-renew/manual-review/escalate)
+      - output contracts (certificate inventory, health dashboards, renewal reports, alert notifications)
+      - github MCP for tracking renewal issues
+      - filesystem MCP for certificate inventory and reports
+    tools_needed:
+      - filesystem MCP
+      - github MCP (gh-cli-mcp)
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #65 from source material. Certificate expiry outages are embarrassingly common. Uses real CLI tools (openssl, dig, curl) — maximally feasible. Shows AO for infrastructure lifecycle management."
+
+  # --- Data & Analytics (new — conductor sweep 28, 2026-03-31) ---
+  - id: customer-segmentation
+    name: "Customer Segmentation Engine"
+    vertical: data-analytics-marketing
+    description: "Customer segmentation and audience analytics pipeline — ingest customer behavioral data from CSV/JSON files, compute RFM (recency, frequency, monetary) scores, cluster customers into segments using statistical analysis, generate persona profiles for each segment with key characteristics and preferences, recommend targeted marketing strategies per segment, track segment migration over time, produce monthly segmentation reports with actionable insights for product and marketing teams"
+    features_demonstrated:
+      - scheduled workflows (weekly segmentation refresh, monthly persona reports, quarterly strategy review)
+      - command phases (jq for data processing, python3 for statistical clustering, csvtool for data manipulation)
+      - multi-agent pipeline (data processor, segmentation analyst, persona writer, strategy recommender, report generator)
+      - decision contracts (segment-action: grow/retain/reactivate/sunset, campaign-type: acquisition/upsell/retention/winback)
+      - output contracts (segment profiles, persona documents, strategy recommendations, migration reports)
+      - memory MCP for tracking historical segmentation and segment evolution
+      - filesystem MCP for data files and reports
+    tools_needed:
+      - memory MCP (@modelcontextprotocol/server-memory)
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #60 from source material. Customer segmentation is foundational to all marketing. Uses command phases with real tools (jq, python3) — highly feasible. Shows AO for data-driven marketing intelligence."
+
+  # --- Nonprofit (new — conductor sweep 28, 2026-03-31) ---
+  - id: volunteer-coordinator
+    name: "Volunteer Coordination Pipeline"
+    vertical: nonprofit-operations
+    description: "Volunteer management and coordination pipeline — ingest volunteer applications from form submissions (CSV/JSON), screen volunteers based on skills and availability, match volunteers to open opportunities based on requirements and preferences, generate onboarding packets with role-specific training materials, schedule shifts and send reminders, track volunteer hours and contributions, recognize top volunteers with impact reports, produce monthly program reports with retention metrics and capacity forecasts"
+    features_demonstrated:
+      - scheduled workflows (daily shift reminders, weekly matching runs, monthly recognition and reporting)
+      - multi-agent pipeline (screener, matcher, onboarding writer, scheduler, recognition generator, report compiler)
+      - decision contracts (screening-result: approve/waitlist/decline, match-quality: excellent/good/partial/no-match)
+      - output contracts (onboarding packets, shift schedules, recognition certificates, program reports)
+      - memory MCP for persistent volunteer profiles and preference tracking
+      - github MCP for tracking volunteer program issues and improvements
+      - phase routing (waitlist notification on screening, re-match on poor fit)
+    tools_needed:
+      - memory MCP (@modelcontextprotocol/server-memory)
+      - filesystem MCP
+      - github MCP (gh-cli-mcp)
+    status: queued
+    notes: "Pipeline #193 from source material. Every nonprofit struggles with volunteer management. Uses memory MCP for persistent profiles — all tools exist. Shows AO for nonprofit operations management."
+
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
 #
 # Verticals to explore next: documentary research, children's book,
 # connected car, programmatic ads, medical coding, cargo operations,
-# broadcast production, access review, volunteer coordinator,
-# number porting, customer churn prediction, load testing,
-# multi-region deployment, portfolio-rebalancer, nps-followup
+# broadcast production, access review, number porting, customer churn prediction,
+# load testing, multi-region deployment, portfolio-rebalancer, nps-followup,
+# alumni engagement, food safety audit, warranty analytics
