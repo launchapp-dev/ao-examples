@@ -120,8 +120,11 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | api-docs-generator | Developer Tools | Route parsing → schema extraction → example generation → validation → OpenAPI | queued | — |
 | food-waste-tracker | Sustainability | Inventory tracking → spoilage prediction → donations → impact reports | queued | — |
 | guest-experience | Hospitality | Guest profiling → room personalization → service coordination → satisfaction | queued | — |
+| dependency-updater | Developer Tools / CI-CD | Dependency scanning → risk assessment → update PRs → test validation | queued | — |
+| seo-auditor | Marketing / SEO | Site crawling → on-page analysis → Core Web Vitals → competitor comparison | queued | — |
+| meeting-summarizer | Business Productivity | Transcript processing → topic extraction → action items → Linear tasks | queued | — |
 
-*83 examples across 30+ verticals — 72 generated, 11 queued. More added autonomously by the conductor every 30 minutes.*
+*86 examples across 30+ verticals — 72 generated, 14 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 

@@ -1732,6 +1732,67 @@ examples:
     status: queued
     notes: "Pipeline #252 from source material. Hospitality is all about personalization at scale. Shows AO maintaining persistent guest knowledge and coordinating real-time service delivery."
 
+  # --- Developer Tools / CI-CD (new — conductor sweep 20, 2026-03-31) ---
+  - id: dependency-updater
+    name: "Dependency Update Pipeline"
+    vertical: developer-tools-cicd
+    description: "Dependency update pipeline — scan repositories for outdated packages, assess breaking change risk per dependency, generate update plan with priority ordering, create feature branches with updates, run test suites, produce compatibility reports, open PRs with detailed changelogs, track merge status"
+    features_demonstrated:
+      - command phases (npm outdated, gh pr create, test runners)
+      - multi-agent pipeline (scanner, risk assessor, updater, test runner, PR author)
+      - decision contracts (update-risk: safe/minor-risk/breaking/skip, test-result: passing/failing/flaky)
+      - phase routing (rework on test failure, skip on breaking with no migration path)
+      - scheduled workflows (weekly dependency scan, daily PR status check)
+      - output contracts (structured update plans, compatibility reports, PR summaries)
+    tools_needed:
+      - github MCP (gh-cli-mcp)
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Every dev team deals with dependency rot. Uses gh CLI and npm/yarn commands — all real tools. Shows AO managing a real developer workflow end-to-end."
+
+  # --- Marketing / SEO (new — conductor sweep 20, 2026-03-31) ---
+  - id: seo-auditor
+    name: "SEO Site Audit Pipeline"
+    vertical: marketing-seo
+    description: "SEO audit pipeline — crawl website pages with Playwright, analyze page titles/meta/headers/content structure, check Core Web Vitals scores, identify broken links and redirect chains, audit schema markup, compare against competitor rankings, generate prioritized fix recommendations, produce executive report with before/after projections"
+    features_demonstrated:
+      - playwright MCP (real website crawling, screenshot capture, performance measurement)
+      - multi-agent pipeline (crawler, on-page analyst, technical auditor, competitor analyst, report generator)
+      - decision contracts (severity: critical/warning/info/pass, priority: immediate/high/medium/low)
+      - command phases (lighthouse CLI for performance scores, link checker scripts)
+      - output contracts (structured audit reports, fix recommendations, competitor comparison matrices)
+      - scheduled workflows (weekly crawl, monthly competitive analysis)
+      - phase routing (re-crawl after fixes applied, escalate critical issues)
+    tools_needed:
+      - playwright MCP
+      - filesystem MCP
+      - sequential-thinking MCP
+      - fetch MCP
+    status: queued
+    notes: "SEO auditing is a perfect Playwright MCP showcase — real web crawling with actionable output. Every website owner needs this."
+
+  # --- Business / Meetings (new — conductor sweep 20, 2026-03-31) ---
+  - id: meeting-summarizer
+    name: "Meeting Notes & Action Items Pipeline"
+    vertical: business-productivity
+    description: "Meeting processing pipeline — ingest meeting transcript or recording notes, identify speakers and topics, extract key decisions and discussion points, generate structured summary, identify action items with owners and deadlines, create follow-up tasks in Linear, draft follow-up email, track action item completion across meetings"
+    features_demonstrated:
+      - multi-agent pipeline (transcriber, topic extractor, summarizer, action tracker, follow-up drafter)
+      - linear MCP (create issues for action items, track completion)
+      - memory MCP (persistent context across recurring meetings)
+      - decision contracts (urgency: immediate/next-sprint/backlog, completion: done/in-progress/blocked/overdue)
+      - output contracts (structured meeting summaries, action item lists, follow-up emails)
+      - scheduled workflows (daily standup processing, weekly meeting digest)
+      - phase routing (escalate blocked items, flag overdue actions)
+    tools_needed:
+      - linear MCP (@tacticlaunch/mcp-linear)
+      - memory MCP
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Universal business need — every team has meetings. Uses Linear MCP for real task tracking. Shows AO as a business productivity tool, not just dev tooling."
+
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
