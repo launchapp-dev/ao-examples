@@ -1276,7 +1276,10 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-example-aml-monitor
+    test_status: pending
     notes: "Pipeline #132 from source material. AML is distinct from fraud-detector — focuses on regulatory compliance patterns (structuring, layering) not individual transaction fraud. High-stakes regulatory domain."
 
   # --- E-Commerce / Analytics (new — conductor sweep 14, 2026-03-31) ---
@@ -1296,7 +1299,10 @@ examples:
       - web search
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-example-dynamic-pricer
+    test_status: pending
     notes: "Pipeline #102 from source material. Dynamic pricing is a real-time optimization problem with direct revenue impact. Shows AO managing automated A/B testing and rollback."
 
   # --- Government / Crisis (new — conductor sweep 14, 2026-03-31) ---
@@ -1316,7 +1322,10 @@ examples:
       - web search (weather data, news feeds, hazard monitoring)
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-example-emergency-manager
+    test_status: pending
     notes: "Pipeline #165 from source material. Emergency management is life-safety critical and shows AO coordinating multi-agency response with real-time situational awareness."
 
   # --- Marketing / Social (new — conductor sweep 14, 2026-03-31) ---
@@ -1342,10 +1351,103 @@ examples:
     test_status: passed
     notes: "Pipeline #274 from source material. Influencer marketing is a distinct workflow from ad-campaign and brand-monitor. Shows AO managing human talent relationships with content approval gates. Uses only filesystem + sequential-thinking MCPs — no API keys required."
 
+  # --- Education / Compliance (new — conductor sweep 15, 2026-03-31) ---
+  - id: accreditation-tracker
+    name: "Accreditation Evidence Pipeline"
+    vertical: education-compliance
+    description: "Accreditation pipeline — map institutional standards to evidence requirements, collect documentation from departments, perform gap analysis, generate remediation plans, compile self-study report, track submission deadlines, produce readiness dashboard"
+    features_demonstrated:
+      - multi-agent pipeline (standards mapper, evidence collector, gap analyst, report compiler, readiness reviewer)
+      - decision contracts (readiness: ready/gaps-found/critical-gaps, evidence: sufficient/needs-more/missing)
+      - phase routing (rework on gaps-found, escalate on critical-gaps)
+      - output contracts (structured gap analysis, self-study report, evidence matrix)
+      - scheduled workflows (weekly readiness checks, monthly progress reports)
+      - manual approval gates (provost sign-off on final submission)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - playwright MCP (scrape accreditation body requirements)
+    status: queued
+    notes: "Pipeline #125 from source material. Accreditation is a high-stakes compliance process every institution faces. Shows AO managing document-heavy regulatory workflows with gap analysis and remediation loops."
+
+  # --- Environmental / Sustainability (new — conductor sweep 15, 2026-03-31) ---
+  - id: water-quality-monitor
+    name: "Water Quality Monitoring Pipeline"
+    vertical: environmental
+    description: "Water quality pipeline — ingest sensor readings and lab results, analyze trends against EPA thresholds, flag violations, generate compliance reports, trigger remediation workflows, track corrective actions, produce regulatory filings"
+    features_demonstrated:
+      - scheduled workflows (hourly sensor ingestion, daily trend analysis, monthly regulatory reports)
+      - command phases (data ingestion scripts, threshold calculation, trend analysis)
+      - decision contracts (compliance: compliant/warning/violation/critical, action: monitor/investigate/remediate/report)
+      - multi-agent pipeline (data ingestor, trend analyst, compliance checker, remediation planner, regulatory filer)
+      - output contracts (structured compliance reports, trend dashboards, regulatory filings)
+      - phase routing (escalate on violation, auto-close compliant with documentation)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - fetch MCP (EPA data APIs)
+    status: queued
+    notes: "Pipeline #178 from source material. Environmental monitoring is a cron-driven pipeline with real regulatory consequences. Showcases AO's scheduled workflow and escalation capabilities."
+
+  # --- Logistics / Freight (new — conductor sweep 15, 2026-03-31) ---
+  - id: freight-broker
+    name: "Freight Brokerage Pipeline"
+    vertical: logistics-freight
+    description: "Freight brokerage pipeline — receive shipment requests, match carriers by lane/capacity/rate, negotiate rates, book loads, generate BOL documents, track shipments in transit, handle exceptions (delays, damage, refusal), invoice and settlement, carrier performance scoring"
+    features_demonstrated:
+      - multi-agent pipeline (intake coordinator, carrier matcher, rate negotiator, document generator, tracker, exception handler, settlement agent)
+      - decision contracts (carrier fit: book/negotiate/reject, exception: reroute/hold/escalate, settlement: approve/dispute/adjust)
+      - phase routing (rework on negotiation failure, escalate on exception)
+      - command phases (rate calculation scripts, carrier scoring algorithms)
+      - output contracts (structured BOL documents, carrier scorecards, settlement reports)
+      - scheduled workflows (daily load board scan, weekly carrier performance review)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #198 from source material. Freight brokerage is a multi-party negotiation workflow with real-time tracking and exception handling. Shows AO managing complex logistics with carrier matching and settlement."
+
+  # --- Insurance / Operations (new — conductor sweep 15, 2026-03-31) ---
+  - id: insurance-onboarding
+    name: "Insurance Agent Onboarding Pipeline"
+    vertical: insurance-ops
+    description: "Agent onboarding pipeline — receive application, verify licensing and credentials, run background checks, assign training modules, provision system access, generate appointment letters, monitor initial production metrics, compliance certification"
+    features_demonstrated:
+      - multi-agent pipeline (application screener, license verifier, background checker, training coordinator, provisioner, compliance certifier)
+      - decision contracts (eligibility: approved/conditional/rejected, background: clear/flagged/disqualified, certification: certified/needs-training/failed)
+      - phase routing (reject on disqualified, rework on conditional approval, loop back for additional training)
+      - output contracts (structured onboarding checklists, appointment letters, compliance certificates)
+      - manual approval gates (agency principal sign-off on appointments)
+      - command phases (license verification scripts, system provisioning commands)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - github MCP (tracking onboarding progress as issues)
+    status: queued
+    notes: "Pipeline #265 from source material. Insurance onboarding has strict regulatory requirements with multi-step verification. Shows AO managing credential-heavy workflows with branching decisions."
+
+  # --- Automotive / Manufacturing (new — conductor sweep 15, 2026-03-31) ---
+  - id: parts-catalog
+    name: "Parts Catalog Management Pipeline"
+    vertical: automotive-manufacturing
+    description: "Parts catalog pipeline — ingest engineering change orders, update fitment data and compatibility matrices, generate technical diagrams and illustrations, translate descriptions for international markets, validate against OEM specifications, publish to dealer networks, track supersession chains"
+    features_demonstrated:
+      - multi-model routing (Haiku for data extraction, Sonnet for content generation, Opus for quality review)
+      - multi-agent pipeline (ECO processor, fitment analyst, content generator, translator, QA reviewer, publisher)
+      - decision contracts (change impact: minor-update/major-revision/recall-related, quality: publish/revise/reject)
+      - output contracts (structured fitment matrices, supersession chains, multilingual descriptions)
+      - phase routing (rework on revision, escalate on recall-related changes)
+      - command phases (fitment validation scripts, catalog diff generation)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #220 from source material. Parts catalog management demonstrates multi-model routing (cost-optimize by using Haiku for extraction, Sonnet for generation). Shows AO managing engineering change workflows in manufacturing."
+
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
 #
-# Verticals to explore next: music production, insurance underwriting,
-# vendor evaluation, connected car, esports tournament, programmatic ads,
+# Verticals to explore next: music production, vendor evaluation,
+# connected car, esports tournament, programmatic ads,
 # medical coding, meal planning, pet care

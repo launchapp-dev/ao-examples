@@ -97,12 +97,17 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [restaurant-ops](workflows/restaurant-ops/) | Food & Hospitality | Menu planning → food costing → prep scheduling → waste tracking → daily P&L | generated | [repo](https://github.com/launchapp-dev/ao-example-restaurant-ops) |
 
 | [fitness-coach](examples/fitness-coach/) | Consumer Health | Baseline assessment → periodized programming → daily workouts → progress tracking | generated | [repo](https://github.com/launchapp-dev/ao-example-fitness-coach) |
-| aml-monitor | Banking Compliance | Transaction screening → pattern detection → SAR filing → case management | queued | — |
-| dynamic-pricer | E-Commerce Analytics | Competitor monitoring → demand elasticity → A/B testing → price optimization | queued | — |
-| emergency-manager | Government / Crisis | Disaster detection → alerts → resource mobilization → situation reports → recovery | queued | — |
+| [aml-monitor](workflows/aml-monitor/) | Banking Compliance | Transaction screening → pattern detection → SAR filing → case management | generated | [repo](https://github.com/launchapp-dev/ao-example-aml-monitor) |
+| [dynamic-pricer](workflows/dynamic-pricer/) | E-Commerce Analytics | Competitor monitoring → demand elasticity → A/B testing → price optimization | generated | [repo](https://github.com/launchapp-dev/ao-example-dynamic-pricer) |
+| [emergency-manager](workflows/emergency-manager/) | Government / Crisis | Disaster detection → alerts → resource mobilization → situation reports → recovery | generated | [repo](https://github.com/launchapp-dev/ao-example-emergency-manager) |
 | [influencer-campaign](examples/influencer-campaign/) | Marketing / Social | Talent discovery → vetting → creative briefs → content review → ROI analysis | generated | [repo](https://github.com/launchapp-dev/ao-example-influencer-campaign) |
+| accreditation-tracker | Education Compliance | Standards mapping → evidence collection → gap analysis → self-study report | queued | — |
+| water-quality-monitor | Environmental | Sensor ingestion → trend analysis → EPA compliance → remediation → regulatory filing | queued | — |
+| freight-broker | Logistics / Freight | Carrier matching → rate negotiation → BOL generation → tracking → settlement | queued | — |
+| insurance-onboarding | Insurance Ops | License verification → background checks → training → provisioning → certification | queued | — |
+| parts-catalog | Automotive Manufacturing | ECO processing → fitment updates → diagram generation → translation → publishing | queued | — |
 
-*64 examples across 60 verticals — 61 generated, 3 queued. More added autonomously by the conductor every 30 minutes.*
+*69 examples across 65 verticals — 64 generated, 5 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 
