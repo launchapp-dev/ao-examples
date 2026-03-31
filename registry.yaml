@@ -961,9 +961,102 @@ examples:
     status: queued
     notes: "Pipeline #143 from source material. Distinct from foia-processor and construction-tracker. Permit applications are a universal pain point with complex multi-department routing."
 
+  # --- Finance / Compliance (new — conductor sweep 11, 2026-03-30) ---
+  - id: fraud-detector
+    name: "Fraud Detection & Response Pipeline"
+    vertical: finance-compliance
+    description: "Real-time fraud detection pipeline — monitor transaction streams, score anomalies with ML models, freeze suspicious accounts, investigate flagged transactions, gather evidence, determine fraud vs false positive, resolve (refund/block/escalate), generate regulatory SARs, update detection rules"
+    features_demonstrated:
+      - scheduled workflows (continuous transaction monitoring)
+      - decision contracts (verdict: confirmed-fraud/false-positive/needs-investigation, severity: low/medium/high/critical)
+      - multi-agent pipeline (monitor, investigator, evidence gatherer, resolver, compliance reporter)
+      - command phases (transaction scoring scripts, rule engine updates)
+      - output contracts (structured investigation reports, SAR filings)
+      - phase routing (escalate on critical severity, auto-resolve false positives)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #136 from source material. Fraud detection is high-stakes, real-time, and shows AO handling complex investigation workflows with regulatory reporting."
+
+  # --- Banking (new — conductor sweep 11, 2026-03-30) ---
+  - id: loan-originator
+    name: "Loan Origination Pipeline"
+    vertical: banking
+    description: "End-to-end loan origination — receive application, verify identity, pull credit reports, verify income/employment, assess collateral, automated underwriting with risk scoring, manual review for edge cases, generate approval/denial letter, prepare closing documents, fund disbursement"
+    features_demonstrated:
+      - decision contracts (underwriting verdict: approve/conditional-approve/deny/refer-to-manual)
+      - multi-agent pipeline (intake processor, credit analyst, income verifier, underwriter, closer)
+      - manual approval gates (senior underwriter review for high-risk loans)
+      - command phases (credit score calculation, debt-to-income ratio scripts)
+      - output contracts (structured loan package, closing documents)
+      - sequential-thinking MCP for complex risk assessment
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #131 from source material. Banking/lending is a massive vertical. Loan origination is the canonical multi-stakeholder underwriting pipeline."
+
+  # --- Consumer / Education (new — conductor sweep 11, 2026-03-30) ---
+  - id: college-advisor
+    name: "College Application Pipeline"
+    vertical: consumer-education
+    description: "College application management — research schools matching student profile, build balanced school list, manage essay writing (brainstorm, draft, revise per school), track application requirements and deadlines, compile activity lists, request recommendations, submit applications, track financial aid, compare offers"
+    features_demonstrated:
+      - multi-agent pipeline (counselor, essay coach, deadline tracker, financial aid analyst)
+      - phase routing (rework essays on review failure)
+      - output contracts (structured school comparison matrices, application checklists)
+      - scheduled workflows (deadline monitoring and reminder generation)
+      - sequential-thinking MCP for school-student fit analysis
+      - manual approval gates (student/parent review before submission)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - web search (school data, admission statistics, scholarship databases)
+    status: queued
+    notes: "Pipeline #298 from source material. Universally relatable consumer use case. Shows AO managing a complex personal project with hard deadlines."
+
+  # --- Marketing Intelligence (new — conductor sweep 11, 2026-03-30) ---
+  - id: brand-monitor
+    name: "Brand Monitoring & Crisis Detection Pipeline"
+    vertical: marketing-intelligence
+    description: "Brand monitoring pipeline — scrape social media mentions and news, sentiment analysis across channels, competitive comparison, detect emerging crises (sentiment drops, viral complaints), alert PR team, generate rapid response drafts, track narrative recovery, produce weekly brand health reports"
+    features_demonstrated:
+      - scheduled workflows (continuous social monitoring, weekly reports)
+      - web search MCP (social media, news, review sites)
+      - decision contracts (crisis severity: nominal/watch/alert/crisis)
+      - multi-agent pipeline (scraper, sentiment analyst, competitive analyst, crisis responder, reporter)
+      - command phases (sentiment scoring scripts, trend detection)
+      - output contracts (structured brand health dashboards, crisis briefs)
+      - phase routing (trigger crisis response on alert/crisis severity)
+    tools_needed:
+      - web search
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #273 from source material. Marketing intelligence is distinct from ad-campaign. Real-time monitoring + crisis detection is a compelling AO pattern."
+
+  # --- Logistics / Warehouse (new — conductor sweep 11, 2026-03-30) ---
+  - id: warehouse-optimizer
+    name: "Warehouse Slotting & Operations Pipeline"
+    vertical: warehouse-ops
+    description: "Warehouse optimization pipeline — analyze order pick patterns, calculate optimal product placement by velocity/affinity, generate slotting move plans, simulate layout changes, coordinate physical moves with minimal disruption, measure pick efficiency improvement, cycle count reconciliation, generate operational dashboards"
+    features_demonstrated:
+      - command phases (pick pattern analysis scripts, simulation runners)
+      - multi-agent pipeline (analyst, slotting optimizer, move planner, efficiency measurer, reporter)
+      - decision contracts (move priority: immediate/scheduled/deferred, improvement threshold: significant/marginal/negative)
+      - output contracts (structured slotting plans, efficiency reports)
+      - scheduled workflows (weekly pick pattern analysis, monthly optimization cycles)
+      - manual approval gates (warehouse manager approval before moves)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #199 from source material. Warehouse ops is distinct from fleet-dispatcher. Physical space optimization with measurable efficiency gains."
+
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
 #
-# Verticals to explore next: media production (video/music), college applications,
-# fraud detection, home renovation, music production, warehouse management
+# Verticals to explore next: media production (video/music), home renovation,
+# music production, drug discovery, M&A due diligence, hotel revenue management
