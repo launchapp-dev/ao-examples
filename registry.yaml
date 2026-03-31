@@ -2498,7 +2498,9 @@ examples:
       - memory MCP (@modelcontextprotocol/server-memory)
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: 2026-03-31
+    test_status: passed
     notes: "Pipeline #215 from source material. Warranty analytics is critical for automotive cost management and safety. Uses command phases with python3 for real statistical analysis — highly feasible. Shows AO for manufacturing quality intelligence."
 
   # --- Finance / Operations (new — conductor sweep 31, 2026-03-31) ---
@@ -2521,7 +2523,9 @@ examples:
       - filesystem MCP
       - github MCP (gh-cli-mcp)
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: 2026-03-31
+    test_status: passed
     notes: "Pipeline #140 from source material. Every company does budgets. Uses python3 for real financial math and jq for data consolidation — maximally feasible. Shows AO for corporate finance operations."
 
   # --- Education / Outreach (new — conductor sweep 31, 2026-03-31) ---

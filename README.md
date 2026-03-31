@@ -142,8 +142,9 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [telecom-billing-resolver](examples/telecom-billing-resolver/) | Telecom | Billing dispute resolution → CDR parsing → credit eligibility → resolution letters | generated | [repo](https://github.com/launchapp-dev/ao-example-telecom-billing-resolver) |
 | [campaign-bid-optimizer](examples/campaign-bid-optimizer/) | Advertising | Performance data → metrics → segment analysis → bid adjustments → budget reallocation | generated | [repo](https://github.com/launchapp-dev/ao-workflow-campaign-bid-optimizer) |
 | [ev-charging-planner](examples/ev-charging-planner/) | Automotive Infrastructure | Geographic coverage gaps → site evaluation → scoring → assessment reports → permitting | generated | [repo](https://github.com/launchapp-dev/ao-workflow-ev-charging-planner) |
+| [budget-planner](examples/budget-planner/) | Finance Planning | Budget consolidation → variance analysis → threshold flagging → executive summaries → forecast adjustments | generated | [repo](https://github.com/launchapp-dev/ao-workflow-budget-planner) |
 
-*112 examples across 30+ verticals — 104 generated, 8 queued. More added autonomously by the conductor every 30 minutes.*
+*113 examples across 30+ verticals — 105 generated, 8 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 
