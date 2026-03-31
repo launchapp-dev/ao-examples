@@ -3283,12 +3283,103 @@ examples:
     status: queued
     notes: "Pipeline #261 from source material. Policy lifecycle management is the core operational workflow of every insurance carrier. Uses python3 for premium math and filesystem — all tools exist. Shows AO managing the full insurance policy lifecycle with regulatory compliance."
 
+  # --- DevOps / Cloud (new — conductor sweep 39, 2026-03-31) ---
+  - id: cloud-cost-optimizer
+    name: "Cloud Cost Optimizer"
+    vertical: devops-cloud
+    description: "Cloud cost optimization pipeline — ingest cloud resource utilization data from CSV/JSON exports (EC2, RDS, S3, Lambda, EKS), identify idle and underutilized resources using configurable threshold rules, detect orphaned resources (unattached EBS volumes, unused Elastic IPs, stale snapshots), analyze reserved instance utilization and savings plan coverage gaps, calculate right-sizing recommendations based on actual usage patterns, estimate monthly savings for each recommendation with confidence levels, generate prioritized action plans ranked by savings impact, produce executive cost dashboards with trend analysis and forecasts, track implemented savings against projections, schedule daily utilization checks, weekly savings reports, and monthly executive reviews"
+    features_demonstrated:
+      - scheduled workflows (daily utilization scans, weekly savings reports, monthly executive reviews, quarterly optimization planning)
+      - multi-agent pipeline (resource scanner, utilization analyzer, orphan detector, RI/SP optimizer, right-sizer, savings calculator, action planner, reporter)
+      - command phases (python3 for utilization analysis and savings calculations, jq for cloud data extraction, awk for resource inventory formatting, sort for savings ranking)
+      - decision contracts (resource-action: keep/right-size/terminate/reserve, savings-confidence: high/medium/low/needs-investigation)
+      - output contracts (utilization reports, orphan resource lists, right-sizing recommendations, savings projections, executive dashboards, action plans)
+      - phase routing (immediate termination recommendation for confirmed orphans, investigation loop on low-confidence savings, escalation on high-spend anomalies)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #63 from source material. Cloud waste averages 32% of total spend — optimization directly impacts bottom line. Uses python3 for analysis and jq for data extraction — all tools exist. Shows AO managing FinOps workflows with quantified savings tracking."
+
+  # --- Automotive / IoT (new — conductor sweep 39, 2026-03-31) ---
+  - id: connected-car-telemetry
+    name: "Connected Car Telemetry Pipeline"
+    vertical: automotive-iot
+    description: "Connected vehicle telemetry processing pipeline — ingest vehicle sensor data from JSON streams (engine diagnostics, tire pressure, battery health, GPS, acceleration, braking patterns), apply manufacturer-specific diagnostic trouble code (DTC) lookup tables, detect anomalous patterns indicating imminent failures using statistical baselines, classify maintenance urgency (routine/soon/urgent/critical), cross-reference with recall databases and technical service bulletins, generate predictive maintenance schedules based on wear models and driving patterns, produce driver behavior scorecards for fleet and insurance use cases, create vehicle health reports for dealership service departments, track warranty eligibility against mileage and time limits, schedule continuous telemetry ingestion, daily fleet health summaries, and weekly maintenance forecasts"
+    features_demonstrated:
+      - scheduled workflows (continuous telemetry ingestion, daily fleet health, weekly maintenance forecasts, monthly driver behavior reports)
+      - multi-agent pipeline (telemetry ingester, DTC decoder, anomaly detector, urgency classifier, recall checker, maintenance scheduler, behavior scorer, reporter)
+      - command phases (python3 for statistical anomaly detection and wear modeling, jq for telemetry data extraction, awk for DTC lookup formatting, sort for urgency ranking)
+      - decision contracts (vehicle-health: healthy/monitor/service-soon/service-now, failure-risk: low/moderate/high/imminent)
+      - output contracts (vehicle health reports, maintenance schedules, driver scorecards, fleet dashboards, recall match alerts, warranty status reports)
+      - phase routing (immediate dealer alert on imminent failure, expanded monitoring on moderate risk, recall notification on matching TSB, warranty claim initiation on covered issues)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #212 from source material. Connected car data is projected $500B+ market by 2030 — predictive maintenance reduces breakdown costs 25-30%. Uses python3 for statistical models and filesystem — all tools exist. Shows AO processing real-time IoT telemetry for predictive analytics."
+
+  # --- Healthcare (new — conductor sweep 39, 2026-03-31) ---
+  - id: prior-authorization
+    name: "Prior Authorization Pipeline"
+    vertical: healthcare-operations
+    description: "Healthcare prior authorization pipeline — receive authorization requests from provider offices via structured JSON (procedure codes, diagnosis codes, patient demographics, clinical notes), validate request completeness against payer-specific requirements, check medical necessity criteria using clinical guidelines and coverage policies, extract supporting evidence from clinical documentation, cross-reference procedure codes against benefit plan coverage, calculate cost estimates and alternative treatment options, route straightforward approvals for auto-adjudication, flag complex cases for medical director review, generate approval/denial letters with required regulatory language, track turnaround times against state-mandated deadlines, manage appeal workflows for denied requests with additional documentation, produce operational dashboards with approval rates and processing times, schedule daily request processing, hourly deadline monitoring, and weekly performance reporting"
+    features_demonstrated:
+      - scheduled workflows (daily request processing, hourly deadline monitoring, weekly performance reports, monthly audit reviews)
+      - multi-agent pipeline (intake validator, medical necessity checker, evidence extractor, coverage verifier, cost estimator, adjudicator, letter generator, appeals handler, reporter)
+      - command phases (python3 for deadline calculations and turnaround time tracking, jq for request data extraction, date for regulatory deadline management, awk for report formatting)
+      - decision contracts (authorization-decision: approved/denied/pend-for-review/request-more-info, urgency: standard/urgent/retrospective)
+      - output contracts (authorization decisions, approval/denial letters, cost estimates, appeals responses, turnaround dashboards, audit reports)
+      - phase routing (auto-approve on clear medical necessity match, medical director referral on complex cases, additional documentation request on insufficient evidence, expedited processing on urgent requests)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #116 from source material. Prior authorization processes 100M+ requests/year in US healthcare — delays cause patient harm. Uses python3 for deadline tracking and filesystem — all tools exist. Shows AO automating a critical healthcare operations workflow with regulatory compliance."
+
+  # --- Manufacturing (new — conductor sweep 39, 2026-03-31) ---
+  - id: production-scheduler
+    name: "Production Scheduling Pipeline"
+    vertical: manufacturing-ops
+    description: "Manufacturing production scheduling pipeline — ingest demand forecasts and customer orders from CSV/JSON, calculate material requirements from bill of materials (BOM) explosion, check raw material inventory availability and lead times, optimize production sequencing to minimize changeover time between product runs, balance workload across production lines considering capacity constraints, generate work orders with detailed operation sequences and time estimates, schedule preventive maintenance windows around production runs, handle rush orders by re-sequencing with impact analysis on existing commitments, track work-in-progress against schedule with variance alerts, produce daily production schedules, shift handoff reports, and weekly capacity utilization dashboards, schedule daily order ingestion, shift-start schedule generation, and weekly capacity planning"
+    features_demonstrated:
+      - scheduled workflows (daily order ingestion, shift-start schedule generation, weekly capacity planning, monthly demand review)
+      - multi-agent pipeline (demand reader, BOM exploder, material checker, sequence optimizer, capacity balancer, work order generator, maintenance scheduler, variance tracker, reporter)
+      - command phases (python3 for optimization calculations and BOM explosion, jq for order data extraction, awk for work order formatting, sort for priority sequencing)
+      - decision contracts (schedule-feasibility: on-track/tight/infeasible, material-status: available/partial/shortage, rush-impact: absorbable/delays-existing/requires-overtime)
+      - output contracts (production schedules, work orders, material requirement lists, shift handoff reports, capacity dashboards, variance alerts)
+      - phase routing (overtime authorization request on infeasible schedule, procurement escalation on material shortage, customer notification on delays-existing rush impact)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #153 from source material. Production scheduling drives $2T+ in global manufacturing output. Uses python3 for optimization and filesystem — all tools exist. Shows AO orchestrating complex manufacturing operations with constraint satisfaction."
+
+  # --- E-Commerce (new — conductor sweep 39, 2026-03-31) ---
+  - id: product-listing
+    name: "Product Listing Pipeline"
+    vertical: ecommerce-marketplace
+    description: "E-commerce product listing pipeline — ingest raw product data from supplier feeds (CSV/JSON with SKUs, specs, images), enrich product attributes using category-specific attribute templates, generate SEO-optimized product titles following marketplace character limits, write compelling product descriptions with feature bullets and use-case scenarios, extract and standardize product specifications into structured attributes, generate keyword-rich backend search terms, validate listing completeness against marketplace requirements (Amazon, Shopify, eBay format rules), check for prohibited content and restricted product categories, optimize listing quality scores, produce listing audit reports with improvement recommendations, schedule daily supplier feed ingestion, weekly listing quality audits, and monthly keyword refresh cycles"
+    features_demonstrated:
+      - scheduled workflows (daily supplier feed ingestion, weekly listing quality audits, monthly keyword refresh, quarterly competitive analysis)
+      - multi-agent pipeline (feed ingester, attribute enricher, title generator, description writer, spec standardizer, keyword optimizer, compliance checker, quality scorer, reporter)
+      - command phases (python3 for listing quality scoring and keyword analysis, jq for feed data extraction, wc for character limit validation, awk for bulk listing formatting)
+      - decision contracts (listing-quality: publish-ready/needs-enrichment/blocked/restricted-category, seo-score: optimized/needs-improvement/poor)
+      - output contracts (enriched product listings, SEO reports, compliance audit results, quality scorecards, keyword recommendations, marketplace-formatted feeds)
+      - phase routing (enrichment loop on needs-enrichment listings, manual review on restricted categories, keyword refresh on poor SEO scores)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #101 from source material. Product listing quality directly drives conversion rates — top listings convert 3-5x vs poor ones. Uses python3 for scoring and jq for data — all tools exist. Shows AO automating marketplace listing operations at scale."
+
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
 #
-# Verticals to explore next: children's book, connected car,
-# number porting, load testing, multi-region deployment,
-# pest-management, public-records-manager, venue-maintenance,
-# policy-impact-analyzer, tour-package, competitive-intel,
-# facility-maintenance, spectrum-manager, agricultural-lending
+# Verticals to explore next: children's book, number porting,
+# load testing, multi-region deployment, pest-management,
+# public-records-manager, venue-maintenance, policy-impact-analyzer,
+# tour-package, competitive-intel, facility-maintenance,
+# spectrum-manager, agricultural-lending, product-spec-writer,
+# backup-verification, demand-forecaster, passenger-rebooking
