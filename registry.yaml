@@ -1539,6 +1539,7 @@ examples:
       - sequential-thinking MCP
     status: generated
     generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-music-producer
     notes: "Complete — AI music production pipeline with composition, arrangement, sound design. Generated 2026-03-31."
 
   # --- Consumer / Real Estate (new — conductor sweep 16, 2026-03-31) ---
@@ -1560,6 +1561,7 @@ examples:
       - sequential-thinking MCP
     status: generated
     generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-home-buyer
     notes: "Pipeline #297 from source material. Home buying is the largest financial transaction most consumers make. Shows AO managing a high-stakes personal journey with multiple professional stakeholders."
 
   # --- Media / Localization (new — conductor sweep 17, 2026-03-31) ---
@@ -1578,8 +1580,9 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-      - fetch MCP (source media metadata)
-    status: queued
+    status: generated
+    test_status: passed
+    github_repo: launchapp-dev/ao-workflow-subtitle-pipeline
     notes: "Pipeline #30 from source material. Subtitle/dubbing is critical for global media distribution. Shows AO managing multilingual content pipelines with timing precision and cultural sensitivity."
 
   # --- Consumer / Pet Care (new — conductor sweep 17, 2026-03-31) ---
@@ -1598,8 +1601,10 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
       - memory MCP (pet health history)
-    status: queued
-    notes: "Pet care is a massive consumer vertical (~$150B market). Shows AO managing health-tracking workflows for non-human subjects with scheduling and trend analysis."
+    status: generated
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-pet-care
+    notes: "Complete — pet health management pipeline with vaccination tracking, medication reminders, and wellness reports."
 
   # --- Developer Tools (new — conductor sweep 17, 2026-03-31) ---
   - id: repo-health-checker
@@ -1619,6 +1624,7 @@ examples:
       - filesystem MCP
     status: generated
     generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-repo-health-checker
     notes: "Pipeline #11 from source material (code quality remediation). Every engineering org needs visibility into repo hygiene across their fleet. Shows AO as an org-wide DevOps audit tool using gh CLI and git MCP."
 
   - id: slack-digest
@@ -1638,6 +1644,7 @@ examples:
       - filesystem MCP
     status: generated
     generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-slack-digest
     notes: "Pipeline #90 from source material (voice of customer/team communication). Every team drowns in Slack. Shows AO as a daily information distiller using the official Slack MCP server."
 
   - id: notion-wiki-sync
@@ -1657,6 +1664,7 @@ examples:
       - filesystem MCP
     status: generated
     generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-notion-wiki-sync
     notes: "Complete — Notion wiki staleness monitor with page scanning, freshness scoring, archival. Generated 2026-03-31."
 
   - id: changelog-generator
@@ -1676,6 +1684,7 @@ examples:
       - github MCP (gh-cli-mcp)
     status: generated
     generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-changelog-generator
     notes: "Pipeline #35 from source material. Every dev team needs changelogs but hates writing them. Shows AO using git MCP and GitHub CLI for developer tooling workflows."
 
   # --- Developer Tools (new — conductor sweep 19, 2026-03-31) ---
@@ -1697,6 +1706,7 @@ examples:
       - filesystem MCP
     status: generated
     generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-api-docs-generator
     notes: "Complete — automated API documentation pipeline with endpoint scanning, schema extraction, example generation. Generated 2026-03-31."
 
   # --- Sustainability / Food (new — conductor sweep 19, 2026-03-31) ---
@@ -1716,7 +1726,9 @@ examples:
       - memory MCP
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    test_status: passed
+    github_repo: launchapp-dev/ao-workflow-food-waste-tracker
     notes: "Pipeline #208 from source material. Food waste is a $400B+ global problem. Shows AO managing time-sensitive inventory decisions with environmental impact tracking."
 
   # --- Travel & Hospitality (new — conductor sweep 19, 2026-03-31) ---
@@ -1736,8 +1748,10 @@ examples:
       - memory MCP
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
-    notes: "Pipeline #252 from source material. Hospitality is all about personalization at scale. Shows AO maintaining persistent guest knowledge and coordinating real-time service delivery."
+    status: generated
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-guest-experience
+    notes: "Complete — hotel guest experience pipeline with persistent knowledge graph and real-time service coordination."
 
   # --- Developer Tools / CI-CD (new — conductor sweep 20, 2026-03-31) ---
   - id: dependency-updater
@@ -1757,6 +1771,7 @@ examples:
       - sequential-thinking MCP
     status: generated
     generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-dependency-updater
     notes: "Every dev team deals with dependency rot. Uses gh CLI and npm/yarn commands — all real tools. Shows AO managing a real developer workflow end-to-end."
 
   # --- Marketing / SEO (new — conductor sweep 20, 2026-03-31) ---
@@ -1779,6 +1794,7 @@ examples:
       - fetch MCP
     status: generated
     test_status: passed
+    github_repo: launchapp-dev/ao-workflow-seo-auditor
     notes: "SEO auditing is a perfect Playwright MCP showcase — real web crawling with actionable output. Every website owner needs this."
 
   # --- Business / Meetings (new — conductor sweep 20, 2026-03-31) ---
@@ -1801,6 +1817,7 @@ examples:
       - sequential-thinking MCP
     status: generated
     generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-meeting-summarizer
     notes: "Complete — meeting transcript summarization with action items, decision logging, follow-up scheduling. Generated 2026-03-31."
 
   # --- Legal / Developer Tools (new — conductor sweep 21, 2026-03-31) ---
@@ -1822,6 +1839,7 @@ examples:
       - sequential-thinking MCP
     status: generated
     test_status: passed
+    github_repo: launchapp-dev/ao-workflow-license-compliance
     notes: "Pipeline #77 from source material. Every company shipping software needs license compliance. Uses real npm tools (license-checker, npm ls) and gh CLI — all existing today."
 
   # --- Business Operations (new — conductor sweep 21, 2026-03-31) ---
@@ -1841,7 +1859,8 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
       - memory MCP
-    status: queued
+    status: generated
+    test_status: passed
     notes: "Pipeline #98 from source material. Every company with a board does this monthly/quarterly. Shows AO as an executive operations tool with strategic reasoning."
 
   # --- Real Estate (new — conductor sweep 21, 2026-03-31) ---
@@ -1863,6 +1882,7 @@ examples:
       - memory MCP
     status: generated
     test_status: passed
+    github_repo: launchapp-dev/ao-workflow-tenant-screening
     notes: "Pipeline #149 from source material. Every landlord/property manager screens tenants. Shows AO handling sensitive personal data workflows with compliance requirements."
 
   # --- Developer Tools (new — conductor sweep 22, 2026-03-31) ---
@@ -1884,6 +1904,7 @@ examples:
       - sequential-thinking MCP
     status: generated
     generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-code-review-bot
     notes: "Every engineering team wants automated code review. Uses gh CLI for real PR operations — all tools exist today. Shows AO as a developer productivity bot."
 
   # --- Retail / Supply Chain (new — conductor sweep 22, 2026-03-31) ---
@@ -1903,6 +1924,7 @@ examples:
       - sequential-thinking MCP
     status: generated
     generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-inventory-forecaster
     notes: "Pipeline #130 from source material. Every retailer needs demand forecasting. Uses only filesystem and sequential-thinking — extremely feasible. Shows AO handling data analysis workflows."
 
   # --- Marketing / Social (new — conductor sweep 22, 2026-03-31) ---
@@ -1923,6 +1945,7 @@ examples:
       - sequential-thinking MCP
     status: generated
     test_status: passed
+    github_repo: launchapp-dev/ao-workflow-social-media-scheduler
     notes: "Every brand needs social media management. Uses filesystem + fetch for research — all real tools. Shows AO as a marketing automation pipeline."
 
   # --- Content / Marketing (new — conductor sweep 23, 2026-03-31) ---
@@ -1941,8 +1964,10 @@ examples:
       - fetch MCP (@modelcontextprotocol/server-fetch)
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
-    notes: "Pipeline #27 from source material. Newsletters are the original content pipeline. Uses fetch MCP to grab real URLs — practical and immediately usable."
+    status: generated
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-newsletter-factory
+    notes: "Complete — newsletter production pipeline with RSS curation, content writing, and scheduled send cadence."
 
   - id: vulnerability-scanner
     name: "Dependency Vulnerability Scanner"
@@ -1959,7 +1984,9 @@ examples:
       - github MCP (gh-cli-mcp)
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    test_status: passed
+    github_repo: launchapp-dev/ao-workflow-vulnerability-scanner
     notes: "Pipeline #184 from source material. Every dev team needs vulnerability scanning. Uses npm audit + gh CLI — real tools that work today. Shows AO for security automation."
 
   - id: vendor-evaluator
@@ -1978,8 +2005,10 @@ examples:
       - memory MCP (@modelcontextprotocol/server-memory)
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
-    notes: "Pipeline #97 from source material. Every company evaluates vendors. Uses fetch MCP for real research — immediately practical. Shows AO for procurement/business ops."
+    status: generated
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-workflow-vendor-evaluator
+    notes: "Complete — vendor evaluation pipeline with web research, weighted scoring, and executive recommendations."
 
   # --- DevOps / SRE (new — conductor sweep 24, 2026-03-31) ---
   - id: runbook-generator
@@ -2037,6 +2066,65 @@ examples:
       - sequential-thinking MCP
     status: queued
     notes: "Pipeline #47 from source material. Every data team needs quality monitoring. Uses filesystem + command phases with python3/jq — all tools exist today. Shows AO for data operations."
+
+  # --- E-Commerce / Consumer (new — conductor sweep 25, 2026-03-31) ---
+  - id: price-tracker
+    name: "Product Price Tracker"
+    vertical: ecommerce-consumer
+    description: "Product price monitoring pipeline — configure target products and URLs, scrape current prices via Playwright MCP browser automation, compare against historical prices stored in memory MCP, detect price drops and deals, generate price trend reports with markdown charts, alert on prices below threshold, produce weekly price comparison summaries across retailers"
+    features_demonstrated:
+      - scheduled workflows (hourly price checks, daily summaries, weekly trend reports)
+      - multi-agent pipeline (scraper, price analyzer, trend reporter, alert manager)
+      - decision contracts (price-action: buy-now/wait/price-rising, deal-quality: excellent/good/fair/pass)
+      - output contracts (structured price history, comparison matrices, alert notifications)
+      - playwright MCP for real website scraping
+      - memory MCP for persistent price history
+      - phase routing (alert on significant price drop, skip on unchanged)
+    tools_needed:
+      - playwright MCP (@playwright/mcp)
+      - memory MCP (@modelcontextprotocol/server-memory)
+      - filesystem MCP
+    status: queued
+    notes: "Pipeline #56 variant from source material. Price tracking is a universal consumer need. Uses Playwright MCP for real scraping — immediately practical. Shows AO for consumer-facing automation."
+
+  - id: api-health-monitor
+    name: "API Health Monitor"
+    vertical: devops-monitoring
+    description: "API endpoint health monitoring pipeline — configure target endpoints with expected response schemas, probe endpoints via fetch MCP at scheduled intervals, measure response times and status codes, detect latency spikes and error rate increases, correlate failures across dependent services, generate uptime/latency dashboards, create incident tickets for sustained degradation, produce weekly SLA compliance reports"
+    features_demonstrated:
+      - scheduled workflows (every-5-min health checks, hourly summaries, weekly SLA reports)
+      - command phases (curl for endpoint probing, jq for response validation)
+      - multi-agent pipeline (prober, analyzer, incident creator, SLA reporter)
+      - decision contracts (health-status: healthy/degraded/down, incident-action: monitor/alert/page/create-incident)
+      - output contracts (structured health reports, SLA dashboards, incident summaries)
+      - memory MCP for tracking historical availability and baseline latencies
+      - fetch MCP for endpoint probing
+    tools_needed:
+      - fetch MCP (@modelcontextprotocol/server-fetch)
+      - memory MCP (@modelcontextprotocol/server-memory)
+      - filesystem MCP
+      - github MCP (gh-cli-mcp for incident issue creation)
+    status: queued
+    notes: "Pipeline #54 variant from source material. Every team with APIs needs monitoring. Uses fetch MCP and command phases — all real tools. Shows AO for infrastructure observability."
+
+  - id: content-repurposer
+    name: "Content Repurposing Pipeline"
+    vertical: content-marketing
+    description: "Content repurposing pipeline — ingest long-form content (blog posts, articles, whitepapers) via fetch MCP or filesystem, analyze key themes and quotes, generate platform-specific content variants (Twitter/X threads, LinkedIn posts, email newsletter snippets, Instagram captions, YouTube descriptions), adapt tone and format per platform, schedule publication cadence, track which derivatives were published"
+    features_demonstrated:
+      - multi-agent pipeline (content analyzer, thread writer, post formatter, scheduler, tracker)
+      - multi-model routing (Haiku for extraction, Sonnet for creative adaptation, Opus for strategy)
+      - decision contracts (content-fit: repurpose/skip/needs-editing, platform-quality: publish/revise/drop)
+      - output contracts (structured content variants per platform, publication calendar, performance tracking)
+      - fetch MCP for ingesting source content from URLs
+      - phase routing (revise on quality check failure, skip on poor platform fit)
+      - sequential-thinking for content strategy and adaptation decisions
+    tools_needed:
+      - fetch MCP (@modelcontextprotocol/server-fetch)
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #26 variant from source material. Content repurposing is the #1 content marketing workflow. Uses fetch MCP for real URL ingestion — every content team needs this. Shows AO for marketing operations."
 
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
