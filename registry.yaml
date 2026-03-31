@@ -3286,6 +3286,7 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
     status: generated
+    github_repo: launchapp-dev/ao-workflow-broadcast-scheduler
     notes: "Pipeline #245 from source material. Broadcast production scheduling is the backbone of live TV and streaming operations. Uses python3 for calculations and filesystem — all tools exist. Shows AO managing real-time media production logistics."
 
   # --- Insurance (new — conductor sweep 38, 2026-03-31) ---
@@ -3303,7 +3304,9 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    github_repo: launchapp-dev/ao-workflow-policy-lifecycle
+    test_status: passed
     notes: "Pipeline #261 from source material. Policy lifecycle management is the core operational workflow of every insurance carrier. Uses python3 for premium math and filesystem — all tools exist. Shows AO managing the full insurance policy lifecycle with regulatory compliance."
 
   # --- DevOps / Cloud (new — conductor sweep 39, 2026-03-31) ---
@@ -3341,7 +3344,9 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    test_status: passed
+    github_repo: "launchapp-dev/ao-example-connected-car-telemetry"
     notes: "Pipeline #212 from source material. Connected car data is projected $500B+ market by 2030 — predictive maintenance reduces breakdown costs 25-30%. Uses python3 for statistical models and filesystem — all tools exist. Shows AO processing real-time IoT telemetry for predictive analytics."
 
   # --- Healthcare (new — conductor sweep 39, 2026-03-31) ---
@@ -3359,7 +3364,9 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    github_repo: launchapp-dev/ao-workflow-prior-authorization
+    test_status: passed
     notes: "Pipeline #116 from source material. Prior authorization processes 100M+ requests/year in US healthcare — delays cause patient harm. Uses python3 for deadline tracking and filesystem — all tools exist. Shows AO automating a critical healthcare operations workflow with regulatory compliance."
 
   # --- Manufacturing (new — conductor sweep 39, 2026-03-31) ---
@@ -3397,7 +3404,9 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    github_repo: launchapp-dev/ao-workflow-product-listing
+    test_status: passed
     notes: "Pipeline #101 from source material. Product listing quality directly drives conversion rates — top listings convert 3-5x vs poor ones. Uses python3 for scoring and jq for data — all tools exist. Shows AO automating marketplace listing operations at scale."
 
   # --- DevOps (new — conductor sweep 40, 2026-03-31) ---
@@ -3434,7 +3443,8 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
       - fetch MCP (weather data)
-    status: queued
+    status: generated
+    github_repo: launchapp-dev/ao-example-pest-management
     notes: "Pipeline #209 from source material. IPM reduces pesticide use 30-50% while maintaining yields. Uses python3 for calculations and fetch for weather — all tools exist. Shows AO orchestrating precision agriculture decision-making."
 
   # --- Aviation (new — conductor sweep 40, 2026-03-31) ---
@@ -3577,11 +3587,106 @@ examples:
     status: queued
     notes: "Tour packaging is a $300B+ market where manual itinerary creation limits catalog size. Uses python3 for optimization and pandoc for PDF catalogs — all tools exist. Shows AO automating creative travel product development."
 
+  # --- Telecommunications (new — conductor sweep 41, 2026-03-31) ---
+  - id: number-porting
+    name: "Number Porting Pipeline"
+    vertical: telecommunications
+    description: "Telecom number porting orchestrator — process porting requests, validate subscriber info, coordinate with donor/receiving carriers, provision numbers, confirm activation, generate compliance audit trails"
+    features_demonstrated:
+      - scheduled workflows (continuous porting request monitoring, hourly progress updates, daily completion reports)
+      - multi-agent pipeline (request validator, compliance checker, donor coordinator, provisioning agent, activation tester, notification sender, auditor)
+      - command phases (python3 for porting window calculations and validation, jq for carrier data extraction, curl for carrier API simulation, date for FCC deadline tracking)
+      - "decision contracts (port-status: approved/rejected/needs-info, activation-result: success/partial/failed)"
+      - output contracts (porting orders, compliance checklists, activation confirmations, audit trails, SLA reports)
+      - phase routing (rejection loop on incomplete info, escalation on FCC deadline approach, rollback on failed activation)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - fetch MCP (carrier API endpoints)
+    status: queued
+    notes: "Fills telecom infrastructure gap — only billing existed. Number porting affects 35M+ US subscribers/year. Uses python3 for validation and fetch for carrier coordination — all tools exist. Shows AO managing regulatory-bound, time-sensitive workflows."
+
+  # --- Nonprofit (new — conductor sweep 41, 2026-03-31) ---
+  - id: impact-measurement
+    name: "Nonprofit Impact Measurement"
+    vertical: nonprofit
+    description: "Impact measurement pipeline — collect program outcome data from multiple sources, analyze against defined metrics, compare to sector benchmarks, auto-generate funder-ready reports with narratives"
+    features_demonstrated:
+      - scheduled workflows (monthly data collection, quarterly funder reports, annual impact summaries)
+      - multi-agent pipeline (data collector, metric analyzer, benchmark comparator, narrative writer, visualization describer, report assembler, funder customizer)
+      - command phases (python3 for statistical analysis and metric calculations, jq for survey data extraction, pandoc for PDF report generation, awk for data aggregation)
+      - "decision contracts (program-health: exceeding/on-track/at-risk/underperforming, data-quality: complete/partial/insufficient)"
+      - output contracts (impact dashboards, funder reports, program evaluations, benchmark comparisons, data quality assessments)
+      - phase routing (additional data collection on insufficient quality, program review on underperforming, narrative revision on funder-specific requirements)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - playwright MCP (scrape benchmark databases)
+    status: queued
+    notes: "Fills nonprofit gap — only donor-prospector and volunteer-coordinator existed. Impact measurement is the #1 funder demand. Uses python3 for analysis and playwright for benchmarks — all tools exist. Shows AO producing high-stakes mission-driven deliverables."
+
+  # --- Pharmaceutical (new — conductor sweep 41, 2026-03-31) ---
+  - id: regulatory-submission
+    name: "Regulatory Submission Pipeline"
+    vertical: pharmaceutical
+    description: "Pharmaceutical regulatory submission pipeline — assemble CTD-format dossiers from module content, validate against FDA/EMA regional requirements, manage gap analysis and remediation, track submission lifecycle"
+    features_demonstrated:
+      - scheduled workflows (per-submission assembly runs, weekly gap analysis scans, monthly regulatory calendar checks)
+      - multi-agent pipeline (module assembler, format validator, regional requirements checker, gap analyzer, content generator, cross-reference builder, quality reviewer, submission packager)
+      - command phases (python3 for document structure validation and cross-reference checking, jq for metadata extraction, diff for version comparison, pandoc for format conversion, wc for document metrics)
+      - "decision contracts (submission-readiness: ready/gaps-identified/major-issues/blocked, regional-compliance: compliant/deviation-noted/non-compliant)"
+      - output contracts (CTD modules, validation reports, gap analysis summaries, cross-reference tables, submission packages, regulatory correspondence drafts)
+      - phase routing (content generation loop on gaps-identified, expert review escalation on major-issues, regional adaptation on deviation-noted)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - git MCP (document version tracking)
+    status: queued
+    notes: "Fills pharmaceutical submission gap — only batch-record and pharmacovigilance existed. Regulatory submissions cost pharma companies $2M+ each. Uses python3 for validation and git for audit trail — all tools exist. Shows AO handling compliance-critical document assembly."
+
+  # --- Manufacturing (new — conductor sweep 41, 2026-03-31) ---
+  - id: bill-of-materials
+    name: "BOM Change Management"
+    vertical: manufacturing
+    description: "Bill of materials change management pipeline — process engineering change orders, propagate BOM updates across product tree, calculate cost impacts, notify suppliers, adjust inventory plans"
+    features_demonstrated:
+      - scheduled workflows (daily ECO processing, weekly cost rollup analysis, monthly supplier notification batches)
+      - multi-agent pipeline (change parser, BOM traverser, cost calculator, impact assessor, supplier notifier, inventory adjuster, compliance checker, report generator)
+      - command phases (python3 for multi-level cost rollup and graph traversal, jq for BOM JSON extraction, diff for change detection, awk for supplier notification formatting)
+      - "decision contracts (change-impact: minor/moderate/major/critical, compliance-status: compliant/review-needed/non-compliant)"
+      - output contracts (updated BOMs, cost impact reports, supplier notifications, inventory adjustment plans, change audit trails, compliance assessments)
+      - phase routing (expanded impact analysis on major changes, supplier consultation loop on critical changes, compliance review on non-compliant materials)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - git MCP (BOM-as-code version tracking)
+    status: queued
+    notes: "Fills manufacturing gap — only production-scheduler and parts-catalog existed. BOM management affects $13T+ in global manufacturing. BOM-as-code pattern with git tracking is novel. Uses python3 for graph traversal — all tools exist. Shows AO orchestrating complex supply chain operations."
+
+  # --- Sports (new — conductor sweep 41, 2026-03-31) ---
+  - id: talent-scouting
+    name: "Sports Talent Scouting Pipeline"
+    vertical: sports
+    description: "Sports talent scouting pipeline — aggregate athlete performance data from public sources, score prospects against position-specific models, generate scouting reports, manage ranked candidate pipeline"
+    features_demonstrated:
+      - scheduled workflows (daily stats scraping, weekly prospect rankings update, monthly cohort review, seasonal draft preparation)
+      - multi-agent pipeline (stats scraper, performance analyzer, position scorer, comparables finder, report writer, ranking maintainer, outreach drafter)
+      - command phases (python3 for multi-criteria scoring and statistical analysis, jq for stats data extraction, sort for ranking, awk for report formatting)
+      - "decision contracts (prospect-grade: elite/high/mid/developmental/pass, readiness: draft-ready/needs-development/monitor)"
+      - output contracts (scouting reports, prospect rankings, comparison analyses, development plans, draft boards, outreach recommendations)
+      - phase routing (deeper analysis on elite prospects, development tracking on needs-development, re-evaluation loop on new performance data)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - playwright MCP (scrape public stats from ESPN, Transfermarkt)
+    status: queued
+    notes: "Fills sports talent acquisition gap — only esports-tournament and ticket-pricing existed. Sports scouting is a $500M+ market increasingly driven by analytics. Uses playwright for real web scraping — all tools exist. Shows AO combining web intelligence with analytical scoring."
+
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
 #
-# Verticals to explore next: number porting, multi-region deployment,
+# Verticals to explore next: multi-region deployment,
 # public-records-manager, spectrum-manager, agricultural-lending,
 # product-spec-writer, demand-forecaster, merchandise-pipeline,
 # fan-engagement, size-fit-recommendation, visual-search-indexer,

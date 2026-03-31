@@ -188,8 +188,19 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [medical-affairs](examples/medical-affairs/) | Pharmaceutical | PubMed search → evidence synthesis → KOL engagement briefs | generated | [repo](https://github.com/launchapp-dev/ao-workflow-medical-affairs) |
 | [construction-cost-estimator](examples/construction-cost-estimator/) | Construction | Scope intake → quantity takeoff → line-item bid packages | generated | [repo](https://github.com/launchapp-dev/ao-workflow-construction-cost-estimator) |
 | [livestock-health](examples/livestock-health/) | Agriculture | Sensor ingestion → anomaly detection → health alerts → treatment protocols | generated | [repo](https://github.com/launchapp-dev/ao-example-livestock-health) |
+| [broadcast-scheduler](examples/broadcast-scheduler/) | Media Production | Show lineup → runtime calculation → crew scheduling → rundowns | generated | [repo](https://github.com/launchapp-dev/ao-workflow-broadcast-scheduler) |
+| [policy-lifecycle](examples/policy-lifecycle/) | Insurance | New business → underwriting → quoting → endorsements → renewals | generated | [repo](https://github.com/launchapp-dev/ao-workflow-policy-lifecycle) |
+| [cloud-cost-optimizer](examples/cloud-cost-optimizer/) | DevOps Cloud | Resource utilization → waste detection → rightsizing → savings reports | generated | [repo](https://github.com/launchapp-dev/ao-workflow-cloud-cost-optimizer) |
+| [connected-car-telemetry](examples/connected-car-telemetry/) | Automotive IoT | Vehicle data ingestion → anomaly detection → predictive maintenance | generated | [repo](https://github.com/launchapp-dev/ao-example-connected-car-telemetry) |
+| [prior-authorization](examples/prior-authorization/) | Healthcare Ops | Auth requests → medical necessity → adjudication → letters | generated | [repo](https://github.com/launchapp-dev/ao-workflow-prior-authorization) |
+| [production-scheduler](examples/production-scheduler/) | Manufacturing | Demand intake → constraint solving → work orders → shift plans | generated | [repo](https://github.com/launchapp-dev/ao-workflow-production-scheduler) |
+| [product-listing](examples/product-listing/) | E-Commerce | Feed ingestion → attribute enrichment → SEO → quality scoring | generated | [repo](https://github.com/launchapp-dev/ao-workflow-product-listing) |
+| [pest-management](examples/pest-management/) | Agriculture | Scouting data → pest ID → threshold evaluation → treatment plans | generated | [repo](https://github.com/launchapp-dev/ao-example-pest-management) |
+| [load-test-runner](examples/load-test-runner/) | DevOps Performance | Scenario generation → load execution → bottleneck analysis → reports | generated | [repo](https://github.com/launchapp-dev/ao-workflow-load-test-runner) |
+| [children-book-maker](examples/children-book-maker/) | Creative Publishing | Age-appropriate stories → illustrations → layout → publishing | generated | [repo](https://github.com/launchapp-dev/ao-workflow-children-book-maker) |
+| [competitive-intel](examples/competitive-intel/) | Business Strategy | Competitor scraping → change detection → analysis → alerts | generated | [repo](https://github.com/launchapp-dev/ao-workflow-competitive-intel) |
 
-*170 examples across 30+ verticals — 151 generated, 19 queued (8 enqueued for generation). More added autonomously by the conductor every 30 minutes.*
+*174 examples across 30+ verticals — 162 generated, 12 queued (10 enqueued for generation). More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 
