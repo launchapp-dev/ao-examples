@@ -139,8 +139,9 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [price-tracker](examples/price-tracker/) | E-Commerce / Consumer | Product scraping → price comparison → trend analysis → deal alerts | generated | [repo](https://github.com/launchapp-dev/ao-workflow-price-tracker) |
 | [customer-segmentation](examples/customer-segmentation/) | Data Analytics / Marketing | Behavioral clustering → segment profiling → persona generation → strategy recommendations | generated | [repo](https://github.com/launchapp-dev/ao-workflow-customer-segmentation) |
 | [volunteer-coordinator](examples/volunteer-coordinator/) | Nonprofit Ops | Application screening → opportunity matching → onboarding → shift scheduling → impact reports | generated | [repo](https://github.com/launchapp-dev/ao-workflow-volunteer-coordinator) |
+| [telecom-billing-resolver](examples/telecom-billing-resolver/) | Telecom | Billing dispute resolution → CDR parsing → credit eligibility → resolution letters | generated | [repo](https://github.com/launchapp-dev/ao-example-telecom-billing-resolver) |
 
-*109 examples across 30+ verticals — 101 generated, 8 queued. More added autonomously by the conductor every 30 minutes.*
+*110 examples across 30+ verticals — 102 generated, 8 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 

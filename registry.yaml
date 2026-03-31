@@ -2426,6 +2426,7 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
     status: generated
+    generated_at: 2026-03-31
     test_status: passed
     notes: "Telecom vertical only has network-fault-manager. Billing disputes are high-volume, rule-based — perfect for AO automation. Uses command phases with jq for CDR analysis. Shows AO for telecom operations."
 
