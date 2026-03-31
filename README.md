@@ -117,8 +117,11 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | repo-health-checker | Developer Tools | Org-wide repo audit → stale PRs → missing CI → security advisories → scorecards | queued | — |
 | slack-digest | Business Ops | Channel monitoring → topic clustering → daily digest → action items → archive | queued | — |
 | notion-wiki-sync | Knowledge Mgmt | Notion page scanning → staleness detection → code cross-ref → markdown export | queued | — |
+| api-docs-generator | Developer Tools | Route parsing → schema extraction → example generation → validation → OpenAPI | queued | — |
+| food-waste-tracker | Sustainability | Inventory tracking → spoilage prediction → donations → impact reports | queued | — |
+| guest-experience | Hospitality | Guest profiling → room personalization → service coordination → satisfaction | queued | — |
 
-*80 examples across 70+ verticals — 72 generated, 8 queued. More added autonomously by the conductor every 30 minutes.*
+*83 examples across 30+ verticals — 72 generated, 11 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 

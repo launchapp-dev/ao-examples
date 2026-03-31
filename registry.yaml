@@ -1672,6 +1672,66 @@ examples:
     status: queued
     notes: "Pipeline #35 from source material. Every dev team needs changelogs but hates writing them. Shows AO using git MCP and GitHub CLI for developer tooling workflows."
 
+  # --- Developer Tools (new — conductor sweep 19, 2026-03-31) ---
+  - id: api-docs-generator
+    name: "API Documentation Generator"
+    vertical: developer-tools
+    description: "API documentation pipeline — parse codebase for route definitions and handlers, extract request/response schemas, generate example requests with curl and SDK snippets, validate examples actually work via command phases, format as OpenAPI spec and markdown, publish to GitHub Pages, create PR for doc updates"
+    features_demonstrated:
+      - command phases (route parsing scripts, curl validation, OpenAPI spec generation)
+      - multi-agent pipeline (code parser, example generator, validator, formatter, publisher)
+      - decision contracts (doc-quality: publish/needs-examples/needs-rewrite, validation: all-pass/some-fail/broken)
+      - output contracts (structured OpenAPI specs, markdown docs, example collections)
+      - phase routing (rework on validation failure, regenerate examples on schema change)
+      - git MCP for codebase scanning
+      - github MCP for PR creation and Pages deployment
+    tools_needed:
+      - git MCP
+      - github MCP (gh-cli-mcp)
+      - filesystem MCP
+    status: queued
+    notes: "Pipeline #34 from source material. Every API needs docs but they're always stale. Shows AO bridging code and documentation with automated validation."
+
+  # --- Sustainability / Food (new — conductor sweep 19, 2026-03-31) ---
+  - id: food-waste-tracker
+    name: "Food Waste Reduction Pipeline"
+    vertical: sustainability-food
+    description: "Food waste management pipeline — track perishable inventory with expiry dates, predict items approaching spoilage using shelf-life models, generate markdown/discount recommendations for near-expiry items, route excess to local food banks via donation matching, calculate composting vs landfill diversion, produce daily waste reduction reports, track cost savings and environmental impact metrics over time"
+    features_demonstrated:
+      - scheduled workflows (daily inventory scan, weekly impact reports)
+      - multi-agent pipeline (inventory tracker, spoilage predictor, donation coordinator, impact reporter)
+      - decision contracts (item-action: sell/markdown/donate/compost, urgency: immediate/soon/monitor)
+      - output contracts (structured inventory reports, donation manifests, impact dashboards)
+      - memory MCP for tracking inventory state and historical trends
+      - phase routing (escalate to donation on approaching expiry, compost on past-expiry)
+      - command phases (shelf-life calculation, cost savings computation)
+    tools_needed:
+      - memory MCP
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #208 from source material. Food waste is a $400B+ global problem. Shows AO managing time-sensitive inventory decisions with environmental impact tracking."
+
+  # --- Travel & Hospitality (new — conductor sweep 19, 2026-03-31) ---
+  - id: guest-experience
+    name: "Hotel Guest Experience Pipeline"
+    vertical: hospitality
+    description: "Hotel guest experience pipeline — build guest profiles from booking data and past stays, personalize room assignment based on preferences, generate welcome messages and amenity recommendations, coordinate during-stay service requests and issue resolution, trigger post-stay satisfaction surveys, analyze feedback for service improvements, update loyalty tier and preferences in guest knowledge graph"
+    features_demonstrated:
+      - multi-agent pipeline (profiler, room assigner, concierge, service coordinator, survey analyst, loyalty manager)
+      - memory MCP for persistent guest knowledge graph across stays
+      - scheduled workflows (daily arrivals processing, weekly feedback analysis)
+      - decision contracts (satisfaction: delighted/satisfied/at-risk/escalate, service-priority: immediate/standard/scheduled)
+      - output contracts (structured guest profiles, service logs, satisfaction reports)
+      - phase routing (escalate on negative feedback, trigger recovery on at-risk guests)
+      - sequential-thinking for preference inference and personalization
+    tools_needed:
+      - memory MCP
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #252 from source material. Hospitality is all about personalization at scale. Shows AO maintaining persistent guest knowledge and coordinating real-time service delivery."
+
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
@@ -1679,4 +1739,4 @@ examples:
 # Verticals to explore next: documentary research, children's book,
 # connected car, programmatic ads, medical coding, loyalty program,
 # cargo operations, broadcast production, vendor evaluation,
-# access review, food waste reduction, guest experience
+# access review, license compliance, tenant screening
