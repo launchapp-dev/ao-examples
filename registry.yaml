@@ -3120,7 +3120,8 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
       - playwright MCP (competitor price scraping)
-    status: queued
+    status: generated
+    test_status: passed
     notes: "Pipeline #244 from source material. Dynamic pricing drives 15-30% revenue uplift for live events. Uses Playwright MCP for real competitor scraping, python3 for optimization — all tools exist. Shows AO managing real-time revenue optimization."
 
   # --- Hospitality (new — conductor sweep 37, 2026-03-31) ---
@@ -3156,7 +3157,8 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: 2026-03-31
     notes: "Pipeline #264 from source material. Actuarial modeling drives $6T+ in global insurance pricing. Uses python3 for statistical methods and filesystem — all tools exist. Shows AO automating complex quantitative workflows with regulatory compliance."
 
   # --- Telecom / Infrastructure (new — conductor sweep 37, 2026-03-31) ---
@@ -3174,7 +3176,8 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: 2026-03-31
     notes: "Pipeline #221 from source material. Capacity planning prevents outages that cost $5,600/minute average. Uses python3 for forecasting and filesystem — all tools exist. Shows AO managing proactive infrastructure planning."
 
   # --- Pharma / Medical Affairs (new — conductor sweep 37, 2026-03-31) ---

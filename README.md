@@ -151,8 +151,9 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [nps-followup](examples/nps-followup/) | Customer Ops | NPS survey analysis → detractor rescue → promoter engagement → response automation | generated | [repo](https://github.com/launchapp-dev/ao-workflow-nps-followup) |
 | [batch-record](examples/batch-record/) | Pharma Manufacturing | Batch initiation → QC checks → deviation handling → yield calculation → QP release | generated | [repo](https://github.com/launchapp-dev/ao-example-batch-record) |
 | [ticket-pricing](examples/ticket-pricing/) | Sports & Entertainment | Demand forecasting → competitor scraping → elasticity modeling → price optimization → revenue simulation | generated | [repo](https://github.com/launchapp-dev/ao-example-ticket-pricing) |
+| [actuarial-modeler](examples/actuarial-modeler/) | Insurance | Risk modeling → loss triangles → reserve estimation → rate indications → filing memoranda | generated | [repo](https://github.com/launchapp-dev/ao-example-actuarial-modeler) |
 
-*120 examples across 30+ verticals — 112 generated, 8 queued. More added autonomously by the conductor every 30 minutes.*
+*121 examples across 30+ verticals — 113 generated, 8 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 
