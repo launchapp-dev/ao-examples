@@ -3032,7 +3032,8 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    test_status: passed
     notes: "Pipeline #137 from source material. Portfolio rebalancing is a $30T+ AUM activity. Uses python3 for optimization and filesystem — all tools exist. Shows AO managing a high-stakes financial workflow with compliance gates."
 
   # --- Legal (new — conductor sweep 36, 2026-03-31) ---
@@ -3049,10 +3050,11 @@ examples:
       - phase routing (immediate update on critical data flow changes, legal review loop on policy drafts)
     tools_needed:
       - filesystem MCP
-      - git MCP (@modelcontextprotocol/server-git)
       - sequential-thinking MCP
-    status: queued
-    notes: "Pipeline #72 from source material. Privacy policies are legally required globally, and product changes often outpace policy updates. Uses grep, python3, git — all tools exist. Shows AO automating a critical legal compliance workflow."
+    status: generated
+    generated_at: "2026-03-31"
+    test_status: passed
+    notes: "Pipeline #72 from source material. Privacy policies are legally required globally, and product changes often outpace policy updates. Uses grep, python3, diff, jq — all native tools. Git versioning via version-policies.sh script (server-git npm package does not exist). Shows AO automating a critical legal compliance workflow."
 
   # --- Pharma Manufacturing (new — conductor sweep 36, 2026-03-31) ---
   - id: batch-record
