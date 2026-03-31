@@ -2359,7 +2359,9 @@ examples:
       - filesystem MCP
       - github MCP (gh-cli-mcp)
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-example-okr-tracker
     notes: "Pipeline #99 from source material. Every company tracks OKRs. Uses memory MCP for persistent tracking across quarters — all tools exist. Shows AO for strategic planning and organizational alignment. Previous build incomplete — only scaffolded PLAN.md, needs full rebuild."
 
   # --- Cybersecurity / Compliance (new — conductor sweep 29, 2026-03-31) ---
@@ -2548,7 +2550,9 @@ examples:
       - filesystem MCP
       - github MCP (gh-cli-mcp)
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: 2026-03-31
+    github_repo: launchapp-dev/ao-example-alumni-engagement
     notes: "Pipeline #129 from source material. Alumni engagement is the lifeblood of university advancement offices. Uses python3 for real scoring algorithms — all tools exist. Shows AO for education advancement and fundraising."
 
   # --- Data & Analytics (new — conductor sweep 32, 2026-03-31) ---
@@ -2569,7 +2573,8 @@ examples:
       - memory MCP (@modelcontextprotocol/server-memory)
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    test_status: passed
     notes: "Pipeline #53 from source material. Every company runs surveys. Uses python3 for real statistical analysis (confidence intervals, NPS scoring) — maximally feasible. Shows AO for research and insights."
 
   # --- DevOps / Security (new — conductor sweep 32, 2026-03-31) ---
@@ -2592,7 +2597,8 @@ examples:
       - memory MCP (@modelcontextprotocol/server-memory)
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    test_status: passed
     notes: "Pipeline #68 from source material. Secret rotation is a top-priority security practice — mandatory for SOC 2. Uses gh secret set and openssl as real CLI tools. Shows AO for DevSecOps automation."
 
   # --- Customer Ops (new — conductor sweep 32, 2026-03-31) ---
@@ -2662,13 +2668,104 @@ examples:
     status: queued
     notes: "Pipeline #203 from source material. Supply chain traceability is mandatory under FSMA 204 (effective 2026). Uses jq for chain validation and python3 for anomaly detection — all tools exist. Shows AO for food/product safety compliance."
 
+  # --- E-Commerce / Returns (new — conductor sweep 33, 2026-03-31) ---
+  - id: returns-processor
+    name: "Returns Processing Pipeline"
+    vertical: ecommerce-ops
+    description: "Returns processing pipeline — receive return request, inspect product condition, categorize action (restock/refurbish/dispose), update inventory levels, process refund, analyze return reasons for product improvement, generate return analytics reports"
+    features_demonstrated:
+      - multi-agent pipeline (intake agent, inspector, categorizer, inventory updater, refund processor, analyst)
+      - decision contracts (disposition: restock/refurbish/dispose/reject, refund: full/partial/store-credit/deny)
+      - phase routing (rework on inspection ambiguity, escalate on fraud detection)
+      - output contracts (structured return assessments, inventory adjustments, analytics reports)
+      - command phases (inventory update scripts, refund calculation)
+      - scheduled workflows (daily return batch processing, weekly analytics)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #103 from source material. Returns processing is a critical e-commerce operation affecting margins and customer satisfaction. Shows AO managing a multi-step logistics workflow with fraud detection."
+
+  # --- Media / Documentary (new — conductor sweep 33, 2026-03-31) ---
+  - id: documentary-researcher
+    name: "Documentary Research Pipeline"
+    vertical: media-research
+    description: "Documentary research pipeline — define topic, gather primary and secondary sources from the web, fact-check claims against multiple sources, build narrative structure, write script with citations, produce research package for production team"
+    features_demonstrated:
+      - multi-agent pipeline (topic researcher, source gatherer, fact-checker, narrative architect, scriptwriter)
+      - multi-model routing (Haiku for web scraping, Sonnet for fact-checking, Opus for narrative structure)
+      - decision contracts (fact-status: verified/unverified/disputed, narrative-quality: compelling/needs-work/restructure)
+      - phase routing (rework on disputed facts, restructure on weak narrative)
+      - output contracts (structured source database, fact-check reports, research package)
+      - web search and fetch MCP for source gathering
+    tools_needed:
+      - fetch MCP (@modelcontextprotocol/server-fetch)
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #25 from source material. Documentary research requires rigorous fact-checking and narrative construction. Shows AO managing research-intensive creative workflows."
+
+  # --- Logistics / Last-Mile (new — conductor sweep 33, 2026-03-31) ---
+  - id: last-mile-optimizer
+    name: "Last-Mile Delivery Optimizer"
+    vertical: logistics-delivery
+    description: "Last-mile delivery optimization — cluster deliveries by geography, optimize route sequences, assign drivers by capacity, track delivery progress, handle failed delivery exceptions, generate driver performance analytics, produce daily operations dashboard"
+    features_demonstrated:
+      - multi-agent pipeline (cluster analyzer, route optimizer, driver assigner, tracker, exception handler, analyst)
+      - decision contracts (route-quality: optimal/acceptable/reroute, exception-action: reattempt/redirect/return-to-depot)
+      - command phases (route optimization scripts, distance calculations, clustering algorithms)
+      - scheduled workflows (morning route planning, midday re-optimization, evening analytics)
+      - output contracts (structured route plans, driver assignments, delivery manifests)
+      - phase routing (reroute on traffic/weather disruptions, reattempt on failed deliveries)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #197 from source material. Last-mile delivery is the most expensive part of the logistics chain. Shows AO managing real-time operational optimization with geographic clustering."
+
+  # --- HR / Training (new — conductor sweep 33, 2026-03-31) ---
+  - id: training-compliance
+    name: "Training Compliance Tracker"
+    vertical: hr-compliance
+    description: "Training compliance pipeline — assign required courses by role, track completion progress, send escalating reminders, certify completions, generate compliance audit trails, flag non-compliant employees, produce regulatory reports for OSHA/HIPAA/SOX requirements"
+    features_demonstrated:
+      - scheduled workflows (daily completion checks, weekly reminder escalation, monthly compliance reports)
+      - multi-agent pipeline (assignment manager, progress tracker, reminder scheduler, certifier, auditor, reporter)
+      - decision contracts (compliance-status: compliant/at-risk/non-compliant, escalation: remind/manager-notify/block-access)
+      - output contracts (structured compliance dashboards, audit trails, regulatory reports)
+      - command phases (completion percentage calculations, deadline tracking scripts)
+      - phase routing (escalate on overdue, certify on completion)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #130 from source material. Training compliance is mandatory across regulated industries (healthcare, finance, manufacturing). Shows AO managing ongoing compliance tracking with automated escalation."
+
+  # --- Entertainment / Rights (new — conductor sweep 33, 2026-03-31) ---
+  - id: rights-royalties
+    name: "Rights & Royalties Manager"
+    vertical: media-business
+    description: "Rights and royalties management pipeline — track content usage across platforms, calculate royalties per agreement terms, generate royalty statements, process payments, conduct periodic audits, reconcile discrepancies, produce publisher and artist reports"
+    features_demonstrated:
+      - multi-agent pipeline (usage tracker, royalty calculator, statement generator, payment processor, auditor, reconciler)
+      - scheduled workflows (monthly royalty calculation, quarterly audit, annual reconciliation)
+      - decision contracts (payment-status: approved/disputed/hold, audit-finding: clean/discrepancy/escalate)
+      - output contracts (structured royalty statements, audit reports, reconciliation summaries)
+      - command phases (royalty calculation scripts, usage aggregation, payment processing)
+      - phase routing (hold payment on dispute, escalate on audit discrepancy)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #280 from source material. Rights and royalties management is complex and error-prone in media/publishing. Shows AO managing financial calculations with audit trails and dispute handling."
+
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
 #
-# Verticals to explore next: documentary research, children's book,
-# connected car, medical coding, cargo operations, broadcast production,
-# number porting, customer churn prediction, load testing, multi-region deployment,
-# portfolio-rebalancer, nps-followup, site-reliability-dashboard, pest-management,
-# livestock-health, public-records-manager, venue-maintenance, rights-royalties,
-# construction-cost-estimator, last-mile-delivery, housekeeping-optimizer
+# Verticals to explore next: children's book, connected car, medical coding,
+# cargo operations, broadcast production, number porting, customer churn prediction,
+# load testing, multi-region deployment, portfolio-rebalancer, nps-followup,
+# pest-management, livestock-health, public-records-manager, venue-maintenance,
+# construction-cost-estimator, housekeeping-optimizer, email-campaign,
+# carbon-tracker, policy-impact-analyzer, whitepaper-producer
