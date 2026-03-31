@@ -153,8 +153,42 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [ticket-pricing](examples/ticket-pricing/) | Sports & Entertainment | Demand forecasting → competitor scraping → elasticity modeling → price optimization → revenue simulation | generated | [repo](https://github.com/launchapp-dev/ao-example-ticket-pricing) |
 | [actuarial-modeler](examples/actuarial-modeler/) | Insurance | Risk modeling → loss triangles → reserve estimation → rate indications → filing memoranda | generated | [repo](https://github.com/launchapp-dev/ao-example-actuarial-modeler) |
 | [capacity-planner](examples/capacity-planner/) | Telecom Infrastructure | Utilization monitoring → trend analysis → threshold alerts → upgrade planning → cost modeling | generated | [repo](https://github.com/launchapp-dev/ao-example-capacity-planner) |
+| [a11y-auditor](examples/a11y-auditor/) | Developer Tools | WCAG audit → violation categorization → remediation guide | generated | [repo](https://github.com/launchapp-dev/ao-example-a11y-auditor) |
+| [access-reviewer](examples/access-reviewer/) | Cybersecurity Compliance | Permission extraction → policy comparison → remediation tickets | generated | [repo](https://github.com/launchapp-dev/ao-workflow-access-reviewer) |
+| [alumni-engagement](examples/alumni-engagement/) | Education Advancement | Alumni segmentation → engagement scoring → personalized outreach | generated | [repo](https://github.com/launchapp-dev/ao-example-alumni-engagement) |
+| [api-health-monitor](examples/api-health-monitor/) | DevOps Monitoring | Endpoint probing → latency analysis → incident tickets | generated | [repo](https://github.com/launchapp-dev/ao-workflow-api-health-monitor) |
+| [carbon-tracker](examples/carbon-tracker/) | Energy Sustainability | Emissions data → scope 1/2/3 calculation → reduction plans | generated | [repo](https://github.com/launchapp-dev/ao-workflow-carbon-tracker) |
+| [churn-predictor](examples/churn-predictor/) | Data Analytics | Behavioral data → risk scoring → intervention recommendations | generated | [repo](https://github.com/launchapp-dev/ao-example-churn-predictor) |
+| [content-repurposer](examples/content-repurposer/) | Content Marketing | Long-form content → platform-specific variants → publication schedule | generated | [repo](https://github.com/launchapp-dev/ao-workflow-content-repurposer) |
+| [customer-feedback-analyzer](examples/customer-feedback-analyzer/) | Customer Ops | Review scraping → sentiment analysis → product recommendations | generated | [repo](https://github.com/launchapp-dev/ao-workflow-customer-feedback-analyzer) |
+| [customer-health-scorer](examples/customer-health-scorer/) | Customer Success | Signal aggregation → weighted health scoring → CSM playbooks | generated | [repo](https://github.com/launchapp-dev/ao-example-customer-health-scorer) |
+| [dns-cert-manager](examples/dns-cert-manager/) | DevOps Infrastructure | Certificate audit → renewal management → deployment verification | generated | [repo](https://github.com/launchapp-dev/ao-workflow-dns-cert-manager) |
+| [documentary-researcher](examples/documentary-researcher/) | Media Research | Source gathering → fact-checking → narrative script with citations | generated | [repo](https://github.com/launchapp-dev/ao-example-documentary-researcher) |
+| [email-campaign](examples/email-campaign/) | Marketing | Audience segmentation → copy variants → A/B test optimization | generated | [repo](https://github.com/launchapp-dev/ao-workflow-email-campaign) |
+| [gdpr-request-handler](examples/gdpr-request-handler/) | Privacy Legal | DSR intake → data location → erasure/portability execution | generated | [repo](https://github.com/launchapp-dev/ao-example-gdpr-request-handler) |
+| [incident-postmortem](examples/incident-postmortem/) | DevOps SRE | Timeline extraction → root cause analysis → action item tracking | generated | [repo](https://github.com/launchapp-dev/ao-workflow-incident-postmortem) |
+| [kb-article-generator](examples/kb-article-generator/) | Customer Ops | Support tickets → topic clustering → KB article drafting | generated | [repo](https://github.com/launchapp-dev/ao-example-kb-article-generator) |
+| [last-mile-optimizer](examples/last-mile-optimizer/) | Logistics Delivery | Geographic clustering → route optimization → driver assignment | generated | [repo](https://github.com/launchapp-dev/ao-example-last-mile-optimizer) |
+| [legislative-tracker](examples/legislative-tracker/) | Government | Bill monitoring → impact analysis → stakeholder briefings | generated | [repo](https://github.com/launchapp-dev/ao-workflow-legislative-tracker) |
+| [log-analyzer](examples/log-analyzer/) | DevOps SRE | Log aggregation → anomaly detection → incident issue creation | generated | [repo](https://github.com/launchapp-dev/ao-workflow-log-analyzer) |
+| [loyalty-program-manager](examples/loyalty-program-manager/) | E-Commerce Retention | Transaction data → points/tier calculation → personalized offers | generated | [repo](https://github.com/launchapp-dev/ao-workflow-loyalty-program-manager) |
+| [medical-coding](examples/medical-coding/) | Healthcare | Clinical notes → ICD-10/CPT mapping → coding worksheets | generated | [repo](https://github.com/launchapp-dev/ao-example-medical-coding) |
+| [okr-tracker](examples/okr-tracker/) | Business Planning | Objective tracking → confidence scoring → quarterly reviews | generated | [repo](https://github.com/launchapp-dev/ao-example-okr-tracker) |
+| [portfolio-rebalancer](examples/portfolio-rebalancer/) | Finance | Drift calculation → trade generation → compliance validation | generated | [repo](https://github.com/launchapp-dev/ao-workflow-portfolio-rebalancer) |
+| [provenance-tracker](examples/provenance-tracker/) | Supply Chain | Batch records → chain-of-custody validation → provenance certificates | generated | [repo](https://github.com/launchapp-dev/ao-example-provenance-tracker) |
+| [rfp-responder](examples/rfp-responder/) | Business Operations | RFP parsing → capability matching → compliance-reviewed response | generated | [repo](https://github.com/launchapp-dev/ao-workflow-rfp-responder) |
+| [rights-royalties](examples/rights-royalties/) | Media Business | Usage tracking → royalty calculation → audit reconciliation | generated | [repo](https://github.com/launchapp-dev/ao-example-rights-royalties) |
+| [secret-rotation](examples/secret-rotation/) | DevOps Security | Secret audit → credential rotation → health verification | generated | [repo](https://github.com/launchapp-dev/ao-example-secret-rotation) |
+| [soc2-evidence](examples/soc2-evidence/) | Compliance Security | Control mapping → evidence collection → auditor-ready reports | generated | [repo](https://github.com/launchapp-dev/ao-example-soc2-evidence) |
+| [survey-analyzer](examples/survey-analyzer/) | Data Analytics | Response ingestion → sentiment/NPS analysis → executive summary | generated | [repo](https://github.com/launchapp-dev/ao-example-survey-analyzer) |
+| [training-compliance](examples/training-compliance/) | HR Compliance | Course assignment → completion tracking → regulatory reports | generated | [repo](https://github.com/launchapp-dev/ao-example-training-compliance) |
+| [warranty-analytics](examples/warranty-analytics/) | Automotive Aftermarket | Claim ingestion → failure pattern detection → supplier scorecards | generated | [repo](https://github.com/launchapp-dev/ao-example-warranty-analytics) |
+| [whitepaper-producer](examples/whitepaper-producer/) | Content Publishing | Research → sectioned draft → peer review → formatted document | generated | [repo](https://github.com/launchapp-dev/ao-example-whitepaper-producer) |
+| [housekeeping-optimizer](examples/housekeeping-optimizer/) | Hospitality | PMS data → room priority scoring → optimized cleaning sequences | generated | [repo](https://github.com/launchapp-dev/ao-workflow-housekeeping-optimizer) |
+| [medical-affairs](examples/medical-affairs/) | Pharmaceutical | PubMed search → evidence synthesis → KOL engagement briefs | generated | [repo](https://github.com/launchapp-dev/ao-workflow-medical-affairs) |
+| [construction-cost-estimator](examples/construction-cost-estimator/) | Construction | Scope intake → quantity takeoff → line-item bid packages | generated | [repo](https://github.com/launchapp-dev/ao-workflow-construction-cost-estimator) |
 
-*122 examples across 30+ verticals — 114 generated, 8 queued. More added autonomously by the conductor every 30 minutes.*
+*169 examples across 30+ verticals — 150 generated, 19 queued (8 enqueued for generation). More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 

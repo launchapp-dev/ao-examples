@@ -327,7 +327,7 @@ examples:
     features_demonstrated:
       - scheduled workflows (continuous supplier monitoring)
       - web search MCP (news feeds, supplier health)
-      - decision contracts (severity verdicts: low/medium/high/critical)
+      - "decision contracts (severity verdicts: low/medium/high/critical)"
       - multi-agent pipeline (monitor, analyst, responder, communicator)
       - command phases (data collection scripts)
     tools_needed:
@@ -560,7 +560,7 @@ examples:
     features_demonstrated:
       - scheduled workflows (daily warranty claim monitoring)
       - command phases (VIN database queries, completion tracking scripts)
-      - decision contracts (recall severity: safety-critical/non-critical/advisory)
+      - "decision contracts (recall severity: safety-critical/non-critical/advisory)"
       - multi-agent pipeline (quality engineer, compliance officer, logistics coordinator, communicator)
       - manual approval gates (VP sign-off on recall initiation)
       - output contracts (structured recall package, NHTSA filing)
@@ -581,7 +581,7 @@ examples:
     description: "Network fault management pipeline — detect alarm, correlate events across network elements, diagnose root cause, dispatch repair, verify fix, update ticket, generate root cause analysis report"
     features_demonstrated:
       - scheduled workflows (continuous alarm monitoring)
-      - decision contracts (severity: critical/major/minor/warning)
+      - "decision contracts (severity: critical/major/minor/warning)"
       - multi-agent pipeline (alarm correlator, diagnostician, dispatcher, reporter)
       - command phases (alarm ingestion, ticket management scripts)
       - output contracts (structured RCA reports)
@@ -602,7 +602,7 @@ examples:
     description: "Drug safety monitoring pipeline — collect adverse event reports, assess causality (WHO-UMC scale), detect safety signals across products, evaluate benefit-risk, update product labeling, generate periodic safety reports for regulatory submission"
     features_demonstrated:
       - scheduled workflows (continuous adverse event monitoring)
-      - decision contracts (causality: certain/probable/possible/unlikely/unassessable)
+      - "decision contracts (causality: certain/probable/possible/unlikely/unassessable)"
       - multi-agent pipeline (case processor, signal detector, risk evaluator, regulatory writer)
       - output contracts (structured ICSR reports, PSUR sections)
       - manual approval gates (medical officer sign-off)
@@ -625,7 +625,7 @@ examples:
     features_demonstrated:
       - scheduled workflows (daily performance monitoring)
       - command phases (data ingestion scripts, metric calculations)
-      - decision contracts (injury risk: low/moderate/high/critical)
+      - "decision contracts (injury risk: low/moderate/high/critical)"
       - multi-agent pipeline (data analyst, sports scientist, load manager, reporter)
       - output contracts (structured performance reports, risk assessments)
       - phase routing (trigger recovery protocol on high risk)
@@ -647,7 +647,7 @@ examples:
     features_demonstrated:
       - scheduled workflows (continuous telemetry monitoring)
       - command phases (telemetry ingestion, orbit calculation scripts)
-      - decision contracts (anomaly severity: nominal/caution/warning/critical)
+      - "decision contracts (anomaly severity: nominal/caution/warning/critical)"
       - multi-agent pipeline (flight controller, orbit analyst, anomaly responder, reporter)
       - output contracts (structured pass plans, maneuver sequences, health reports)
       - phase routing (escalate on critical anomaly)
@@ -669,7 +669,7 @@ examples:
     features_demonstrated:
       - command phases (transaction import and categorization scripts)
       - multi-agent pipeline (accountant, budget analyst, investment advisor, reporter)
-      - decision contracts (financial health: excellent/good/fair/poor/critical)
+      - "decision contracts (financial health: excellent/good/fair/poor/critical)"
       - output contracts (structured budget plans, investment recommendations)
       - scheduled workflows (monthly financial review)
       - sequential-thinking MCP for complex financial planning
@@ -711,7 +711,7 @@ examples:
     description: "Customer support pipeline — classify incoming tickets, prioritize by urgency/impact, route to appropriate team, suggest response drafts, escalate stale tickets, generate support analytics dashboards, identify knowledge base gaps"
     features_demonstrated:
       - scheduled workflows (continuous ticket monitoring)
-      - decision contracts (priority: critical/high/medium/low, route: engineering/billing/product/general)
+      - "decision contracts (priority: critical/high/medium/low, route: engineering/billing/product/general)"
       - multi-agent pipeline (classifier, responder, escalation manager, analyst)
       - command phases (ticket ingestion and metrics scripts)
       - output contracts (structured ticket assessments, analytics reports)
@@ -754,7 +754,7 @@ examples:
     description: "Construction project tracking — schedule task dependencies, track daily progress reports, flag schedule delays, manage resource reallocation, generate stakeholder reports, weather delay impact assessment, subcontractor coordination, punch list management"
     features_demonstrated:
       - scheduled workflows (daily progress monitoring)
-      - decision contracts (delay severity: on-track/minor-delay/major-delay/critical)
+      - "decision contracts (delay severity: on-track/minor-delay/major-delay/critical)"
       - multi-agent pipeline (project manager, scheduler, resource planner, reporter)
       - command phases (schedule calculation, critical path analysis scripts)
       - output contracts (structured progress reports, delay analyses)
@@ -775,7 +775,7 @@ examples:
     description: "Immigration case management — assess visa eligibility, compile required documents, prepare application forms, legal review, file with USCIS/embassy, track case status, respond to RFEs (Requests for Evidence), deadline monitoring"
     features_demonstrated:
       - scheduled workflows (deadline tracking and status polling)
-      - decision contracts (eligibility: eligible/conditionally-eligible/ineligible)
+      - "decision contracts (eligibility: eligible/conditionally-eligible/ineligible)"
       - multi-agent pipeline (intake specialist, document compiler, immigration attorney, filer, tracker)
       - manual approval gates (attorney sign-off before filing)
       - output contracts (structured case packages, filing checklists)
@@ -797,7 +797,7 @@ examples:
     description: "Content moderation at scale — ingest user-generated content, AI classification (spam/hate/violence/safe), confidence scoring, route low-confidence to human review, action (approve/remove/warn), handle appeals, generate moderation analytics reports"
     features_demonstrated:
       - scheduled workflows (continuous content queue monitoring)
-      - decision contracts (moderation verdict: approve/remove/warn/escalate)
+      - "decision contracts (moderation verdict: approve/remove/warn/escalate)"
       - multi-agent pipeline (classifier, reviewer, appeals handler, policy analyst, reporter)
       - command phases (content ingestion, metrics calculation scripts)
       - output contracts (structured moderation decisions, analytics dashboards)
@@ -818,7 +818,7 @@ examples:
     description: "Clinical trial management — protocol design, site selection and qualification, patient recruitment screening, data collection and monitoring, adverse event tracking, interim analysis, final report generation, regulatory submission prep"
     features_demonstrated:
       - multi-agent pipeline (protocol designer, site manager, recruiter, monitor, statistician, regulatory writer)
-      - decision contracts (enrollment: accept/waitlist/exclude; interim analysis: continue/modify/stop)
+      - "decision contracts (enrollment: accept/waitlist/exclude; interim analysis: continue/modify/stop)"
       - manual approval gates (IRB review, medical monitor sign-off, sponsor approval)
       - scheduled workflows (weekly enrollment monitoring, monthly safety reviews)
       - output contracts (structured CRFs, safety reports, statistical analysis plans)
@@ -840,7 +840,7 @@ examples:
     description: "SRE incident response pipeline — detect alert from monitoring, diagnose root cause, apply mitigation, validate recovery, generate root cause analysis, write postmortem, create prevention tasks, update runbooks"
     features_demonstrated:
       - scheduled workflows (continuous alert monitoring)
-      - decision contracts (severity: SEV1/SEV2/SEV3/SEV4, status: mitigated/escalating/resolved)
+      - "decision contracts (severity: SEV1/SEV2/SEV3/SEV4, status: mitigated/escalating/resolved)"
       - multi-agent pipeline (detector, diagnostician, mitigator, postmortem writer, prevention planner)
       - command phases (health check scripts, metric queries, rollback commands)
       - output contracts (structured RCA reports, postmortem documents)
@@ -865,7 +865,7 @@ examples:
       - multi-agent pipeline (data collector, validator, analyst, benchmarker, report writer, reviewer)
       - command phases (metric calculation scripts, benchmarking tools)
       - output contracts (structured ESG metrics JSON, GRI-aligned reports)
-      - decision contracts (data quality: complete/incomplete/anomalous)
+      - "decision contracts (data quality: complete/incomplete/anomalous)"
       - manual approval gates (CFO sign-off on published reports)
     tools_needed:
       - filesystem MCP
@@ -885,7 +885,7 @@ examples:
     features_demonstrated:
       - command phases (tax calculation scripts, form generation)
       - multi-agent pipeline (document gatherer, categorizer, tax strategist, calculator, reviewer, filer)
-      - decision contracts (filing status optimization: itemize/standard, extension needed: yes/no)
+      - "decision contracts (filing status optimization: itemize/standard, extension needed: yes/no)"
       - output contracts (structured tax return JSON, filing-ready forms)
       - manual approval gates (taxpayer review before filing)
       - sequential-thinking MCP for complex tax optimization
@@ -905,7 +905,7 @@ examples:
     description: "Cross-border trade compliance pipeline — classify goods by HS code, determine duty rates and trade agreement eligibility, screen restricted parties, prepare customs declarations, validate commercial invoices, manage broker review, file electronically, track clearance, maintain audit trail"
     features_demonstrated:
       - command phases (HS code lookup scripts, duty rate calculations)
-      - decision contracts (classification confidence: confirmed/review-needed/blocked)
+      - "decision contracts (classification confidence: confirmed/review-needed/blocked)"
       - multi-agent pipeline (classifier, compliance officer, document preparer, broker reviewer, filer)
       - manual approval gates (licensed customs broker sign-off)
       - output contracts (structured customs declarations, audit trail records)
@@ -928,7 +928,7 @@ examples:
     features_demonstrated:
       - web search MCP (wealth screening, philanthropic databases)
       - multi-agent pipeline (prospect researcher, scoring analyst, outreach writer, stewardship coordinator, reporter)
-      - decision contracts (prospect readiness: ready-to-ask/needs-cultivation/disqualified)
+      - "decision contracts (prospect readiness: ready-to-ask/needs-cultivation/disqualified)"
       - output contracts (structured prospect profiles, outreach sequences)
       - scheduled workflows (weekly prospect pipeline review)
       - phase routing (rework outreach on low engagement)
@@ -949,7 +949,7 @@ examples:
     description: "Building permit pipeline — gather jurisdiction requirements, compile architectural drawings and specifications, assemble application package, submit to planning department, track reviewer comments, respond to corrections, manage interdepartmental approvals (fire, zoning, structural), secure final permit, schedule inspections"
     features_demonstrated:
       - multi-agent pipeline (requirements researcher, document compiler, applicant coordinator, reviewer liaison, inspector scheduler)
-      - decision contracts (application status: approved/corrections-needed/denied)
+      - "decision contracts (application status: approved/corrections-needed/denied)"
       - manual approval gates (architect sign-off, owner approval before submission)
       - scheduled workflows (daily status tracking, deadline monitoring)
       - command phases (document assembly scripts, status polling)
@@ -971,7 +971,7 @@ examples:
     description: "Real-time fraud detection pipeline — monitor transaction streams, score anomalies with ML models, freeze suspicious accounts, investigate flagged transactions, gather evidence, determine fraud vs false positive, resolve (refund/block/escalate), generate regulatory SARs, update detection rules"
     features_demonstrated:
       - scheduled workflows (continuous transaction monitoring)
-      - decision contracts (verdict: confirmed-fraud/false-positive/needs-investigation, severity: low/medium/high/critical)
+      - "decision contracts (verdict: confirmed-fraud/false-positive/needs-investigation, severity: low/medium/high/critical)"
       - multi-agent pipeline (monitor, investigator, evidence gatherer, resolver, compliance reporter)
       - command phases (transaction scoring scripts, rule engine updates)
       - output contracts (structured investigation reports, SAR filings)
@@ -991,7 +991,7 @@ examples:
     vertical: banking
     description: "End-to-end loan origination — receive application, verify identity, pull credit reports, verify income/employment, assess collateral, automated underwriting with risk scoring, manual review for edge cases, generate approval/denial letter, prepare closing documents, fund disbursement"
     features_demonstrated:
-      - decision contracts (underwriting verdict: approve/conditional-approve/deny/refer-to-manual)
+      - "decision contracts (underwriting verdict: approve/conditional-approve/deny/refer-to-manual)"
       - multi-agent pipeline (intake processor, credit analyst, income verifier, underwriter, closer)
       - manual approval gates (senior underwriter review for high-risk loans)
       - command phases (credit score calculation, debt-to-income ratio scripts)
@@ -1034,7 +1034,7 @@ examples:
     features_demonstrated:
       - scheduled workflows (continuous social monitoring, weekly reports)
       - web search MCP (social media, news, review sites)
-      - decision contracts (crisis severity: nominal/watch/alert/crisis)
+      - "decision contracts (crisis severity: nominal/watch/alert/crisis)"
       - multi-agent pipeline (scraper, sentiment analyst, competitive analyst, crisis responder, reporter)
       - command phases (sentiment scoring scripts, trend detection)
       - output contracts (structured brand health dashboards, crisis briefs)
@@ -1057,7 +1057,7 @@ examples:
     features_demonstrated:
       - command phases (pick pattern analysis scripts, simulation runners)
       - multi-agent pipeline (analyst, slotting optimizer, move planner, efficiency measurer, reporter)
-      - decision contracts (move priority: immediate/scheduled/deferred, improvement threshold: significant/marginal/negative)
+      - "decision contracts (move priority: immediate/scheduled/deferred, improvement threshold: significant/marginal/negative)"
       - output contracts (structured slotting plans, efficiency reports)
       - scheduled workflows (weekly pick pattern analysis, monthly optimization cycles)
       - manual approval gates (warehouse manager approval before moves)
@@ -1077,7 +1077,7 @@ examples:
     description: "M&A due diligence pipeline — collect target company documents, financial statement analysis, technology audit, IP review, regulatory risk assessment, customer concentration analysis, integration planning, generate investment memo with go/no-go recommendation"
     features_demonstrated:
       - multi-agent pipeline (financial analyst, tech auditor, legal reviewer, integration planner, investment committee writer)
-      - decision contracts (verdict: proceed/conditional-proceed/walk-away)
+      - "decision contracts (verdict: proceed/conditional-proceed/walk-away)"
       - manual approval gates (deal team sign-off, board approval)
       - output contracts (structured due diligence report, investment memo)
       - sequential-thinking MCP for complex valuation analysis
@@ -1098,7 +1098,7 @@ examples:
     description: "Drug discovery pipeline — target identification from disease biology, compound library screening, hit-to-lead optimization, ADMET property prediction, preclinical study design, IND-enabling study planning, regulatory strategy, generate IND filing package"
     features_demonstrated:
       - multi-agent pipeline (biologist, medicinal chemist, DMPK scientist, toxicologist, regulatory strategist)
-      - decision contracts (compound progression: advance/optimize/terminate)
+      - "decision contracts (compound progression: advance/optimize/terminate)"
       - phase routing (rework on failed ADMET properties, terminate on safety signal)
       - output contracts (structured compound profiles, study protocols, IND sections)
       - sequential-thinking MCP for SAR analysis
@@ -1121,7 +1121,7 @@ examples:
       - scheduled workflows (daily rate optimization, weekly performance review)
       - command phases (demand forecasting scripts, competitive rate scraping)
       - multi-agent pipeline (demand forecaster, rate strategist, channel manager, revenue analyst, reporter)
-      - decision contracts (rate action: increase/hold/decrease, overbooking level: conservative/moderate/aggressive)
+      - "decision contracts (rate action: increase/hold/decrease, overbooking level: conservative/moderate/aggressive)"
       - output contracts (structured rate grids, performance dashboards)
       - web search MCP (competitor rates, event calendars, market data)
     tools_needed:
@@ -1182,7 +1182,7 @@ examples:
     description: "Home renovation pipeline — scope project and set budget, generate design concepts, select and vet contractors, prepare permit applications, construction schedule management, progress tracking with photo documentation, inspection coordination, punch list management, final walkthrough"
     features_demonstrated:
       - multi-agent pipeline (designer, contractor evaluator, project manager, inspector, closer)
-      - decision contracts (contractor selection: hire/negotiate/reject, inspection: pass/fix/fail)
+      - "decision contracts (contractor selection: hire/negotiate/reject, inspection: pass/fix/fail)"
       - manual approval gates (homeowner approval at design, contractor selection, budget checkpoints)
       - phase routing (rework on inspection failure, rework on budget overrun)
       - output contracts (structured project plans, contractor comparison matrices, punch lists)
@@ -1204,7 +1204,7 @@ examples:
     description: "Estate planning pipeline — inventory all assets and liabilities, define beneficiaries and guardians, draft will/trust documents, coordinate beneficiary designations on financial accounts, healthcare directive and power of attorney, tax optimization strategies, legal review, document execution and storage, periodic review scheduling"
     features_demonstrated:
       - multi-agent pipeline (estate attorney, financial planner, tax strategist, document drafter, reviewer)
-      - decision contracts (trust type selection: revocable/irrevocable/special-needs, tax strategy: basic/advanced/complex)
+      - "decision contracts (trust type selection: revocable/irrevocable/special-needs, tax strategy: basic/advanced/complex)"
       - manual approval gates (attorney review, client approval before execution)
       - output contracts (structured asset inventory, document checklists, beneficiary matrices)
       - scheduled workflows (annual review reminders, life event triggers)
@@ -1227,7 +1227,7 @@ examples:
       - scheduled workflows (daily prep schedule, weekly menu review, monthly P&L)
       - command phases (food cost calculation scripts, inventory reconciliation)
       - multi-agent pipeline (executive chef, sous chef, purchasing manager, floor manager, cost controller)
-      - decision contracts (menu item viability: keep/modify/remove, vendor selection: approve/negotiate/reject)
+      - "decision contracts (menu item viability: keep/modify/remove, vendor selection: approve/negotiate/reject)"
       - output contracts (structured menu cost sheets, prep lists, P&L reports)
       - phase routing (rework menu item if food cost exceeds target)
     tools_needed:
@@ -1248,7 +1248,7 @@ examples:
       - scheduled workflows (daily workout generation, weekly progress review, monthly program adjustment)
       - command phases (metric calculation scripts, periodization logic)
       - multi-agent pipeline (assessment specialist, program designer, exercise selector, recovery analyst, reporter)
-      - decision contracts (progression: advance/maintain/deload, recovery status: fresh/fatigued/overtrained)
+      - "decision contracts (progression: advance/maintain/deload, recovery status: fresh/fatigued/overtrained)"
       - output contracts (structured workout plans, progress reports, body composition tracking)
       - phase routing (trigger deload week on overtrained status)
     tools_needed:
@@ -1267,7 +1267,7 @@ examples:
     description: "AML monitoring pipeline — continuous transaction screening, pattern detection (structuring, layering, integration), customer due diligence enhancement, suspicious activity investigation, evidence compilation, SAR filing preparation, regulatory submission, case management and resolution tracking"
     features_demonstrated:
       - scheduled workflows (continuous transaction monitoring, periodic customer reviews)
-      - decision contracts (risk level: low/medium/high/critical, filing decision: file-SAR/escalate/close)
+      - "decision contracts (risk level: low/medium/high/critical, filing decision: file-SAR/escalate/close)"
       - multi-agent pipeline (transaction screener, pattern analyst, investigator, compliance officer, filing specialist)
       - command phases (transaction scoring scripts, threshold monitoring)
       - output contracts (structured investigation reports, SAR filings, audit trails)
@@ -1292,7 +1292,7 @@ examples:
       - web search MCP (competitor price scraping, market data)
       - command phases (elasticity calculation scripts, revenue impact analysis)
       - multi-agent pipeline (market researcher, pricing strategist, test designer, revenue analyst, reporter)
-      - decision contracts (price action: increase/decrease/hold, test result: deploy-winner/extend-test/rollback)
+      - "decision contracts (price action: increase/decrease/hold, test result: deploy-winner/extend-test/rollback)"
       - output contracts (structured pricing matrices, A/B test results, revenue dashboards)
       - phase routing (rollback on negative revenue signal)
     tools_needed:
@@ -1312,7 +1312,7 @@ examples:
     description: "Emergency management pipeline — detect disaster event from monitoring feeds, classify severity and type, issue public alerts, mobilize resources (personnel, equipment, shelters), generate situation reports, coordinate multi-agency response, track resource deployment, manage recovery planning, produce after-action review"
     features_demonstrated:
       - scheduled workflows (continuous hazard monitoring, periodic situation reports)
-      - decision contracts (severity: watch/warning/emergency/catastrophe, phase: preparedness/response/recovery/mitigation)
+      - "decision contracts (severity: watch/warning/emergency/catastrophe, phase: preparedness/response/recovery/mitigation)"
       - multi-agent pipeline (hazard monitor, alert coordinator, resource mobilizer, situation reporter, recovery planner)
       - command phases (weather data ingestion, resource tracking scripts, GIS analysis)
       - output contracts (structured situation reports, resource deployment plans, after-action reviews)
@@ -1336,7 +1336,7 @@ examples:
     features_demonstrated:
       - web search MCP (influencer discovery, audience analysis, content vetting)
       - multi-agent pipeline (talent scout, vetting analyst, negotiator, creative director, performance analyst, reporter)
-      - decision contracts (influencer fit: approve/negotiate/reject, content review: approve/revise/reject)
+      - "decision contracts (influencer fit: approve/negotiate/reject, content review: approve/revise/reject)"
       - output contracts (structured influencer profiles, campaign briefs, ROI reports)
       - manual approval gates (brand manager content approval before publish)
       - phase routing (rework content on revision request)
@@ -1358,7 +1358,7 @@ examples:
     description: "Accreditation pipeline — map institutional standards to evidence requirements, collect documentation from departments, perform gap analysis, generate remediation plans, compile self-study report, track submission deadlines, produce readiness dashboard"
     features_demonstrated:
       - multi-agent pipeline (standards mapper, evidence collector, gap analyst, report compiler, readiness reviewer)
-      - decision contracts (readiness: ready/gaps-found/critical-gaps, evidence: sufficient/needs-more/missing)
+      - "decision contracts (readiness: ready/gaps-found/critical-gaps, evidence: sufficient/needs-more/missing)"
       - phase routing (rework on gaps-found, escalate on critical-gaps)
       - output contracts (structured gap analysis, self-study report, evidence matrix)
       - scheduled workflows (weekly readiness checks, monthly progress reports)
@@ -1381,7 +1381,7 @@ examples:
     features_demonstrated:
       - scheduled workflows (hourly sensor ingestion, daily trend analysis, monthly regulatory reports)
       - command phases (data ingestion scripts, threshold calculation, trend analysis)
-      - decision contracts (compliance: compliant/warning/violation/critical, action: investigate/remediate/report/escalate)
+      - "decision contracts (compliance: compliant/warning/violation/critical, action: investigate/remediate/report/escalate)"
       - multi-agent pipeline (data ingestor, trend analyst, compliance checker, remediation planner, regulatory filer)
       - output contracts (structured compliance reports, trend dashboards, regulatory filings)
       - phase routing (escalate on violation, auto-close compliant with documentation)
@@ -1403,7 +1403,7 @@ examples:
     description: "Freight brokerage pipeline — receive shipment requests, match carriers by lane/capacity/rate, negotiate rates, book loads, generate BOL documents, track shipments in transit, handle exceptions (delays, damage, refusal), invoice and settlement, carrier performance scoring"
     features_demonstrated:
       - multi-agent pipeline (intake coordinator, carrier matcher, rate negotiator, document generator, tracker, exception handler, settlement agent)
-      - decision contracts (carrier fit: book/negotiate/reject, exception: reroute/hold/escalate, settlement: approve/dispute/adjust)
+      - "decision contracts (carrier fit: book/negotiate/reject, exception: reroute/hold/escalate, settlement: approve/dispute/adjust)"
       - phase routing (rework on negotiation failure, escalate on exception)
       - command phases (rate calculation scripts, carrier scoring algorithms)
       - output contracts (structured BOL documents, carrier scorecards, settlement reports)
@@ -1424,7 +1424,7 @@ examples:
     description: "Agent onboarding pipeline — receive application, verify licensing and credentials, run background checks, assign training modules, provision system access, generate appointment letters, monitor initial production metrics, compliance certification"
     features_demonstrated:
       - multi-agent pipeline (application screener, license verifier, background checker, training coordinator, provisioner, compliance certifier)
-      - decision contracts (eligibility: approved/conditional/rejected, background: clear/flagged/disqualified, certification: certified/needs-training/failed)
+      - "decision contracts (eligibility: approved/conditional/rejected, background: clear/flagged/disqualified, certification: certified/needs-training/failed)"
       - phase routing (reject on disqualified, rework on conditional approval, loop back for additional training)
       - output contracts (structured onboarding checklists, appointment letters, compliance certificates)
       - manual approval gates (agency principal sign-off on appointments)
@@ -1447,7 +1447,7 @@ examples:
     features_demonstrated:
       - multi-model routing (Haiku for data extraction, Sonnet for content generation, Opus for quality review)
       - multi-agent pipeline (ECO processor, fitment analyst, content generator, translator, QA reviewer, publisher)
-      - decision contracts (change impact: minor-update/major-revision/recall-related, quality: publish/revise/reject)
+      - "decision contracts (change impact: minor-update/major-revision/recall-related, quality: publish/revise/reject)"
       - output contracts (structured fitment matrices, supersession chains, multilingual descriptions)
       - phase routing (rework on revision, escalate on recall-related changes)
       - command phases (fitment validation scripts, catalog diff generation)
@@ -1468,7 +1468,7 @@ examples:
       - scheduled workflows (weekly meal plan generation, daily prep reminders)
       - command phases (nutrition calculation scripts, grocery list consolidation, cost estimation)
       - multi-agent pipeline (nutritionist, recipe curator, grocery optimizer, prep scheduler, reporter)
-      - decision contracts (recipe fit: include/swap/exclude, budget status: on-track/over-budget/adjust)
+      - "decision contracts (recipe fit: include/swap/exclude, budget status: on-track/over-budget/adjust)"
       - output contracts (structured meal plans, grocery lists, prep schedules)
       - phase routing (rework meal plan if over budget or nutrition targets missed)
     tools_needed:
@@ -1488,7 +1488,7 @@ examples:
     features_demonstrated:
       - scheduled workflows (daily flight hour ingestion, weekly fleet health review)
       - command phases (hour/cycle tracking scripts, inspection interval calculations, parts inventory queries)
-      - decision contracts (airworthiness: serviceable/conditional/grounded, inspection scope: routine/extended/unscheduled)
+      - "decision contracts (airworthiness: serviceable/conditional/grounded, inspection scope: routine/extended/unscheduled)"
       - multi-agent pipeline (fleet planner, maintenance controller, parts manager, certifying engineer, reporter)
       - output contracts (structured work orders, airworthiness certificates, fleet health dashboards)
       - manual approval gates (certifying engineer sign-off, quality assurance release)
@@ -1510,7 +1510,7 @@ examples:
       - scheduled workflows (registration deadline enforcement, match scheduling, results monitoring)
       - command phases (bracket generation scripts, ELO/seeding calculations, prize distribution math)
       - multi-agent pipeline (tournament director, bracket manager, match referee, broadcast coordinator, analytics producer)
-      - decision contracts (dispute resolution: upheld/overturned/replay, match status: completed/disputed/forfeited)
+      - "decision contracts (dispute resolution: upheld/overturned/replay, match status: completed/disputed/forfeited)"
       - output contracts (structured brackets, match schedules, prize breakdowns, analytics reports)
       - phase routing (rework bracket on dispute upheld, replay match on technical issues)
       - manual approval gates (head referee sign-off on dispute resolutions)
@@ -1549,7 +1549,7 @@ examples:
     description: "Home buying pipeline — assess financial readiness, mortgage pre-approval preparation, neighborhood research and school ratings, house hunting with criteria matching, offer strategy and negotiation, home inspection coordination, appraisal tracking, title search and insurance, closing document preparation, move-in checklist and utility setup"
     features_demonstrated:
       - multi-agent pipeline (financial advisor, mortgage specialist, neighborhood researcher, buyer agent, inspector coordinator, closing specialist)
-      - decision contracts (offer strategy: aggressive/market/conservative, inspection: proceed/negotiate-repairs/walk-away)
+      - "decision contracts (offer strategy: aggressive/market/conservative, inspection: proceed/negotiate-repairs/walk-away)"
       - phase routing (rework offer on counter, walk away on failed inspection)
       - output contracts (structured financial readiness reports, neighborhood comparison matrices, closing checklists)
       - scheduled workflows (daily new listing alerts, deadline tracking)
@@ -1572,7 +1572,7 @@ examples:
     features_demonstrated:
       - multi-agent pipeline (transcriber, translator, timing specialist, QA reviewer, packager)
       - multi-model routing (Haiku for transcription parsing, Sonnet for translation, Opus for cultural review)
-      - decision contracts (quality: approve/retranslate/escalate, cultural-fit: localized/needs-adaptation/reject)
+      - "decision contracts (quality: approve/retranslate/escalate, cultural-fit: localized/needs-adaptation/reject)"
       - output contracts (structured SRT/VTT files, timing manifests, QA reports)
       - phase routing (rework on cultural misfit, retranslate on quality failure)
       - command phases (subtitle timing scripts, format conversion)
@@ -1593,7 +1593,7 @@ examples:
     features_demonstrated:
       - scheduled workflows (daily medication reminders, weekly weight check prompts, annual vaccination alerts)
       - multi-agent pipeline (health tracker, medication manager, appointment coordinator, trend analyzer, reporter)
-      - decision contracts (health-status: healthy/monitor/urgent-vet-visit, vaccination: current/due-soon/overdue)
+      - "decision contracts (health-status: healthy/monitor/urgent-vet-visit, vaccination: current/due-soon/overdue)"
       - output contracts (structured health records, medication schedules, wellness reports)
       - phase routing (escalate to urgent on abnormal vitals, remind on upcoming vaccinations)
       - command phases (weight trend calculation, medication interaction checks)
@@ -1615,7 +1615,7 @@ examples:
       - command phases (gh api calls, npm audit, git log analysis)
       - scheduled workflows (weekly org audit via cron)
       - multi-agent pipeline (scanner, analyzer, reporter, issue-creator)
-      - decision contracts (repo-health: healthy/warning/critical, action: auto-fix/create-issue/escalate)
+      - "decision contracts (repo-health: healthy/warning/critical, action: auto-fix/create-issue/escalate)"
       - output contracts (structured scorecards, org dashboard)
       - github MCP for repo operations
     tools_needed:
@@ -1634,7 +1634,7 @@ examples:
     features_demonstrated:
       - scheduled workflows (daily morning digest via cron)
       - multi-agent pipeline (message collector, topic clusterer, summarizer, digest writer)
-      - decision contracts (message-importance: key-decision/action-item/fyi/noise, digest-quality: publish/revise)
+      - "decision contracts (message-importance: key-decision/action-item/fyi/noise, digest-quality: publish/revise)"
       - output contracts (structured digest with sections: decisions, action-items, discussions, FYIs)
       - Slack MCP for reading and posting messages
       - sequential-thinking for topic clustering
@@ -1654,7 +1654,7 @@ examples:
     features_demonstrated:
       - scheduled workflows (weekly staleness audit)
       - multi-agent pipeline (page scanner, staleness detector, code cross-referencer, reporter, updater)
-      - decision contracts (page-status: current/stale/critical/archive, action: flag/update/archive/delete)
+      - "decision contracts (page-status: current/stale/critical/archive, action: flag/update/archive/delete)"
       - Notion MCP for reading pages and adding comments
       - git MCP for checking code references
       - filesystem MCP for markdown export
@@ -1674,7 +1674,7 @@ examples:
     features_demonstrated:
       - command phases (git log parsing, commit categorization scripts, version bump calculation)
       - multi-agent pipeline (commit analyzer, changelog writer, migration guide author, release drafter)
-      - decision contracts (release-type: major/minor/patch, breaking-change: yes/no/unclear)
+      - "decision contracts (release-type: major/minor/patch, breaking-change: yes/no/unclear)"
       - output contracts (structured changelogs, release notes, migration guides)
       - phase routing (rework changelog on reviewer rejection, escalate on unclear breaking changes)
       - git MCP for repository operations
@@ -1695,7 +1695,7 @@ examples:
     features_demonstrated:
       - command phases (route parsing scripts, curl validation, OpenAPI spec generation)
       - multi-agent pipeline (code parser, example generator, validator, formatter, publisher)
-      - decision contracts (doc-quality: publish/needs-examples/needs-rewrite, validation: all-pass/some-fail/broken)
+      - "decision contracts (doc-quality: publish/needs-examples/needs-rewrite, validation: all-pass/some-fail/broken)"
       - output contracts (structured OpenAPI specs, markdown docs, example collections)
       - phase routing (rework on validation failure, regenerate examples on schema change)
       - git MCP for codebase scanning
@@ -1717,7 +1717,7 @@ examples:
     features_demonstrated:
       - scheduled workflows (daily inventory scan, weekly impact reports)
       - multi-agent pipeline (inventory tracker, spoilage predictor, donation coordinator, impact reporter)
-      - decision contracts (item-action: sell/markdown/donate/compost, urgency: immediate/soon/monitor)
+      - "decision contracts (item-action: sell/markdown/donate/compost, urgency: immediate/soon/monitor)"
       - output contracts (structured inventory reports, donation manifests, impact dashboards)
       - memory MCP for tracking inventory state and historical trends
       - phase routing (escalate to donation on approaching expiry, compost on past-expiry)
@@ -1740,7 +1740,7 @@ examples:
       - multi-agent pipeline (profiler, room assigner, concierge, service coordinator, survey analyst, loyalty manager)
       - memory MCP for persistent guest knowledge graph across stays
       - scheduled workflows (daily arrivals processing, weekly feedback analysis)
-      - decision contracts (satisfaction: delighted/satisfied/at-risk/escalate, service-priority: immediate/standard/scheduled)
+      - "decision contracts (satisfaction: delighted/satisfied/at-risk/escalate, service-priority: immediate/standard/scheduled)"
       - output contracts (structured guest profiles, service logs, satisfaction reports)
       - phase routing (escalate on negative feedback, trigger recovery on at-risk guests)
       - sequential-thinking for preference inference and personalization
@@ -1761,7 +1761,7 @@ examples:
     features_demonstrated:
       - command phases (npm outdated, gh pr create, test runners)
       - multi-agent pipeline (scanner, risk assessor, updater, test runner, PR author)
-      - decision contracts (update-risk: safe/minor-risk/breaking/skip, test-result: passing/failing/flaky)
+      - "decision contracts (update-risk: safe/minor-risk/breaking/skip, test-result: passing/failing/flaky)"
       - phase routing (rework on test failure, skip on breaking with no migration path)
       - scheduled workflows (weekly dependency scan, daily PR status check)
       - output contracts (structured update plans, compatibility reports, PR summaries)
@@ -1782,7 +1782,7 @@ examples:
     features_demonstrated:
       - playwright MCP (real website crawling, screenshot capture, performance measurement)
       - multi-agent pipeline (crawler, on-page analyst, technical auditor, competitor analyst, report generator)
-      - decision contracts (severity: critical/warning/info/pass, priority: immediate/high/medium/low)
+      - "decision contracts (severity: critical/warning/info/pass, priority: immediate/high/medium/low)"
       - command phases (lighthouse CLI for performance scores, link checker scripts)
       - output contracts (structured audit reports, fix recommendations, competitor comparison matrices)
       - scheduled workflows (weekly crawl, monthly competitive analysis)
@@ -1806,7 +1806,7 @@ examples:
       - multi-agent pipeline (transcriber, topic extractor, summarizer, action tracker, follow-up drafter)
       - linear MCP (create issues for action items, track completion)
       - memory MCP (persistent context across recurring meetings)
-      - decision contracts (urgency: immediate/next-sprint/backlog, completion: done/in-progress/blocked/overdue)
+      - "decision contracts (urgency: immediate/next-sprint/backlog, completion: done/in-progress/blocked/overdue)"
       - output contracts (structured meeting summaries, action item lists, follow-up emails)
       - scheduled workflows (daily standup processing, weekly meeting digest)
       - phase routing (escalate blocked items, flag overdue actions)
@@ -1828,7 +1828,7 @@ examples:
     features_demonstrated:
       - command phases (npx license-checker --json, npm ls --all, gh issue create)
       - multi-agent pipeline (dependency scanner, license classifier, policy checker, report generator, issue creator)
-      - decision contracts (compliance: compliant/warning/violation/unknown, action: approve/replace/request-exception/block-release)
+      - "decision contracts (compliance: compliant/warning/violation/unknown, action: approve/replace/request-exception/block-release)"
       - output contracts (structured compliance matrices, violation reports, audit packages)
       - scheduled workflows (weekly compliance scan, pre-release gate)
       - phase routing (block release on copyleft violation, request exception on unknown)
@@ -1851,7 +1851,7 @@ examples:
       - multi-agent pipeline (data collector, narrative writer, executive summarizer, slide formatter, Q&A preparer)
       - scheduled workflows (monthly board prep cycle, quarterly deep-dive)
       - output contracts (structured slide decks, talking points, Q&A guides, appendix tables)
-      - decision contracts (deck-quality: ready/needs-data/needs-revision, narrative-tone: appropriate/too-optimistic/too-pessimistic)
+      - "decision contracts (deck-quality: ready/needs-data/needs-revision, narrative-tone: appropriate/too-optimistic/too-pessimistic)"
       - phase routing (rework narrative on tone misalignment, collect more data on gaps)
       - sequential-thinking MCP for strategic narrative development
       - memory MCP for tracking historical metrics and prior deck themes
@@ -1871,7 +1871,7 @@ examples:
     description: "Tenant screening pipeline — receive rental application, verify employment and income documentation, check rental history references, assess credit worthiness from provided reports, evaluate application against property-specific criteria (income ratio, pet policy, lease terms), generate risk score with reasoning, produce landlord-ready decision report, draft lease agreement from approved template, manage waitlist for competitive properties"
     features_demonstrated:
       - multi-agent pipeline (application intake, employment verifier, reference checker, risk scorer, report generator, lease drafter)
-      - decision contracts (application-status: approved/conditionally-approved/denied/waitlisted, risk-level: low/moderate/high/disqualifying)
+      - "decision contracts (application-status: approved/conditionally-approved/denied/waitlisted, risk-level: low/moderate/high/disqualifying)"
       - output contracts (structured screening reports, risk assessments, draft leases, denial notices with fair-housing compliance)
       - phase routing (conditional approval triggers additional documentation request, denial triggers fair-housing compliant notice)
       - sequential-thinking MCP for holistic applicant evaluation
@@ -1895,7 +1895,7 @@ examples:
       - scheduled workflows (poll for new PRs every 15 minutes)
       - command phases (gh pr list, gh pr diff, gh pr review)
       - multi-agent pipeline (diff analyzer, security scanner, style checker, review composer)
-      - decision contracts (review-verdict: approve/request-changes/comment-only, severity: critical/warning/info)
+      - "decision contracts (review-verdict: approve/request-changes/comment-only, severity: critical/warning/info)"
       - output contracts (structured review comments, metrics dashboard)
       - github MCP for PR operations
     tools_needed:
@@ -1916,7 +1916,7 @@ examples:
     features_demonstrated:
       - command phases (data parsing scripts, statistical calculations)
       - multi-agent pipeline (data ingester, trend analyzer, forecaster, report generator)
-      - decision contracts (reorder-urgency: immediate/scheduled/monitor, confidence: high/medium/low)
+      - "decision contracts (reorder-urgency: immediate/scheduled/monitor, confidence: high/medium/low)"
       - output contracts (structured forecasts, purchase order recommendations, markdown reports)
       - scheduled workflows (weekly forecast refresh)
       - sequential-thinking for trend analysis
@@ -1936,7 +1936,7 @@ examples:
     features_demonstrated:
       - scheduled workflows (daily content generation, weekly analytics)
       - multi-agent pipeline (strategist, copywriter, visual director, scheduler, analyst)
-      - decision contracts (post-quality: publish/revise/kill, platform-fit: optimized/needs-adjustment/skip)
+      - "decision contracts (post-quality: publish/revise/kill, platform-fit: optimized/needs-adjustment/skip)"
       - output contracts (structured content calendar, platform-specific posts, analytics reports)
       - phase routing (rework posts that fail brand voice check)
       - multi-model routing (creative drafting vs analytical review)
@@ -1957,7 +1957,7 @@ examples:
     features_demonstrated:
       - command phases (curl for RSS parsing, pandoc for format conversion)
       - multi-agent pipeline (curator, writer, editor, analyst)
-      - decision contracts (content-fit: include/summarize/skip, edition-quality: publish/revise/delay)
+      - "decision contracts (content-fit: include/summarize/skip, edition-quality: publish/revise/delay)"
       - output contracts (structured newsletter markdown, content calendar, topic tracker)
       - scheduled workflows (weekly newsletter cycle)
       - fetch MCP for real URL content ingestion
@@ -1977,7 +1977,7 @@ examples:
     features_demonstrated:
       - command phases (npm audit --json, pip-audit --format json, gh api /repos/{owner}/{repo}/security-advisories)
       - multi-agent pipeline (scanner, analyst, remediator, reporter)
-      - decision contracts (severity: critical/high/medium/low, action: patch-now/schedule/accept-risk/investigate)
+      - "decision contracts (severity: critical/high/medium/low, action: patch-now/schedule/accept-risk/investigate)"
       - output contracts (structured CVE reports, remediation plans, security posture dashboards)
       - scheduled workflows (daily scan, weekly report)
       - github MCP for issue creation and advisory lookup
@@ -1996,7 +1996,7 @@ examples:
     description: "Vendor evaluation pipeline — intake vendor list, research each vendor via web fetch for company info and reviews, score against weighted criteria (pricing, features, support, security, compliance), generate comparison matrix, produce executive recommendation with pros/cons, track evaluation history"
     features_demonstrated:
       - multi-agent pipeline (researcher, analyst, compliance checker, report writer)
-      - decision contracts (vendor-verdict: recommend/acceptable/reject/needs-more-info, risk-level: low/medium/high)
+      - "decision contracts (vendor-verdict: recommend/acceptable/reject/needs-more-info, risk-level: low/medium/high)"
       - output contracts (structured comparison matrices, scoring rubrics, executive summaries)
       - fetch MCP for real vendor website and review data
       - sequential-thinking for weighted scoring methodology
@@ -2019,7 +2019,7 @@ examples:
     features_demonstrated:
       - command phases (gh issue list, gh api for incident data, git operations)
       - multi-agent pipeline (incident analyst, procedure writer, reviewer, publisher)
-      - decision contracts (coverage-verdict: complete/gaps-identified/needs-rewrite, severity-mapping: P1/P2/P3/P4)
+      - "decision contracts (coverage-verdict: complete/gaps-identified/needs-rewrite, severity-mapping: P1/P2/P3/P4)"
       - output contracts (structured runbook markdown, coverage reports, gap analysis)
       - scheduled workflows (weekly runbook refresh from new incidents)
       - github MCP for issue and wiki operations
@@ -2040,7 +2040,7 @@ examples:
     features_demonstrated:
       - command phases (file listing, diff analysis, similarity scoring)
       - multi-agent pipeline (submission processor, grader, plagiarism checker, feedback writer, analytics compiler)
-      - decision contracts (grade-verdict: pass/needs-revision/fail, plagiarism-flag: clear/suspicious/confirmed)
+      - "decision contracts (grade-verdict: pass/needs-revision/fail, plagiarism-flag: clear/suspicious/confirmed)"
       - output contracts (structured grade reports, individual feedback, class analytics)
       - phase routing (rework on ambiguous plagiarism results)
       - filesystem MCP for reading submissions and writing reports
@@ -2061,7 +2061,7 @@ examples:
     features_demonstrated:
       - command phases (python3 -c for data profiling, jq for JSON validation)
       - multi-agent pipeline (profiler, anomaly detector, validator, fixer, reporter)
-      - decision contracts (quality-verdict: healthy/degraded/critical, fix-action: auto-fix/manual-review/escalate)
+      - "decision contracts (quality-verdict: healthy/degraded/critical, fix-action: auto-fix/manual-review/escalate)"
       - output contracts (structured quality scorecards, anomaly reports, trend dashboards)
       - scheduled workflows (hourly data quality checks)
       - memory MCP for tracking quality baselines and historical trends
@@ -2082,7 +2082,7 @@ examples:
     features_demonstrated:
       - scheduled workflows (hourly price checks, daily summaries, weekly trend reports)
       - multi-agent pipeline (scraper, price analyzer, trend reporter, alert manager)
-      - decision contracts (price-action: buy-now/wait/price-rising, deal-quality: excellent/good/fair/pass)
+      - "decision contracts (price-action: buy-now/wait/price-rising, deal-quality: excellent/good/fair/pass)"
       - output contracts (structured price history, comparison matrices, alert notifications)
       - playwright MCP for real website scraping
       - memory MCP for persistent price history
@@ -2104,7 +2104,7 @@ examples:
       - scheduled workflows (every-5-min health checks, hourly summaries, weekly SLA reports)
       - command phases (curl for endpoint probing, jq for response validation)
       - multi-agent pipeline (prober, analyzer, incident creator, SLA reporter)
-      - decision contracts (health-status: healthy/degraded/down, incident-action: monitor/alert/page/create-incident)
+      - "decision contracts (health-status: healthy/degraded/down, incident-action: monitor/alert/page/create-incident)"
       - output contracts (structured health reports, SLA dashboards, incident summaries)
       - memory MCP for tracking historical availability and baseline latencies
       - fetch MCP for endpoint probing
@@ -2125,7 +2125,7 @@ examples:
     features_demonstrated:
       - multi-agent pipeline (content analyzer, thread writer, post formatter, scheduler, tracker)
       - multi-model routing (Haiku for extraction, Sonnet for creative adaptation, Opus for strategy)
-      - decision contracts (content-fit: repurpose/skip/needs-editing, platform-quality: publish/revise/drop)
+      - "decision contracts (content-fit: repurpose/skip/needs-editing, platform-quality: publish/revise/drop)"
       - output contracts (structured content variants per platform, publication calendar, performance tracking)
       - fetch MCP for ingesting source content from URLs
       - phase routing (revise on quality check failure, skip on poor platform fit)
@@ -2146,7 +2146,7 @@ examples:
     description: "RFP response automation pipeline — parse incoming RFP requirements document, match company capabilities against each requirement, draft section-by-section responses drawing from a knowledge base of past proposals, review for completeness and compliance, assemble final response document with executive summary, appendices, and pricing framework, track response submission deadlines"
     features_demonstrated:
       - multi-agent pipeline (parser, capability matcher, draft writer, compliance reviewer, assembler)
-      - decision contracts (coverage-verdict: fully-covered/partial-gaps/cannot-respond, compliance-check: compliant/needs-revision/non-compliant)
+      - "decision contracts (coverage-verdict: fully-covered/partial-gaps/cannot-respond, compliance-check: compliant/needs-revision/non-compliant)"
       - output contracts (structured response documents, gap analysis, compliance checklists)
       - phase routing (rework on compliance failure, skip sections with no matching capability)
       - sequential-thinking MCP for requirement-to-capability matching
@@ -2168,7 +2168,7 @@ examples:
     features_demonstrated:
       - scheduled workflows (daily bill monitoring, weekly digest generation)
       - multi-agent pipeline (web scraper, impact analyst, briefing writer, position recommender, digest compiler)
-      - decision contracts (impact-severity: high/medium/low/none, position: support/oppose/monitor/amend)
+      - "decision contracts (impact-severity: high/medium/low/none, position: support/oppose/monitor/amend)"
       - output contracts (structured briefings, impact assessments, weekly digests, position papers)
       - playwright MCP for real web scraping of legislative sites
       - phase routing (escalate on high-impact bills, skip on irrelevant)
@@ -2193,7 +2193,7 @@ examples:
       - command phases (grep/awk for log parsing, jq for structured log analysis, wc for metrics)
       - scheduled workflows (hourly log analysis, daily summaries, weekly trend reports)
       - multi-agent pipeline (log aggregator, pattern detector, anomaly analyzer, incident creator, summary writer)
-      - decision contracts (severity: critical/warning/info, action: create-incident/monitor/ignore)
+      - "decision contracts (severity: critical/warning/info, action: create-incident/monitor/ignore)"
       - output contracts (structured incident reports, daily summaries, trend analysis)
       - github MCP for automatic incident issue creation
       - filesystem MCP for log file access
@@ -2214,7 +2214,7 @@ examples:
     features_demonstrated:
       - multi-agent pipeline (timeline builder, root cause analyst, postmortem writer, action tracker)
       - command phases (git log parsing, gh issue search, jq for structured data)
-      - decision contracts (severity: SEV1/SEV2/SEV3/SEV4, root-cause-confidence: confirmed/probable/suspected)
+      - "decision contracts (severity: SEV1/SEV2/SEV3/SEV4, root-cause-confidence: confirmed/probable/suspected)"
       - output contracts (structured postmortem docs, action item issues, trend reports)
       - github MCP for issue creation and timeline extraction
       - git MCP for commit history correlation
@@ -2237,7 +2237,7 @@ examples:
     features_demonstrated:
       - scheduled workflows (daily scrape, weekly analysis, monthly executive report)
       - multi-agent pipeline (scraper, sentiment analyzer, theme extractor, recommendation writer, executive summarizer)
-      - decision contracts (sentiment: positive/neutral/negative/mixed, priority: critical/high/medium/low)
+      - "decision contracts (sentiment: positive/neutral/negative/mixed, priority: critical/high/medium/low)"
       - output contracts (structured sentiment reports, theme matrices, product recommendations, executive summaries)
       - playwright MCP for real review site scraping
       - memory MCP for historical sentiment tracking
@@ -2262,7 +2262,7 @@ examples:
       - scheduled workflows (daily points calculation, weekly tier updates, monthly program reports)
       - multi-agent pipeline (points calculator, tier manager, offer personalizer, performance reporter)
       - command phases (jq for transaction data processing, data aggregation scripts)
-      - decision contracts (tier-action: upgrade/maintain/downgrade/at-risk, offer-type: bonus-points/discount/exclusive-access/free-shipping)
+      - "decision contracts (tier-action: upgrade/maintain/downgrade/at-risk, offer-type: bonus-points/discount/exclusive-access/free-shipping)"
       - output contracts (tier status reports, personalized offer batches, program performance dashboards)
       - memory MCP for customer profile and preference tracking
       - phase routing (personalized retention outreach for at-risk customers, celebration for upgrades)
@@ -2284,7 +2284,7 @@ examples:
       - scheduled workflows (daily expiry check, weekly health dashboard, monthly full audit)
       - command phases (openssl s_client for cert inspection, dig for DNS validation, curl for endpoint verification)
       - multi-agent pipeline (cert auditor, renewal manager, deployment verifier, dashboard generator)
-      - decision contracts (cert-status: valid/expiring-soon/expired/revoked, renewal-action: auto-renew/manual-review/escalate)
+      - "decision contracts (cert-status: valid/expiring-soon/expired/revoked, renewal-action: auto-renew/manual-review/escalate)"
       - output contracts (certificate inventory, health dashboards, renewal reports, alert notifications)
       - github MCP for tracking renewal issues
       - filesystem MCP for certificate inventory and reports
@@ -2306,7 +2306,7 @@ examples:
       - scheduled workflows (weekly segmentation refresh, monthly persona reports, quarterly strategy review)
       - command phases (jq for data processing, python3 for statistical clustering, csvtool for data manipulation)
       - multi-agent pipeline (data processor, segmentation analyst, persona writer, strategy recommender, report generator)
-      - decision contracts (segment-action: grow/retain/reactivate/sunset, campaign-type: acquisition/upsell/retention/winback)
+      - "decision contracts (segment-action: grow/retain/reactivate/sunset, campaign-type: acquisition/upsell/retention/winback)"
       - output contracts (segment profiles, persona documents, strategy recommendations, migration reports)
       - memory MCP for tracking historical segmentation and segment evolution
       - filesystem MCP for data files and reports
@@ -2328,7 +2328,7 @@ examples:
     features_demonstrated:
       - scheduled workflows (daily shift reminders, weekly matching runs, monthly recognition and reporting)
       - multi-agent pipeline (screener, matcher, onboarding writer, scheduler, recognition generator, report compiler)
-      - decision contracts (screening-result: approve/waitlist/decline, match-quality: excellent/good/partial/no-match)
+      - "decision contracts (screening-result: approve/waitlist/decline, match-quality: excellent/good/partial/no-match)"
       - output contracts (onboarding packets, shift schedules, recognition certificates, program reports)
       - memory MCP for persistent volunteer profiles and preference tracking
       - github MCP for tracking volunteer program issues and improvements
@@ -2351,7 +2351,7 @@ examples:
       - scheduled workflows (weekly progress digest, monthly confidence update, quarterly review)
       - multi-agent pipeline (objective definer, progress tracker, confidence scorer, digest writer, quarterly reviewer)
       - command phases (jq for structured OKR data processing, date calculations for deadline tracking)
-      - decision contracts (confidence-level: on-track/at-risk/off-track/achieved, quarter-verdict: exceeded/met/partially-met/missed)
+      - "decision contracts (confidence-level: on-track/at-risk/off-track/achieved, quarter-verdict: exceeded/met/partially-met/missed)"
       - output contracts (weekly digests, confidence dashboards, quarterly review documents, retrospective reports)
       - memory MCP for persistent OKR history and cross-quarter tracking
       - github MCP for creating issues on at-risk objectives
@@ -2375,7 +2375,7 @@ examples:
       - scheduled workflows (weekly access scan, monthly compliance report, quarterly full audit)
       - command phases (gh api for extracting org members/teams/repo permissions, jq for policy comparison)
       - multi-agent pipeline (permission extractor, policy comparator, violation flagger, remediation writer, compliance reporter)
-      - decision contracts (access-status: compliant/violation/needs-review, severity: critical/high/medium/low)
+      - "decision contracts (access-status: compliant/violation/needs-review, severity: critical/high/medium/low)"
       - output contracts (violation reports, remediation issues, compliance audit trails, access baseline snapshots)
       - github MCP for permission extraction and issue creation
       - memory MCP for access baselines and historical comparison
@@ -2399,7 +2399,7 @@ examples:
     features_demonstrated:
       - scheduled workflows (daily temperature log review, weekly facility audits, monthly compliance summary)
       - multi-agent pipeline (checklist generator, audit executor, finding documenter, corrective action writer, compliance reporter)
-      - decision contracts (finding-severity: critical/major/minor/observation, audit-result: pass/conditional-pass/fail)
+      - "decision contracts (finding-severity: critical/major/minor/observation, audit-result: pass/conditional-pass/fail)"
       - output contracts (audit checklists, finding reports, corrective action plans, compliance certificates, trend dashboards)
       - memory MCP for audit history and facility baseline tracking
       - github MCP for tracking corrective action items as issues
@@ -2424,7 +2424,7 @@ examples:
       - scheduled workflows (daily dispute intake, weekly pattern analysis, monthly reporting)
       - multi-agent pipeline (ticket parser, CDR analyst, eligibility determiner, resolution writer, analytics reporter)
       - command phases (jq for CDR parsing, csvtool for rate plan lookups, date calculations for billing periods)
-      - decision contracts (eligibility: full-credit/partial-credit/no-credit/escalate, dispute-pattern: billing-error/usage-dispute/rate-mismatch/fraud)
+      - "decision contracts (eligibility: full-credit/partial-credit/no-credit/escalate, dispute-pattern: billing-error/usage-dispute/rate-mismatch/fraud)"
       - output contracts (resolution letters, credit memos, analytics dashboards, pattern reports)
       - memory MCP for tracking dispute patterns and repeat offenders
       - filesystem MCP for CDR files and resolution documents
@@ -2447,7 +2447,7 @@ examples:
     features_demonstrated:
       - scheduled workflows (weekly gap analysis refresh, monthly site scoring, quarterly expansion report)
       - multi-agent pipeline (data scraper, gap analyzer, site evaluator, report writer, permit tracker)
-      - decision contracts (site-verdict: approve/conditional/reject/defer, priority: immediate/next-quarter/backlog)
+      - "decision contracts (site-verdict: approve/conditional/reject/defer, priority: immediate/next-quarter/backlog)"
       - output contracts (site assessments, coverage gap reports, cost estimates, expansion roadmaps)
       - playwright MCP for scraping public EV charging station data (AFDC, PlugShare)
       - memory MCP for persistent site evaluation history and coverage baselines
@@ -2473,7 +2473,7 @@ examples:
       - scheduled workflows (hourly metric refresh, daily bid recommendations, weekly optimization reports)
       - multi-agent pipeline (data processor, metric calculator, segment analyst, bid optimizer, report generator)
       - command phases (jq for performance data aggregation, python3 for statistical calculations, csvtool for data processing)
-      - decision contracts (segment-action: increase-bid/decrease-bid/pause/maintain, budget-action: reallocate/maintain/expand/contract)
+      - "decision contracts (segment-action: increase-bid/decrease-bid/pause/maintain, budget-action: reallocate/maintain/expand/contract)"
       - output contracts (bid adjustment sheets, segment scorecards, optimization reports, budget allocation plans)
       - memory MCP for tracking historical performance and optimization effectiveness
       - filesystem MCP for campaign data files and reports
@@ -2497,7 +2497,7 @@ examples:
       - scheduled workflows (daily claim ingestion, weekly pattern analysis, monthly trend reports)
       - multi-agent pipeline (claim parser, failure analyst, pattern detector, root cause clusterer, report generator)
       - command phases (python3 for statistical calculations and MTTF analysis, jq for claim data aggregation, csvtool for data processing)
-      - decision contracts (pattern-severity: critical-recall/field-action/monitor/normal, supplier-action: recovery-claim/quality-audit/warning/clear)
+      - "decision contracts (pattern-severity: critical-recall/field-action/monitor/normal, supplier-action: recovery-claim/quality-audit/warning/clear)"
       - output contracts (failure rate dashboards, pattern alert reports, supplier scorecards, recovery cost estimates, monthly trend summaries)
       - memory MCP for tracking historical failure baselines and supplier performance
       - filesystem MCP for claim data files and reports
@@ -2521,7 +2521,7 @@ examples:
       - scheduled workflows (monthly actuals-vs-budget, quarterly reforecast, annual planning cycle)
       - multi-agent pipeline (request validator, consolidator, variance analyst, executive writer, forecast adjuster)
       - command phases (python3 for financial calculations and variance analysis, jq for budget data consolidation, csvtool for account mapping)
-      - decision contracts (variance-status: within-budget/over-threshold/needs-justification/rejected, forecast-action: maintain/revise-up/revise-down/defer)
+      - "decision contracts (variance-status: within-budget/over-threshold/needs-justification/rejected, forecast-action: maintain/revise-up/revise-down/defer)"
     github_repo: launchapp-dev/ao-example-budget-planner
       - output contracts (consolidated budgets, variance reports, executive summaries, forecast adjustments, multi-year trend analyses)
       - memory MCP for multi-year budget history and cost center baselines
@@ -2547,7 +2547,7 @@ examples:
       - scheduled workflows (weekly outreach batch, monthly engagement scoring, quarterly dashboard reports, annual reunion planning)
       - multi-agent pipeline (data ingester, segmentation engine, engagement scorer, donor identifier, outreach writer, report generator)
       - command phases (python3 for engagement scoring algorithms, jq for alumni data processing, csvtool for export handling)
-      - decision contracts (donor-potential: major-gift/mid-level/annual-fund/steward-only, engagement-status: highly-engaged/active/lapsed/lost)
+      - "decision contracts (donor-potential: major-gift/mid-level/annual-fund/steward-only, engagement-status: highly-engaged/active/lapsed/lost)"
     github_repo: launchapp-dev/ao-example-alumni-engagement
       - output contracts (segment profiles, outreach templates, event invitation lists, engagement dashboards, donor prospect lists)
       - memory MCP for persistent alumni profiles and engagement history
@@ -2573,7 +2573,7 @@ examples:
       - scheduled workflows (daily response ingestion, weekly interim reports, end-of-survey full analysis)
       - multi-agent pipeline (data cleaner, sentiment analyzer, theme extractor, statistician, report writer)
       - command phases (python3 for statistical analysis and NPS calculations, jq for response data processing, csvtool for export handling)
-      - decision contracts (survey-health: sufficient-responses/low-response-rate/needs-extension, finding-significance: statistically-significant/trending/inconclusive)
+      - "decision contracts (survey-health: sufficient-responses/low-response-rate/needs-extension, finding-significance: statistically-significant/trending/inconclusive)"
       - output contracts (executive summaries, theme reports, segment breakdowns, trend comparisons, raw data appendices)
       - memory MCP for historical survey baselines and wave-over-wave tracking
       - filesystem MCP for response data files and reports
@@ -2596,7 +2596,7 @@ examples:
       - scheduled workflows (daily expiry check, weekly rotation batch, monthly compliance audit)
       - multi-agent pipeline (secret auditor, rotation planner, credential rotator, health verifier, compliance reporter)
       - command phases (gh secret set for GitHub secrets, jq for secret inventory management, openssl for certificate operations)
-      - decision contracts (rotation-urgency: immediate/scheduled/deferred/exempt, health-status: verified/degraded/failed/rollback)
+      - "decision contracts (rotation-urgency: immediate/scheduled/deferred/exempt, health-status: verified/degraded/failed/rollback)"
     github_repo: launchapp-dev/ao-example-secret-rotation
       - output contracts (rotation audit logs, expiry forecasts, compliance reports, secret inventory snapshots)
       - github MCP for scanning repos and managing GitHub secrets
@@ -2621,7 +2621,7 @@ examples:
       - scheduled workflows (daily score refresh, weekly health digest, monthly churn forecast)
       - multi-agent pipeline (signal aggregator, health scorer, trend detector, playbook generator, report writer)
       - command phases (python3 for weighted scoring algorithms and trend analysis, jq for signal data aggregation)
-      - decision contracts (health-tier: healthy/attention/at-risk/critical, intervention: proactive-outreach/escalate-to-manager/executive-sponsor/churn-prevention)
+      - "decision contracts (health-tier: healthy/attention/at-risk/critical, intervention: proactive-outreach/escalate-to-manager/executive-sponsor/churn-prevention)"
       - output contracts (account health cards, CSM playbooks, weekly digests, churn risk forecasts, trend dashboards)
       - memory MCP for persistent health score history and intervention effectiveness tracking
       - filesystem MCP for signal data files and reports
@@ -2645,7 +2645,7 @@ examples:
       - scheduled workflows (daily critical date check, monthly rent roll, quarterly portfolio review)
       - multi-agent pipeline (lease parser, date tracker, escalation calculator, negotiation briefer, portfolio reporter)
       - command phases (python3 for rent escalation calculations and NPV analysis, jq for lease data aggregation, date for deadline calculations)
-      - decision contracts (lease-action: renew/renegotiate/terminate/holdover, urgency: immediate/30-day/60-day/90-day)
+      - "decision contracts (lease-action: renew/renegotiate/terminate/holdover, urgency: immediate/30-day/60-day/90-day)"
       - output contracts (critical date alerts, rent rolls, renewal briefs, portfolio summaries, amortization schedules)
       - memory MCP for lease portfolio history and market comparable baselines
       - filesystem MCP for lease data files and reports
@@ -2671,7 +2671,7 @@ examples:
       - scheduled workflows (hourly batch ingestion, daily chain validation, weekly compliance reports)
       - multi-agent pipeline (batch ingester, chain validator, anomaly detector, certificate generator, compliance reporter)
       - command phases (jq for batch record parsing and chain validation, python3 for anomaly detection algorithms, shasum for document integrity verification)
-      - decision contracts (chain-status: complete/gap-detected/anomaly-flagged/recall-triggered, compliance-status: compliant/documentation-gap/violation/exempt)
+      - "decision contracts (chain-status: complete/gap-detected/anomaly-flagged/recall-triggered, compliance-status: compliant/documentation-gap/violation/exempt)"
     github_repo: launchapp-dev/ao-example-provenance-tracker
       - output contracts (provenance certificates, chain-of-custody logs, anomaly alerts, compliance reports, recall-readiness assessments)
       - memory MCP for persistent batch genealogy and supply chain node registry
@@ -2693,7 +2693,7 @@ examples:
     description: "Returns processing pipeline — receive return request, inspect product condition, categorize action (restock/refurbish/dispose), update inventory levels, process refund, analyze return reasons for product improvement, generate return analytics reports"
     features_demonstrated:
       - multi-agent pipeline (intake agent, inspector, categorizer, inventory updater, refund processor, analyst)
-      - decision contracts (disposition: restock/refurbish/dispose/reject, refund: full/partial/store-credit/deny)
+      - "decision contracts (disposition: restock/refurbish/dispose/reject, refund: full/partial/store-credit/deny)"
       - phase routing (rework on inspection ambiguity, escalate on fraud detection)
       - output contracts (structured return assessments, inventory adjustments, analytics reports)
       - command phases (inventory update scripts, refund calculation)
@@ -2715,7 +2715,7 @@ examples:
     features_demonstrated:
       - multi-agent pipeline (topic researcher, source gatherer, fact-checker, narrative architect, scriptwriter)
       - multi-model routing (Haiku for web scraping, Sonnet for fact-checking, Opus for narrative structure)
-      - decision contracts (fact-status: verified/unverified/disputed, narrative-quality: compelling/needs-work/restructure)
+      - "decision contracts (fact-status: verified/unverified/disputed, narrative-quality: compelling/needs-work/restructure)"
     github_repo: launchapp-dev/ao-example-documentary-researcher
       - phase routing (rework on disputed facts, restructure on weak narrative)
       - output contracts (structured source database, fact-check reports, research package)
@@ -2735,7 +2735,7 @@ examples:
     description: "Last-mile delivery optimization — cluster deliveries by geography, optimize route sequences, assign drivers by capacity, track delivery progress, handle failed delivery exceptions, generate driver performance analytics, produce daily operations dashboard"
     features_demonstrated:
       - multi-agent pipeline (cluster analyzer, route optimizer, driver assigner, tracker, exception handler, analyst)
-      - decision contracts (route-quality: optimal/acceptable/reroute, exception-action: reattempt/redirect/return-to-depot)
+      - "decision contracts (route-quality: optimal/acceptable/reroute, exception-action: reattempt/redirect/return-to-depot)"
       - command phases (route optimization scripts, distance calculations, clustering algorithms)
       - scheduled workflows (morning route planning, midday re-optimization, evening analytics)
       - output contracts (structured route plans, driver assignments, delivery manifests)
@@ -2757,7 +2757,7 @@ examples:
     features_demonstrated:
       - scheduled workflows (daily completion checks, weekly reminder escalation, monthly compliance reports)
       - multi-agent pipeline (assignment manager, progress tracker, reminder scheduler, certifier, auditor, reporter)
-      - decision contracts (compliance-status: compliant/at-risk/non-compliant, escalation: remind/manager-notify/block-access)
+      - "decision contracts (compliance-status: compliant/at-risk/non-compliant, escalation: remind/manager-notify/block-access)"
     github_repo: launchapp-dev/ao-example-training-compliance
       - output contracts (structured compliance dashboards, audit trails, regulatory reports)
       - command phases (completion percentage calculations, deadline tracking scripts)
@@ -2777,7 +2777,7 @@ examples:
     features_demonstrated:
       - multi-agent pipeline (usage tracker, royalty calculator, statement generator, payment processor, auditor, reconciler)
       - scheduled workflows (monthly royalty calculation, quarterly audit, annual reconciliation)
-      - decision contracts (payment-status: approved/disputed/hold, audit-finding: clean/discrepancy/escalate)
+      - "decision contracts (payment-status: approved/disputed/hold, audit-finding: clean/discrepancy/escalate)"
     github_repo: launchapp-dev/ao-example-rights-royalties
       - output contracts (structured royalty statements, audit reports, reconciliation summaries)
       - command phases (royalty calculation scripts, usage aggregation, payment processing)
@@ -2797,7 +2797,7 @@ examples:
       - scheduled workflows (quarterly evidence collection, monthly gap analysis, weekly control monitoring)
       - multi-agent pipeline (criteria mapper, evidence collector, gap analyzer, remediation planner, report compiler)
       - command phases (git log parsing for change management evidence, file permission audits, config scanning with jq)
-      - decision contracts (control-status: effective/deficiency/material-weakness, evidence-status: sufficient/gap/stale)
+      - "decision contracts (control-status: effective/deficiency/material-weakness, evidence-status: sufficient/gap/stale)"
       - output contracts (evidence packages, gap analysis reports, auditor summaries, remediation task lists)
       - phase routing (immediate alert on material weakness, remediation loop on deficiency)
       - git MCP for change management evidence
@@ -2821,7 +2821,7 @@ examples:
       - scheduled workflows (daily deadline monitoring, weekly status reports, monthly analytics)
       - multi-agent pipeline (intake classifier, data locator, compiler, erasure planner, compliance tracker, reporter)
       - command phases (jq for data extraction, find for file system data location, shasum for data integrity verification)
-      - decision contracts (request-type: access/erasure/portability/rectification, compliance-status: on-track/at-risk/overdue/completed)
+      - "decision contracts (request-type: access/erasure/portability/rectification, compliance-status: on-track/at-risk/overdue/completed)"
       - output contracts (data inventories, erasure plans, portability exports, audit trails, analytics dashboards)
       - phase routing (escalate on approaching deadline, re-search on incomplete data location)
       - memory MCP for persistent request tracking and data location registry
@@ -2844,7 +2844,7 @@ examples:
       - scheduled workflows (daily risk scoring, weekly dashboard, monthly retention analysis)
       - multi-agent pipeline (data ingester, feature extractor, risk scorer, intervention planner, tracker, reporter)
       - command phases (python3 for statistical scoring and trend analysis, jq for data aggregation, sort/awk for ranking)
-      - decision contracts (risk-tier: healthy/monitor/at-risk/churning, intervention: no-action/nurture-email/csm-outreach/executive-escalation)
+      - "decision contracts (risk-tier: healthy/monitor/at-risk/churning, intervention: no-action/nurture-email/csm-outreach/executive-escalation)"
       - output contracts (risk scorecards, intervention plans, churn dashboards, retention reports)
       - phase routing (immediate CSM alert on churning, nurture sequence on at-risk)
     tools_needed:
@@ -2864,7 +2864,7 @@ examples:
       - scheduled workflows (weekly audits, daily monitoring of critical pages, monthly trend reports)
       - multi-agent pipeline (crawler, auditor, categorizer, remediator, reporter, tracker)
       - command phases (npx @axe-core/cli for WCAG testing, node for result processing)
-      - decision contracts (compliance-status: compliant/minor-issues/major-violations/critical-failures, page-status: pass/conditional-pass/fail)
+      - "decision contracts (compliance-status: compliant/minor-issues/major-violations/critical-failures, page-status: pass/conditional-pass/fail)"
       - output contracts (audit reports with screenshots, remediation guides, compliance dashboards, trend analyses)
       - phase routing (immediate alert on critical failures, remediation loop on major violations)
       - Playwright MCP for browser-based page crawling and screenshots
@@ -2886,7 +2886,7 @@ examples:
       - scheduled workflows (weekly topic clustering, daily stale article detection, monthly effectiveness analysis)
       - multi-agent pipeline (ticket aggregator, topic clusterer, gap analyzer, article drafter, reviewer, publisher, effectiveness tracker)
       - command phases (python3 for text clustering and similarity scoring, jq for ticket data extraction, wc for article metrics)
-      - decision contracts (article-quality: publish/revise/reject, staleness: current/needs-update/obsolete)
+      - "decision contracts (article-quality: publish/revise/reject, staleness: current/needs-update/obsolete)"
       - output contracts (structured KB articles in markdown, topic cluster reports, gap analysis, effectiveness dashboards)
       - phase routing (revise loop on quality review failure, immediate publish on critical gap detection)
     tools_needed:
@@ -2907,7 +2907,7 @@ examples:
       - scheduled workflows (monthly data collection, weekly anomaly detection, quarterly reporting)
       - multi-agent pipeline (data collector, calculator, benchmarker, opportunity finder, planner, reporter)
       - command phases (python3 for emissions calculations and trend analysis, jq for data aggregation, awk for CSV processing)
-      - decision contracts (emissions-status: on-track/behind-target/critical-overshoot, reduction-priority: quick-win/medium-effort/strategic-investment)
+      - "decision contracts (emissions-status: on-track/behind-target/critical-overshoot, reduction-priority: quick-win/medium-effort/strategic-investment)"
       - output contracts (emissions inventories, reduction plans, quarterly reports, annual disclosures)
       - phase routing (immediate alert on critical overshoot, re-collection on data quality issues)
     tools_needed:
@@ -2927,7 +2927,7 @@ examples:
       - scheduled workflows (quarterly production cycle, weekly progress checks)
       - multi-agent pipeline (researcher, outliner, writer, reviewer, compiler, promoter)
       - command phases (pandoc for document formatting, python3 for citation management, wc for length validation)
-      - decision contracts (section-quality: approved/needs-revision/rewrite, research-sufficiency: adequate/needs-more-sources/insufficient)
+      - "decision contracts (section-quality: approved/needs-revision/rewrite, research-sufficiency: adequate/needs-more-sources/insufficient)"
       - output contracts (structured whitepapers in markdown, promotional packages, production reports)
       - phase routing (revision loop on quality review failure, additional research on insufficient sources)
       - fetch MCP for web research
@@ -2950,7 +2950,7 @@ examples:
       - scheduled workflows (daily batch coding, weekly accuracy audits, monthly reports)
       - multi-agent pipeline (note parser, code mapper, validator, reviewer, reporter, auditor)
       - command phases (python3 for text pattern matching and code lookup, jq for JSON clinical data extraction, grep for ICD code matching)
-      - decision contracts (code-confidence: high/medium/low/manual-review, documentation-status: sufficient/needs-addendum/query-provider)
+      - "decision contracts (code-confidence: high/medium/low/manual-review, documentation-status: sufficient/needs-addendum/query-provider)"
       - output contracts (coding worksheets, audit reports, accuracy dashboards, documentation queries)
       - phase routing (immediate escalation on low-confidence codes, re-parse on extraction failures)
     tools_needed:
@@ -2971,7 +2971,7 @@ examples:
       - scheduled workflows (campaign cadence scheduling, daily metric collection, weekly performance reviews)
       - multi-agent pipeline (strategist, segmenter, copywriter, compliance checker, template builder, analyst)
       - command phases (python3 for engagement scoring and timezone optimization, jq for metrics aggregation, node for HTML template generation)
-      - decision contracts (content-quality: send-ready/needs-revision/restart, compliance-status: compliant/fix-required/blocked)
+      - "decision contracts (content-quality: send-ready/needs-revision/restart, compliance-status: compliant/fix-required/blocked)"
       - output contracts (email copy variants, HTML templates, send schedules, A/B test configs, performance reports)
       - phase routing (revision loop on compliance failures, restart on poor A/B test results)
     tools_needed:
@@ -2991,7 +2991,7 @@ examples:
       - scheduled workflows (daily load planning, shift-based manifest generation, weekly capacity analysis)
       - multi-agent pipeline (booking processor, DG classifier, load planner, manifest generator, compliance checker, tracker)
       - command phases (python3 for weight/balance calculations and capacity optimization, jq for booking data extraction, awk for manifest formatting)
-      - decision contracts (cargo-status: cleared/hold-for-review/rejected, load-balance: within-limits/marginal/exceeds-limits)
+      - "decision contracts (cargo-status: cleared/hold-for-review/rejected, load-balance: within-limits/marginal/exceeds-limits)"
       - output contracts (load plans, cargo manifests, DG declarations, operations dashboards, capacity reports)
       - phase routing (immediate rejection on exceeds-limits, manual review on marginal loads, DG re-classification on missing data)
     tools_needed:
@@ -3010,7 +3010,7 @@ examples:
       - scheduled workflows (daily new-string detection, weekly completeness audits, release readiness checks)
       - multi-agent pipeline (scanner, extractor, key-generator, validator, reporter, release-gater)
       - command phases (grep for string extraction, python3 for key generation and locale comparison, jq for JSON locale file processing, wc for coverage metrics)
-      - decision contracts (locale-status: complete/partial/blocking, release-readiness: go/no-go/conditional)
+      - "decision contracts (locale-status: complete/partial/blocking, release-readiness: go/no-go/conditional)"
       - output contracts (locale coverage reports, missing key lists, translation dashboards, release readiness assessments)
       - phase routing (block release on critical missing translations, re-scan on code changes detected)
     tools_needed:
@@ -3033,7 +3033,7 @@ examples:
       - scheduled workflows (daily drift monitoring, monthly rebalancing, quarterly attribution reports)
       - multi-agent pipeline (position ingester, drift calculator, trade generator, compliance checker, executor, reporter)
       - command phases (python3 for portfolio math and optimization, jq for position data extraction, sort for trade prioritization)
-      - decision contracts (drift-status: within-band/approaching-threshold/rebalance-required, compliance: approved/restricted/blocked)
+      - "decision contracts (drift-status: within-band/approaching-threshold/rebalance-required, compliance: approved/restricted/blocked)"
       - output contracts (trade blotters, drift reports, performance attribution, compliance certificates)
       - phase routing (immediate rebalance on threshold breach, compliance review loop on restricted trades)
     tools_needed:
@@ -3053,7 +3053,7 @@ examples:
       - scheduled workflows (quarterly policy reviews, annual audits, continuous product change monitoring)
       - multi-agent pipeline (product scanner, data flow mapper, classifier, policy drafter, legal reviewer, versioner)
       - command phases (grep/find for codebase scanning, python3 for data flow analysis, diff for version comparison, jq for configuration parsing)
-      - decision contracts (policy-status: current/needs-update/non-compliant, data-sensitivity: low/medium/high/critical)
+      - "decision contracts (policy-status: current/needs-update/non-compliant, data-sensitivity: low/medium/high/critical)"
       - output contracts (privacy policies per jurisdiction, data processing records, cookie consent configs, change impact assessments)
       - phase routing (immediate update on critical data flow changes, legal review loop on policy drafts)
     tools_needed:
@@ -3074,7 +3074,7 @@ examples:
       - scheduled workflows (shift-based batch monitoring, daily production summaries, weekly quality reviews)
       - multi-agent pipeline (batch initiator, instruction generator, quality checker, deviation handler, yield calculator, QP reviewer, reporter)
       - command phases (python3 for yield calculations and specification checking, jq for batch data extraction, date for timestamp management)
-      - decision contracts (batch-status: in-spec/minor-deviation/major-deviation/reject, release-decision: approved/conditional/hold/reject)
+      - "decision contracts (batch-status: in-spec/minor-deviation/major-deviation/reject, release-decision: approved/conditional/hold/reject)"
       - output contracts (batch records, certificates of analysis, deviation reports, yield reconciliation, quality dashboards)
       - phase routing (immediate hold on major deviation, re-test on conditional release, investigation loop on reject)
     tools_needed:
@@ -3094,7 +3094,7 @@ examples:
       - scheduled workflows (daily response ingestion, weekly follow-up audits, monthly executive reports)
       - multi-agent pipeline (ingester, segmenter, theme analyzer, action generator, tracker, reporter)
       - command phases (python3 for NPS calculation and trend analysis, jq for response data extraction, sort/awk for segmentation)
-      - decision contracts (response-action: thank/engage/rescue/escalate, rescue-status: responding/improving/churning)
+      - "decision contracts (response-action: thank/engage/rescue/escalate, rescue-status: responding/improving/churning)"
       - output contracts (segment reports, follow-up action lists, trend dashboards, executive summaries, rescue effectiveness reports)
       - phase routing (immediate escalation on critical detractor, rescue sequence on low scores, thank-and-refer on promoters)
     tools_needed:
@@ -3113,7 +3113,7 @@ examples:
       - scheduled workflows (hourly price monitoring during sales, daily market scans, weekly revenue reviews)
       - multi-agent pipeline (demand monitor, competitor scraper, elasticity modeler, price optimizer, simulator, reporter)
       - command phases (python3 for elasticity calculations and revenue simulation, jq for sales data extraction, sort for inventory ranking)
-      - decision contracts (price-action: hold/increase/decrease/flash-sale, demand-signal: cold/warming/hot/sold-out)
+      - "decision contracts (price-action: hold/increase/decrease/flash-sale, demand-signal: cold/warming/hot/sold-out)"
       - output contracts (price adjustment recommendations, revenue projections, competitor comparison reports, sell-through dashboards)
       - phase routing (immediate flash-sale trigger on stale inventory, hold on already-hot sections, manual review on large price swings)
     tools_needed:
@@ -3133,13 +3133,13 @@ examples:
       - scheduled workflows (daily shift-start assignments, mid-shift rebalancing, weekly productivity analysis)
       - multi-agent pipeline (PMS reader, priority scorer, route optimizer, staff assigner, progress tracker, inspector, reporter)
       - command phases (python3 for route optimization and workload balancing, jq for PMS data extraction, awk for assignment formatting)
-      - decision contracts (room-priority: standard/priority/rush/vip-immediate, inspection-result: pass/touch-up/reclean)
+      - "decision contracts (room-priority: standard/priority/rush/vip-immediate, inspection-result: pass/touch-up/reclean)"
       - output contracts (room assignments, cleaning sequences, progress dashboards, productivity reports, maintenance tickets)
       - phase routing (immediate reclean on failed VIP inspection, reassignment on staff no-show, engineering escalation on maintenance findings)
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
     notes: "Pipeline #260 from source material. Housekeeping is 50% of hotel labor cost — optimization directly impacts profitability. Uses python3 for routing and filesystem — all tools exist. Shows AO optimizing physical operations scheduling."
 
   # --- Insurance (new — conductor sweep 37, 2026-03-31) ---
@@ -3151,7 +3151,7 @@ examples:
       - scheduled workflows (monthly reserve updates, quarterly loss development, annual rate filing cycle)
       - multi-agent pipeline (data cleaner, triangle builder, development estimator, distribution fitter, rate calculator, filing preparer, reviewer)
       - command phases (python3 for actuarial calculations and statistical distributions, jq for claims data extraction, bc for precision arithmetic)
-      - decision contracts (reserve-adequacy: adequate/marginal/deficient, rate-indication: decrease/adequate/moderate-increase/significant-increase)
+      - "decision contracts (reserve-adequacy: adequate/marginal/deficient, rate-indication: decrease/adequate/moderate-increase/significant-increase)"
       - output contracts (loss triangles, development exhibits, rate indications, filing memoranda, reserve reports)
       - phase routing (immediate escalation on deficient reserves, additional data request on low credibility, regulatory review loop on filing drafts)
     tools_needed:
@@ -3170,7 +3170,7 @@ examples:
       - scheduled workflows (daily utilization monitoring, weekly trend analysis, monthly capacity reviews, quarterly planning cycles)
       - multi-agent pipeline (metrics collector, trend analyzer, threshold monitor, scenario modeler, recommender, procurement planner, validator)
       - command phases (python3 for regression analysis and forecasting, jq for metrics extraction, awk for utilization calculations)
-      - decision contracts (capacity-status: healthy/approaching-threshold/critical/exhausted, upgrade-urgency: planned/expedite/emergency)
+      - "decision contracts (capacity-status: healthy/approaching-threshold/critical/exhausted, upgrade-urgency: planned/expedite/emergency)"
       - output contracts (utilization reports, capacity forecasts, upgrade recommendations, procurement timelines, validation reports)
       - phase routing (emergency procurement on exhausted capacity, additional monitoring on approaching-threshold, forecast recalibration on prediction miss)
     tools_needed:
@@ -3189,14 +3189,15 @@ examples:
       - scheduled workflows (weekly literature scans, monthly KOL reviews, quarterly publication planning, annual congress calendar)
       - multi-agent pipeline (literature searcher, evidence classifier, synthesizer, KOL tracker, engagement planner, briefing generator, reporter)
       - command phases (python3 for citation analysis and evidence grading, jq for PubMed data parsing, grep for keyword extraction)
-      - decision contracts (evidence-level: high/moderate/low/insufficient, publication-relevance: critical/important/background/not-relevant)
+      - "decision contracts (evidence-level: high/moderate/low/insufficient, publication-relevance: critical/important/background/not-relevant)"
       - output contracts (evidence summaries, KOL profiles, advisory board briefs, publication plans, congress reports)
       - phase routing (immediate alert on critical evidence, expanded search on insufficient data, KOL outreach trigger on engagement opportunities)
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
       - fetch MCP (PubMed API access)
-    status: queued
+    status: generated
+    generated_at: 2026-03-31
     notes: "Pipeline #287 from source material. Medical affairs is a $20B+ function across pharma — literature monitoring is legally required for pharmacovigilance compliance. Uses fetch MCP for PubMed, python3 for analysis — all tools exist. Shows AO automating scientific literature intelligence."
 
   # --- Construction (new — conductor sweep 38, 2026-03-31) ---
@@ -3208,13 +3209,14 @@ examples:
       - scheduled workflows (weekly price database updates, per-project estimation runs, monthly benchmark analysis)
       - multi-agent pipeline (scope reader, quantity estimator, material pricer, labor estimator, equipment planner, bid assembler, benchmark analyst)
       - command phases (python3 for quantity calculations and cost aggregation, jq for scope data extraction, awk for bid formatting, sort for line-item ranking)
-      - decision contracts (estimate-confidence: high/moderate/low/insufficient-data, bid-readiness: ready/needs-review/incomplete)
+      - "decision contracts (estimate-confidence: high/moderate/low/insufficient-data, bid-readiness: ready/needs-review/incomplete)"
       - output contracts (quantity takeoffs, cost breakdowns, bid packages, variance reports, benchmark comparisons)
       - phase routing (re-estimate on low confidence, manual review on large variance from benchmark, additional scope clarification on insufficient data)
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: 2026-03-31
     notes: "Pipeline #150 from source material. Construction estimating is a $1.4T US industry — accurate bids win contracts. Uses python3 for math, jq for data, awk for formatting — all tools exist. Shows AO automating complex multi-trade cost estimation."
 
   # --- Agriculture (new — conductor sweep 38, 2026-03-31) ---
@@ -3226,7 +3228,7 @@ examples:
       - scheduled workflows (hourly sensor ingestion, daily health analysis, weekly herd reports, monthly trend reviews)
       - multi-agent pipeline (sensor ingester, anomaly detector, alert classifier, diagnostician, treatment recommender, recovery tracker, herd reporter)
       - command phases (python3 for statistical anomaly detection and health index calculations, jq for sensor data extraction, awk for alert formatting)
-      - decision contracts (animal-status: healthy/watch/concern/critical, outbreak-risk: isolated/cluster/potential-outbreak)
+      - "decision contracts (animal-status: healthy/watch/concern/critical, outbreak-risk: isolated/cluster/potential-outbreak)"
       - output contracts (health alerts, diagnostic reports, treatment plans, recovery logs, herd dashboards, outbreak assessments)
       - phase routing (immediate vet alert on critical status, expanded monitoring on cluster detection, quarantine recommendation on potential outbreak)
     tools_needed:
@@ -3244,7 +3246,7 @@ examples:
       - scheduled workflows (pre-departure planning 2h before flights, shift-based ops monitoring, daily crew scheduling, weekly fuel analysis)
       - multi-agent pipeline (crew scheduler, weather analyst, fuel planner, route optimizer, weight-balance calculator, dispatcher, debrief analyst)
       - command phases (python3 for fuel calculations and weight-balance math, jq for schedule data extraction, curl for weather API, awk for dispatch document formatting)
-      - decision contracts (dispatch-decision: go/conditional/no-go, weather-status: vfr/mvfr/ifr/lifr, crew-legality: legal/approaching-limit/illegal)
+      - "decision contracts (dispatch-decision: go/conditional/no-go, weather-status: vfr/mvfr/ifr/lifr, crew-legality: legal/approaching-limit/illegal)"
       - output contracts (flight plans, dispatch releases, crew duty reports, fuel calculations, weight-balance sheets, debrief reports)
       - phase routing (immediate no-go on crew legality violation, alternate planning on weather conditional, re-route on enroute weather deviation)
     tools_needed:
@@ -3263,7 +3265,7 @@ examples:
       - scheduled workflows (daily call sheet generation, weekly production calendars, monthly utilization analysis)
       - multi-agent pipeline (lineup reader, runtime calculator, crew assigner, equipment planner, rundown generator, conflict resolver, reporter)
       - command phases (python3 for runtime calculations and conflict detection, jq for lineup data extraction, awk for rundown formatting, sort for priority scheduling)
-      - decision contracts (schedule-status: confirmed/tentative/conflict, crew-availability: available/partial/unavailable)
+      - "decision contracts (schedule-status: confirmed/tentative/conflict, crew-availability: available/partial/unavailable)"
       - output contracts (rundowns, call sheets, equipment lists, crew schedules, production calendars, utilization reports)
       - phase routing (immediate conflict resolution on double-booking, crew substitution on unavailability, schedule adjustment on runtime overrun)
     tools_needed:
@@ -3281,7 +3283,7 @@ examples:
       - scheduled workflows (daily new business, weekly endorsements, monthly renewal campaigns, quarterly portfolio reviews)
       - multi-agent pipeline (intake processor, risk scorer, quote generator, policy issuer, endorsement handler, renewal manager, cancellation processor, portfolio analyst)
       - command phases (python3 for premium calculations and pro-rata math, jq for application data extraction, diff for policy version comparison, date for expiration scheduling)
-      - decision contracts (underwriting-decision: approve/refer/decline, renewal-action: auto-renew/re-quote/non-renew)
+      - "decision contracts (underwriting-decision: approve/refer/decline, renewal-action: auto-renew/re-quote/non-renew)"
       - output contracts (quotes, policy documents, endorsements, renewal offers, cancellation notices, portfolio dashboards, audit trails)
       - phase routing (referral to senior underwriter on marginal risk, re-quote on loss ratio breach, retention outreach on non-renewal candidates)
     tools_needed:
@@ -3299,7 +3301,7 @@ examples:
       - scheduled workflows (daily utilization scans, weekly savings reports, monthly executive reviews, quarterly optimization planning)
       - multi-agent pipeline (resource scanner, utilization analyzer, orphan detector, RI/SP optimizer, right-sizer, savings calculator, action planner, reporter)
       - command phases (python3 for utilization analysis and savings calculations, jq for cloud data extraction, awk for resource inventory formatting, sort for savings ranking)
-      - decision contracts (resource-action: keep/right-size/terminate/reserve, savings-confidence: high/medium/low/needs-investigation)
+      - "decision contracts (resource-action: keep/right-size/terminate/reserve, savings-confidence: high/medium/low/needs-investigation)"
       - output contracts (utilization reports, orphan resource lists, right-sizing recommendations, savings projections, executive dashboards, action plans)
       - phase routing (immediate termination recommendation for confirmed orphans, investigation loop on low-confidence savings, escalation on high-spend anomalies)
     tools_needed:
@@ -3317,7 +3319,7 @@ examples:
       - scheduled workflows (continuous telemetry ingestion, daily fleet health, weekly maintenance forecasts, monthly driver behavior reports)
       - multi-agent pipeline (telemetry ingester, DTC decoder, anomaly detector, urgency classifier, recall checker, maintenance scheduler, behavior scorer, reporter)
       - command phases (python3 for statistical anomaly detection and wear modeling, jq for telemetry data extraction, awk for DTC lookup formatting, sort for urgency ranking)
-      - decision contracts (vehicle-health: healthy/monitor/service-soon/service-now, failure-risk: low/moderate/high/imminent)
+      - "decision contracts (vehicle-health: healthy/monitor/service-soon/service-now, failure-risk: low/moderate/high/imminent)"
       - output contracts (vehicle health reports, maintenance schedules, driver scorecards, fleet dashboards, recall match alerts, warranty status reports)
       - phase routing (immediate dealer alert on imminent failure, expanded monitoring on moderate risk, recall notification on matching TSB, warranty claim initiation on covered issues)
     tools_needed:
@@ -3335,7 +3337,7 @@ examples:
       - scheduled workflows (daily request processing, hourly deadline monitoring, weekly performance reports, monthly audit reviews)
       - multi-agent pipeline (intake validator, medical necessity checker, evidence extractor, coverage verifier, cost estimator, adjudicator, letter generator, appeals handler, reporter)
       - command phases (python3 for deadline calculations and turnaround time tracking, jq for request data extraction, date for regulatory deadline management, awk for report formatting)
-      - decision contracts (authorization-decision: approved/denied/pend-for-review/request-more-info, urgency: standard/urgent/retrospective)
+      - "decision contracts (authorization-decision: approved/denied/pend-for-review/request-more-info, urgency: standard/urgent/retrospective)"
       - output contracts (authorization decisions, approval/denial letters, cost estimates, appeals responses, turnaround dashboards, audit reports)
       - phase routing (auto-approve on clear medical necessity match, medical director referral on complex cases, additional documentation request on insufficient evidence, expedited processing on urgent requests)
     tools_needed:
@@ -3353,7 +3355,7 @@ examples:
       - scheduled workflows (daily order ingestion, shift-start schedule generation, weekly capacity planning, monthly demand review)
       - multi-agent pipeline (demand reader, BOM exploder, material checker, sequence optimizer, capacity balancer, work order generator, maintenance scheduler, variance tracker, reporter)
       - command phases (python3 for optimization calculations and BOM explosion, jq for order data extraction, awk for work order formatting, sort for priority sequencing)
-      - decision contracts (schedule-feasibility: on-track/tight/infeasible, material-status: available/partial/shortage, rush-impact: absorbable/delays-existing/requires-overtime)
+      - "decision contracts (schedule-feasibility: on-track/tight/infeasible, material-status: available/partial/shortage, rush-impact: absorbable/delays-existing/requires-overtime)"
       - output contracts (production schedules, work orders, material requirement lists, shift handoff reports, capacity dashboards, variance alerts)
       - phase routing (overtime authorization request on infeasible schedule, procurement escalation on material shortage, customer notification on delays-existing rush impact)
     tools_needed:
@@ -3371,7 +3373,7 @@ examples:
       - scheduled workflows (daily supplier feed ingestion, weekly listing quality audits, monthly keyword refresh, quarterly competitive analysis)
       - multi-agent pipeline (feed ingester, attribute enricher, title generator, description writer, spec standardizer, keyword optimizer, compliance checker, quality scorer, reporter)
       - command phases (python3 for listing quality scoring and keyword analysis, jq for feed data extraction, wc for character limit validation, awk for bulk listing formatting)
-      - decision contracts (listing-quality: publish-ready/needs-enrichment/blocked/restricted-category, seo-score: optimized/needs-improvement/poor)
+      - "decision contracts (listing-quality: publish-ready/needs-enrichment/blocked/restricted-category, seo-score: optimized/needs-improvement/poor)"
       - output contracts (enriched product listings, SEO reports, compliance audit results, quality scorecards, keyword recommendations, marketplace-formatted feeds)
       - phase routing (enrichment loop on needs-enrichment listings, manual review on restricted categories, keyword refresh on poor SEO scores)
     tools_needed:
@@ -3389,7 +3391,7 @@ examples:
       - scheduled workflows (daily backup verification, weekly RTO analysis, monthly compliance reports, quarterly disaster recovery drills)
       - multi-agent pipeline (scheduler, backup executor, restore operator, integrity validator, RTO measurer, compliance packager, alerter, reporter)
       - command phases (python3 for checksum comparison and RTO calculations, jq for backup metadata extraction, sha256sum for file integrity, diff for data comparison, date for SLA deadline tracking)
-      - decision contracts (backup-health: verified/degraded/failed, rto-status: within-sla/approaching-limit/exceeds-sla)
+      - "decision contracts (backup-health: verified/degraded/failed, rto-status: within-sla/approaching-limit/exceeds-sla)"
       - output contracts (backup verification reports, integrity check results, RTO measurements, compliance evidence packages, trend dashboards, alert notifications)
       - phase routing (immediate re-backup on failed integrity, escalation on exceeds-sla RTO, additional validation on degraded status, compliance flag on missing evidence)
     tools_needed:
@@ -3407,7 +3409,7 @@ examples:
       - scheduled workflows (daily scouting ingestion, weekly pest pressure analysis, bi-weekly treatment effectiveness reviews, seasonal summary reports)
       - multi-agent pipeline (scout data ingester, pest identifier, threshold evaluator, weather analyzer, treatment selector, prescription generator, effectiveness tracker, reporter)
       - command phases (python3 for threshold calculations and application rate math, jq for scouting data extraction, curl for weather API, awk for prescription formatting, bc for buffer zone geometry)
-      - decision contracts (pest-action: monitor/cultural-control/biological-control/chemical-treatment/emergency-spray, outbreak-risk: low/moderate/high/critical)
+      - "decision contracts (pest-action: monitor/cultural-control/biological-control/chemical-treatment/emergency-spray, outbreak-risk: low/moderate/high/critical)"
       - output contracts (scouting summaries, pest pressure maps, treatment prescriptions, application logs, effectiveness reports, seasonal management summaries)
       - phase routing (emergency spray authorization on critical outbreak, expanded monitoring on moderate risk, biological control deployment on appropriate pest-stage match, re-scout on unclear identification)
     tools_needed:
@@ -3426,7 +3428,7 @@ examples:
       - scheduled workflows (continuous disruption monitoring, hourly rebooking progress updates, daily disruption summary, weekly operational reliability reports)
       - multi-agent pipeline (disruption detector, passenger identifier, priority scorer, inventory searcher, option ranker, auto-rebooker, complex case handler, compensation calculator, notifier, reporter)
       - command phases (python3 for priority scoring and compensation calculations, jq for passenger manifest extraction, sort for rebooking priority ordering, date for connection time calculations, wc for affected passenger counting)
-      - decision contracts (rebooking-action: auto-rebook/agent-review/voluntary-rebook/refund-eligible, compensation-status: eu261-eligible/dot-eligible/goodwill/none)
+      - "decision contracts (rebooking-action: auto-rebook/agent-review/voluntary-rebook/refund-eligible, compensation-status: eu261-eligible/dot-eligible/goodwill/none)"
       - output contracts (rebooking confirmations, passenger notifications, compensation offers, agent review queues, disruption dashboards, reliability reports)
       - phase routing (immediate auto-rebook on clear best option, agent escalation on complex cases, voluntary rebook offer on oversold alternatives, refund processing on no suitable options)
     tools_needed:
@@ -3444,7 +3446,7 @@ examples:
       - scheduled workflows (per-policy analysis runs, weekly regulatory calendar scans, monthly legislative tracking, quarterly impact review updates)
       - multi-agent pipeline (policy parser, population modeler, economic analyst, fiscal estimator, equity assessor, implementation planner, conflict checker, brief writer, FAQ generator, reporter)
       - command phases (python3 for economic modeling and fiscal calculations, jq for policy data extraction, wc for document metrics, diff for policy version comparison, pandoc for report formatting)
-      - decision contracts (impact-magnitude: minimal/moderate/significant/transformative, implementation-feasibility: straightforward/complex/requires-legislation/infeasible)
+      - "decision contracts (impact-magnitude: minimal/moderate/significant/transformative, implementation-feasibility: straightforward/complex/requires-legislation/infeasible)"
       - output contracts (impact assessments, fiscal notes, equity analyses, stakeholder summaries, implementation roadmaps, policy briefs, FAQ documents)
       - phase routing (expanded analysis on significant impact, legal review on requires-legislation, stakeholder consultation loop on equity concerns, implementation pilot recommendation on complex feasibility)
     tools_needed:
@@ -3460,7 +3462,7 @@ examples:
     description: "Automated load testing pipeline — generate test scenarios from API specs, execute k6/artillery runs, analyze latency/throughput results, produce regression reports, alert on degradations"
     features_demonstrated:
       - command phases (k6/artillery CLI execution)
-      - decision contracts (perf-status: pass/regression/critical-degradation, action: ship/investigate/block-deploy)
+      - "decision contracts (perf-status: pass/regression/critical-degradation, action: ship/investigate/block-deploy)"
       - scheduled workflows (nightly perf runs)
       - multi-phase pipeline with rework loops
     tools_needed:
@@ -3476,7 +3478,7 @@ examples:
     description: "Children's book production pipeline — age-appropriate story writing, illustration direction, image generation via Replicate, page layout, reading level verification, PDF assembly"
     features_demonstrated:
       - multi-model routing (creative Opus for story, Sonnet for layout, Haiku for reading level check)
-      - decision contracts (content-safety: approved/needs-revision/rejected, reading-level: on-target/too-simple/too-complex)
+      - "decision contracts (content-safety: approved/needs-revision/rejected, reading-level: on-target/too-simple/too-complex)"
       - command phases (pandoc for PDF assembly, imagemagick for image processing)
       - rework loops on content review
     tools_needed:
@@ -3493,7 +3495,7 @@ examples:
     features_demonstrated:
       - scheduled workflows (daily competitor monitoring)
       - playwright MCP (real website scraping)
-      - decision contracts (alert-priority: critical/notable/routine, market-impact: high/medium/low)
+      - "decision contracts (alert-priority: critical/notable/routine, market-impact: high/medium/low)"
       - multi-agent pipeline (scraper, analyst, writer)
     tools_needed:
       - playwright MCP
@@ -3510,7 +3512,7 @@ examples:
     features_demonstrated:
       - scheduled workflows (daily weather-based scheduling)
       - command phases (python3 for calculations, curl for weather API)
-      - decision contracts (irrigation-action: irrigate/defer/reduce, water-status: optimal/stressed/waterlogged)
+      - "decision contracts (irrigation-action: irrigate/defer/reduce, water-status: optimal/stressed/waterlogged)"
       - fetch MCP (weather API data)
     tools_needed:
       - filesystem MCP
@@ -3524,7 +3526,7 @@ examples:
     description: "Venue/facility maintenance pipeline — inspection scheduling, work order generation, priority triage, contractor dispatch, compliance documentation, preventive maintenance calendar"
     features_demonstrated:
       - scheduled workflows (weekly inspection cycles)
-      - decision contracts (urgency: emergency/high/routine/deferrable, compliance-status: compliant/due-soon/overdue/violation)
+      - "decision contracts (urgency: emergency/high/routine/deferrable, compliance-status: compliant/due-soon/overdue/violation)"
       - multi-agent pipeline (inspector, dispatcher, compliance-officer)
       - filesystem reports and audit trails
     tools_needed:
@@ -3542,7 +3544,7 @@ examples:
       - scheduled workflows (seasonal catalog generation, weekly pricing updates, daily availability checks, monthly performance reviews)
       - multi-agent pipeline (destination researcher, itinerary designer, pricing calculator, copywriter, logistics validator, comparison builder, catalog producer, OTA formatter, reporter)
       - command phases (python3 for pricing calculations and distance optimization, jq for destination data extraction, pandoc for PDF generation, awk for data feed formatting, sort for attraction ranking)
-      - decision contracts (itinerary-feasibility: feasible/tight-timing/infeasible, pricing-competitiveness: underpriced/competitive/premium/overpriced)
+      - "decision contracts (itinerary-feasibility: feasible/tight-timing/infeasible, pricing-competitiveness: underpriced/competitive/premium/overpriced)"
       - output contracts (tour itineraries, pricing sheets, marketing descriptions, day-by-day schedules, comparison tables, seasonal catalogs, OTA data feeds)
       - phase routing (itinerary redesign on infeasible logistics, pricing adjustment on overpriced assessment, attraction substitution on availability conflicts, premium upsell creation on high-demand periods)
     tools_needed:
