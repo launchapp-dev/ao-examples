@@ -2621,7 +2621,7 @@ examples:
       - filesystem MCP
       - github MCP (gh-cli-mcp)
       - sequential-thinking MCP
-    status: queued
+    status: generated
     notes: "Pipeline #88 from source material. Customer health scoring is the foundation of customer success. Uses python3 for real weighted scoring — all tools exist. Shows AO for SaaS retention and growth."
 
   # --- Real Estate (new — conductor sweep 32, 2026-03-31) ---
@@ -2644,7 +2644,9 @@ examples:
       - filesystem MCP
       - github MCP (gh-cli-mcp)
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: 2026-03-31
+    test_status: passed
     notes: "Pipeline #145 from source material. Commercial lease management involves complex date tracking and financial calculations. Uses python3 for real NPV and escalation math — all tools exist. Shows AO for commercial real estate operations."
 
   # --- Supply Chain (new — conductor sweep 32, 2026-03-31) ---
