@@ -1367,8 +1367,11 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
       - playwright MCP (scrape accreditation body requirements)
-    status: queued
-    notes: "Pipeline #125 from source material. Accreditation is a high-stakes compliance process every institution faces. Shows AO managing document-heavy regulatory workflows with gap analysis and remediation loops."
+    status: generated
+    generated_at: 2026-03-30
+    test_status: passed
+    github_repo: launchapp-dev/ao-example-accreditation-tracker
+    notes: "Pipeline #125 from source material. Accreditation is a high-stakes compliance process every institution faces. Shows AO managing document-heavy regulatory workflows with gap analysis and remediation loops. 6 agents, 3 workflows, Playwright MCP for web scraping, manual provost approval gate, escalation path for critical gaps."
 
   # --- Environmental / Sustainability (new — conductor sweep 15, 2026-03-31) ---
   - id: water-quality-monitor
@@ -1451,10 +1454,105 @@ examples:
     status: queued
     notes: "Pipeline #220 from source material. Parts catalog management demonstrates multi-model routing (cost-optimize by using Haiku for extraction, Sonnet for generation). Shows AO managing engineering change workflows in manufacturing."
 
+  # --- Consumer / Food (new — conductor sweep 16, 2026-03-31) ---
+  - id: meal-planner
+    name: "Meal Planning & Grocery Pipeline"
+    vertical: consumer-food
+    description: "Meal planning pipeline — collect dietary preferences and restrictions, select recipes matching nutritional targets, generate weekly meal calendar, compile consolidated grocery list with quantities, estimate cost per meal, produce prep schedule with batch cooking optimization, track pantry inventory"
+    features_demonstrated:
+      - scheduled workflows (weekly meal plan generation, daily prep reminders)
+      - command phases (nutrition calculation scripts, grocery list consolidation, cost estimation)
+      - multi-agent pipeline (nutritionist, recipe curator, grocery optimizer, prep scheduler, reporter)
+      - decision contracts (recipe fit: include/swap/exclude, budget status: on-track/over-budget/adjust)
+      - output contracts (structured meal plans, grocery lists, prep schedules)
+      - phase routing (rework meal plan if over budget or nutrition targets missed)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - web search (recipe databases, grocery pricing)
+    status: queued
+    notes: "Pipeline #299 from source material. Meal planning is universally relatable and shows AO managing everyday consumer workflows with optimization and scheduling."
+
+  # --- Aviation (new — conductor sweep 16, 2026-03-31) ---
+  - id: aircraft-maintenance
+    name: "Aircraft Maintenance Tracking Pipeline"
+    vertical: aviation
+    description: "Aircraft maintenance pipeline — track flight hours and cycles per airframe, schedule inspections per regulatory intervals (A/B/C/D checks), generate work orders with task cards, manage parts procurement and rotable inventory, execute maintenance with sign-offs, certify airworthiness, update aircraft records, produce fleet health reports"
+    features_demonstrated:
+      - scheduled workflows (daily flight hour ingestion, weekly fleet health review)
+      - command phases (hour/cycle tracking scripts, inspection interval calculations, parts inventory queries)
+      - decision contracts (airworthiness: serviceable/conditional/grounded, inspection scope: routine/extended/unscheduled)
+      - multi-agent pipeline (fleet planner, maintenance controller, parts manager, certifying engineer, reporter)
+      - output contracts (structured work orders, airworthiness certificates, fleet health dashboards)
+      - manual approval gates (certifying engineer sign-off, quality assurance release)
+      - phase routing (ground aircraft on safety findings, extend inspection on conditional items)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #232 from source material. Aviation maintenance is safety-critical with strict regulatory intervals. Shows AO managing life-safety workflows with certification gates."
+
+  # --- Gaming / Esports (new — conductor sweep 16, 2026-03-31) ---
+  - id: esports-tournament
+    name: "Esports Tournament Operations Pipeline"
+    vertical: esports
+    description: "Esports tournament pipeline — open registration and verify eligibility, seed brackets based on rankings, schedule matches across time zones, monitor live match results, update brackets in real-time, handle disputes and protests, calculate prize distribution, generate broadcast schedule, produce post-tournament analytics and highlight reels"
+    features_demonstrated:
+      - scheduled workflows (registration deadline enforcement, match scheduling, results monitoring)
+      - command phases (bracket generation scripts, ELO/seeding calculations, prize distribution math)
+      - multi-agent pipeline (tournament director, bracket manager, match referee, broadcast coordinator, analytics producer)
+      - decision contracts (dispute resolution: upheld/overturned/replay, match status: completed/disputed/forfeited)
+      - output contracts (structured brackets, match schedules, prize breakdowns, analytics reports)
+      - phase routing (rework bracket on dispute upheld, replay match on technical issues)
+      - manual approval gates (head referee sign-off on dispute resolutions)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #246 from source material. Esports is a rapidly growing vertical. Tournament ops shows AO managing real-time competitive events with bracket logic and dispute resolution."
+
+  # --- Media / Music (new — conductor sweep 16, 2026-03-31) ---
+  - id: music-producer
+    name: "Music Album Production Pipeline"
+    vertical: media-music
+    description: "Music album production pipeline — develop album concept and mood board, write lyrics per track, compose melody and chord progressions, arrange instrumentation, produce reference mixes, master tracks, design album artwork, write liner notes, prepare distribution metadata, generate marketing and release plan"
+    features_demonstrated:
+      - multi-agent pipeline (creative director, lyricist, composer, producer, mastering engineer, art director, marketing strategist)
+      - phase routing (rework tracks on creative review failure)
+      - output contracts (structured track listings, production notes, distribution metadata, marketing plans)
+      - sequential-thinking MCP for creative concept development
+      - multi-model routing (creative ideation vs technical production vs marketing analysis)
+      - manual approval gates (artist approval at concept, lyrics, and final master stages)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #21 from source material. Music production is a deeply creative multi-phase pipeline. Shows AO orchestrating artistic workflows with multiple creative review gates."
+
+  # --- Consumer / Real Estate (new — conductor sweep 16, 2026-03-31) ---
+  - id: home-buyer
+    name: "Home Buying Pipeline"
+    vertical: consumer-realestate
+    description: "Home buying pipeline — assess financial readiness, mortgage pre-approval preparation, neighborhood research and school ratings, house hunting with criteria matching, offer strategy and negotiation, home inspection coordination, appraisal tracking, title search and insurance, closing document preparation, move-in checklist and utility setup"
+    features_demonstrated:
+      - multi-agent pipeline (financial advisor, mortgage specialist, neighborhood researcher, buyer agent, inspector coordinator, closing specialist)
+      - decision contracts (offer strategy: aggressive/market/conservative, inspection: proceed/negotiate-repairs/walk-away)
+      - phase routing (rework offer on counter, walk away on failed inspection)
+      - output contracts (structured financial readiness reports, neighborhood comparison matrices, closing checklists)
+      - scheduled workflows (daily new listing alerts, deadline tracking)
+      - manual approval gates (buyer approval at offer, inspection response, closing)
+      - web search MCP (listing research, neighborhood data, school ratings)
+    tools_needed:
+      - web search
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #297 from source material. Home buying is the largest financial transaction most consumers make. Shows AO managing a high-stakes personal journey with multiple professional stakeholders."
+
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
 #
-# Verticals to explore next: music production, vendor evaluation,
-# connected car, esports tournament, programmatic ads,
-# medical coding, meal planning, pet care
+# Verticals to explore next: documentary research, children's book,
+# connected car, programmatic ads, medical coding, pet care,
+# loyalty program, cargo operations, broadcast production
