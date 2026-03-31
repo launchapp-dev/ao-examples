@@ -152,8 +152,9 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [batch-record](examples/batch-record/) | Pharma Manufacturing | Batch initiation → QC checks → deviation handling → yield calculation → QP release | generated | [repo](https://github.com/launchapp-dev/ao-example-batch-record) |
 | [ticket-pricing](examples/ticket-pricing/) | Sports & Entertainment | Demand forecasting → competitor scraping → elasticity modeling → price optimization → revenue simulation | generated | [repo](https://github.com/launchapp-dev/ao-example-ticket-pricing) |
 | [actuarial-modeler](examples/actuarial-modeler/) | Insurance | Risk modeling → loss triangles → reserve estimation → rate indications → filing memoranda | generated | [repo](https://github.com/launchapp-dev/ao-example-actuarial-modeler) |
+| [capacity-planner](examples/capacity-planner/) | Telecom Infrastructure | Utilization monitoring → trend analysis → threshold alerts → upgrade planning → cost modeling | generated | [repo](https://github.com/launchapp-dev/ao-example-capacity-planner) |
 
-*121 examples across 30+ verticals — 113 generated, 8 queued. More added autonomously by the conductor every 30 minutes.*
+*122 examples across 30+ verticals — 114 generated, 8 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 
