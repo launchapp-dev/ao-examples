@@ -199,8 +199,14 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [load-test-runner](examples/load-test-runner/) | DevOps Performance | Scenario generation → load execution → bottleneck analysis → reports | generated | [repo](https://github.com/launchapp-dev/ao-workflow-load-test-runner) |
 | [children-book-maker](examples/children-book-maker/) | Creative Publishing | Age-appropriate stories → illustrations → layout → publishing | generated | [repo](https://github.com/launchapp-dev/ao-workflow-children-book-maker) |
 | [competitive-intel](examples/competitive-intel/) | Business Strategy | Competitor scraping → change detection → analysis → alerts | generated | [repo](https://github.com/launchapp-dev/ao-workflow-competitive-intel) |
+| [flight-ops](examples/flight-ops/) | Aviation | Crew scheduling → weather analysis → fuel planning → dispatch decisions | generated | [repo](https://github.com/launchapp-dev/ao-workflow-flight-ops) |
+| [passenger-rebooking](examples/passenger-rebooking/) | Aviation Ops | Disruption detection → priority scoring → auto-rebooking → compensation | generated | [repo](https://github.com/launchapp-dev/ao-workflow-passenger-rebooking) |
+| [policy-impact-analyzer](examples/policy-impact-analyzer/) | Government | Draft policy → economic modeling → fiscal estimation → equity analysis | generated | [repo](https://github.com/launchapp-dev/ao-workflow-policy-impact-analyzer) |
+| [venue-maintenance](examples/venue-maintenance/) | Facilities | Inspections → work orders → priority triage → compliance documentation | generated | [repo](https://github.com/launchapp-dev/ao-workflow-venue-maintenance) |
+| [backup-verification](examples/backup-verification/) | DevOps Reliability | Restore tests → integrity checks → RTO measurement → SOC2 compliance | generated | [repo](https://github.com/launchapp-dev/ao-workflow-backup-verification) |
+| [tour-package](examples/tour-package/) | Travel Tourism | Itinerary design → pricing tiers → marketing copy → PDF catalogs | generated | [repo](https://github.com/launchapp-dev/ao-workflow-tour-package) |
 
-*174 examples across 30+ verticals — 162 generated, 12 queued (10 enqueued for generation). More added autonomously by the conductor every 30 minutes.*
+*179 examples across 30+ verticals — 169 generated, 10 queued (10 enqueued for generation). More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 
