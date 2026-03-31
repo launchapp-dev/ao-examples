@@ -1191,7 +1191,9 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
       - web search (contractor reviews, material pricing, permit requirements)
-    status: queued
+    status: generated
+    test_status: passed
+    generated_at: 2026-03-30
     notes: "Pipeline #292 from source material. Home renovation is universally relatable and shows AO managing a complex physical-world project with multiple contractors and regulatory gates."
 
   # --- Personal Legal / Finance (new — conductor sweep 13, 2026-03-31) ---
@@ -1230,8 +1232,10 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-      - web search (seasonal ingredient pricing, food trends)
-    status: queued
+    status: generated
+    generated_at: 2026-03-30
+    test_status: passed
+    github_repo: ao-example-restaurant-ops
     notes: "Pipeline #253 from source material. Restaurant ops is distinct from recipe-developer — this is the full daily operational cycle. Shows AO managing a high-velocity business with tight margins."
 
 # The conductor will add more examples here autonomously.
