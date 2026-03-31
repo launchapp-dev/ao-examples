@@ -1378,16 +1378,20 @@ examples:
     features_demonstrated:
       - scheduled workflows (hourly sensor ingestion, daily trend analysis, monthly regulatory reports)
       - command phases (data ingestion scripts, threshold calculation, trend analysis)
-      - decision contracts (compliance: compliant/warning/violation/critical, action: monitor/investigate/remediate/report)
+      - decision contracts (compliance: compliant/warning/violation/critical, action: investigate/remediate/report/escalate)
       - multi-agent pipeline (data ingestor, trend analyst, compliance checker, remediation planner, regulatory filer)
       - output contracts (structured compliance reports, trend dashboards, regulatory filings)
       - phase routing (escalate on violation, auto-close compliant with documentation)
+      - rework loops (corrective action tracking retries until resolved, max 14 attempts)
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-      - fetch MCP (EPA data APIs)
-    status: queued
-    notes: "Pipeline #178 from source material. Environmental monitoring is a cron-driven pipeline with real regulatory consequences. Showcases AO's scheduled workflow and escalation capabilities."
+    status: generated
+    started_at: 2026-03-30
+    generated_at: 2026-03-30
+    test_status: passed
+    github_repo: launchapp-dev/ao-example-water-quality-monitor
+    notes: "Pipeline #178 from source material. Environmental monitoring is a cron-driven pipeline with real regulatory consequences. Showcases AO's scheduled workflow and escalation capabilities. 5 agents, 4 workflows, 14 phases, 3 command scripts. EPA thresholds stored locally (no fetch MCP needed — @modelcontextprotocol/server-fetch does not exist on npm)."
 
   # --- Logistics / Freight (new — conductor sweep 15, 2026-03-31) ---
   - id: freight-broker
