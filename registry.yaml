@@ -994,7 +994,9 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: "2026-03-30"
+    github_repo: launchapp-dev/ao-example-loan-originator
     notes: "Pipeline #131 from source material. Banking/lending is a massive vertical. Loan origination is the canonical multi-stakeholder underwriting pipeline."
 
   # --- Consumer / Education (new — conductor sweep 11, 2026-03-30) ---
@@ -1033,7 +1035,10 @@ examples:
       - web search
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    generated_at: "2026-03-30"
+    test_status: passed
+    github_repo: "https://github.com/launchapp-dev/ao-example-brand-monitor"
     notes: "Pipeline #273 from source material. Marketing intelligence is distinct from ad-campaign. Real-time monitoring + crisis detection is a compelling AO pattern."
 
   # --- Logistics / Warehouse (new — conductor sweep 11, 2026-03-30) ---

@@ -81,9 +81,10 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [tax-preparer](examples/tax-preparer/) | Finance | Document gathering → deductions → tax calculation → filing | generated | [repo](https://github.com/launchapp-dev/ao-example-tax-preparer) |
 | [compliance-auditor](examples/compliance-auditor/) | Customs & Trade | HS classification → duty rates → customs declarations → filing | generated | [repo](https://github.com/launchapp-dev/ao-example-compliance-auditor) |
 | [donor-prospector](examples/donor-prospector/) | Nonprofit | Prospect research → scoring → outreach → stewardship → analytics | generated | [repo](https://github.com/launchapp-dev/ao-example-donor-prospector) |
+| [brand-monitor](examples/brand-monitor/) | Marketing Intelligence | Social monitoring → sentiment analysis → crisis detection → response drafts → brand health reports | generated | [repo](https://github.com/launchapp-dev/ao-example-brand-monitor) |
 | permit-tracker | Government | Requirements → application → submission → corrections → inspections | queued | |
 
-*46 examples across 42 verticals — 45 generated, 1 queued. More added autonomously by the conductor every 30 minutes.*
+*47 examples across 43 verticals — 46 generated, 1 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 
