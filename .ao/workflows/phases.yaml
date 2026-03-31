@@ -652,6 +652,63 @@ phases:
       writes_files: true
       requires_commit: true
 
+  qa-example:
+    mode: agent
+    agent: tester
+    directive: |
+      MANDATORY QA — this example cannot ship without passing.
+
+      The task title IS the example id.
+      The example is at: examples/{{subject_title}}/
+
+      ## QA Checklist (ALL must pass)
+
+      ### 1. Config Compiles
+      ```bash
+      ao workflow config --project-root examples/{{subject_title}}/ 2>&1
+      ```
+      If this fails, verdict: fail. Nothing else matters.
+
+      ### 2. All Tools Are Real
+      Check every MCP server, CLI tool, and npm package referenced in the example:
+      - MCP servers in mcp-servers.yaml: verify the npm package exists (`npm view <package> 2>&1`)
+      - Command phases: verify the CLI tool exists (`which <tool> 2>&1` or `npx <package> --help 2>&1`)
+      - API integrations: verify the npm SDK exists (`npm view <package> 2>&1`)
+      NO FAKE TOOLS. NO THEORETICAL INTEGRATIONS. Every tool must be installable today.
+
+      ### 3. Workflows Discoverable
+      ```bash
+      ao workflow list --project-root examples/{{subject_title}}/ 2>&1
+      ```
+
+      ### 4. Environment Variables Documented
+      If the example needs API keys, .env.example must exist with all required vars listed.
+      README must document what keys are needed and how to get them.
+
+      ### 5. Quick Start Works
+      The README quick start instructions must be accurate and complete.
+      Someone should be able to follow them and get the workflow running.
+
+      ### 6. Run Diagnostics
+      ```bash
+      ao doctor --project-root examples/{{subject_title}}/ 2>&1
+      ```
+
+      ## Verdicts
+      - **advance** — all checks pass, this is ready to ship
+      - **rework** — specific fixable issues (list them)
+      - **fail** — config doesn't compile or uses fake/nonexistent tools
+
+      Project root: /Users/samishukri/ao-examples
+    decision_contract:
+      required_fields:
+        - verdict
+        - reasoning
+    capabilities:
+      mutates_state: true
+      writes_files: true
+      requires_commit: true
+
   fix-example:
     mode: agent
     agent: master-builder

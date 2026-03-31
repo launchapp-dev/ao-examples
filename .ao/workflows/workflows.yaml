@@ -29,13 +29,13 @@ workflows:
             advance:
               target: test-example
           max_rework_attempts: 3
-      - test-example:
+      - qa-example:
           on_verdict:
             rework:
               target: build-example
             fail:
               target: build-example
-          max_rework_attempts: 2
+          max_rework_attempts: 3
       - init-example-repo
       - update-registry
     post_success:

@@ -19,21 +19,42 @@ agents:
 
       ## Your Responsibilities
 
-      ### 1. IDEATE — Come Up With New Example Ideas
-      - Browse trending AI tools, APIs, and integrations (Replicate, Hugging Face, ElevenLabs, Stripe, Linear, etc.)
-      - Think about underserved verticals (education, real estate, supply chain, HR, gaming, etc.)
-      - Look for interesting tool combinations (e.g., "Replicate image gen + ElevenLabs voice = video producer")
-      - Check what's trending in the AI/automation space and create examples for it
-      - Each idea should showcase AO as a GENERAL-PURPOSE production system, not just a coding tool
-      - Aim for variety: different verticals, different MCP servers, different AO features
+      ### 1. DISCOVER EXISTING TOOLS FIRST (most important)
+      Before ideating, FIND what already exists and works today:
 
-      ### 2. RESEARCH — Find Real Tools and Integrations
-      - When you come up with an idea, research what tools/APIs/MCP servers it would need
-      - Check if MCP servers exist for the tools (npm search, GitHub)
-      - Identify real API endpoints, real npm packages, real CLI tools
-      - Don't invent fake integrations — only propose examples that could actually run
-      - Look at what MCP servers are available: filesystem, playwright, github, context7, sequential-thinking, etc.
-      - Search for new MCP servers that would enable new use cases
+      **MCP Servers (npm):**
+      - Search npm for: @modelcontextprotocol/*, mcp-server-*, *-mcp
+      - Known working servers: filesystem, playwright, github (gh-cli-mcp), context7, sequential-thinking
+      - Search GitHub for: "mcp server" repos with real stars and recent commits
+      - Check https://github.com/modelcontextprotocol for official servers
+      - Check https://github.com/punkpeye/awesome-mcp-servers for community list
+
+      **CLI Tools (already installed or installable):**
+      - gh (GitHub CLI), git, curl, jq, ffmpeg, imagemagick, pandoc
+      - npm/npx packages that work as CLI tools
+      - Python scripts via python3 -c or pip-installed CLIs
+      - Homebrew packages available on macOS
+
+      **Real APIs with existing npm/Python packages:**
+      - Replicate (npm: replicate), Hugging Face (npm: @huggingface/inference)
+      - ElevenLabs, OpenAI, Anthropic — all have npm SDKs
+      - Stripe, Twilio, SendGrid, Resend — all have npm SDKs
+      - Slack, Discord, Telegram — all have npm SDKs or CLI tools
+      - Financial data: Yahoo Finance (npm: yahoo-finance2), Alpha Vantage
+      - Web scraping: Playwright (MCP exists!), Puppeteer, Cheerio
+
+      **The rule: USE what exists. Only BUILD when nothing exists.**
+      Workflows should use command phases with real CLIs, or MCP servers with real npm packages.
+      A workflow that runs `npx replicate run stability-ai/sdxl` is better than a theoretical one.
+
+      ### 2. IDEATE — Real-World Workflows That Work Today
+      - Every workflow MUST use real, existing tools (MCP servers, CLIs, npm packages)
+      - Think about what someone could `ao daemon start` and get real output from TODAY
+      - Prioritize workflows where all the tools already exist on npm or as CLIs
+      - Example: "social media monitor" using Playwright MCP to scrape + filesystem to save + cron schedule
+      - Example: "repo health checker" using gh CLI + git commands + filesystem reports
+      - Example: "PDF report generator" using pandoc CLI + filesystem MCP
+      - NOT: "theoretical workflow that would need an API that doesn't have a package"
 
       ### 3. QUEUE — Add Ideas to Registry and Create Tasks
       - Add new ideas to registry.yaml with status: "queued"
@@ -49,29 +70,14 @@ agents:
       - Update registry.yaml with current status and notes
       - Keep the README.md examples table up to date with generated examples
 
-      ### 5. DISCOVER & BUILD MCP SERVERS
-      - Search npm and GitHub for existing MCP servers that could enable new example types
-      - Search for: @modelcontextprotocol/*, community MCP servers, tool-specific MCP wrappers
-      - When you find a useful MCP server, document it in research/mcp-registry.md
-      - When NO MCP server exists for a critical tool/API, commission one to be BUILT:
-        - Queue a task with workflow-ref: build-mcp
-        - Title: "mcp-<tool-name>" (e.g. "mcp-replicate", "mcp-elevenlabs")
-        - Description: what API it wraps, what tools it should expose, example usage
-      - Custom MCP servers go in: mcp-servers/<name>/ as standalone npm packages
-      - Each custom MCP server should:
-        - Be a TypeScript MCP server using @modelcontextprotocol/sdk
-        - Wrap a real API (Replicate, ElevenLabs, financial data, etc.)
-        - Expose tools that AO agents can call
-        - Have a README with setup instructions
-        - Be publishable to npm under @launchapp-dev scope
-      - Think like StoryForge: what tools would make a vertical example actually WORK?
-        - Image generation (Replicate, DALL-E, Midjourney API)
-        - Voice synthesis (ElevenLabs, Play.ht)
-        - Music generation (Suno, Udio)
-        - Video generation (Runway, Luma)
-        - Data sources (Yahoo Finance, PubMed, legal databases)
-        - Productivity (Linear, Notion, Slack, email)
-      - The goal: if an example needs a tool that doesn't have an MCP server, BUILD IT
+      ### 5. MAINTAIN MCP REGISTRY
+      - Keep research/mcp-registry.md up to date with all discovered MCP servers
+      - For each MCP server, document: npm package, what tools it exposes, how to configure
+      - When you discover a new working MCP server, add it immediately
+      - Only commission a custom MCP build (workflow-ref: build-mcp) as a LAST RESORT
+        when no existing package, CLI, or MCP server can do the job
+      - Prefer command phases with real CLIs over custom MCP servers
+        (e.g., `npx replicate run ...` as a command phase is simpler than building an MCP server)
 
       ## Decision Framework
       On each 30-minute run:
@@ -152,13 +158,21 @@ agents:
          - Sample input data
          - Output directory structure
 
-      ### MCP Servers Available
-      - `filesystem` — read/write local files
-      - `github` — GitHub operations (issues, PRs, repos)
-      - `playwright` — browser automation
-      - `context7` — documentation lookup
-      - `sequential-thinking` — structured reasoning
-      - Custom MCP servers can be defined per-example
+      ### Use Real, Existing Tools
+      Every workflow must use tools that ALREADY EXIST. Priority order:
+      1. **Existing MCP servers on npm** — search for @modelcontextprotocol/*, *-mcp, mcp-server-*
+      2. **CLI tools via command phases** — gh, git, curl, jq, ffmpeg, pandoc, npx <package>
+      3. **npm packages via npx** — replicate, @huggingface/inference, etc.
+      4. **Python scripts** — python3 -c "..." for quick data processing
+      5. **Custom MCP servers** — LAST RESORT, only when nothing else works
+
+      ### Known Working MCP Servers
+      - `@modelcontextprotocol/server-filesystem` — read/write local files
+      - `gh-cli-mcp` — GitHub operations via gh CLI
+      - `@playwright/mcp` — browser automation (scraping, testing, screenshots)
+      - `@upstash/context7-mcp` — documentation lookup
+      - `@modelcontextprotocol/server-sequential-thinking` — structured reasoning
+      - Search npm for more — new ones are published regularly
 
       ## Quality Rules
       - Every workflow MUST be runnable with `ao daemon start`
