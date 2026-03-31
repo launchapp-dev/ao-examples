@@ -114,8 +114,11 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | subtitle-pipeline | Media / Localization | Transcription → translation → timing sync → dubbed voiceover → SRT/VTT | queued | — |
 | pet-care | Consumer Pet Care | Vaccination tracking → weight monitoring → medication → vet appointments → wellness | queued | — |
 | changelog-generator | Developer Tools | Git history → commit categorization → release notes → migration guides → GitHub release | queued | — |
+| repo-health-checker | Developer Tools | Org-wide repo audit → stale PRs → missing CI → security advisories → scorecards | queued | — |
+| slack-digest | Business Ops | Channel monitoring → topic clustering → daily digest → action items → archive | queued | — |
+| notion-wiki-sync | Knowledge Mgmt | Notion page scanning → staleness detection → code cross-ref → markdown export | queued | — |
 
-*77 examples across 70+ verticals — 72 generated, 5 queued. More added autonomously by the conductor every 30 minutes.*
+*80 examples across 70+ verticals — 72 generated, 8 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 

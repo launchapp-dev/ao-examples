@@ -1600,6 +1600,60 @@ examples:
     notes: "Pet care is a massive consumer vertical (~$150B market). Shows AO managing health-tracking workflows for non-human subjects with scheduling and trend analysis."
 
   # --- Developer Tools (new — conductor sweep 17, 2026-03-31) ---
+  - id: repo-health-checker
+    name: "Repository Health Checker"
+    vertical: developer-tools
+    description: "Org-wide repo health audit pipeline — scan all repos in a GitHub org, check for stale PRs (>7 days), missing CI configs, outdated dependencies, open security advisories, missing README/LICENSE, low test coverage signals, generate per-repo scorecards, create issues for critical findings, produce org-wide health dashboard markdown"
+    features_demonstrated:
+      - command phases (gh api calls, npm audit, git log analysis)
+      - scheduled workflows (weekly org audit via cron)
+      - multi-agent pipeline (scanner, analyzer, reporter, issue-creator)
+      - decision contracts (repo-health: healthy/warning/critical, action: auto-fix/create-issue/escalate)
+      - output contracts (structured scorecards, org dashboard)
+      - github MCP for repo operations
+    tools_needed:
+      - github MCP (gh-cli-mcp)
+      - git MCP
+      - filesystem MCP
+    status: queued
+    notes: "Pipeline #11 from source material (code quality remediation). Every engineering org needs visibility into repo hygiene across their fleet. Shows AO as an org-wide DevOps audit tool using gh CLI and git MCP."
+
+  - id: slack-digest
+    name: "Slack Channel Daily Digest"
+    vertical: business-ops
+    description: "Daily Slack digest pipeline — connect to configured Slack channels, read messages from the past 24 hours, identify key discussions/decisions/action-items, cluster by topic, summarize each thread, extract mentions and deadlines, generate daily digest markdown, post summary back to a digest channel, archive to filesystem"
+    features_demonstrated:
+      - scheduled workflows (daily morning digest via cron)
+      - multi-agent pipeline (message collector, topic clusterer, summarizer, digest writer)
+      - decision contracts (message-importance: key-decision/action-item/fyi/noise, digest-quality: publish/revise)
+      - output contracts (structured digest with sections: decisions, action-items, discussions, FYIs)
+      - Slack MCP for reading and posting messages
+      - sequential-thinking for topic clustering
+    tools_needed:
+      - slack MCP (@modelcontextprotocol/server-slack)
+      - sequential-thinking MCP
+      - filesystem MCP
+    status: queued
+    notes: "Pipeline #90 from source material (voice of customer/team communication). Every team drowns in Slack. Shows AO as a daily information distiller using the official Slack MCP server."
+
+  - id: notion-wiki-sync
+    name: "Notion Wiki Sync & Staleness Monitor"
+    vertical: knowledge-management
+    description: "Knowledge base maintenance pipeline — connect to Notion workspace, read all pages in a designated wiki database, detect stale pages (not updated in 30+ days), check for broken links, identify outdated code references by cross-referencing with actual codebase, flag pages that reference removed features, generate staleness report, create Notion comments on stale pages with suggested updates, export critical docs to git-tracked markdown as backup"
+    features_demonstrated:
+      - scheduled workflows (weekly staleness audit)
+      - multi-agent pipeline (page scanner, staleness detector, code cross-referencer, reporter, updater)
+      - decision contracts (page-status: current/stale/critical/archive, action: flag/update/archive/delete)
+      - Notion MCP for reading pages and adding comments
+      - git MCP for checking code references
+      - filesystem MCP for markdown export
+    tools_needed:
+      - notion MCP (@notionhq/notion-mcp-server)
+      - git MCP
+      - filesystem MCP
+    status: queued
+    notes: "Pipeline #33 from source material (knowledge base maintenance). Internal wikis rot fast. Shows AO bridging Notion and code repos to keep documentation accurate."
+
   - id: changelog-generator
     name: "Changelog & Release Notes Generator"
     vertical: developer-tools
@@ -1623,5 +1677,6 @@ examples:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
 #
 # Verticals to explore next: documentary research, children's book,
-# connected car, programmatic ads, medical coding, pet care,
-# loyalty program, cargo operations, broadcast production
+# connected car, programmatic ads, medical coding, loyalty program,
+# cargo operations, broadcast production, vendor evaluation,
+# access review, food waste reduction, guest experience
