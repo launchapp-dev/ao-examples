@@ -1255,6 +1255,7 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
     status: generated
+    generated_at: "2026-03-30"
     test_status: passed
     github_repo: launchapp-dev/ao-example-fitness-coach
     notes: "Pipeline #296 from source material. Fitness coaching is universally relatable and shows AO managing physical performance with adaptive programming."
