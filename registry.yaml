@@ -3081,6 +3081,7 @@ examples:
       - filesystem MCP
       - sequential-thinking MCP
     status: generated
+    generated_at: 2026-03-31
     test_status: passed
     notes: "Pipeline #285 from source material. GMP batch records are legally required for pharmaceutical manufacturing with FDA/EMA oversight. Uses python3 for calculations and filesystem — all tools exist. Shows AO managing a safety-critical manufacturing workflow with strict quality gates."
 
