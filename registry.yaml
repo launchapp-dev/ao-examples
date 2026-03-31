@@ -2915,6 +2915,7 @@ examples:
       - sequential-thinking MCP
     status: generated
     test_status: passed
+    github_repo: launchapp-dev/ao-workflow-carbon-tracker
     notes: "Pipeline #171 from source material. Carbon tracking is increasingly mandatory (SEC climate disclosure, EU CSRD). Uses python3 for calculations and filesystem — all tools exist. Shows AO automating environmental compliance."
 
   # --- Content / Publishing (new — conductor sweep 35, 2026-03-31) ---
@@ -2978,6 +2979,7 @@ examples:
       - sequential-thinking MCP
     status: generated
     test_status: passed
+    github_repo: launchapp-dev/ao-workflow-email-campaign
     notes: "Pipeline #45 from source material. Email marketing has 36:1 ROI — highest of any channel. Uses python3 for scoring, node for templating — all tools exist. Shows AO automating a revenue-driving marketing workflow."
 
   # --- Aviation / Aerospace (new — conductor sweep 35, 2026-03-31) ---
@@ -3012,10 +3014,13 @@ examples:
       - phase routing (block release on critical missing translations, re-scan on code changes detected)
     tools_needed:
       - filesystem MCP
-      - git MCP (@modelcontextprotocol/server-git)
+      - git MCP (@cyanheads/git-mcp-server)
       - sequential-thinking MCP
-    status: queued
-    notes: "Pipeline #14/#40 from source material. i18n is required for any product serving international markets. Uses grep, python3, jq, and git — all tools exist. Shows AO automating a tedious but critical developer workflow."
+    status: generated
+    started_at: 2026-03-31
+    generated_at: 2026-03-31
+    test_status: passed
+    notes: "4 agents (string-scanner/haiku, key-generator/sonnet, locale-validator/sonnet, coverage-reporter/sonnet). 3 workflows: daily-scan, weekly-audit, release-check. No external API keys needed. Decision contracts: complete|partial|blocking and go|no-go|conditional."
 
   # --- Finance (new — conductor sweep 36, 2026-03-31) ---
   - id: portfolio-rebalancer
@@ -3034,6 +3039,7 @@ examples:
       - sequential-thinking MCP
     status: generated
     test_status: passed
+    github_repo: launchapp-dev/ao-workflow-portfolio-rebalancer
     notes: "Pipeline #137 from source material. Portfolio rebalancing is a $30T+ AUM activity. Uses python3 for optimization and filesystem — all tools exist. Shows AO managing a high-stakes financial workflow with compliance gates."
 
   # --- Legal (new — conductor sweep 36, 2026-03-31) ---
@@ -3091,6 +3097,98 @@ examples:
       - sequential-thinking MCP
     status: queued
     notes: "Pipeline #87 from source material. NPS is the standard customer loyalty metric — closing the loop on feedback drives 2x higher retention. Uses python3 and jq — all tools exist. Shows AO automating the critical 'close the loop' customer ops workflow."
+
+  # --- Sports & Entertainment (new — conductor sweep 37, 2026-03-31) ---
+  - id: ticket-pricing
+    name: "Dynamic Ticket Pricing Engine"
+    vertical: sports-entertainment
+    description: "Dynamic ticket pricing pipeline — monitor real-time demand signals from ticket sales velocity and inventory levels, scrape competitor event pricing using Playwright, analyze historical sell-through patterns by event type/venue/day-of-week, calculate demand elasticity per price tier and section, generate optimized price adjustments with floor/ceiling constraints, simulate revenue impact before applying changes, produce pricing dashboards with sell-through projections, schedule hourly price checks during active sale periods and daily market scans"
+    features_demonstrated:
+      - scheduled workflows (hourly price monitoring during sales, daily market scans, weekly revenue reviews)
+      - multi-agent pipeline (demand monitor, competitor scraper, elasticity modeler, price optimizer, simulator, reporter)
+      - command phases (python3 for elasticity calculations and revenue simulation, jq for sales data extraction, sort for inventory ranking)
+      - decision contracts (price-action: hold/increase/decrease/flash-sale, demand-signal: cold/warming/hot/sold-out)
+      - output contracts (price adjustment recommendations, revenue projections, competitor comparison reports, sell-through dashboards)
+      - phase routing (immediate flash-sale trigger on stale inventory, hold on already-hot sections, manual review on large price swings)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - playwright MCP (competitor price scraping)
+    status: queued
+    notes: "Pipeline #244 from source material. Dynamic pricing drives 15-30% revenue uplift for live events. Uses Playwright MCP for real competitor scraping, python3 for optimization — all tools exist. Shows AO managing real-time revenue optimization."
+
+  # --- Hospitality (new — conductor sweep 37, 2026-03-31) ---
+  - id: housekeeping-optimizer
+    name: "Hotel Housekeeping Optimizer"
+    vertical: hospitality
+    description: "Hotel housekeeping scheduling and optimization pipeline — ingest departure/arrival lists from PMS data (CSV/JSON), calculate room priority scores based on checkout time, VIP status, and maintenance needs, generate optimized cleaning sequences minimizing hallway travel distance, assign rooms to housekeeping staff based on skill level and workload balance, track cleaning progress with estimated completion times, trigger room inspections for VIP and suite rooms, flag maintenance issues discovered during cleaning for engineering dispatch, produce daily productivity reports and staffing recommendations, schedule daily assignment generation at shift start and mid-shift rebalancing"
+    features_demonstrated:
+      - scheduled workflows (daily shift-start assignments, mid-shift rebalancing, weekly productivity analysis)
+      - multi-agent pipeline (PMS reader, priority scorer, route optimizer, staff assigner, progress tracker, inspector, reporter)
+      - command phases (python3 for route optimization and workload balancing, jq for PMS data extraction, awk for assignment formatting)
+      - decision contracts (room-priority: standard/priority/rush/vip-immediate, inspection-result: pass/touch-up/reclean)
+      - output contracts (room assignments, cleaning sequences, progress dashboards, productivity reports, maintenance tickets)
+      - phase routing (immediate reclean on failed VIP inspection, reassignment on staff no-show, engineering escalation on maintenance findings)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #260 from source material. Housekeeping is 50% of hotel labor cost — optimization directly impacts profitability. Uses python3 for routing and filesystem — all tools exist. Shows AO optimizing physical operations scheduling."
+
+  # --- Insurance (new — conductor sweep 37, 2026-03-31) ---
+  - id: actuarial-modeler
+    name: "Actuarial Loss Modeling Pipeline"
+    vertical: insurance
+    description: "Actuarial loss modeling and rate filing pipeline — ingest historical claims data from CSV/JSON, clean and validate loss triangles, apply development factors using chain-ladder and Bornhuetter-Ferguson methods, fit severity and frequency distributions, calculate ultimate losses and IBNR reserves, benchmark against industry loss ratios, generate rate indications with trend and credibility adjustments, produce rate filing documentation per state regulatory requirements, create exhibits and supporting actuarial memoranda, schedule monthly reserve updates and annual rate reviews"
+    features_demonstrated:
+      - scheduled workflows (monthly reserve updates, quarterly loss development, annual rate filing cycle)
+      - multi-agent pipeline (data cleaner, triangle builder, development estimator, distribution fitter, rate calculator, filing preparer, reviewer)
+      - command phases (python3 for actuarial calculations and statistical distributions, jq for claims data extraction, bc for precision arithmetic)
+      - decision contracts (reserve-adequacy: adequate/marginal/deficient, rate-indication: decrease/adequate/moderate-increase/significant-increase)
+      - output contracts (loss triangles, development exhibits, rate indications, filing memoranda, reserve reports)
+      - phase routing (immediate escalation on deficient reserves, additional data request on low credibility, regulatory review loop on filing drafts)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #264 from source material. Actuarial modeling drives $6T+ in global insurance pricing. Uses python3 for statistical methods and filesystem — all tools exist. Shows AO automating complex quantitative workflows with regulatory compliance."
+
+  # --- Telecom / Infrastructure (new — conductor sweep 37, 2026-03-31) ---
+  - id: capacity-planner
+    name: "Network Capacity Planner"
+    vertical: telecom-infrastructure
+    description: "Network infrastructure capacity planning pipeline — ingest current utilization metrics from CSV/JSON (bandwidth, CPU, memory, storage per node), analyze growth trends using linear and exponential regression models, identify nodes approaching capacity thresholds (80%/90%/95%), model upgrade scenarios with cost-benefit analysis, generate capacity forecasts at 30/60/90/180-day horizons, produce upgrade recommendations ranked by urgency and ROI, create procurement timelines with lead-time considerations, track capacity events post-upgrade to validate forecasts, schedule daily utilization checks and weekly trend analysis"
+    features_demonstrated:
+      - scheduled workflows (daily utilization monitoring, weekly trend analysis, monthly capacity reviews, quarterly planning cycles)
+      - multi-agent pipeline (metrics collector, trend analyzer, threshold monitor, scenario modeler, recommender, procurement planner, validator)
+      - command phases (python3 for regression analysis and forecasting, jq for metrics extraction, awk for utilization calculations)
+      - decision contracts (capacity-status: healthy/approaching-threshold/critical/exhausted, upgrade-urgency: planned/expedite/emergency)
+      - output contracts (utilization reports, capacity forecasts, upgrade recommendations, procurement timelines, validation reports)
+      - phase routing (emergency procurement on exhausted capacity, additional monitoring on approaching-threshold, forecast recalibration on prediction miss)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #221 from source material. Capacity planning prevents outages that cost $5,600/minute average. Uses python3 for forecasting and filesystem — all tools exist. Shows AO managing proactive infrastructure planning."
+
+  # --- Pharma / Medical Affairs (new — conductor sweep 37, 2026-03-31) ---
+  - id: medical-affairs
+    name: "Medical Affairs Pipeline"
+    vertical: pharmaceutical
+    description: "Medical affairs literature monitoring and KOL management pipeline — schedule weekly PubMed searches using fetch MCP for target therapeutic areas, extract and classify publications by relevance and evidence level, synthesize key findings into structured evidence summaries, identify key opinion leaders from publication authorship and citation networks, track KOL engagement history and sentiment, generate advisory board briefing materials with latest evidence, produce publication plans aligned with product lifecycle milestones, create congress coverage reports from meeting abstracts, schedule weekly literature scans and monthly KOL engagement reviews"
+    features_demonstrated:
+      - scheduled workflows (weekly literature scans, monthly KOL reviews, quarterly publication planning, annual congress calendar)
+      - multi-agent pipeline (literature searcher, evidence classifier, synthesizer, KOL tracker, engagement planner, briefing generator, reporter)
+      - command phases (python3 for citation analysis and evidence grading, jq for PubMed data parsing, grep for keyword extraction)
+      - decision contracts (evidence-level: high/moderate/low/insufficient, publication-relevance: critical/important/background/not-relevant)
+      - output contracts (evidence summaries, KOL profiles, advisory board briefs, publication plans, congress reports)
+      - phase routing (immediate alert on critical evidence, expanded search on insufficient data, KOL outreach trigger on engagement opportunities)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - fetch MCP (PubMed API access)
+    status: queued
+    notes: "Pipeline #287 from source material. Medical affairs is a $20B+ function across pharma — literature monitoring is legally required for pharmacovigilance compliance. Uses fetch MCP for PubMed, python3 for analysis — all tools exist. Shows AO automating scientific literature intelligence."
 
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
