@@ -2467,12 +2467,79 @@ examples:
     status: queued
     notes: "Advertising has only ad-campaign and influencer-campaign. Programmatic bidding is the core of digital advertising. Uses command phases with real math (python3, jq). Shows AO for data-driven ad optimization."
 
+  # --- Automotive / Manufacturing (new — conductor sweep 31, 2026-03-31) ---
+  - id: warranty-analytics
+    name: "Warranty Claims Analytics Pipeline"
+    vertical: automotive-aftermarket
+    description: "Warranty claims analytics pipeline — ingest warranty claim records from CSV/JSON files, parse failure modes and component data, aggregate claims by part number, model year, and supplier, calculate failure rates and mean-time-to-failure metrics, detect emerging patterns using statistical thresholds, identify supplier quality issues with root cause clustering, generate supplier recovery cost estimates, produce monthly warranty trend reports with early warning alerts, maintain historical baseline for year-over-year comparison"
+    features_demonstrated:
+      - scheduled workflows (daily claim ingestion, weekly pattern analysis, monthly trend reports)
+      - multi-agent pipeline (claim parser, failure analyst, pattern detector, root cause clusterer, report generator)
+      - command phases (python3 for statistical calculations and MTTF analysis, jq for claim data aggregation, csvtool for data processing)
+      - decision contracts (pattern-severity: critical-recall/field-action/monitor/normal, supplier-action: recovery-claim/quality-audit/warning/clear)
+      - output contracts (failure rate dashboards, pattern alert reports, supplier scorecards, recovery cost estimates, monthly trend summaries)
+      - memory MCP for tracking historical failure baselines and supplier performance
+      - filesystem MCP for claim data files and reports
+      - phase routing (immediate escalation on critical recall patterns, routine monitoring for normal trends)
+    tools_needed:
+      - memory MCP (@modelcontextprotocol/server-memory)
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #215 from source material. Warranty analytics is critical for automotive cost management and safety. Uses command phases with python3 for real statistical analysis — highly feasible. Shows AO for manufacturing quality intelligence."
+
+  # --- Finance / Operations (new — conductor sweep 31, 2026-03-31) ---
+  - id: budget-planner
+    name: "Budget Planning & Variance Pipeline"
+    vertical: finance-planning
+    description: "Budget planning and variance analysis pipeline — collect department budget requests from structured templates (JSON/CSV), validate line items against chart of accounts, consolidate into company-wide budget with rollups by cost center, compare budget proposals against prior year actuals and current run rate, calculate variances and flag items exceeding configurable thresholds, generate executive budget summary with key driver analysis, track budget revisions through approval workflow, produce monthly actuals-vs-budget reports with forecast adjustments, maintain multi-year budget history for trend analysis"
+    features_demonstrated:
+      - scheduled workflows (monthly actuals-vs-budget, quarterly reforecast, annual planning cycle)
+      - multi-agent pipeline (request validator, consolidator, variance analyst, executive writer, forecast adjuster)
+      - command phases (python3 for financial calculations and variance analysis, jq for budget data consolidation, csvtool for account mapping)
+      - decision contracts (variance-status: within-budget/over-threshold/needs-justification/rejected, forecast-action: maintain/revise-up/revise-down/defer)
+      - output contracts (consolidated budgets, variance reports, executive summaries, forecast adjustments, multi-year trend analyses)
+      - memory MCP for multi-year budget history and cost center baselines
+      - filesystem MCP for budget templates, data files, and reports
+      - github MCP for tracking budget revision approvals as issues
+      - phase routing (automatic approval for within-threshold items, escalation for over-threshold variances)
+    tools_needed:
+      - memory MCP (@modelcontextprotocol/server-memory)
+      - filesystem MCP
+      - github MCP (gh-cli-mcp)
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #140 from source material. Every company does budgets. Uses python3 for real financial math and jq for data consolidation — maximally feasible. Shows AO for corporate finance operations."
+
+  # --- Education / Outreach (new — conductor sweep 31, 2026-03-31) ---
+  - id: alumni-engagement
+    name: "Alumni Engagement Pipeline"
+    vertical: education-advancement
+    description: "Alumni engagement and donor identification pipeline — ingest alumni records from CSV exports, segment alumni by graduation year, degree, career trajectory, and engagement history, score engagement level using weighted activity metrics (event attendance, email opens, donations, volunteer hours), identify high-potential donors based on capacity and affinity signals, generate personalized outreach templates for each segment, create reunion and event invitation lists with personalized messaging, track outreach response rates and update engagement scores, produce quarterly engagement dashboards with retention cohort analysis, maintain persistent alumni profiles for lifecycle relationship management"
+    features_demonstrated:
+      - scheduled workflows (weekly outreach batch, monthly engagement scoring, quarterly dashboard reports, annual reunion planning)
+      - multi-agent pipeline (data ingester, segmentation engine, engagement scorer, donor identifier, outreach writer, report generator)
+      - command phases (python3 for engagement scoring algorithms, jq for alumni data processing, csvtool for export handling)
+      - decision contracts (donor-potential: major-gift/mid-level/annual-fund/steward-only, engagement-status: highly-engaged/active/lapsed/lost)
+      - output contracts (segment profiles, outreach templates, event invitation lists, engagement dashboards, donor prospect lists)
+      - memory MCP for persistent alumni profiles and engagement history
+      - filesystem MCP for data files, templates, and reports
+      - github MCP for tracking campaign progress as project issues
+      - phase routing (fast-track outreach for highly-engaged alumni, re-engagement campaigns for lapsed)
+    tools_needed:
+      - memory MCP (@modelcontextprotocol/server-memory)
+      - filesystem MCP
+      - github MCP (gh-cli-mcp)
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #129 from source material. Alumni engagement is the lifeblood of university advancement offices. Uses python3 for real scoring algorithms — all tools exist. Shows AO for education advancement and fundraising."
+
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
 #
 # Verticals to explore next: documentary research, children's book,
-# connected car, programmatic ads, medical coding, cargo operations,
-# broadcast production, number porting, customer churn prediction,
-# load testing, multi-region deployment, portfolio-rebalancer, nps-followup,
-# alumni engagement, warranty analytics, budget-planner, site-reliability-dashboard
+# connected car, medical coding, cargo operations, broadcast production,
+# number porting, customer churn prediction, load testing, multi-region deployment,
+# portfolio-rebalancer, nps-followup, site-reliability-dashboard, pest-management,
+# livestock-health, public-records-manager, venue-maintenance
