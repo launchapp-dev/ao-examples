@@ -976,7 +976,8 @@ examples:
     tools_needed:
       - filesystem MCP
       - sequential-thinking MCP
-    status: queued
+    status: generated
+    test_status: passed
     notes: "Pipeline #136 from source material. Fraud detection is high-stakes, real-time, and shows AO handling complex investigation workflows with regulatory reporting."
 
   # --- Banking (new — conductor sweep 11, 2026-03-30) ---
