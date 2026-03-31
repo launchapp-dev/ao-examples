@@ -3020,6 +3020,7 @@ examples:
     started_at: 2026-03-31
     generated_at: 2026-03-31
     test_status: passed
+    github_repo: launchapp-dev/ao-workflow-i18n-pipeline
     notes: "4 agents (string-scanner/haiku, key-generator/sonnet, locale-validator/sonnet, coverage-reporter/sonnet). 3 workflows: daily-scan, weekly-audit, release-check. No external API keys needed. Decision contracts: complete|partial|blocking and go|no-go|conditional."
 
   # --- Finance (new — conductor sweep 36, 2026-03-31) ---
@@ -3060,6 +3061,7 @@ examples:
     status: generated
     generated_at: "2026-03-31"
     test_status: passed
+    github_repo: launchapp-dev/ao-workflow-privacy-policy-generator
     notes: "Pipeline #72 from source material. Privacy policies are legally required globally, and product changes often outpace policy updates. Uses grep, python3, diff, jq — all native tools. Git versioning via version-policies.sh script (server-git npm package does not exist). Shows AO automating a critical legal compliance workflow."
 
   # --- Pharma Manufacturing (new — conductor sweep 36, 2026-03-31) ---
@@ -3190,13 +3192,103 @@ examples:
     status: queued
     notes: "Pipeline #287 from source material. Medical affairs is a $20B+ function across pharma — literature monitoring is legally required for pharmacovigilance compliance. Uses fetch MCP for PubMed, python3 for analysis — all tools exist. Shows AO automating scientific literature intelligence."
 
+  # --- Construction (new — conductor sweep 38, 2026-03-31) ---
+  - id: construction-cost-estimator
+    name: "Construction Cost Estimator"
+    vertical: construction
+    description: "Construction cost estimation pipeline — ingest project scope and architectural drawings descriptions from structured JSON, perform quantity takeoff calculations for materials (concrete, steel, lumber, finishes), fetch current material pricing from CSV price databases, estimate labor hours by trade (electrical, plumbing, HVAC, framing, finishing), apply regional labor rate adjustments, calculate equipment rental costs and duration, add overhead, profit margins, and contingency percentages, generate detailed line-item bid packages, compare estimates against historical project benchmarks, produce cost variance analysis reports, schedule weekly price updates and per-project estimation runs"
+    features_demonstrated:
+      - scheduled workflows (weekly price database updates, per-project estimation runs, monthly benchmark analysis)
+      - multi-agent pipeline (scope reader, quantity estimator, material pricer, labor estimator, equipment planner, bid assembler, benchmark analyst)
+      - command phases (python3 for quantity calculations and cost aggregation, jq for scope data extraction, awk for bid formatting, sort for line-item ranking)
+      - decision contracts (estimate-confidence: high/moderate/low/insufficient-data, bid-readiness: ready/needs-review/incomplete)
+      - output contracts (quantity takeoffs, cost breakdowns, bid packages, variance reports, benchmark comparisons)
+      - phase routing (re-estimate on low confidence, manual review on large variance from benchmark, additional scope clarification on insufficient data)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #150 from source material. Construction estimating is a $1.4T US industry — accurate bids win contracts. Uses python3 for math, jq for data, awk for formatting — all tools exist. Shows AO automating complex multi-trade cost estimation."
+
+  # --- Agriculture (new — conductor sweep 38, 2026-03-31) ---
+  - id: livestock-health
+    name: "Livestock Health Monitor"
+    vertical: agriculture
+    description: "Livestock health monitoring pipeline — ingest animal sensor data from CSV/JSON (temperature, activity level, feed intake, weight, rumination time), detect anomalies against breed-specific baselines using statistical thresholds, classify health alerts by severity (watch/concern/critical), generate diagnostic hypotheses based on symptom patterns, recommend treatment protocols from veterinary reference databases, track treatment administration and recovery progress, calculate herd-level health indices, produce daily health dashboards and weekly herd reports, flag disease outbreak patterns across multiple animals, schedule hourly sensor ingestion and daily herd health analysis"
+    features_demonstrated:
+      - scheduled workflows (hourly sensor ingestion, daily health analysis, weekly herd reports, monthly trend reviews)
+      - multi-agent pipeline (sensor ingester, anomaly detector, alert classifier, diagnostician, treatment recommender, recovery tracker, herd reporter)
+      - command phases (python3 for statistical anomaly detection and health index calculations, jq for sensor data extraction, awk for alert formatting)
+      - decision contracts (animal-status: healthy/watch/concern/critical, outbreak-risk: isolated/cluster/potential-outbreak)
+      - output contracts (health alerts, diagnostic reports, treatment plans, recovery logs, herd dashboards, outbreak assessments)
+      - phase routing (immediate vet alert on critical status, expanded monitoring on cluster detection, quarantine recommendation on potential outbreak)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #206 from source material. Livestock health monitoring prevents $8B+ annual US losses from animal disease. Uses python3 for statistical analysis and filesystem — all tools exist. Shows AO managing agricultural operations with real-time anomaly detection."
+
+  # --- Aviation (new — conductor sweep 38, 2026-03-31) ---
+  - id: flight-ops
+    name: "Flight Operations Manager"
+    vertical: aviation
+    description: "Flight operations management pipeline — ingest crew rosters and aircraft schedules from structured data, calculate crew duty time limits against FAR 117 regulations, fetch weather data via fetch MCP for departure/arrival/alternate airports, assess weather minimums against aircraft and crew qualifications, compute fuel requirements including reserves and alternates, generate flight plans with route optimization for wind and weather, perform weight and balance calculations for passenger and cargo loads, produce dispatch release documents, monitor active flights for weather deviations, generate post-flight debriefs with fuel burn analysis, schedule pre-departure planning windows and shift-based operations monitoring"
+    features_demonstrated:
+      - scheduled workflows (pre-departure planning 2h before flights, shift-based ops monitoring, daily crew scheduling, weekly fuel analysis)
+      - multi-agent pipeline (crew scheduler, weather analyst, fuel planner, route optimizer, weight-balance calculator, dispatcher, debrief analyst)
+      - command phases (python3 for fuel calculations and weight-balance math, jq for schedule data extraction, curl for weather API, awk for dispatch document formatting)
+      - decision contracts (dispatch-decision: go/conditional/no-go, weather-status: vfr/mvfr/ifr/lifr, crew-legality: legal/approaching-limit/illegal)
+      - output contracts (flight plans, dispatch releases, crew duty reports, fuel calculations, weight-balance sheets, debrief reports)
+      - phase routing (immediate no-go on crew legality violation, alternate planning on weather conditional, re-route on enroute weather deviation)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+      - fetch MCP (weather data retrieval)
+    status: queued
+    notes: "Pipeline #231 from source material. Flight operations is safety-critical aviation work regulated by FAA. Uses python3 for calculations, fetch MCP for weather — all tools exist. Shows AO managing high-stakes safety-of-flight decisions."
+
+  # --- Media Production (new — conductor sweep 38, 2026-03-31) ---
+  - id: broadcast-scheduler
+    name: "Broadcast Production Scheduler"
+    vertical: media-production
+    description: "Broadcast production scheduling pipeline — ingest show lineup and segment rundowns from JSON, calculate total runtime with commercial break placement, assign crew roles (director, TD, audio, graphics, camera operators) based on availability and skill requirements, generate equipment checkout lists per production, create detailed rundown documents with segment timing and cue sheets, track rehearsal completion status, flag scheduling conflicts across overlapping productions, produce daily call sheets with crew assignments and report times, generate weekly production calendars and monthly resource utilization reports, schedule daily call sheet generation and weekly conflict resolution"
+    features_demonstrated:
+      - scheduled workflows (daily call sheet generation, weekly production calendars, monthly utilization analysis)
+      - multi-agent pipeline (lineup reader, runtime calculator, crew assigner, equipment planner, rundown generator, conflict resolver, reporter)
+      - command phases (python3 for runtime calculations and conflict detection, jq for lineup data extraction, awk for rundown formatting, sort for priority scheduling)
+      - decision contracts (schedule-status: confirmed/tentative/conflict, crew-availability: available/partial/unavailable)
+      - output contracts (rundowns, call sheets, equipment lists, crew schedules, production calendars, utilization reports)
+      - phase routing (immediate conflict resolution on double-booking, crew substitution on unavailability, schedule adjustment on runtime overrun)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #245 from source material. Broadcast production scheduling is the backbone of live TV and streaming operations. Uses python3 for calculations and filesystem — all tools exist. Shows AO managing real-time media production logistics."
+
+  # --- Insurance (new — conductor sweep 38, 2026-03-31) ---
+  - id: policy-lifecycle
+    name: "Insurance Policy Lifecycle Manager"
+    vertical: insurance
+    description: "Insurance policy lifecycle management pipeline — intake new business applications from structured JSON, perform automated risk assessment scoring based on applicant data, generate premium quotes with coverage options and deductible combinations, produce policy documents from templates with bound terms, process mid-term endorsements (address changes, coverage modifications, additional insureds), calculate pro-rata premium adjustments on endorsements, generate renewal offers 60 days before expiration with updated pricing, handle cancellation requests with earned premium calculations and refund processing, maintain policy version history with audit trail, produce portfolio dashboards with loss ratios and retention metrics, schedule daily new business processing, weekly endorsement batches, and monthly renewal campaigns"
+    features_demonstrated:
+      - scheduled workflows (daily new business, weekly endorsements, monthly renewal campaigns, quarterly portfolio reviews)
+      - multi-agent pipeline (intake processor, risk scorer, quote generator, policy issuer, endorsement handler, renewal manager, cancellation processor, portfolio analyst)
+      - command phases (python3 for premium calculations and pro-rata math, jq for application data extraction, diff for policy version comparison, date for expiration scheduling)
+      - decision contracts (underwriting-decision: approve/refer/decline, renewal-action: auto-renew/re-quote/non-renew)
+      - output contracts (quotes, policy documents, endorsements, renewal offers, cancellation notices, portfolio dashboards, audit trails)
+      - phase routing (referral to senior underwriter on marginal risk, re-quote on loss ratio breach, retention outreach on non-renewal candidates)
+    tools_needed:
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #261 from source material. Policy lifecycle management is the core operational workflow of every insurance carrier. Uses python3 for premium math and filesystem — all tools exist. Shows AO managing the full insurance policy lifecycle with regulatory compliance."
+
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
 #
 # Verticals to explore next: children's book, connected car,
-# broadcast production, number porting, load testing,
-# multi-region deployment, pest-management, livestock-health,
-# public-records-manager, venue-maintenance, construction-cost-estimator,
-# housekeeping-optimizer, policy-impact-analyzer, tour-package,
-# competitive-intel, insurance-underwriting, facility-maintenance
+# number porting, load testing, multi-region deployment,
+# pest-management, public-records-manager, venue-maintenance,
+# policy-impact-analyzer, tour-package, competitive-intel,
+# facility-maintenance, spectrum-manager, agricultural-lending
