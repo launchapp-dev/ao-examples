@@ -109,22 +109,35 @@ Autonomous factory that generates AO workflow examples across 30+ verticals. Run
 | [meal-planner](examples/meal-planner/) | Consumer Food | Dietary preferences → recipe matching → grocery lists → batch cooking → cost tracking | generated | [repo](https://github.com/launchapp-dev/ao-workflow-meal-planner) |
 | [aircraft-maintenance](examples/aircraft-maintenance/) | Aviation | Flight hour tracking → inspection scheduling → work orders → airworthiness certification | generated | [repo](https://github.com/launchapp-dev/ao-workflow-aircraft-maintenance) |
 | [esports-tournament](examples/esports-tournament/) | Esports | Registration → bracket seeding → match scheduling → disputes → prize distribution | generated | [repo](https://github.com/launchapp-dev/ao-workflow-esports-tournament) |
-| music-producer | Media / Music | Album concept → lyrics → composition → mastering → artwork → distribution | queued | — |
-| home-buyer | Consumer Real Estate | Financial readiness → mortgage → house hunting → offers → closing | queued | — |
-| subtitle-pipeline | Media / Localization | Transcription → translation → timing sync → dubbed voiceover → SRT/VTT | queued | — |
-| pet-care | Consumer Pet Care | Vaccination tracking → weight monitoring → medication → vet appointments → wellness | queued | — |
-| changelog-generator | Developer Tools | Git history → commit categorization → release notes → migration guides → GitHub release | queued | — |
-| repo-health-checker | Developer Tools | Org-wide repo audit → stale PRs → missing CI → security advisories → scorecards | queued | — |
-| slack-digest | Business Ops | Channel monitoring → topic clustering → daily digest → action items → archive | queued | — |
-| notion-wiki-sync | Knowledge Mgmt | Notion page scanning → staleness detection → code cross-ref → markdown export | queued | — |
-| api-docs-generator | Developer Tools | Route parsing → schema extraction → example generation → validation → OpenAPI | queued | — |
-| food-waste-tracker | Sustainability | Inventory tracking → spoilage prediction → donations → impact reports | queued | — |
-| guest-experience | Hospitality | Guest profiling → room personalization → service coordination → satisfaction | queued | — |
-| dependency-updater | Developer Tools / CI-CD | Dependency scanning → risk assessment → update PRs → test validation | queued | — |
-| seo-auditor | Marketing / SEO | Site crawling → on-page analysis → Core Web Vitals → competitor comparison | queued | — |
-| meeting-summarizer | Business Productivity | Transcript processing → topic extraction → action items → Linear tasks | queued | — |
+| [music-producer](examples/music-producer/) | Media / Music | Album concept → lyrics → composition → mastering → artwork → distribution | generated | [repo](https://github.com/launchapp-dev/ao-workflow-music-producer) |
+| [home-buyer](examples/home-buyer/) | Consumer Real Estate | Financial readiness → mortgage → house hunting → offers → closing | generated | [repo](https://github.com/launchapp-dev/ao-workflow-home-buyer) |
+| [subtitle-pipeline](examples/subtitle-pipeline/) | Media / Localization | Transcription → translation → timing sync → dubbed voiceover → SRT/VTT | generated | [repo](https://github.com/launchapp-dev/ao-workflow-subtitle-pipeline) |
+| [pet-care](examples/pet-care/) | Consumer Pet Care | Vaccination tracking → weight monitoring → medication → vet appointments → wellness | generated | [repo](https://github.com/launchapp-dev/ao-workflow-pet-care) |
+| [changelog-generator](examples/changelog-generator/) | Developer Tools | Git history → commit categorization → release notes → migration guides → GitHub release | generated | [repo](https://github.com/launchapp-dev/ao-workflow-changelog-generator) |
+| [repo-health-checker](examples/repo-health-checker/) | Developer Tools | Org-wide repo audit → stale PRs → missing CI → security advisories → scorecards | generated | [repo](https://github.com/launchapp-dev/ao-workflow-repo-health-checker) |
+| [slack-digest](examples/slack-digest/) | Business Ops | Channel monitoring → topic clustering → daily digest → action items → archive | generated | [repo](https://github.com/launchapp-dev/ao-workflow-slack-digest) |
+| [notion-wiki-sync](examples/notion-wiki-sync/) | Knowledge Mgmt | Notion page scanning → staleness detection → code cross-ref → markdown export | generated | [repo](https://github.com/launchapp-dev/ao-workflow-notion-wiki-sync) |
+| [api-docs-generator](examples/api-docs-generator/) | Developer Tools | Route parsing → schema extraction → example generation → validation → OpenAPI | generated | [repo](https://github.com/launchapp-dev/ao-workflow-api-docs-generator) |
+| [food-waste-tracker](examples/food-waste-tracker/) | Sustainability | Inventory tracking → spoilage prediction → donations → impact reports | generated | [repo](https://github.com/launchapp-dev/ao-workflow-food-waste-tracker) |
+| [guest-experience](examples/guest-experience/) | Hospitality | Guest profiling → room personalization → service coordination → satisfaction | generated | [repo](https://github.com/launchapp-dev/ao-workflow-guest-experience) |
+| [dependency-updater](examples/dependency-updater/) | Developer Tools / CI-CD | Dependency scanning → risk assessment → update PRs → test validation | generated | [repo](https://github.com/launchapp-dev/ao-workflow-dependency-updater) |
+| [seo-auditor](examples/seo-auditor/) | Marketing / SEO | Site crawling → on-page analysis → Core Web Vitals → competitor comparison | generated | [repo](https://github.com/launchapp-dev/ao-workflow-seo-auditor) |
+| [meeting-summarizer](examples/meeting-summarizer/) | Business Productivity | Transcript processing → topic extraction → action items → Linear tasks | generated | [repo](https://github.com/launchapp-dev/ao-workflow-meeting-summarizer) |
+| [license-compliance](examples/license-compliance/) | Legal / DevTools | Dependency license scanning → conflict detection → remediation → compliance reports | generated | [repo](https://github.com/launchapp-dev/ao-workflow-license-compliance) |
+| [board-deck-generator](examples/board-deck-generator/) | Business Executive | Metrics collection → narrative writing → slide design → executive review | generated | [repo](https://github.com/launchapp-dev/ao-workflow-board-deck-generator) |
+| [tenant-screening](examples/tenant-screening/) | Real Estate | Application processing → credit/background checks → scoring → lease generation | generated | [repo](https://github.com/launchapp-dev/ao-workflow-tenant-screening) |
+| [code-review-bot](examples/code-review-bot/) | Developer Tools | PR analysis → code quality → security scan → review comments → approval | generated | [repo](https://github.com/launchapp-dev/ao-workflow-code-review-bot) |
+| [inventory-forecaster](examples/inventory-forecaster/) | Retail | Demand modeling → safety stock → reorder triggers → purchase orders | generated | [repo](https://github.com/launchapp-dev/ao-workflow-inventory-forecaster) |
+| [social-media-scheduler](examples/social-media-scheduler/) | Marketing / Social | Content strategy → copy writing → image gen → scheduling → analytics | generated | [repo](https://github.com/launchapp-dev/ao-workflow-social-media-scheduler) |
+| [newsletter-factory](examples/newsletter-factory/) | Content Marketing | Topic curation → writing → design → audience segmentation → send | generated | [repo](https://github.com/launchapp-dev/ao-workflow-newsletter-factory) |
+| [vulnerability-scanner](examples/vulnerability-scanner/) | Cybersecurity / DevTools | Dependency scan → CVE enrichment → severity ranking → remediation PRs | generated | [repo](https://github.com/launchapp-dev/ao-workflow-vulnerability-scanner) |
+| [vendor-evaluator](examples/vendor-evaluator/) | Business Ops | Requirements → RFI → score responses → negotiate → contract → onboard | generated | [repo](https://github.com/launchapp-dev/ao-workflow-vendor-evaluator) |
+| [runbook-generator](examples/runbook-generator/) | DevOps / SRE | Incident analysis → procedure docs → test runbook → publish → train | generated | [repo](https://github.com/launchapp-dev/ao-workflow-runbook-generator) |
+| [assignment-grader](examples/assignment-grader/) | Education | Submission collection → auto-grade → plagiarism check → feedback → record | generated | [repo](https://github.com/launchapp-dev/ao-workflow-assignment-grader) |
+| [data-quality-monitor](examples/data-quality-monitor/) | Data Analytics | Data profiling → anomaly detection → auto-fix → alerting → reports | generated | [repo](https://github.com/launchapp-dev/ao-workflow-data-quality-monitor) |
+| [price-tracker](examples/price-tracker/) | E-Commerce / Consumer | Product scraping → price comparison → trend analysis → deal alerts | generated | [repo](https://github.com/launchapp-dev/ao-workflow-price-tracker) |
 
-*86 examples across 30+ verticals — 72 generated, 14 queued. More added autonomously by the conductor every 30 minutes.*
+*107 examples across 30+ verticals — 99 generated, 8 queued. More added autonomously by the conductor every 30 minutes.*
 
 ## Quick Start
 

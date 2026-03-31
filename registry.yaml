@@ -2195,12 +2195,75 @@ examples:
     status: queued
     notes: "Pipeline #54 from source material. Complements runbook-generator and incident-responder for full SRE coverage. Uses command phases with real CLI tools (grep, awk, jq) — extremely feasible."
 
+  # --- DevOps / SRE (new — conductor sweep 27, 2026-03-31) ---
+  - id: incident-postmortem
+    name: "Incident Postmortem Generator"
+    vertical: devops-sre
+    description: "Incident postmortem pipeline — gather incident timeline from GitHub issues and git commits, correlate events across services and logs, identify contributing factors and root causes, write structured postmortem document (summary, timeline, impact, root cause, action items), create follow-up GitHub issues for each action item, track remediation progress, generate weekly incident trend reports"
+    features_demonstrated:
+      - multi-agent pipeline (timeline builder, root cause analyst, postmortem writer, action tracker)
+      - command phases (git log parsing, gh issue search, jq for structured data)
+      - decision contracts (severity: SEV1/SEV2/SEV3/SEV4, root-cause-confidence: confirmed/probable/suspected)
+      - output contracts (structured postmortem docs, action item issues, trend reports)
+      - github MCP for issue creation and timeline extraction
+      - git MCP for commit history correlation
+      - phase routing (escalate on SEV1/SEV2, abbreviated postmortem for SEV3/SEV4)
+    tools_needed:
+      - github MCP (gh-cli-mcp)
+      - git MCP (@modelcontextprotocol/server-git)
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #62 from source material. Every engineering team needs postmortems. Uses gh-cli-mcp + git MCP — all real tools. Complements incident-responder and runbook-generator for complete incident lifecycle."
+
+  # --- Customer Operations (new — conductor sweep 27, 2026-03-31) ---
+  - id: customer-feedback-analyzer
+    name: "Customer Feedback Analyzer"
+    vertical: customer-ops
+    description: "Customer feedback analysis pipeline — aggregate reviews and feedback from web pages via Playwright MCP scraping, parse structured and unstructured feedback, run sentiment analysis on each review, extract recurring themes and feature requests, correlate sentiment with product areas, generate product team recommendations with evidence, create executive summary with satisfaction trends, maintain historical sentiment tracking via memory MCP"
+    features_demonstrated:
+      - scheduled workflows (daily scrape, weekly analysis, monthly executive report)
+      - multi-agent pipeline (scraper, sentiment analyzer, theme extractor, recommendation writer, executive summarizer)
+      - decision contracts (sentiment: positive/neutral/negative/mixed, priority: critical/high/medium/low)
+      - output contracts (structured sentiment reports, theme matrices, product recommendations, executive summaries)
+      - playwright MCP for real review site scraping
+      - memory MCP for historical sentiment tracking
+      - phase routing (escalate on sentiment drop, skip on insufficient new data)
+      - multi-model routing (Haiku for extraction, Sonnet for analysis, Opus for recommendations)
+    tools_needed:
+      - playwright MCP (@playwright/mcp)
+      - memory MCP (@modelcontextprotocol/server-memory)
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #83 from source material. Customer ops vertical has only support-triage. Feedback analysis is universal — every product team needs it. Uses Playwright MCP for real scraping."
+
+  # --- E-Commerce / Retention (new — conductor sweep 27, 2026-03-31) ---
+  - id: loyalty-program-manager
+    name: "Loyalty Program Manager"
+    vertical: ecommerce-retention
+    description: "Loyalty program management pipeline — ingest customer transaction data from CSV/JSON files, calculate points accrual based on configurable rules, determine tier status (bronze/silver/gold/platinum) based on spend thresholds, identify customers approaching tier upgrades or at risk of tier downgrade, generate personalized reward offers based on purchase history and preferences, create monthly loyalty program performance reports with retention metrics, track reward redemption rates and program ROI"
+    features_demonstrated:
+      - scheduled workflows (daily points calculation, weekly tier updates, monthly program reports)
+      - multi-agent pipeline (points calculator, tier manager, offer personalizer, performance reporter)
+      - command phases (jq for transaction data processing, data aggregation scripts)
+      - decision contracts (tier-action: upgrade/maintain/downgrade/at-risk, offer-type: bonus-points/discount/exclusive-access/free-shipping)
+      - output contracts (tier status reports, personalized offer batches, program performance dashboards)
+      - memory MCP for customer profile and preference tracking
+      - phase routing (personalized retention outreach for at-risk customers, celebration for upgrades)
+    tools_needed:
+      - memory MCP (@modelcontextprotocol/server-memory)
+      - filesystem MCP
+      - sequential-thinking MCP
+    status: queued
+    notes: "Pipeline #110 from source material. E-commerce retention is huge and underrepresented. Uses memory MCP for persistent customer profiles — all tools exist. Shows AO for marketing/retention operations."
+
 # The conductor will add more examples here autonomously.
 # It should reference the 300 pipelines list for inspiration:
 # /Users/samishukri/brain/knowledge/yc/100-pipelines.md
 #
 # Verticals to explore next: documentary research, children's book,
-# connected car, programmatic ads, medical coding, loyalty program,
-# cargo operations, broadcast production, access review,
-# volunteer coordinator, number porting, customer churn prediction,
-# load testing, multi-region deployment, portfolio-rebalancer, nps-followup
+# connected car, programmatic ads, medical coding, cargo operations,
+# broadcast production, access review, volunteer coordinator,
+# number porting, customer churn prediction, load testing,
+# multi-region deployment, portfolio-rebalancer, nps-followup
